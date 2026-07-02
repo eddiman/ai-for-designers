@@ -5,9 +5,9 @@ Front-facing material for participants is in the session root `README.md`. This 
 ## Run of show (~70 min)
 
 - **0:00–0:10** — Frame the session and the scenario. Show the planted-tension warning: tell the room a tension has been planted between the interviews and the questionnaire, without saying where.
-- **0:10–0:25** — Live demo: generic vs. directed on one interview; then the same two styles on the questionnaire data.
-- **0:25–0:55** — Hands-on: each participant produces summaries of the interviews and the questionnaire, trying both styles on at least one source. Push them to ask whether each summary is usable, and what each style missed or added.
-- **0:55–1:10** — Cross-reference: compare the interview summaries against the questionnaire summary. Where do they agree, conflict, leave gaps? This is where the planted tension should surface.
+- **0:10–0:25** — Live demo the three-step flow (generic → directed → "analyze the differences") on one interview in its own chat, then on the questionnaire. State the two rules: one source per chat, and work the data in steps.
+- **0:25–0:55** — Hands-on: each participant runs the three-step flow on the interviews and the questionnaire, one fresh chat per source. Push them to ask whether each summary is usable, and what each style missed or added.
+- **0:55–1:10** — Choose inputs, then triangulate: pick one summary per source, combine only those worked summaries in one chat, and run the conflict-seeking prompt. This is where the planted tension should surface. Leave a few minutes to put a one-shot "do it all at once" output next to a worked-in-steps one and ask which they can defend.
 
 ## Opening framing
 
@@ -31,6 +31,15 @@ This is the payoff. Things to watch for and steer:
 - **The model papering over the tension is a feature, not a bug.** If someone's triangulation comes back "everyone basically agrees," don't rescue it — ask them to read across their own summaries and check. That moment, where the human catches what the smoothing missed, is the lesson. The human names the tension; the model's pass is a draft to interrogate.
 
 Default to AI-assisted-then-verify, given the tight slot. If time allows, the stronger version is to have participants spot the conflict manually first, then run the prompt as a check and compare.
+
+## Landing the takeaways (from the pilot)
+
+The first pilot went well, and gave two clear notes: participants wanted sharper instructions on what to actually do, and a clearer statement of what they walk away knowing. The session README now leads with both. Reinforce these two in the debrief — they are the outcomes the room valued most:
+
+1. **Separate problems belong in separate chats.** Mixing contexts confuses the model and yields confident, wrong answers. Say it plainly and tie it to what they just did.
+2. **The more steps you take to work the raw data yourself, the more control you have and the better the result.** Frame the step-by-step flow not as busywork but as what makes the output *checkable*.
+
+**Use the one-shot shortcut as the teaching moment.** In the pilot, a participant pasted all three interviews into one chat and had the model summarize, prioritize, and lay it all out. The result looked good — and he had no way to know whether it was the best cut or whether the summaries held up. That's the whole lesson in one move: one-shotting buys relevance and polish but costs you the ability to trust or trace the result. If someone does this in the room (someone will), don't wave it off — put their one-shot output next to a worked-in-steps output and ask the room which one they can actually defend, and how they'd check it. Expect it, and leave time to run the comparison live.
 
 ## Pre-setup
 
