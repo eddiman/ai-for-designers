@@ -12,6 +12,18 @@ Whether participants continue from their own Session 1 output or pick up the pre
 
 For returning participants the recap is a model for justifying their own work; for drop-ins it's the context they need to use the premade versions.
 
+## Running the three activities
+
+The participant README gives starter prompts for all three activities (insights → problem definition → personas) and tells participants to work in one chat with the evidence attached up front. Unlike Session 1, the prompts here are meant to be adapted — steer the room toward tuning them, not copying them verbatim. The learning is in judging the output (evidence anchor, hypothesis label, red-team response), not in the prompt mechanics.
+
+Rough timeboxes for a live run:
+
+- Recap + setup — 10 min
+- Key insights — 10 min
+- Problem definition (generate, rank, commit, red-team + response) — 25 min
+- Personas — 20 min
+- Save the packet + wrap — 10 min
+
 ## Why personas are required here
 
 Personas aren't a deliverable for their own sake. Session 3 runs the UX review in character as these personas, so they're a working input the next session depends on. That's the reason they must be evidence-tied and hypothesis-labelled — make that explicit to the room.

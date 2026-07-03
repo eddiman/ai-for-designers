@@ -9,7 +9,7 @@
 - Maja: Generic 
 - Geir: Generic
 - Sofie: Generic
-- Questionnaire: Direceted
+- Questionnaire: Directed
 
 
 
