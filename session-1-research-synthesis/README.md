@@ -6,7 +6,7 @@ How the framing of a summarization prompt changes the research you get back, and
 
 ## What you start from
 
-Everyone works from the same research pack in  session 1, if you havent `premade/`: three interview transcripts and a questionnaire dataset, all about how people plan and catch buses today. This is the start of the course, so there's nothing to carry forward yet — you build from this shared pack.
+Everyone works from the same research pack in `premade/`: three interview transcripts and a questionnaire dataset, all about how people plan and catch buses today. This is the start of the course, so there's nothing to carry forward yet — you build from this shared pack.
 
 A tension has been deliberately planted somewhere between the interviews and the questionnaire. You aren't told where. Finding it is part of the work.
 
