@@ -21,7 +21,7 @@ Two things carry over from Session 1:
 
 - **Pro** — the thread carries: your insights feed the problem definition, the committed problem feeds the personas, and the model remembers all of it without you re-stating it.
 - **Pro** — fewer restarts and less re-pasting.
-- **Con** — context piles up. By the personas step the chat is full of the ranking debate and the red-team argument, which can anchor the personas to that argument rather than to the raw evidence.
+- **Con** — context piles up. By the personas step the chat is full of the ranking debate and the red-team argument against your committed problem (defined in step 2), which can anchor the personas to that argument rather than to the raw evidence.
 
 *A fresh chat per activity (insights, then problem, then personas):*
 
@@ -49,9 +49,9 @@ This is not the same as the triangulation: the triangulation maps where sources 
 
 ### 2. Problem definition
 
-Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then attack it.
+Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then red-team it.
 
-**Why:** you can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch, and the red-team stress-tests it before you sink a whole prototype into the wrong problem. The single committed problem is what scopes Session 3.
+**Why:** you can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch. *Red-teaming* borrows a term from security — a "red team" is tasked with attacking a plan to expose its weaknesses — so here you turn the AI into your red team and ask it to make the strongest case that your chosen problem is the wrong one to solve first. That stress-tests the choice before you sink a whole prototype into it. The single committed problem is what scopes Session 3.
 
 > Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it.
 >
@@ -59,7 +59,11 @@ Working from the evidence and the insights you just wrote, generate framings, ra
 >
 > Argue why the problem I picked is the wrong one to solve first.
 
-Commit to a single problem. Then write your **own** response to the red-team argument — don't let the model have the last word. Save it all to `problem-definition.md`.
+**Commit to a single problem** means exactly that: pick *one* framing from the ranked list and write it as a single clear problem statement plus its How-Might-We — not a blend of three, not "all of the above." Narrowing is the point. Jot down the framings you *didn't* pick and why, so the choice is traceable (the stub has a spot for this).
+
+**Write your own response to the red-team.** Once the model has argued why your pick is the wrong problem to solve first, don't just paste its critique and move on — reply in your own words. Do you concede and re-scope the problem, or hold your ground, and on what evidence? That reply is the judgement this step is training; letting the model have the last word defeats the purpose.
+
+Save the committed problem, the rejected candidates, the red-team argument, and your response to `problem-definition.md`.
 
 ### 3. Personas
 
