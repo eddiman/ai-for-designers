@@ -19,3 +19,13 @@
 - **Insight:**
 - **Evidence:**
 - **Observed / inferred:**
+
+### Insight 4 (optional)
+- **Insight:**
+- **Evidence:**
+- **Observed / inferred:**
+
+### Insight 5 (optional)
+- **Insight:**
+- **Evidence:**
+- **Observed / inferred:**

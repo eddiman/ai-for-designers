@@ -21,7 +21,7 @@ Two things carry over from Session 1:
 
 - **Pro** — the thread carries: your insights feed the problem definition, the committed problem feeds the personas, and the model remembers all of it without you re-stating it.
 - **Pro** — fewer restarts and less re-pasting.
-- **Con** — context piles up. By the personas step the chat is full of the ranking debate and the red-team argument against your committed problem (defined in step 2), which can anchor the personas to that argument rather than to the raw evidence.
+- **Con** — context piles up. By the personas step the chat is full of the ranking debate and the red-team argument against your committed problem (from the problem-definition step), which can anchor the personas to that argument rather than to the raw evidence.
 
 *A fresh chat per activity (insights, then problem, then personas):*
 
@@ -39,7 +39,7 @@ Each step builds on the one before it. If you kept everything in one chat, that 
 
 ### 1. Key insights
 
-Distill the triangulation into the handful of insights the rest of the course builds on.
+Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on.
 
 **Why:** these are the portable, evidence-anchored takeaways everything downstream references — they scope the problem definition here, and in Sessions 3–4 they feed the prototype generation and the knowledge base. Get them right once and you stop re-deriving the signal from raw evidence every time.
 
@@ -75,7 +75,7 @@ Create **2–3 personas**, each grounded in specific evidence, each labelled as 
 
 Don't just turn each interviewee into a persona. Use the split the triangulation already named — the power user (wants a smart, proactive assistant) versus the simplicity-first rider (wants only reliable basics) — to build personas that mean something.
 
-Save all three files as plain markdown — clean headings and short bullets, nothing fancy. You'll attach them directly in Figma Make and Copilot in Session 3, so keep them readable.
+Save them to `personas.md`.
 
 ## What you'll produce
 
@@ -85,7 +85,7 @@ A "design brief packet" — three files that the rest of the course consumes, in
 - `problem-definition.md` — the single committed problem, with the red-team argument and your response
 - `personas.md` — 2–3 evidence-grounded personas, each labelled as a hypothesis
 
-Empty stub files for each are in this folder — fill them in as you go.
+Empty stub files for each are in this folder — fill them in as you go. Keep all three as plain markdown — clean headings and short bullets, nothing fancy — so they attach cleanly to Figma Make and Copilot in Session 3.
 
 ## What you'll take away
 

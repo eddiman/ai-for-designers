@@ -1,13 +1,10 @@
 # Interview summaries
 
-> Your work. One summary per interview, with quotes attributed to the source. Keep at least one interview in **both** a generic and a directed version so the difference is visible. In every summary, keep "what was said" separate from "what we infer."
+> Reference artifact (premade). One carried-forward summary per interview — the **generic**-prompt version chosen for each source in `triangulation.md` — with quotes attributed to the source. What was said is kept separate from what we infer. Attach these as-is to start Session 2; there's nothing to select or redo.
 
 ---
 
 ## Interview 1 — Maja (daily commuter, no car)
-
-### Generic prompt
-<!-- "Summarize this interview." -->
 
 **Summary**
 
@@ -128,72 +125,11 @@
 ✅ **Bottom line:**  
 Maja wants a **smart, personalized transit assistant** that removes uncertainty, reduces mental effort, and adapts to her routine—transforming commuting from stressful to effortless.
 
-
-### Directed prompt
-<!-- "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed." -->
-
-**Summary**
-
-## 🚌 How she catches the bus today
-
-* Relies entirely on buses for commuting and daily life.
-* Uses **multiple tools at once**:
-  * Transit app (primary)
-  * Live map (to double-check)
-  * Her own memory of patterns and delays
-* Follows a **self-built routine**:
-  * Knows scheduled times but adjusts based on experience (e.g. avoids unreliable departures).
-  * Leaves earlier than necessary to compensate for uncertainty.
-* Repeats the same trips daily, but must **manually search or re-enter routes every time**.
-
-***
-
-## 😤 What frustrates her
-
-* **Unreliable information**:
-  * Real-time data is inconsistent (e.g. buses showing “2 minutes” that never arrive).
-  * Biggest issue is not delays, but **not knowing what’s happening**.
-* **Mental overload**:
-  * Has to mentally track schedules, reliability patterns, and backup options.
-* **Poor app experience**:
-  * Apps are generic and don’t remember her habits.
-  * Feels like starting from scratch every time.
-* **Lack of proactive support**:
-  * Has to constantly check instead of being guided.
-  * No clear instructions on what to do when things go wrong (e.g. cancellations, full buses).
-
-***
-
-## 💭 What she wishes existed
-
-* A **personalized transit app** that:
-  * Learns her regular routes (home, work, gym, etc.)
-  * Automatically surfaces the trips she takes most
-* **Proactive, actionable notifications**:
-  * “Leave now”
-  * “Your usual bus is delayed”
-  * Suggested alternatives before she’s stuck waiting
-* **Context awareness**:
-  * Adapts to time of day, weekday routines, and even her calendar
-* A **low-effort, one-tap experience**:
-  * No searching or re-entering routes
-  * Clear, reliable guidance every day
-
-***
-
-✅ **In short:**  
-Maja currently manages her commute through a mix of apps, guesswork, and habits—but finds it stressful and inefficient. She wants a **smart, proactive, personalized assistant** that removes uncertainty and handles the complexity for her.
-
-
 ---
 
 ## Interview 2 — Geir (occasional rider, drives otherwise)
 
-### Generic prompt
-<!-- "Summarize this interview." -->
-
 **Summary**
-
 
 ### Summary of Interview with Geir
 
@@ -234,43 +170,9 @@ Maja currently manages her commute through a mix of apps, guesswork, and habits�
 * For Geir, the value of the bus system hinges on **trustworthy basic information**.
 * If the system consistently told the truth, **most of his frustration would disappear**.
 
-
-### Directed prompt
-<!-- "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed." -->
-
-**Summary**
-### How they catch the bus today
-
-* Uses the bus **infrequently and habitually**—same route (Bus 9), same stop, similar times.
-* Relies on **on-site information**: paper timetables and especially **electronic display screens**.
-* Avoids apps because they feel **overly complex and unnecessary** for his simple use case.
-* Wants a **quick, low-effort check** (e.g., “next bus in X minutes”) and nothing more.
-
-### What frustrates them
-
-* **Unreliable real-time information** is the main issue—not the waiting itself.
-* Displays often show **incorrect countdowns or “ghost” buses** that don’t arrive.
-* **Lack of communication during disruptions** (e.g., diversions, delays, cancellations).
-* Feels **“kept in the dark”**, which erodes trust in the system.
-* Frustration comes from **uncertainty and misinformation**, not inconvenience alone.
-
-### What they wish existed
-
-* **Accurate, trustworthy, and honest information above all else**.
-* Clear, direct updates like: *“delayed,” “cancelled,” “diversion in place.”*
-* A **simple, no-friction interface** (physical or digital) that just shows reliable times.
-* No need for extra features (apps, notifications, personalization)—**just correctness and clarity**.
-
-**Bottom line:** He wants a **simple, dependable system he can trust**, where the basic information is consistently correct.
-
-
-
 ---
 
 ## Interview 3 — Sofie (student, mixed-mode traveller)
-
-### Generic prompt
-<!-- "Summarize this interview." -->
 
 **Summary**
 
@@ -299,33 +201,3 @@ Maja currently manages her commute through a mix of apps, guesswork, and habits�
 * **Accessibility awareness:** Notes that her grandmother has very different needs (clear signage, physical accessibility, no app use), highlighting a **design challenge across user types**.
 
 * **Key takeaway:** For Sofie, **reliability beats everything**. A simple system that delivers **honest arrival times and clear cancellation info** is far more valuable than advanced features.
-
-
-### Directed prompt
-<!-- "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed." -->
-
-**Summary**
-### **How she catches the bus today**
-
-* Uses the bus **a few times a week as a backup** (bad weather, running late, late shifts).
-* **Plans last-minute** using an app to check the next departure.
-* Due to past bad experiences, she now **adds buffer time and often takes an earlier bus** than needed.
-* For familiar routes, she relies on **basic lookup only**; for unfamiliar trips, she depends heavily on the app and feels less confident.
-
-### **What frustrates her**
-
-* **Unreliable real-time information** is the biggest issue—especially “ghost buses” that never arrive.
-* She **can’t tell the difference between delays and cancellations**, which creates stress.
-* This uncertainty leads to **anxiety and wasted time**, forcing her to overplan.
-* She is frustrated by the **gap between what the app says and reality**.
-
-### **What she wishes existed**
-
-* **Accurate, trustworthy arrival times** above everything else.
-* A **clear notification when a bus is cancelled or not running**.
-* A system that is **simple and reliable**, not feature-heavy.
-* For unfamiliar trips only: **more guidance and reassurance** (e.g., clearer navigation help).
-
-**Bottom line:** She wants a **simple system she can trust**—reliable timing and clear cancellation info matter far more than advanced features.
-
-
