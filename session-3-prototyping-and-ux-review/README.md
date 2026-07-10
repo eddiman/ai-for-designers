@@ -33,7 +33,7 @@ Copy the designs out of Figma Make and into a Figma design file. Depending on ho
 Give each screen a number in the order a user moves through it, and place each direction's screens together in their own frame or section, named to match the direction name from Figma Make. So you end up with three labelled groups — one per direction — each holding its screens in flow order. This is what makes the file readable to the UX-review step: the reviewer can follow one direction's flow at a time and refer to screens by number. 
 Ask Figma Make to describe each direction's flow down to be used for a UX review and paste it in `app-flow.md`.
 Example prompt:
-> Describe each direction's flow down to be used for a UX review
+> Describe each direction's flow down to be used for a UX review, write it out in the chat here.
 
 <img width="594" height="735" alt="image" src="https://github.com/user-attachments/assets/97e4095d-505e-4b1e-9937-27e50291656b" />
 
