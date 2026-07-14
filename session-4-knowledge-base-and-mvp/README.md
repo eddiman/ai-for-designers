@@ -65,7 +65,11 @@ Break the spec into small increments, and decide up front how you'll verify each
 - **`build-plan.md`** — the MVP broken into increments, each small enough to build and verify in one pass, ordered so that what has to exist first comes first. No increment should be a whole feature at once.
 - **`verification-plan.md`** — for each increment, how you'll confirm it actually works before moving on.
 
-Ask Copilot to draft the plan from the spec, then tighten it yourself — split anything that's too big to verify in one pass.
+Ask Copilot to draft the plan from the spec, then tighten it yourself — split anything that's too big to verify in one pass. Start from this prompt and adapt it:
+
+> Read `spec.md` and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Break the MVP into small increments and write `build-plan.md` — the increments, each small enough to build **and verify in one pass**, ordered so what has to exist first comes first (no increment is a whole feature at once). Then, in the same pass, write `verification-plan.md` — going increment by increment through the build plan you just wrote, exactly how I'll confirm each one works before moving on.
+>
+> **Do not write, scaffold, or run any application code — this is a planning step only.** If an increment can't be verified in a single pass, split it. If something in the spec is missing or contradictory, flag it and ask rather than filling the gap yourself.
 
 ### 5. Build the MVP, following the plan
 
