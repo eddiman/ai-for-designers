@@ -22,7 +22,9 @@ Attach `problem-definition.md`, `key-insights.md`, and `personas.md`, then start
 >
 > For each direction: give it a short name, generate the key screens as a clickable flow, and stay grounded in the attached research — the insights and personas, not generic bus-app conventions. Make the three genuinely different from each other (e.g. lean into the reliability-first take in one and the personalization take in another) so I have real alternatives to compare, not three versions of the same idea.
 
-Don't accept the first result as final — react to what comes back. Ask it to push one direction further, pull two apart if they've converged, or fix a screen that doesn't match a persona's needs. The prototypes get better the more you steer. Note the name Figma Make gave each direction — you'll reuse those names in the next step. Capture them in `prototype-directions.md`.
+Don't accept the first result as final — react to what comes back. Ask it to push one direction further, pull two apart if they've converged, or fix a screen that doesn't match a persona's needs. The prototypes get better the more you steer.
+
+Once you're happy with the three, **fill out `prototype-directions.md`** — one entry per direction with its name, Figma link, what it is, and how it answers the problem. This is a required output, not a note-to-self: you attach it to the UX review in step 4, where it gives the persona reviewer the *intent* behind each direction (what it's trying to do) alongside `app-flow.md`'s screen-by-screen path. So it has to be filled in before you move on.
 
 ### 2. Bring the designs into a Figma file
 
@@ -30,20 +32,23 @@ Copy the designs out of Figma Make and into a Figma design file. Depending on ho
 
 ### 3. Number the screens and organize them by direction
 
-Give each screen a number in the order a user moves through it, and place each direction's screens together in their own frame or section, named to match the direction name from Figma Make. So you end up with three labelled groups — one per direction — each holding its screens in flow order. This is what makes the file readable to the UX-review step: the reviewer can follow one direction's flow at a time and refer to screens by number. 
-Ask Figma Make to describe each direction's flow down to be used for a UX review and paste it in `app-flow.md`.
+Give each screen a number in the order a user moves through it, and place each direction's screens together in their own frame or section, named to match the direction name from Figma Make. So you end up with three labelled groups — one per direction — each holding its screens in flow order. This is what makes the file readable to the UX-review step: the reviewer can follow one direction's flow at a time and refer to screens by number.
+
+Then **fill out `app-flow.md`** — one flow per direction, describing the path a user takes through its numbered screens, using the same direction names and screen numbers as in the Figma file. Ask Figma Make to write each direction's flow down and paste it in. This is a required output, not a note-to-self: the UX review in step 4 is run *against* these written flows, so it has to be filled in before you move on.
+
 Example prompt:
-> Describe each direction's flow down to be used for a UX review, write it out in the chat here.
+> Describe each direction's flow to be used for a UX review, write it out in the chat here.
 
 <img width="594" height="735" alt="image" src="https://github.com/user-attachments/assets/97e4095d-505e-4b1e-9937-27e50291656b" />
-
 
 ### 4. Run the persona UX review
 
 With the Figma MCP connected (see below) and your three directions organized in the file, run the review in Copilot's Agent mode. Start from this prompt and adapt it:
 
 > _[Link to the Figma section/frame containing the directions, or a link to each direction's frame]_
-> Attached / connected is a Figma file with **3 prototype directions** for a bus app, each in its own named section with its screens numbered in flow order. Also attached are my `personas.md`, `problem-definition.md`, and `app-flow.md` (my written flow for each direction).
+> Attached / connected is a Figma file with **3 prototype directions** for a bus app, each in its own named section with its screens numbered in flow order. Also attached are my `personas.md`, `problem-definition.md`, `app-flow.md` (my written flow for each direction), and `prototype-directions.md` (what each direction is and how it's meant to answer the problem).
+>
+> Use `app-flow.md` for the mechanical path through each direction's screens, and `prototype-directions.md` for the intent behind each direction — hold each one to what it's *trying* to do, not just what's on screen.
 >
 > Review all three directions **in character as each of my personas** — every persona reviews every direction. For each persona × direction, walk the numbered screens in order and note what that persona notices, struggles with, and wants, referring to screens by number. Stay true to each persona's evidence-grounded goals (e.g. the reliability-first rider vs. the personalization-seeking power user) — don't give generic feedback.
 >

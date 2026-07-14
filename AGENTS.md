@@ -44,10 +44,6 @@ Each session folder separates front-facing from facilitator material:
 3. Work the prerequisites: confirm tool access (Copilot 365, GitHub Copilot via BSD, Figma Make, Figma MCP) and dry-run the Session 3 Figma Make to Copilot/Figma round-trip and the Session 4 build loop.
 4. Resolve the open decisions listed at the end of the plan.
 
-## Knowledge base — pending
-
-Session 4 needs a project knowledge base and a scaffolding skill to set it up. This will be created from a separate prompt supplied later. Do not scaffold the knowledge base yet. Leave the KB work in Session 4 as a placeholder until that prompt arrives.
-
 ## Writing style
 
 Plain, direct language. Do not use "it's X, not Y" antithesis or balanced-contrast flourishes such as "A is cheap; B is the skill". State the point directly.
