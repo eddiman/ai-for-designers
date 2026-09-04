@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fixed demonstration conditions for the Bus Decisions MVP." />
+    <title>Bus Decisions MVP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">Bus Decisions MVP</p>
+      <h1>Choose a demonstration condition</h1>
+      <p class="summary">
+        This uses fixed demonstration data for the Stortorget / Bus 37 route. It
+        does not show live transit information.
+      </p>
+
+      <section class="scenario" aria-labelledby="scenario-heading">
+        <p class="section-label" id="scenario-heading">Demonstration condition</p>
+        <div class="scenario-controls" role="group" aria-label="Demonstration condition">
+          <button class="scenario-button" type="button" data-scenario="confirmed" aria-pressed="true">
+            High confidence
+          </button>
+          <button class="scenario-button" type="button" data-scenario="uncertain" aria-pressed="false">
+            Information uncertain
+          </button>
+          <button class="scenario-button" type="button" data-scenario="untrackable" aria-pressed="false">
+            Untrackable
+          </button>
+        </div>
+
+        <section class="scenario-preview" aria-live="polite" aria-atomic="true">
+          <p class="section-label">Current condition</p>
+          <h2 id="scenario-name">High confidence</h2>
+          <p class="status status--confirmed" id="scenario-status">Confirmed tracking</p>
+          <p id="scenario-detail">
+            Two fixed demonstration sources agree. GPS sees Bus 37 two stops away,
+            with no disruption reported.
+          </p>
+          <p class="demo-note" id="scenario-context">
+            This is static demonstration data, not live transit information.
+          </p>
+        </section>
+      </section>
+
+      <p class="next-step">Decision recommendations will be added in later increments.</p>
+    </main>
+  </body>
+</html>
