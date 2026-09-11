@@ -12,15 +12,11 @@ This is a dependency-free static HTML, CSS, and JavaScript project for the Bus D
 
 ## Run
 
-Open `index.html` directly in a browser. No install or build step is required.
+Open `index.html` directly in a browser. There is no install step, no build step, and no package manager.
 
-For a local HTTP server, from this directory run:
+## Stack rules
 
-```text
-npx --yes serve .
-```
-
-Then open the local URL printed by the server.
+Plain HTML, CSS, and JavaScript only. Do not add a framework, a build step, a CSS library, or any dependency. If a task seems to need one, pick the simplest option that keeps the app opening directly in a browser and say what you picked.
 
 ## Verification
 

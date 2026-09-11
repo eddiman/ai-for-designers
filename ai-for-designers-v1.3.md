@@ -189,9 +189,9 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **Tools:** GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
 
-**Pre-setup:** the KB scaffolding skill, a working Copilot build environment, and Node.js on every participant's machine, ready before the session. Node is the one people are missing — the app is a Vite project and Vite will not run without it. The reference knowledge base is committed at `session-4-knowledge-base-and-mvp/kb/` as the worked example; participants build their own during the session.
+**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The reference knowledge base is committed at `session-4-knowledge-base-and-mvp/kb/` as the worked example; participants build their own during the session.
 
-**The app's stack is pinned:** Vite with the vanilla template, plain JavaScript, plain CSS, no other dependencies. Participants paste a ready-made scaffold prompt instead of being asked to choose, and the build prompts tell the agent to pick the simplest working option and report it rather than putting a technical question to a designer.
+**The app's stack is pinned:** plain HTML, CSS, and JavaScript — no framework, no build step, nothing to install. Participants paste a ready-made scaffold prompt instead of being asked to choose, and the build prompts tell the agent to pick the simplest working option and report it rather than putting a technical question to a designer. Keeping the stack free of installs also keeps the session's attention on the spec-and-verify loop instead of on tooling.
 
 ---
 
@@ -204,9 +204,8 @@ Run this for each of the three interviews and for the questionnaire. The questio
 | Figma Make | 3 | Confirm current support for attached files |
 | Figma MCP (local server) | 3, 4 | Runs on each participant's own machine; they set it up in facilitator lockstep. Facilitator tests the full round-trip in advance; may need IT/security sign-off |
 | KB scaffolding skill | 4 | Needs to exist before Session 4 — see open decisions |
-| Node.js (LTS) | 4 | **Required for the Vite app and often missing on designers' machines.** Have participants run `node -v` and install from nodejs.org ahead of the session; put it on the readiness check |
 
-The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for participants. Sessions 3–4 also need setup on each participant's own machine — the Figma MCP local server in Session 3, Node.js in Session 4 — so the facilitator testing the pipeline in advance is necessary but not sufficient. Confirm both with participants ahead of time, and expect to fix a few in the room.
+The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for participants. Session 3 needs setup on each participant's own machine — the Figma MCP local server — so the facilitator testing the pipeline in advance is necessary but not sufficient; expect to fix a few in the room. Session 4 needs no install of its own: the app is plain HTML, CSS, and JavaScript.
 
 ## Open decisions
 

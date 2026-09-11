@@ -75,25 +75,17 @@ Ask Copilot to draft the plan from the spec, then tighten it yourself — split 
 
 Now build, in the loop the plan sets up. Scaffold the project first, then work one increment at a time. The anti-pattern to avoid is one-shotting — asking the tool to produce a whole feature in a single prompt and hoping it holds together.
 
-**The stack is already decided, so you don't have to be.** The app is a **Vite** project using the **vanilla** template — plain JavaScript, no framework — with **plain CSS** in `.css` files, running locally in your browser. Nothing else gets installed. This is pinned on purpose: it means the build tool never stops to ask you which framework, bundler, or styling library to use, and everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.
+**The stack is already decided, so you don't have to be.** The app is plain **HTML**, **CSS**, and **JavaScript** — no framework, no build step, no packages, nothing to install. You open the file in your browser and it runs. This is pinned on purpose: it means the build tool never stops to ask you which framework, bundler, or styling library to use, and everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.
 
-**Before you can scaffold it, you need Node.js.** Vite runs on Node, and a lot of designers have never had a reason to install it. Check in the VS Code terminal:
-
-```text
-node -v
-```
-
-If that prints a version number (any current LTS release is fine), you're set. If it says something like `command not found`, install it from [nodejs.org](https://nodejs.org) — take the **LTS** installer for your operating system, click through it, then close and reopen the terminal and run `node -v` again. It installs `npm` at the same time, which is what actually fetches Vite.
-
-Do this **before the session** if you can. If you hit it in the room, say so — it takes a few minutes and the facilitator will walk you through it. Nothing else in Session 4 depends on it, so you can build the knowledge base, the direction, the spec, and the plans while it installs.
+It is also enough. The MVP has to show a saved stop, a status, and a recommendation — plain HTML, CSS, and JavaScript do that, and every hour not spent on tooling is an hour spent on the spec-and-verify loop this session is actually about.
 
 **Scaffold it with this prompt.** Paste it as-is:
 
-> Scaffold the app for this MVP at `session-4-knowledge-base-and-mvp/app/` using **Vite** with the **vanilla** template — plain JavaScript, no framework. Styling is **plain CSS** in `.css` files: no Tailwind, no CSS framework, no preprocessor. Do not add any dependency beyond what the Vite vanilla template installs.
+> Scaffold the app for this MVP at `session-4-knowledge-base-and-mvp/app/` as plain HTML, CSS, and JavaScript — an `index.html`, a `styles.css`, and a `script.js`. No framework, no build step, no package manager, no dependencies: I must be able to open `index.html` directly in a browser and have it work.
 >
-> Leave it as the template's starting page for now — do not build any part of the MVP yet. When you're done, tell me the exact commands to install it and to start it locally, and confirm it runs.
+> Leave it as a single near-empty starting page for now — do not build any part of the MVP yet. When you're done, tell me how to open it and confirm it works.
 >
-> If a technical choice isn't covered above, pick the simplest option that keeps the app running locally and tell me what you picked. Do not ask me to choose.
+> If a technical choice isn't covered above, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.
 
 That last line matters. In the pilot, the build tool paused to ask a participant a technical question she could not understand well enough to answer, and the session stalled there. A pinned stack plus a standing instruction to decide-and-report removes most of that.
 
@@ -101,7 +93,7 @@ Once it runs, work the plan. Start from this prompt and adapt it:
 
 > Read `build-plan.md`, `verification-plan.md`, and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Build **only the first increment** from the build plan — nothing beyond it. When it's done, write back into `build-plan.md` exactly what you did for that increment — which files you added or changed and what now works — then stop so I can verify it against the verification plan before we continue.
 >
-> If a technical choice isn't covered by the build plan or the app's `AGENTS.md`, pick the simplest option that keeps the app running locally and tell me what you picked. Do not ask me to choose.
+> If a technical choice isn't covered by the build plan or the app's `AGENTS.md`, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.
 
 #### 5.1 Capture the project setup in `AGENTS.md`
 
@@ -113,11 +105,11 @@ Now — after the first run, not before — create it. Copilot can draft it by i
 
 > Inspect the project you just scaffolded and the first increment you built, then draft an `AGENTS.md` at the root of the app you just created — `session-4-knowledge-base-and-mvp/app/AGENTS.md`. Do not modify the `AGENTS.md` at the repository root; that one describes the course repository.
 >
-> Document what's actually here: the stack (Vite, vanilla JavaScript, plain CSS, no other dependencies), the project structure and where things live, the conventions to follow, and the exact commands to install and run the app locally. State the stack as fixed — later increments must not introduce a framework, a CSS library, or a new dependency. Add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.
+> Document what's actually here: the stack (plain HTML, CSS, and JavaScript, with no build step and no dependencies), the project structure and where things live, the conventions to follow, and exactly how to open and check the app. State the stack as fixed — later increments must not introduce a framework, a build step, a CSS library, or a dependency. Add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.
 >
 > Only describe what's real in the code. Where something is genuinely undecided, list it as an open question for me at the end.
 
-Read the draft and check it against what's actually there: does it say Vite, vanilla JavaScript, and plain CSS, and does it give commands that really start the app? Everything built after this follows this file, so a wrong line here propagates. If it lists open questions at the end, answer them or delete them — don't leave them for a later increment to guess at.
+Read the draft and check it against what's actually there: does it say plain HTML, CSS, and JavaScript with no build step, and does it tell you how to actually open the app? Everything built after this follows this file, so a wrong line here propagates. If it lists open questions at the end, answer them or delete them — don't leave them for a later increment to guess at.
 
 After each increment: verify it against `verification-plan.md`, mark it verified (or note what failed and had to be reworked), then release the next increment the same way. The written-back record in `build-plan.md` is what keeps you and the tool honest about what's actually been built versus what's still just planned.
 
@@ -137,4 +129,4 @@ A generative build tool becomes reliable when it has a structured knowledge base
 
 ## Tools
 
-GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill; Node.js (for Vite) and the app's stack, which is Vite with the vanilla template and plain CSS.
+GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill. The app is plain HTML, CSS, and JavaScript, so there is nothing to install for the build.
