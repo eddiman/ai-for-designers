@@ -150,22 +150,22 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 ## Session 3 — Prototyping with Figma Make, and a persona UX review
 
-**Learning goal:** Use the brief packet to generate prototype directions in Figma Make, then close the loop by running a persona-based UX review through Copilot and Figma. The plumbing is pre-wired; the lesson is the workflow and what it produces.
+**Learning goal:** Use the brief packet to generate prototype directions in Figma Make, then close the loop by running a persona-based UX review through Copilot and Figma. Participants connect the Figma MCP themselves, led step by step by the facilitator; the lesson is the workflow and what it produces.
 
 **Starting point + recap:** continue from your own brief packet from Session 2, or pick up the premade `problem-definition.md`, `personas.md`, and `key-insights.md` if you missed it. The recap explains which problem the reference packet committed to, how the reliability-vs-personalization tension was resolved, and which personas it reviews against.
 
 **The work:**
 - **Figma Make:** attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. The point of attaching files is that the prototypes come back grounded in the actual research rather than generic.
-- **Round-trip to Copilot / Figma (pre-wired):** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings.
+- **Round-trip to Copilot / Figma:** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings.
 - **Triage:** decide which findings are worth acting on.
 
-**Pre-setup (important):** the Copilot↔Figma connection (the Figma MCP plugin and the agent) must be working before the session. As you noted, the learning here is to *show* the capability, not to teach people how to wire it up. Build and test the full round-trip in advance.
+**Pre-setup (important):** the read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`, so it cannot be pre-wired for them. The facilitator builds and tests the full round-trip in advance — Figma Make generation → into Figma → persona UX review — then leads participants through their own setup in lockstep, pausing until everyone's server is reachable. Pilot evidence supports showing the setup: one participant valued being introduced to how it is wired and seeing an example of use.
 
 **Concrete output:** 3 prototype directions in Figma, a written description of the app flow, and a persona-based UX review with prioritized findings.
 
 **Takeaway:** when a generative tool is given your real problem and personas as structured files, the prototypes it returns are grounded in the research instead of generic, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
 
-**Tools:** Figma Make; Figma MCP plugin; GitHub Copilot / agent (all pre-wired). Requires the BSD application to be approved.
+**Tools:** Figma Make; Figma MCP (local server, set up by each participant in lockstep); GitHub Copilot / agent. Requires the BSD application to be approved.
 
 **To verify before committing this session:** does Figma Make currently accept attached files to inform a generation, and is the Copilot↔Figma review flow reproducible end to end? Both need a dry run.
 
@@ -198,7 +198,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 | Microsoft Copilot 365 chat | 1, 2 | Org-provided, no setup |
 | GitHub Copilot / agent | 3, 4 | **Requires a BSD application — start it the day the course is announced** |
 | Figma Make | 3 | Confirm current support for attached files |
-| Figma MCP plugin | 3, 4 | Pre-wired by the facilitator; may need IT/security sign-off |
+| Figma MCP (local server) | 3, 4 | Runs on each participant's own machine; they set it up in facilitator lockstep. Facilitator tests the full round-trip in advance; may need IT/security sign-off |
 | KB scaffolding skill | 4 | Needs to exist before Session 4 — see open decisions |
 
 The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for participants. Sessions 3–4 depend on a working pipeline the facilitator prepares in advance.

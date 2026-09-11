@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-How to use your brief packet to generate prototype directions in Figma Make, then close the loop by running a persona-based UX review through Copilot and Figma. You'll connect the Figma MCP yourself (instructions below); the focus is the workflow and what it produces.
+How to use your brief packet to generate prototype directions in Figma Make, then close the loop by running a persona-based UX review through Copilot and Figma. You'll connect the Figma MCP yourself — the facilitator walks the room through it step by step, and the instructions are below. The focus is the workflow and what it produces.
 
 ## What you start from
 
@@ -78,7 +78,7 @@ When a generative tool is given your real problem and personas as structured fil
 
 ## Tools
 
-Figma Make; Figma MCP (local server); GitHub Copilot / agent. You set up the Figma MCP connection yourself — see below.
+Figma Make; Figma MCP (local server); GitHub Copilot / agent. You set up the Figma MCP connection on your own machine — the server runs locally, so it has to be yours. The facilitator leads this step by step; the instructions are below.
 
 ### Figma MCP instructions
 

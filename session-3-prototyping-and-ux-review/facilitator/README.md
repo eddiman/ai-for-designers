@@ -8,11 +8,17 @@ Walk through the reference brief packet: which problem it committed to, how the 
 
 ## Pre-setup (important)
 
-The learning here is to *show* the capability, not to teach people how to wire it up — so the pipeline must be working before the session.
+The read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`. You cannot pre-wire it for them — they set it up on their own machines, and the participant `README.md` carries the steps. Your job is to have the whole path tested first and to lead them through it.
 
-- The Copilot↔Figma connection (the Figma MCP plugin and the agent) must be live and tested end to end.
-- Build and test the full round-trip in advance: Figma Make generation → into Figma → persona UX review.
+- Build and test the full round-trip in advance on your own machine: Figma Make generation → into Figma → persona UX review.
+- Know the failure modes before the room hits them: the server is only reachable while the Figma desktop app is open, and the tools do not appear in Copilot until the `figma` entry in `mcp.json` is restarted.
 - Requires the BSD application to be approved. Confirm this well ahead.
+
+## Run the MCP setup in lockstep
+
+Work through the setup in the participant `README.md` step by step with the room, on your own screen, and pause until everyone's server is reachable at `http://127.0.0.1:3845/mcp` before starting the review. In the pilot, the facilitator did not run Session 4 alongside participants and judged afterwards that they should have; the same applies here, where a single missed step blocks the whole review.
+
+Pilot evidence supports keeping the setup visible rather than hiding it: one participant had not used Figma MCP before and valued being introduced to how it is wired and seeing an example of use. Another was still slightly unsure of it afterwards, which is what the lockstep pass is for.
 
 ## To verify before committing this session
 
