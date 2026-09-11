@@ -6,12 +6,9 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 ## Core, stretch, and the three checkpoints
 
-The required outcome is **one** increment built and verified. Everything past that is stretch. Say
-this out loud at the start — the pilot's overwhelm came partly from a nine-increment plan reading
-like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
+The required outcome is **one** increment built and verified. Everything past that is stretch. Say this out loud at the start — the pilot's overwhelm came partly from a nine-increment plan reading like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
 
-The participant `README.md` places three checkpoints. Run them; they are the human quality check
-participants asked for.
+The participant `README.md` places three checkpoints. Run them; they are the human quality check participants asked for.
 
 | After | What you are checking |
 |---|---|
@@ -32,8 +29,8 @@ Walk through the reference prototype direction: which one was chosen and why it 
 - The KB scaffolding skill must exist and be ready before Session 4 (see the open decisions in `../../ai-for-designers-v1.3.md`). **It does not exist yet.** `../../kb-prompt.md` is the current stand-in — a prompt participants copy and paste rather than a skill they invoke. The participant `README.md` says "use the KB scaffolding skill", so either the skill gets built or that step needs rewording before the session runs.
 - A working Copilot build environment in VS Code, with the BSD application approved.
 - **The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no build step, no package manager, and nothing to install. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework. The pilot showed why — the build tool stopped to ask a participant a technical question she could not understand well enough to answer. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
-  - Nothing to install means nothing to fail on a participant's machine, and no version drift between people in the room. If a participant's agent proposes a framework, a bundler, or a package install, that is off-spec — point them back at the scaffold prompt.
-  - The app opens straight from `index.html` in a browser, so verifying an increment is looking at the page rather than reading a terminal.
+- Nothing to install means nothing to fail on a participant's machine, and no version drift between people in the room. If a participant's agent proposes a framework, a bundler, or a package install, that is off-spec — point them back at the scaffold prompt.
+- The app opens straight from `index.html` in a browser, so verifying an increment is looking at the page rather than reading a terminal.
 
 ## How the build runs
 

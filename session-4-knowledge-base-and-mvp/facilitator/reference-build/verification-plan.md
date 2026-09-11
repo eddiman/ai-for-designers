@@ -23,8 +23,7 @@
 
 ### Increment 2 — verified 2026-09-11
 
-Opened `app/index.html` and reached all three conditions through the visible selector. Checked each
-against the confirmed build decisions in [spec.md](spec.md):
+Opened `app/index.html` and reached all three conditions through the visible selector. Checked each against the confirmed build decisions in [spec.md](spec.md):
 
 | Condition | Status shown | Supporting detail | Matches spec |
 |---|---|---|---|
@@ -33,16 +32,11 @@ against the confirmed build decisions in [spec.md](spec.md):
 | Untrackable | Untrackable | Bus 37 without data for 9 minutes; Bus 15 at Kongens gate as the confirmed alternative | Yes |
 
 - The stop and route read "Stortorget / Bus 37" and match the spec and the KB.
-- No live-data claim anywhere. The page says it does not show live transit information, and each
-  condition repeats that its data is static.
-- Selecting a condition updates the name, status, and detail with no browser errors, and selecting
-  a previous condition returns it unchanged.
-- `aria-pressed` follows the selected button and the preview is an `aria-live` region, so the change
-  is announced rather than only shown.
+- No live-data claim anywhere. The page says it does not show live transit information, and each condition repeats that its data is static.
+- Selecting a condition updates the name, status, and detail with no browser errors, and selecting a previous condition returns it unchanged.
+- `aria-pressed` follows the selected button and the preview is an `aria-live` region, so the change is announced rather than only shown.
 
 Two observations, neither a failure against this increment:
 
-- In the uncertain condition the status line repeats the heading word for word ("Information
-  uncertain" twice). Worth varying when increment 6 gives that state its real content.
-- The supporting detail is not yet labelled **What we know**. That is increment 6's requirement,
-  and this increment only has to show the fixed detail.
+- In the uncertain condition the status line repeats the heading word for word ("Information uncertain" twice). Worth varying when increment 6 gives that state its real content.
+- The supporting detail is not yet labelled **What we know**. That is increment 6's requirement, and this increment only has to show the fixed detail.
