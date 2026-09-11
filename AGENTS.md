@@ -23,6 +23,7 @@ This repository is the working space for planning **AI for Designers**, a course
 - `session-2-problem-definition-and-personas/` — Session 2; `facilitator/`, `premade/`
 - `session-3-prototyping-and-ux-review/` — Session 3; `facilitator/`, `premade/`
 - `session-4-knowledge-base-and-mvp/` — Session 4; `facilitator/`, `premade/`
+- `presentation/` — the on-screen deck: a landing page and one deck per session, plain HTML/CSS/JS, opened straight from `index.html`. The session `README.md` files remain the detailed instructions; this is what the room looks at.
 
 Each session folder separates front-facing from facilitator material:
 - root `README.md` — the participant-facing course material for that session (what you'll learn, what you do, what you produce).

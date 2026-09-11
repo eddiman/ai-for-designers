@@ -1,0 +1,77 @@
+# Presentation
+
+The on-screen deck for the course. One landing page plus a deck per session, meant to be projected while you facilitate. The session `README.md` files stay the detailed instruction set — for you to follow, for someone taking the course alone, or for handing to an agent. This is the version the room looks at.
+
+## Run it
+
+Open `index.html` in a browser. There is no install step, no build step, and no package manager — plain HTML, CSS, and JavaScript, the same rule the Session 4 MVP follows.
+
+Double-clicking the file works. If you would rather serve it, anything static will do:
+
+```text
+python3 -m http.server 8000
+```
+
+The one thing that needs the network is the IBM Plex Sans webfont from Google Fonts. Without a connection it falls back to the system sans, and every layout still holds. If you are presenting somewhere with no wifi, load the page once beforehand so the font is cached.
+
+## Presenting
+
+| Key | Does |
+|---|---|
+| `→` `↓` `Space` `PageDown` or **click the slide** | Next slide |
+| `←` `↑` `PageUp` `Backspace` | Previous slide |
+| `Home` / `End` | First / last slide |
+| `F` | Toggle fullscreen |
+| `O` | Slide overview — click any slide to jump |
+| `Esc` | Close the overview, or go back to the session list |
+
+In fullscreen the control bar fades out until you move the pointer.
+
+## Links to a single slide
+
+Every slide has its own address, so you can link a colleague straight to one:
+
+```text
+index.html#/session-4          → session 4, first slide
+index.html#/session-4/6        → session 4, slide 6
+index.html#/                   → the session list
+```
+
+Slide numbers are the ones shown in the control bar and the overview, counting from 1. They shift if you add or remove a slide, so treat a deep link as a bookmark rather than a permanent reference.
+
+## Theme
+
+Taken from the OT light theme in Figma — file `sbCntnu1vvMCYwhdAZu5tP`, node `2245-2894`. IBM Plex Sans, 14px base, 1.333 perfect-fourth scale, 1.5 line height. The tokens are CSS custom properties at the top of `styles.css`, named to match the Figma variables, so a change in Figma maps to one line here.
+
+Each session carries one of the semantic colours so a glance tells you which deck is on screen:
+
+| Session | Accent |
+|---|---|
+| 1 — Research synthesis | Green `#00E676` |
+| 2 — Problem definition and personas | Yellow `#FFC400` |
+| 3 — Prototyping and UX review | Purple `#651FFF` |
+| 4 — Knowledge base and MVP | Blue `#304FFE` |
+
+## Editing the content
+
+Slides are data, not markup. Each session is an array in `content/session-N.js`, and `content/sessions.js` holds the landing-page metadata. Add, remove, or reorder by editing the array — no HTML to touch.
+
+A slide is an object with a `kind` and the fields that kind uses. Text fields accept `**bold**`, `*emphasis*`, and `` `code` ``.
+
+| `kind` | Fields | Use it for |
+|---|---|---|
+| `cover` | `eyebrow`, `title`, `lead`, `meta[]` | Session opener and closer. Full-bleed accent colour. |
+| `statement` | `eyebrow`, `text` | One big idea, with nothing competing with it. |
+| `map` | `title`, `lead`, `steps[]`, `active` | The progress map. `active` highlights one step by index. |
+| `list` | `eyebrow`, `title`, `lead`, `items[]`, `ordered`, `check` | Bullets. An item is a string, or `{label, text}`. |
+| `step` | `n`, `title`, `lead`, `doItems[]`, `doneItems[]`, `why` | A numbered step, laid out as Do this now / You are done when / Why this matters. |
+| `prompt` | `eyebrow`, `title`, `text` | A prompt to show or read out. Monospace, preserves line breaks. |
+| `table` | `eyebrow`, `title`, `lead`, `cols[]`, `rows[][]` | Comparisons and file lists. |
+
+Any slide also takes an optional `callout: {tone, title, text}` — `tone` is `go` (green), `stop` (red), or omitted (yellow) — and an optional `note`, which renders small at the foot of the slide as a facilitator cue.
+
+## Layout notes
+
+A slide is a fixed 16:9 box that scales to fit the window, with type sized in container-query units. What you see on your laptop is what lands on the projector, at any resolution. Below 720px wide the box gives up the aspect ratio and stacks instead, so the decks stay readable on a phone.
+
+Content that overflows a slide is clipped rather than scrolled — that is deliberate, so an overlong slide is visibly wrong while you are editing rather than quietly cut off while you present. If a slide overflows, split it.

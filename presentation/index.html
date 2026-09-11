@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI for Designers — facilitator presentation for all four sessions." />
+    <title>AI for Designers — presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Landing -->
+    <main id="landing" class="landing" hidden>
+      <header class="landing__head">
+        <p class="overline">Course presentation</p>
+        <h1 class="landing__title">AI for Designers</h1>
+        <p class="landing__lead">
+          One project, from raw research to a built MVP. Four sessions, each with its own deck.
+          Open a session to present it; the session <code>README.md</code> stays the detailed
+          instruction set for following along or handing to an agent.
+        </p>
+      </header>
+
+      <nav id="session-list" class="sessions" aria-label="Sessions"></nav>
+
+      <section class="landing__help">
+        <h2 class="h6">Presenting</h2>
+        <dl class="keys">
+          <div><dt><kbd>→</kbd> <kbd>Space</kbd> <kbd>click</kbd></dt><dd>Next slide</dd></div>
+          <div><dt><kbd>←</kbd></dt><dd>Previous slide</dd></div>
+          <div><dt><kbd>F</kbd></dt><dd>Fullscreen</dd></div>
+          <div><dt><kbd>O</kbd></dt><dd>Slide overview</dd></div>
+          <div><dt><kbd>Esc</kbd></dt><dd>Back to this page</dd></div>
+        </dl>
+        <p class="small">
+          Every slide has its own link — <code>#/session-4/6</code> is session 4, slide 6. Copy the
+          address bar to link straight to a slide.
+        </p>
+      </section>
+    </main>
+
+    <!-- Deck -->
+    <div id="deck" class="deck" hidden>
+      <div class="deck__progress"><span id="progress" class="deck__progress-bar"></span></div>
+
+      <div id="stage" class="stage" role="main" aria-live="polite">
+        <article id="slide" class="slide"></article>
+      </div>
+
+      <div class="controls" role="toolbar" aria-label="Presentation controls">
+        <a class="controls__btn" href="#/" title="Back to sessions (Esc)" data-nav>Sessions</a>
+        <button class="controls__btn" id="btn-overview" title="Slide overview (O)">Overview</button>
+        <button class="controls__btn" id="btn-prev" title="Previous slide (←)" aria-label="Previous slide">←</button>
+        <span class="controls__count"><span id="count-now">1</span> / <span id="count-all">1</span></span>
+        <button class="controls__btn" id="btn-next" title="Next slide (→)" aria-label="Next slide">→</button>
+        <button class="controls__btn" id="btn-fullscreen" title="Fullscreen (F)">Fullscreen</button>
+      </div>
+
+      <div id="overview" class="overview" hidden>
+        <div class="overview__head">
+          <h2 class="h6" id="overview-title">Slides</h2>
+          <button class="controls__btn" id="btn-overview-close">Close</button>
+        </div>
+        <ol id="overview-list" class="overview__list"></ol>
+      </div>
+    </div>
+
+    <!-- Content: plain scripts so the deck works from file:// with no build step -->
+    <script src="content/sessions.js"></script>
+    <script src="content/session-1.js"></script>
+    <script src="content/session-2.js"></script>
+    <script src="content/session-3.js"></script>
+    <script src="content/session-4.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
