@@ -45,7 +45,7 @@ The saved-stop screen is built before recommendations so the home-screen UX-revi
 
 ## Build status
 
-The pre-build decision gate and Increment 1 are verified. Increment 2 is built and awaiting user verification. No later increment has been built.
+The pre-build decision gate and Increments 1 and 2 are verified. No later increment has been built. Increments 3–9 are planned only.
 
 ## Implementation record
 
@@ -70,7 +70,7 @@ Opening `app/index.html` displays one static “Project shell ready” screen. I
 
 ### Increment 2 — Add the agreed scenario and state selection
 
-**Status:** Built; awaiting verification.
+**Status:** Verified 2026-09-11. See the verification record in [verification-plan.md](verification-plan.md).
 
 **Files added:**
 
