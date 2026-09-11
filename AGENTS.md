@@ -33,18 +33,26 @@ Session 4 adds one more: `facilitator/reference-build/` holds a full worked run 
 
 ## Current state
 
-- The plan (v1.3) is drafted and current.
-- **Session 1 is fleshed out into runnable detail.** Its front-facing `README.md` carries the three-step per-source flow (generic → directed → analyze differences), the exact prompts for interviews and questionnaire, and the choose-then-triangulate step; `facilitator/` holds the run of show, the triangulation steering notes, and the planted-tension design notes; the produced artifacts (`interview-summaries.md`, `questionnaire-summary.md`, `triangulation.md`) exist as fill-in stubs.
-- Sessions 2–4 `README.md` files are split into front-facing / `facilitator/` / `premade/` and stubbed, but still need the same fleshing-out into runnable detail.
-- No premade artifacts have been produced yet. The `premade/` folders hold front-facing manifests only.
-- Prerequisites are not worked out yet (tool access, dry-runs). See the plan's "Tools and prerequisites" and "Open decisions" sections.
+- **The course has been run.** A full pilot went through all four sessions, and four MS Forms responses came back. The raw log, the spreadsheet, and the worked analysis are in `.local/`, which is gitignored and therefore local to this machine only — `.local/pilot-feedback-recommendations.md` is the source of truth for what to change next, ahead of anything in the plan's open-decisions list, which predates it.
+- **All four sessions are fleshed out into runnable detail**, each with its participant `README.md`, the exact prompts to adapt, `facilitator/` notes, `premade/` on-ramp artifacts, and fill-in stubs at the session root.
+- **The premade artifacts exist for every session** — Session 1's research pack with the planted tension, and each later session's on-ramp carried forward from the one before.
+- **Session 4's build loop has been dry-run end to end.** The output is the worked example in `session-4-knowledge-base-and-mvp/facilitator/reference-build/`: a populated knowledge base, the committed Decide direction, a spec, a nine-increment build plan, a verification plan, and the app through increment 2.
+- The plan (v1.3) is current but has been edited in place since it was drafted — the Session 3 MCP correction, the pinned Session 4 stack, and the settled build mode all landed after v1.3 was written. A version bump is pending.
+- Prerequisites are partly settled. The Figma MCP question is resolved: participants set up the local server themselves in facilitator lockstep. Session 4 needs nothing installed, since the app is plain HTML, CSS, and JavaScript. Still open: BSD approval for Copilot, and whether the KB scaffolding skill gets built. Five open decisions remain at the end of the plan.
 
 ## What's next
 
-1. Flesh out Sessions 2–4 `README.md` into runnable plans, the way Session 1 now is.
-2. Produce the premade artifacts into each session's `premade/` folder, starting with Session 1's research pack (3 interviews + questionnaire) with the deliberate planted tension.
-3. Work the prerequisites: confirm tool access (Copilot 365, GitHub Copilot via BSD, Figma Make, Figma MCP) and dry-run the Session 3 Figma Make to Copilot/Figma round-trip and the Session 4 build loop.
-4. Resolve the open decisions listed at the end of the plan.
+Driven by `.local/pilot-feedback-recommendations.md`. The pilot's verdict was to keep the four sessions and the end-to-end workflow, and to fix the tool orientation, the instructions, and the facilitation.
+
+1. **Add a tooling orientation** — 10–15 minutes, guided: what Markdown is, where each session's files live, the VS Code Explorer and Copilot Chat, course artifacts against application code, and the artifact journey from research to a verified build. Plus a readiness check used to plan support and pairing.
+2. **Give every activity a visible action structure** — "Do this now", "You are done when", "Why this matters", and where relevant "If the tool asks a technical question". Keep the immediate action separate from its explanation.
+3. **Add a shared core with optional stretch work** to each session, so different speeds are handled without splitting the course. Session 4's core is the KB, the decisions and plans, and one verified increment.
+4. **Work the per-session changes:** a Markdown demo and shorter one-shot warnings in Session 1; evidence and persona quality gates plus reflection time in Session 2; stating what the persona review is and is not before running it in Session 3; and the Session 4 reframe — purpose before steps, a visible progress map, defined vocabulary, and quality checkpoints after the KB, the spec, and the first increment.
+5. **Decide the KB scaffolding skill.** `kb-prompt.md` is a copy-paste prompt, and Session 4's `README.md` tells participants to use a skill. Build it or reword the step.
+6. **Bump the plan to v1.4** once the changes above land, and archive v1.3.
+7. **Run a timed dry run** with at least one designer who rarely opens VS Code and one who lives in it. Check that both finish the shared core, see where facilitator help is needed, and ask each to explain the purpose and evidence behind every artifact they produced. Use the result to decide whether Session 4 needs splitting.
+
+Deferred on purpose, per the same analysis: removing Session 4, requiring physical or full attendance, making the course beginner-only, moving all Session 1 work into VS Code, and adding more required artifacts.
 
 ## Writing style
 
