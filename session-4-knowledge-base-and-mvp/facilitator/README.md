@@ -16,6 +16,10 @@ Walk through the reference prototype direction: which one was chosen and why it 
 
 - The KB scaffolding skill must exist and be ready before Session 4 (see the open decisions in `../../ai-for-designers-v1.3.md`). **It does not exist yet.** `../../kb-prompt.md` is the current stand-in — a prompt participants copy and paste rather than a skill they invoke. The participant `README.md` says "use the KB scaffolding skill", so either the skill gets built or that step needs rewording before the session runs.
 - A working Copilot build environment in VS Code, with the BSD application approved.
+- **Node.js on every participant's machine.** The app is a Vite project, and Vite runs on Node — designers often have never installed it. Ask participants to run `node -v` and install the LTS build from nodejs.org ahead of the session if it comes back empty, and put it on the readiness check. Have the installer page open and expect to walk at least one person through it in the room.
+  - The failure mode: without Node, the scaffold prompt dies on `npm` not being found, which reads to a designer as the AI being broken. Name it before it happens.
+  - It only blocks the build step. Anyone installing mid-session can keep working on the KB, the chosen direction, the spec, and the plans while it downloads.
+- **The app's stack is pinned:** Vite with the vanilla template, plain CSS, no other dependencies. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework. The pilot showed why — the build tool stopped to ask a participant a technical question she could not understand well enough to answer. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
 
 ## How the build runs
 

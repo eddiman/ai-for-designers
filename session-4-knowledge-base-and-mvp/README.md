@@ -75,21 +75,49 @@ Ask Copilot to draft the plan from the spec, then tighten it yourself — split 
 
 Now build, in the loop the plan sets up. Scaffold the project first, then work one increment at a time. The anti-pattern to avoid is one-shotting — asking the tool to produce a whole feature in a single prompt and hoping it holds together.
 
-Tell the build tool to work the plan explicitly. Start from this prompt and adapt it:
+**The stack is already decided, so you don't have to be.** The app is a **Vite** project using the **vanilla** template — plain JavaScript, no framework — with **plain CSS** in `.css` files, running locally in your browser. Nothing else gets installed. This is pinned on purpose: it means the build tool never stops to ask you which framework, bundler, or styling library to use, and everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.
 
-> Read `build-plan.md`, `verification-plan.md`, and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Scaffold the project, then build **only the first increment** from the build plan — nothing beyond it. When it's done, write back into `build-plan.md` exactly what you did for that increment — which files you added or changed and what now works — then stop so I can verify it against the verification plan before we continue.
+**Before you can scaffold it, you need Node.js.** Vite runs on Node, and a lot of designers have never had a reason to install it. Check in the VS Code terminal:
+
+```text
+node -v
+```
+
+If that prints a version number (any current LTS release is fine), you're set. If it says something like `command not found`, install it from [nodejs.org](https://nodejs.org) — take the **LTS** installer for your operating system, click through it, then close and reopen the terminal and run `node -v` again. It installs `npm` at the same time, which is what actually fetches Vite.
+
+Do this **before the session** if you can. If you hit it in the room, say so — it takes a few minutes and the facilitator will walk you through it. Nothing else in Session 4 depends on it, so you can build the knowledge base, the direction, the spec, and the plans while it installs.
+
+**Scaffold it with this prompt.** Paste it as-is:
+
+> Scaffold the app for this MVP at `session-4-knowledge-base-and-mvp/app/` using **Vite** with the **vanilla** template — plain JavaScript, no framework. Styling is **plain CSS** in `.css` files: no Tailwind, no CSS framework, no preprocessor. Do not add any dependency beyond what the Vite vanilla template installs.
+>
+> Leave it as the template's starting page for now — do not build any part of the MVP yet. When you're done, tell me the exact commands to install it and to start it locally, and confirm it runs.
+>
+> If a technical choice isn't covered above, pick the simplest option that keeps the app running locally and tell me what you picked. Do not ask me to choose.
+
+That last line matters. In the pilot, the build tool paused to ask a participant a technical question she could not understand well enough to answer, and the session stalled there. A pinned stack plus a standing instruction to decide-and-report removes most of that.
+
+Once it runs, work the plan. Start from this prompt and adapt it:
+
+> Read `build-plan.md`, `verification-plan.md`, and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Build **only the first increment** from the build plan — nothing beyond it. When it's done, write back into `build-plan.md` exactly what you did for that increment — which files you added or changed and what now works — then stop so I can verify it against the verification plan before we continue.
+>
+> If a technical choice isn't covered by the build plan or the app's `AGENTS.md`, pick the simplest option that keeps the app running locally and tell me what you picked. Do not ask me to choose.
 
 #### 5.1 Capture the project setup in `AGENTS.md`
 
-That first run made a decisions — a framework, a language, a folder layout, how the app runs. Right now those choices live only in the code the agent happened to write. **`AGENTS.md` is a plain-markdown instructions file that Copilot (and other agents) read automatically before they act** — think of it as the project's operating manual: the tech stack, the architecture, the conventions to follow, and the commands to run and test the app. Without it, each new session re-guesses these and the code drifts; with it, every later increment stays consistent with the first.
+The stack was handed to you, but the scaffold still settled things nobody wrote down — the folder layout, where styles live, how the app starts, what the files are called. Right now those live only in the code the agent happened to write. **`AGENTS.md` is a plain-markdown instructions file that Copilot (and other agents) read automatically before they act** — think of it as the project's operating manual: the tech stack, the architecture, the conventions to follow, and the commands to run and test the app. Without it, each new session re-guesses these and the code drifts; with it, every later increment stays consistent with the first.
 
 It belongs at the root of the project it describes, which here means **`session-4-knowledge-base-and-mvp/app/AGENTS.md`** — alongside the app's own files. An agent reads the nearest `AGENTS.md` to whatever it is working on, so one sitting next to the app is what governs the app. Leave the `AGENTS.md` at the repository root alone: that one describes this course repository, and overwriting it would replace the course instructions with notes about a bus app.
 
-Now — after the first run, not before — create it. Copilot can draft it by inspecting what it just built, but **the technology and architecture calls are yours to confirm**, not the model's to invent. Start from this prompt and adapt it:
+Now — after the first run, not before — create it. Copilot can draft it by inspecting what it just built, and your job is to check that it recorded the pinned stack correctly rather than something it invented. Start from this prompt and adapt it:
 
-> Inspect the project you just scaffolded and the first increment you built, then draft an `AGENTS.md` at the root of the app you just created — `session-4-knowledge-base-and-mvp/app/AGENTS.md`. Do not modify the `AGENTS.md` at the repository root; that one describes the course repository. Document what's actually here: the tech stack and language, the project structure and where things live, the key architectural choices, the coding conventions to follow, and the exact commands to install, run, and test the app. Also add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes. Only describe what's real in the code — where a choice is ambiguous or missing, list it as an open question for me to decide rather than guessing.
+> Inspect the project you just scaffolded and the first increment you built, then draft an `AGENTS.md` at the root of the app you just created — `session-4-knowledge-base-and-mvp/app/AGENTS.md`. Do not modify the `AGENTS.md` at the repository root; that one describes the course repository.
+>
+> Document what's actually here: the stack (Vite, vanilla JavaScript, plain CSS, no other dependencies), the project structure and where things live, the conventions to follow, and the exact commands to install and run the app locally. State the stack as fixed — later increments must not introduce a framework, a CSS library, or a new dependency. Add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.
+>
+> Only describe what's real in the code. Where something is genuinely undecided, list it as an open question for me at the end.
 
-Read the draft and correct it where the choices should be yours — pin the framework, the architecture, and the conventions you actually want, since everything built after this will follow them. This is where a bit of technical judgment pays off; if you're unsure about a choice, ask Copilot to lay out the trade-offs before you commit.
+Read the draft and check it against what's actually there: does it say Vite, vanilla JavaScript, and plain CSS, and does it give commands that really start the app? Everything built after this follows this file, so a wrong line here propagates. If it lists open questions at the end, answer them or delete them — don't leave them for a later increment to guess at.
 
 After each increment: verify it against `verification-plan.md`, mark it verified (or note what failed and had to be reworked), then release the next increment the same way. The written-back record in `build-plan.md` is what keeps you and the tool honest about what's actually been built versus what's still just planned.
 
@@ -109,4 +137,4 @@ A generative build tool becomes reliable when it has a structured knowledge base
 
 ## Tools
 
-GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
+GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill; Node.js (for Vite) and the app's stack, which is Vite with the vanilla template and plain CSS.
