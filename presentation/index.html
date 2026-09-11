@@ -20,13 +20,13 @@
         <p class="overline">Course presentation</p>
         <h1 class="landing__title">AI for Designers</h1>
         <p class="landing__lead">
-          One project, from raw research to a built MVP. Four sessions, each with its own deck.
-          Open a session to present it; the session <code>README.md</code> stays the detailed
-          instruction set for following along or handing to an agent.
+          One project, from raw research to a built MVP. Open with the introduction, run Session 0
+          for the setup, then a deck per session. The session <code>README.md</code> files stay the
+          detailed instruction set for following along or handing to an agent.
         </p>
       </header>
 
-      <nav id="session-list" class="sessions" aria-label="Sessions"></nav>
+      <nav id="session-list" class="session-groups" aria-label="Sessions"></nav>
 
       <section class="landing__help">
         <h2 class="h6">Presenting</h2>
@@ -72,6 +72,8 @@
 
     <!-- Content: plain scripts so the deck works from file:// with no build step -->
     <script src="content/sessions.js"></script>
+    <script src="content/intro.js"></script>
+    <script src="content/session-0.js"></script>
     <script src="content/session-1.js"></script>
     <script src="content/session-2.js"></script>
     <script src="content/session-3.js"></script>

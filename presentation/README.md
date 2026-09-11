@@ -2,6 +2,20 @@
 
 The on-screen deck for the course. One landing page plus a deck per session, meant to be projected while you facilitate. The session `README.md` files stay the detailed instruction set — for you to follow, for someone taking the course alone, or for handing to an agent. This is the version the room looks at.
 
+## The decks
+
+Six in all, split into two groups on the landing page.
+
+| Deck | Route | Use it for |
+|---|---|---|
+| **Introduction** | `#/intro` | Opening the course. What it is, the running project, how the four sessions hang together, the three moves that carry through all of them, and what the course is not. |
+| **Session 0** | `#/session-0` | Requirements and setup. What each session needs, what to sort before Session 1, the readiness check, the tooling walkthrough, and the artifact journey. |
+| Sessions 1–4 | `#/session-1` … `#/session-4` | The sessions themselves, one deck each. |
+
+Session 0 has no folder of its own in the repository — it exists only as this deck, since it produces no artifacts. The same is true of the introduction.
+
+Run the introduction and Session 0 back to back at the start of Session 1. The introduction closes by pointing at Session 0, and Session 0 closes by pointing at Session 1, so the three run as one sequence without touching the landing page.
+
 ## Run it
 
 Open `index.html` in a browser. There is no install step, no build step, and no package manager — plain HTML, CSS, and JavaScript, the same rule the Session 4 MVP follows.
@@ -45,8 +59,10 @@ Taken from the OT light theme in Figma — file `sbCntnu1vvMCYwhdAZu5tP`, node `
 
 Each session carries one of the semantic colours so a glance tells you which deck is on screen:
 
-| Session | Accent |
+| Deck | Accent |
 |---|---|
+| Introduction | Black `#000000` |
+| Session 0 — Before we start | Red `#FF1744` |
 | 1 — Research synthesis | Green `#00E676` |
 | 2 — Problem definition and personas | Yellow `#FFC400` |
 | 3 — Prototyping and UX review | Purple `#651FFF` |
@@ -54,7 +70,7 @@ Each session carries one of the semantic colours so a glance tells you which dec
 
 ## Editing the content
 
-Slides are data, not markup. Each session is an array in `content/session-N.js`, and `content/sessions.js` holds the landing-page metadata. Add, remove, or reorder by editing the array — no HTML to touch.
+Slides are data, not markup. Each deck is an array in its own file under `content/` — `intro.js`, `session-0.js`, `session-1.js` and so on — and `content/sessions.js` holds the landing-page metadata, including which group each deck sits in. Add, remove, or reorder by editing the array; there is no HTML to touch. A new deck needs three things: a file in `content/`, an entry in `sessions.js`, and a `<script>` line in `index.html`.
 
 A slide is an object with a `kind` and the fields that kind uses. Text fields accept `**bold**`, `*emphasis*`, and `` `code` ``.
 

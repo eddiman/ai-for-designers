@@ -217,7 +217,10 @@
     el.next.disabled = state.index === deck.length - 1;
 
     var meta = session(state.sessionId);
-    document.title = (meta ? meta.short + " — " : "") + (s.title || "slide " + (state.index + 1)) + " — AI for Designers";
+    var slideName = s.title || "slide " + (state.index + 1);
+    var parts = [meta ? meta.short : null, slideName];
+    if (slideName !== "AI for Designers") parts.push("AI for Designers");
+    document.title = parts.filter(Boolean).join(" — ");
     renderOverview();
   }
 
@@ -245,15 +248,34 @@
 
   function renderLanding() {
     el.sessionList.innerHTML = "";
+    var groups = [];
     SESSIONS.forEach(function (s) {
-      var a = h("a", "session-card");
-      a.href = "#/" + s.id;
-      a.setAttribute("data-session", s.id);
-      a.appendChild(h("span", "session-card__n", s.short));
-      a.appendChild(h("h2", "session-card__title", fmt(s.title)));
-      a.appendChild(h("p", "session-card__lead", fmt(s.lead)));
-      a.appendChild(h("p", "session-card__meta", slides(s.id).length + " slides · " + s.tool));
-      el.sessionList.appendChild(a);
+      var name = s.group || "Sessions";
+      var g = null;
+      for (var i = 0; i < groups.length; i++) if (groups[i].name === name) g = groups[i];
+      if (!g) {
+        g = { name: name, items: [] };
+        groups.push(g);
+      }
+      g.items.push(s);
+    });
+
+    groups.forEach(function (g) {
+      var section = h("section", "sessions-group");
+      section.appendChild(h("h2", "sessions-group__title", fmt(g.name)));
+      var grid = h("div", "sessions");
+      g.items.forEach(function (s) {
+        var a = h("a", "session-card");
+        a.href = "#/" + s.id;
+        a.setAttribute("data-session", s.id);
+        a.appendChild(h("span", "session-card__n", s.short));
+        a.appendChild(h("h3", "session-card__title", fmt(s.title)));
+        a.appendChild(h("p", "session-card__lead", fmt(s.lead)));
+        a.appendChild(h("p", "session-card__meta", slides(s.id).length + " slides · " + s.tool));
+        grid.appendChild(a);
+      });
+      section.appendChild(grid);
+      el.sessionList.appendChild(section);
     });
   }
 
