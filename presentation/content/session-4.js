@@ -251,7 +251,7 @@ window.DECKS["session-4"] = [
     callout: {
       tone: "stop",
       title: "You do not need an opinion about it",
-      text: "In the pilot the build tool stopped to ask a participant a technical question she could not understand well enough to answer, and the work stalled there. This reply works every time it asks."
+      text: "A build tool that stops to ask a technical question you cannot answer stalls the work entirely. This reply gets you moving again, every time."
     }
   },
 

@@ -32,14 +32,14 @@ This is the payoff. Things to watch for and steer:
 
 Default to AI-assisted-then-verify, given the tight slot. If time allows, the stronger version is to have participants spot the conflict manually first, then run the prompt as a check and compare.
 
-## Landing the takeaways (from the pilot)
+## Landing the takeaways
 
-The first pilot went well, and gave two clear notes: participants wanted sharper instructions on what to actually do, and a clearer statement of what they walk away knowing. The session README now leads with both. Reinforce these two in the debrief — they are the outcomes the room valued most:
+Two things need sharpening in the room: what participants should actually do, and what they walk away knowing. The session README leads with both. Reinforce them in the debrief — they are the outcomes that matter most:
 
 1. **Separate problems belong in separate chats.** Mixing contexts confuses the model and yields confident, wrong answers. Say it plainly and tie it to what they just did.
 2. **The more steps you take to work the raw data yourself, the more control you have and the better the result.** Frame the step-by-step flow not as busywork but as what makes the output *checkable*.
 
-**Use the one-shot shortcut as the teaching moment.** In the pilot, a participant pasted all three interviews into one chat and had the model summarize, prioritize, and lay it all out. The result looked good — and he had no way to know whether it was the best cut or whether the summaries held up. That's the whole lesson in one move: one-shotting buys relevance and polish but costs you the ability to trust or trace the result. If someone does this in the room (someone will), don't wave it off — put their one-shot output next to a worked-in-steps output and ask the room which one they can actually defend, and how they'd check it. Expect it, and leave time to run the comparison live.
+**Use the one-shot shortcut as the teaching moment.** Someone will paste all three interviews into one chat and have the model summarize, prioritize, and lay it all out. The result looks good, and they have no way to know whether it was the best cut or whether the summaries held up. That's the whole lesson in one move: one-shotting buys relevance and polish but costs you the ability to trust or trace the result. If someone does this in the room (someone will), don't wave it off — put their one-shot output next to a worked-in-steps output and ask the room which one they can actually defend, and how they'd check it. Expect it, and leave time to run the comparison live.
 
 ## Pre-setup
 

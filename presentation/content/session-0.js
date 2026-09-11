@@ -82,7 +82,7 @@ window.DECKS["session-0"] = [
       "**Git or GitHub** — any exposure at all?",
       "**Working with AI beyond single prompts** — attaching files, iterating, agents?"
     ],
-    note: "In the pilot, comfort with VS Code rather than AI experience was what predicted how Session 4 felt. Better to know that now than to discover it at the time."
+    note: "Comfort with VS Code matters more here than experience with AI. Better to know that now than to discover it at the time."
   },
 
   {
@@ -91,7 +91,7 @@ window.DECKS["session-0"] = [
     text: "VS Code is a file manager with an AI in it.",
     callout: {
       title: "You are not being asked to code",
-      text: "You are being asked to keep files organized and to talk to an agent that can read and write them. A pilot participant said it scared her considerably less once she saw it that way."
+      text: "You are being asked to keep files organized and to talk to an agent that can read and write them. Nothing more than that."
     }
   },
 

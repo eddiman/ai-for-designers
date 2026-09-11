@@ -16,9 +16,9 @@ The read-only Figma MCP is a localhost server running in each participant's own 
 
 ## Run the MCP setup in lockstep
 
-Work through the setup in the participant `README.md` step by step with the room, on your own screen, and pause until everyone's server is reachable at `http://127.0.0.1:3845/mcp` before starting the review. In the pilot, the facilitator did not run Session 4 alongside participants and judged afterwards that they should have; the same applies here, where a single missed step blocks the whole review.
+Work through the setup in the participant `README.md` step by step with the room, on your own screen, and pause until everyone's server is reachable at `http://127.0.0.1:3845/mcp` before starting the review. A single missed step blocks the whole review, so run it alongside them rather than leaving them to it.
 
-Pilot evidence supports keeping the setup visible rather than hiding it: one participant had not used Figma MCP before and valued being introduced to how it is wired and seeing an example of use. Another was still slightly unsure of it afterwards, which is what the lockstep pass is for.
+Keep the setup visible rather than hiding it. Seeing how the connection is wired, with one example of it in use, is worth more than arriving at a room where it already works — and the lockstep pass is what catches anyone left unsure.
 
 ## To verify before committing this session
 

@@ -6,6 +6,7 @@
    ========================================================================== */
 
 :root {
+
   /* Surface */
   --surface-black: #000000;
   --surface-white: #ffffff;
@@ -60,7 +61,7 @@ body {
   padding: 0;
   height: 100%;
 }
-
+iframe { display:none;}
 body {
   background: var(--surface-background);
   color: var(--on-surface-high);

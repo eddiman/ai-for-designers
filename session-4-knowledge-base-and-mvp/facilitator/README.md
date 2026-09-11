@@ -6,9 +6,9 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 ## Core, stretch, and the three checkpoints
 
-The required outcome is **one** increment built and verified. Everything past that is stretch. Say this out loud at the start — the pilot's overwhelm came partly from a nine-increment plan reading like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
+The required outcome is **one** increment built and verified. Everything past that is stretch. Say this out loud at the start, because a nine-increment plan otherwise reads like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
 
-The participant `README.md` places three checkpoints. Run them; they are the human quality check participants asked for.
+The participant `README.md` places three checkpoints. Run them — they are the human quality check that stops someone carrying a thin artifact forward.
 
 | After | What you are checking |
 |---|---|
@@ -28,7 +28,7 @@ Walk through the reference prototype direction: which one was chosen and why it 
 
 - The KB scaffolding skill must exist and be ready before Session 4 (see the open decisions in `../../ai-for-designers-v1.3.md`). **It does not exist yet.** `../../kb-prompt.md` is the current stand-in — a prompt participants copy and paste rather than a skill they invoke. The participant `README.md` says "use the KB scaffolding skill", so either the skill gets built or that step needs rewording before the session runs.
 - A working Copilot build environment in VS Code, with the BSD application approved.
-- **The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no build step, no package manager, and nothing to install. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework. The pilot showed why — the build tool stopped to ask a participant a technical question she could not understand well enough to answer. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
+- **The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no build step, no package manager, and nothing to install. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework, because a build tool that stops to ask an unanswerable technical question stalls the work. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
 - Nothing to install means nothing to fail on a participant's machine, and no version drift between people in the room. If a participant's agent proposes a framework, a bundler, or a package install, that is off-spec — point them back at the scaffold prompt.
 - The app opens straight from `index.html` in a browser, so verifying an increment is looking at the page rather than reading a terminal.
 
@@ -36,6 +36,6 @@ Walk through the reference prototype direction: which one was chosen and why it 
 
 Each participant builds the MVP themselves, using AI, on their own machine. They work individually rather than in pairs, in the same room, and ask for help whenever they need it.
 
-Pace the room rather than letting people run ahead alone: work the same steps on your own screen and pause after each phase — KB, chosen direction, spec, plan, first increment — so nobody is silently stuck. In the pilot, Session 4 was not run alongside participants, and the facilitator judged afterwards that it should have been.
+Pace the room rather than letting people run ahead alone: work the same steps on your own screen and pause after each phase — KB, chosen direction, spec, plan, first increment — so nobody is silently stuck. Running it alongside them is worth more here than in any earlier session.
 
-Expect help requests to cluster where the pilot struggled: file navigation, technical vocabulary in the instructions, and the agent's own clarifying questions — one participant could not understand those well enough to answer them.
+Expect help requests to cluster in three places: file navigation, technical vocabulary in the instructions, and the agent's own clarifying questions, which can be too technical to answer.

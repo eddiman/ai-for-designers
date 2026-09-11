@@ -161,7 +161,7 @@ window.DECKS["session-3"] = [
     callout: {
       tone: "go",
       title: "What it is good for",
-      text: "In the pilot it surfaced issues a participant had not noticed himself, and made the prototype more accurate to the problem."
+      text: "It surfaces problems you would not have spotted on your own, and pulls the prototype closer to the committed problem."
     }
   },
 

@@ -34,7 +34,7 @@ Session 4 adds one more: `facilitator/reference-build/` holds a full worked run 
 
 ## Current state
 
-- **The course has been run.** A full pilot went through all four sessions, and four MS Forms responses came back. The raw log, the spreadsheet, and the worked analysis are in `.local/`, which is gitignored and therefore local to this machine only — `.local/pilot-feedback-recommendations.md` is the source of truth for what to change next, ahead of anything in the plan's open-decisions list, which predates it.
+- **The course has been run once, end to end.** Review notes from that run are kept outside this repository. The revision work they point to is listed under *What's next* below, which supersedes the plan's open-decisions list where the two disagree.
 - **All four sessions are fleshed out into runnable detail**, each with its participant `README.md`, the exact prompts to adapt, `facilitator/` notes, `premade/` on-ramp artifacts, and fill-in stubs at the session root.
 - **The premade artifacts exist for every session** — Session 1's research pack with the planted tension, and each later session's on-ramp carried forward from the one before.
 - **Session 4's build loop has been dry-run end to end.** The output is the worked example in `session-4-knowledge-base-and-mvp/facilitator/reference-build/`: a populated knowledge base, the committed Decide direction, a spec, a nine-increment build plan, a verification plan, and the app through increment 2.
@@ -43,7 +43,7 @@ Session 4 adds one more: `facilitator/reference-build/` holds a full worked run 
 
 ## What's next
 
-Driven by `.local/pilot-feedback-recommendations.md`. The pilot's verdict was to keep the four sessions and the end-to-end workflow, and to fix the tool orientation, the instructions, and the facilitation.
+The four sessions and the end-to-end workflow stay as they are. The revision work is in the tool orientation, the instructions, and the facilitation.
 
 1. **Add a tooling orientation** — 10–15 minutes, guided: what Markdown is, where each session's files live, the VS Code Explorer and Copilot Chat, course artifacts against application code, and the artifact journey from research to a verified build. Plus a readiness check used to plan support and pairing.
 2. **Give every activity a visible action structure** — "Do this now", "You are done when", "Why this matters", and where relevant "If the tool asks a technical question". Keep the immediate action separate from its explanation.
@@ -53,7 +53,7 @@ Driven by `.local/pilot-feedback-recommendations.md`. The pilot's verdict was to
 6. **Bump the plan to v1.4** once the changes above land, and archive v1.3.
 7. **Run a timed dry run** with at least one designer who rarely opens VS Code and one who lives in it. Check that both finish the shared core, see where facilitator help is needed, and ask each to explain the purpose and evidence behind every artifact they produced. Use the result to decide whether Session 4 needs splitting.
 
-Deferred on purpose, per the same analysis: removing Session 4, requiring physical or full attendance, making the course beginner-only, moving all Session 1 work into VS Code, and adding more required artifacts.
+Deferred on purpose: removing Session 4, requiring physical or full attendance, making the course beginner-only, moving all Session 1 work into VS Code, and adding more required artifacts.
 
 ## Writing style
 

@@ -159,7 +159,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 - **Round-trip to Copilot / Figma:** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings.
 - **Triage:** decide which findings are worth acting on.
 
-**Pre-setup (important):** the read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`, so it cannot be pre-wired for them. The facilitator builds and tests the full round-trip in advance — Figma Make generation → into Figma → persona UX review — then leads participants through their own setup in lockstep, pausing until everyone's server is reachable. Pilot evidence supports showing the setup: one participant valued being introduced to how it is wired and seeing an example of use.
+**Pre-setup (important):** the read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`, so it cannot be pre-wired for them. The facilitator builds and tests the full round-trip in advance — Figma Make generation → into Figma → persona UX review — then leads participants through their own setup in lockstep, pausing until everyone's server is reachable.
 
 **Concrete output:** 3 prototype directions in Figma, a written description of the app flow, and a persona-based UX review with prioritized findings.
 
