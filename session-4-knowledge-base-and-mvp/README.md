@@ -1,24 +1,54 @@
 # Session 4 — A project knowledge base and an MVP build
 
-## What you'll learn
+## Why this session exists
 
-How to stand up a project knowledge base from everything you've produced across the course, choose one prototype direction to commit to, then build a working MVP in Copilot using a disciplined loop — spec → plan → build → verify — without one-shotting whole features.
+You are testing whether your research and design decisions can constrain a working output: handed
+your evidence and your decisions, does a build tool produce something that answers the problem you
+committed to?
+
+Building production-quality software is outside this session's scope. The MVP is one output of the
+knowledge base, and you can keep asking questions against that knowledge base long after today.
+
+## Where you are going
+
+```text
+build the KB → choose a direction → write the spec → plan the build → build one increment → verify
+```
+
+Six moves. You will have finished each one before the next begins, and the facilitator pauses the
+room at each arrow.
+
+## What counts as done
+
+**Core — everyone finishes this:** a knowledge base, a committed direction, a spec, a build plan, a
+verification plan, and **one increment that you built and verified**. One verified increment
+demonstrates the whole loop. That is the learning goal met.
+
+**Stretch — if you get there:** keep going through the increments in your plan, one at a time, with
+the same verify-before-continuing discipline.
+
+You are not behind if you finish the core and stop. Completing the loop once is what this session
+asks for, at whatever size.
+
+## Words you will meet
+
+Every one of these is ordinary once named. Ask if any of them stays fuzzy.
+
+| Word | What it means here |
+|---|---|
+| **repository** (repo) | The folder holding this whole course, tracked so changes are recoverable. Its top level is the "repository root". |
+| **agent** | Copilot when it can read and write files by itself, rather than only answering in chat. |
+| **scaffold** | Create the empty starting files for an app, before any real behaviour exists. |
+| **stack** | Which technologies an app is built from. Yours is decided already: HTML, CSS, and JavaScript. |
+| **increment** | One small piece of the app, small enough to build and check in a single pass. |
+| **verify** | Open the thing and confirm it does what the plan said, before moving on. |
+| **architecture** | How the files are arranged and which one is responsible for what. |
 
 ## What you start from
 
-Everything from Sessions 1–3. The knowledge base is built from the whole trail: your research synthesis, problem definition, personas, insights, prototype directions, flows, and UX review. For any session you didn't finish, use the known-good premade artifacts (see step 1) so you can still build a complete KB.
-
-## What you'll do
-
-Work in order. Each step feeds the next, so check the output before moving on.
-
-### 1. Build the project knowledge base
-
-**What a knowledge base is, here:** a `kb/` folder inside this Session 4 directory — `session-4-knowledge-base-and-mvp/kb/` when named from the repository root. It holds your project's durable knowledge: the committed problem, the personas, the research insights, and the design decisions. It uses versioned files instead of scattered chat history, docs, and memory. It's not a wiki for humans or a database; it's structured context written for an AI agent to read before it acts. The point is that the research and design work from Sessions 1–3 becomes something the build tool can read and use. Raw material (imported artifacts and notes) sits in one place; curated knowledge (the summary, decisions, and learnings) sits in another, so the agent can find relevant context quickly.
-
-Use the KB scaffolding skill to create `session-4-knowledge-base-and-mvp/kb/`, then populate it from everything you've made so far. The KB becomes the durable context the build tool reads, so the research and design work from Sessions 1–3 is finally reusable by code.
-
-Gather your own artifacts from each session. **For any session you didn't finish, use the known-good premade version** so the KB is still complete:
+Everything from Sessions 1–3: your research synthesis, problem definition, personas, insights,
+prototype directions, flows, and UX review. For any session you did not finish, take the premade
+version so your knowledge base is still complete.
 
 | From | Artifacts | Premade fallback |
 |---|---|---|
@@ -26,107 +56,309 @@ Gather your own artifacts from each session. **For any session you didn't finish
 | Session 2 | `problem-definition.md`, `personas.md`, `key-insights.md` | `../session-3-prototyping-and-ux-review/premade/` |
 | Session 3 | `prototype-directions.md`, `app-flow.md`, `ux-review.md` | `premade/` (this folder) |
 
-Once the `session-4-knowledge-base-and-mvp/kb/` scaffold exists, populate it from these artifacts. Start from this prompt and adapt it:
+---
 
-> Attached are the artifacts from a research-and-design project on helping people catch the bus: `interview-summaries.md`, `questionnaire-summary.md`, `triangulation.md`, `problem-definition.md`, `personas.md`, `key-insights.md`, `prototype-directions.md`, `app-flow.md`, and `ux-review.md`.
+## 1. Build the project knowledge base
+
+**Do this now**
+
+1. Use the KB scaffolding skill to create `session-4-knowledge-base-and-mvp/kb/`.
+2. Gather your nine artifacts from the table above, taking premade versions where you need them.
+3. Paste this prompt and attach them:
+
+> Attached are the artifacts from a research-and-design project on helping people catch the bus:
+> `interview-summaries.md`, `questionnaire-summary.md`, `triangulation.md`,
+> `problem-definition.md`, `personas.md`, `key-insights.md`, `prototype-directions.md`,
+> `app-flow.md`, and `ux-review.md`.
 >
-> Populate `session-4-knowledge-base-and-mvp/kb/` from them. Drop the raw artifacts into `session-4-knowledge-base-and-mvp/kb/sessions/`, then distil them into the curated folders: the committed problem into `session-4-knowledge-base-and-mvp/kb/decisions/`; personas and the prototype directions and flows into `session-4-knowledge-base-and-mvp/kb/design/` (with personas also as `session-4-knowledge-base-and-mvp/kb/stories/` if they fit better there); the research insights and the UX-review findings into `session-4-knowledge-base-and-mvp/kb/learnings/`; and a short project summary into `session-4-knowledge-base-and-mvp/kb/overview.md` that names the committed problem and points to the rest. Keep it factual, don't invent anything that isn't in the artifacts, and update `session-4-knowledge-base-and-mvp/kb/overview.md` so it's a real entry point.
-
-Don't accept the first result blindly — check that the committed problem, the personas, and the prototype decisions all made it in and are easy to find. The KB is the thing every later step reads; if it's thin here, everything downstream inherits the gap.
-
-### 2. Choose your prototype direction
-
-Session 3 gave you three directions and a UX review — it didn't make you pick. That's this step. Commit to **one** direction to take into the build.
-
-Decide it your way: go with your own intuition, or ask Copilot to help you reason it through against the KB. To get help deciding, start from this prompt and adapt it:
-
-> Read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` — especially the three prototype directions, the app flows, and the UX review with its triage. Help me choose **one** direction to build as an MVP. Weigh each against the committed problem and how each persona reviewed it, and be explicit about the trade-offs. Recommend one, but give me the reasoning for all three so the call is mine.
-
-The choice is yours, not the model's — it can lay out the trade-offs, but you decide. **Write the decision and the reasoning into `chosen-direction.md`**, including which UX-review findings you're committing to carry into the build and what you're deliberately leaving behind. This is a required output: the spec in step 3 is written against it.
-
-### 3. Write the spec
-
-From the KB and your chosen direction, write the spec for the MVP — what it does, for whom, and where it stops. Keep it grounded: every part of the spec should trace back to something in the KB (an insight, a persona need, a prototype decision), not to a generic app feature.
-
-**Write it into `spec.md`.** Fill in what you're building, what's in scope, what's explicitly out of scope for now, and what KB content each part rests on. Being clear about *out of scope* is what keeps the build from sprawling.
-
-Ask the agent to draft it with you. Start from this prompt and adapt it:
-
-> Read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` — especially the committed problem, the personas, and my chosen direction in `chosen-direction.md` — and help me write the MVP spec into `spec.md`: what it does, for whom, what's in scope, what's explicitly out of scope for now, and which KB content each part rests on. Every part of the spec must trace back to something in the KB, not to a generic bus-app feature.
+> Populate `session-4-knowledge-base-and-mvp/kb/` from them. Put the raw artifacts in `kb/sessions/`,
+> then distil them into the curated folders: the committed problem into `kb/decisions/`; personas and
+> the prototype directions and flows into `kb/design/` (personas can also go in `kb/stories/` if they
+> fit better there); the research insights and UX-review findings into `kb/learnings/`; and a short
+> project summary into `kb/overview.md` that names the committed problem and points to the rest.
 >
-> **Do not write, scaffold, or run any application code — only produce the spec.** This is a planning step; building comes later. If something in the KB is missing or contradictory, flag it and ask rather than filling the gap yourself.
+> Keep it factual and invent nothing that is not in the artifacts.
 
-Steer the draft — where the agent reaches for a generic feature, push it back to the evidence in the KB.
+4. Open `kb/overview.md` and read it.
 
-### 4. Plan the build
+**You are done when**
 
-Break the spec into small increments, and decide up front how you'll verify each one. This is the plan the build tool will follow.
+- `kb/` exists and holds your artifacts, sorted into folders.
+- You can find the committed problem, the personas, and the prototype decisions without searching.
+- `kb/overview.md` reads as a real entry point to the project rather than a list of file names.
 
-- **`build-plan.md`** — the MVP broken into increments, each small enough to build and verify in one pass, ordered so that what has to exist first comes first. No increment should be a whole feature at once.
-- **`verification-plan.md`** — for each increment, how you'll confirm it actually works before moving on.
+**Why this matters**
 
-Ask Copilot to draft the plan from the spec, then tighten it yourself — split anything that's too big to verify in one pass. Start from this prompt and adapt it:
+A knowledge base is your project's durable memory, written as files for an agent to read before it
+acts, instead of living in scattered chat history. Everything after this step reads from it. A thin
+knowledge base here means every later step inherits the gap.
 
-> Read `spec.md` and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Break the MVP into small increments and write `build-plan.md` — the increments, each small enough to build **and verify in one pass**, ordered so what has to exist first comes first (no increment is a whole feature at once). Then, in the same pass, write `verification-plan.md` — going increment by increment through the build plan you just wrote, exactly how I'll confirm each one works before moving on.
+> **Checkpoint.** Before step 2, show your `kb/overview.md` to the facilitator or the person next to
+> you. Can they tell what problem you committed to from that file alone?
+
+---
+
+## 2. Choose your prototype direction
+
+Session 3 gave you three directions and a UX review without making you pick. That is this step.
+
+**Do this now**
+
+1. Decide which one direction you are taking into the build. Use your own judgement, or ask for the
+   trade-offs first with this prompt:
+
+> Read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` — especially the three prototype
+> directions, the app flows, and the UX review with its triage. Help me choose **one** direction to
+> build as an MVP. Weigh each against the committed problem and how each persona reviewed it, and be
+> explicit about the trade-offs. Recommend one, but give me the reasoning for all three so the call
+> is mine.
+
+2. Write your decision into `chosen-direction.md`: the direction, why it won, which UX-review
+   findings you are committing to fix in the build, and what you are leaving behind.
+
+**You are done when**
+
+- `chosen-direction.md` names one direction and gives your reasons.
+- It lists the UX-review findings you will carry into the build.
+- It says what the other two directions had that you are deliberately not building.
+
+**Why this matters**
+
+The spec in step 3 is written against this file. Deciding here, in writing, is what stops the build
+from drifting between directions later. The choice is yours — the model can lay out trade-offs, and
+you make the call.
+
+---
+
+## 3. Write the spec
+
+**Do this now**
+
+1. Draft it with this prompt:
+
+> Read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` — especially the committed
+> problem, the personas, and my chosen direction in `chosen-direction.md` — and help me write the
+> MVP spec into `spec.md`: what it does, for whom, what is in scope, what is explicitly out of scope
+> for now, and which knowledge-base content each part rests on. Every part of the spec must trace
+> back to something in the knowledge base rather than to a generic bus-app feature.
 >
-> **Do not write, scaffold, or run any application code — this is a planning step only.** If an increment can't be verified in a single pass, split it. If something in the spec is missing or contradictory, flag it and ask rather than filling the gap yourself.
+> **Do not write, scaffold, or run any application code — only produce the spec.** If something in
+> the knowledge base is missing or contradictory, flag it and ask me rather than filling the gap
+> yourself.
 
-### 5. Build the MVP, following the plan
+2. Read the draft and push back where it reached for a generic feature. Ask where a line comes from
+   in the knowledge base. If it has no answer, cut the line.
 
-Now build, in the loop the plan sets up. Scaffold the project first, then work one increment at a time. The anti-pattern to avoid is one-shotting — asking the tool to produce a whole feature in a single prompt and hoping it holds together.
+**You are done when**
 
-**The stack is already decided, so you don't have to be.** The app is plain **HTML**, **CSS**, and **JavaScript** — no framework, no build step, no packages, nothing to install. You open the file in your browser and it runs. This is pinned on purpose: it means the build tool never stops to ask you which framework, bundler, or styling library to use, and everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.
+- `spec.md` says what you are building, for whom, what is in scope, and what is out of scope.
+- Every scope item traces to something in your knowledge base.
+- The out-of-scope list is not empty.
 
-It is also enough. The MVP has to show a saved stop, a status, and a recommendation — plain HTML, CSS, and JavaScript do that, and every hour not spent on tooling is an hour spent on the spec-and-verify loop this session is actually about.
+**Why this matters**
 
-**Scaffold it with this prompt.** Paste it as-is:
+The out-of-scope list is what keeps the build from sprawling. A spec that traces to evidence is the
+difference between building your project and building a generic bus app.
 
-> Scaffold the app for this MVP at `session-4-knowledge-base-and-mvp/app/` as plain HTML, CSS, and JavaScript — an `index.html`, a `styles.css`, and a `script.js`. No framework, no build step, no package manager, no dependencies: I must be able to open `index.html` directly in a browser and have it work.
+> **Checkpoint.** Before step 4, have someone read your out-of-scope list. If it is empty or vague,
+> the build will sprawl and you will run out of time.
+
+---
+
+## 4. Plan the build
+
+**Do this now**
+
+1. Draft both plans with this prompt:
+
+> Read `spec.md` and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Break the MVP
+> into small increments and write `build-plan.md` — each increment small enough to build **and
+> verify in one pass**, ordered so that what has to exist first comes first. No increment is a whole
+> feature at once. Then, in the same pass, write `verification-plan.md`, going increment by
+> increment through the build plan you just wrote, with exactly how I will confirm each one works
+> before moving on.
 >
-> Leave it as a single near-empty starting page for now — do not build any part of the MVP yet. When you're done, tell me how to open it and confirm it works.
+> **Do not write, scaffold, or run any application code — this is a planning step only.** If an
+> increment cannot be verified in a single pass, split it. If something in the spec is missing or
+> contradictory, flag it and ask me rather than filling the gap yourself.
+
+2. Read the increments. Split anything you could not check in one sitting.
+3. Read the verification plan. For each row, ask yourself what you would actually click or look at.
+
+**You are done when**
+
+- `build-plan.md` lists increments in an order where nothing depends on something later.
+- Increment 1 is small — a starting point with no feature in it yet.
+- `verification-plan.md` has a row per increment describing something you can actually check.
+
+**Why this matters**
+
+This is the plan the build tool follows. Increments that are too big cannot be verified, and an
+increment you cannot verify is one you have to trust blindly.
+
+---
+
+## 5. Scaffold the app
+
+**The stack is already decided, so you do not have to be.** The app is plain **HTML**, **CSS**, and
+**JavaScript**. No framework, no build step, no packages, nothing to install — you open the file in
+your browser and it runs.
+
+That is pinned on purpose: the build tool will not stop to ask you which framework to use, and
+everyone in the room is running the same thing. It is also enough — a saved stop, a status, and a
+recommendation need nothing more.
+
+**Do this now**
+
+1. Paste this prompt as-is:
+
+> Scaffold the app for this MVP at `session-4-knowledge-base-and-mvp/app/` as plain HTML, CSS, and
+> JavaScript — an `index.html`, a `styles.css`, and a `script.js`. No framework, no build step, no
+> package manager, no dependencies: I must be able to open `index.html` directly in a browser and
+> have it work.
 >
-> If a technical choice isn't covered above, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.
-
-That last line matters. In the pilot, the build tool paused to ask a participant a technical question she could not understand well enough to answer, and the session stalled there. A pinned stack plus a standing instruction to decide-and-report removes most of that.
-
-Once it runs, work the plan. Start from this prompt and adapt it:
-
-> Read `build-plan.md`, `verification-plan.md`, and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Build **only the first increment** from the build plan — nothing beyond it. When it's done, write back into `build-plan.md` exactly what you did for that increment — which files you added or changed and what now works — then stop so I can verify it against the verification plan before we continue.
+> Leave it as a single near-empty starting page for now — do not build any part of the MVP yet. When
+> you are done, tell me how to open it and confirm it works.
 >
-> If a technical choice isn't covered by the build plan or the app's `AGENTS.md`, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.
+> If a technical choice is not covered above, pick the simplest option that keeps the app opening
+> directly in a browser and tell me what you picked. Do not ask me to choose.
 
-#### 5.1 Capture the project setup in `AGENTS.md`
+2. Open `index.html` in your browser and confirm you see the starting page.
 
-The stack was handed to you, but the scaffold still settled things nobody wrote down — the folder layout, where styles live, how the app starts, what the files are called. Right now those live only in the code the agent happened to write. **`AGENTS.md` is a plain-markdown instructions file that Copilot (and other agents) read automatically before they act** — think of it as the project's operating manual: the tech stack, the architecture, the conventions to follow, and the commands to run and test the app. Without it, each new session re-guesses these and the code drifts; with it, every later increment stays consistent with the first.
+**You are done when**
 
-It belongs at the root of the project it describes, which here means **`session-4-knowledge-base-and-mvp/app/AGENTS.md`** — alongside the app's own files. An agent reads the nearest `AGENTS.md` to whatever it is working on, so one sitting next to the app is what governs the app. Leave the `AGENTS.md` at the repository root alone: that one describes this course repository, and overwriting it would replace the course instructions with notes about a bus app.
+- `app/` holds `index.html`, `styles.css`, and `script.js`.
+- Opening `index.html` shows a page.
+- Nothing was installed and no package manager ran.
 
-Now — after the first run, not before — create it. Copilot can draft it by inspecting what it just built, and your job is to check that it recorded the pinned stack correctly rather than something it invented. Start from this prompt and adapt it:
+**If the tool asks you a technical question**
 
-> Inspect the project you just scaffolded and the first increment you built, then draft an `AGENTS.md` at the root of the app you just created — `session-4-knowledge-base-and-mvp/app/AGENTS.md`. Do not modify the `AGENTS.md` at the repository root; that one describes the course repository.
+Reply: *pick the simplest option that keeps the app opening directly in a browser, and tell me what
+you picked.* You do not need an opinion about it. The prompt above already says so, and this reply
+works any time it asks again.
+
+---
+
+## 6. Build one increment, then verify it
+
+This is the core of the session. The anti-pattern to avoid is one-shotting: asking for a whole
+feature in a single prompt and hoping it holds together.
+
+**Do this now**
+
+1. Release exactly one increment:
+
+> Read `build-plan.md`, `verification-plan.md`, and the knowledge base in
+> `session-4-knowledge-base-and-mvp/kb/`. Build **only the first increment** from the build plan —
+> nothing beyond it. When it is done, write back into `build-plan.md` exactly what you did: which
+> files you added or changed, and what now works. Then stop, so I can verify it before we continue.
 >
-> Document what's actually here: the stack (plain HTML, CSS, and JavaScript, with no build step and no dependencies), the project structure and where things live, the conventions to follow, and exactly how to open and check the app. State the stack as fixed — later increments must not introduce a framework, a build step, a CSS library, or a dependency. Add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.
+> If a technical choice is not covered by the build plan or the app's `AGENTS.md`, pick the simplest
+> option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me
+> to choose.
+
+2. Open the app and run the check from your verification plan for that increment. Look at the page
+   rather than reading the agent's summary of it.
+3. Mark the row verified in `verification-plan.md`. If it failed, write down what failed and what you
+   went back and changed.
+
+**You are done when**
+
+- The increment works when you look at it yourself.
+- `build-plan.md` records what the tool actually did.
+- `verification-plan.md` shows that increment as verified, or records why it is not.
+
+**Why this matters**
+
+Verifying each small step, and making the tool write back what it actually did, is what produces a
+working MVP instead of a confident-looking mess. The written record is what keeps both of you honest
+about what has been built against what is still only planned.
+
+**If the tool asks you a technical question**
+
+Same reply as step 5. A *product* question is different — what a screen should say, which option a
+rider sees first — and that one is yours. Answer it from your spec.
+
+> **Checkpoint.** You have met the session's core goal. Show your verified increment and your
+> `verification-plan.md` row to the facilitator before going further.
+
+---
+
+## 7. Capture the setup in `AGENTS.md`
+
+The scaffold settled things nobody wrote down: the folder layout, where styles live, what the files
+are called.
+
+**`AGENTS.md` is a plain-markdown instructions file that Copilot reads automatically before it
+acts** — the project's operating manual. Without it, each new session re-guesses these things and
+the code drifts.
+
+It belongs beside the app it describes: **`session-4-knowledge-base-and-mvp/app/AGENTS.md`**. An
+agent reads the nearest `AGENTS.md` to whatever it is working on. Leave the one at the repository
+root alone — that describes this course repository, and overwriting it would replace the course
+instructions with notes about a bus app.
+
+**Do this now**
+
+1. Now that the first increment exists, draft it:
+
+> Inspect the project you scaffolded and the first increment you built, then draft an `AGENTS.md` at
+> `session-4-knowledge-base-and-mvp/app/AGENTS.md`. Do not modify the `AGENTS.md` at the repository
+> root; that one describes the course repository.
 >
-> Only describe what's real in the code. Where something is genuinely undecided, list it as an open question for me at the end.
+> Document what is actually here: the stack (plain HTML, CSS, and JavaScript, with no build step and
+> no dependencies), the project structure and where things live, the conventions to follow, and
+> exactly how to open and check the app. State the stack as fixed — later increments must not
+> introduce a framework, a build step, a CSS library, or a dependency. Add a short rule to read the
+> knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a
+> rule to pick the simplest working option and report it rather than asking me technical questions.
+>
+> Only describe what is real in the code. Where something is genuinely undecided, list it as an open
+> question for me at the end.
 
-Read the draft and check it against what's actually there: does it say plain HTML, CSS, and JavaScript with no build step, and does it tell you how to actually open the app? Everything built after this follows this file, so a wrong line here propagates. If it lists open questions at the end, answer them or delete them — don't leave them for a later increment to guess at.
+2. Read it and check it against reality: does it say plain HTML, CSS, and JavaScript with no build
+   step, and does it tell you how to open the app?
+3. Answer or delete any open questions it left at the end.
 
-After each increment: verify it against `verification-plan.md`, mark it verified (or note what failed and had to be reworked), then release the next increment the same way. The written-back record in `build-plan.md` is what keeps you and the tool honest about what's actually been built versus what's still just planned.
+**You are done when**
+
+- `app/AGENTS.md` exists and describes what is actually in `app/`.
+- It states the stack as fixed.
+- No open questions are left dangling for a later increment to guess at.
+
+**Why this matters**
+
+Everything built after this follows this file, so a wrong line here propagates into every later
+increment.
+
+---
+
+## Stretch: keep going
+
+If you have time after step 7, release the next increment the same way — one at a time, verify, mark
+it, then the next. Stop whenever you like. Each verified increment is a finished piece of work.
 
 ## What you'll produce
 
 - a project knowledge base
 - a committed prototype direction with the reasoning written down
 - a spec, a build plan, and a verification plan
-- a running MVP of the bus app, built incrementally and verified as it goes
-- an `AGENTS.md` that captures the project's tech stack, architecture, and conventions
+- at least one increment of a working MVP, built and verified
+- an `AGENTS.md` that captures the project's stack, structure, and conventions
 
-Work the build loop in the stub files in this folder — `chosen-direction.md`, `spec.md`, `build-plan.md`, and `verification-plan.md`. The knowledge base and the app have no stubs: you create `kb/` in step 1 and `app/` in step 5, both in this folder.
+Work in the stub files in this folder — `chosen-direction.md`, `spec.md`, `build-plan.md`, and
+`verification-plan.md`. The knowledge base and the app have no stubs: you create `kb/` in step 1 and
+`app/` in step 5, both in this folder.
 
 ## What you'll take away
 
-A generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step, and making the tool write back what it actually did, is what gets you a working MVP instead of a confident-looking mess. The knowledge base is what lets the build tool actually use the research and design decisions from the earlier sessions.
+A generative build tool becomes reliable when it has a structured knowledge base to read and a loop
+that goes spec → plan → small build → verify → iterate. Verifying each small step, and making the
+tool write back what it actually did, is what gets you a working MVP instead of a confident-looking
+mess. The knowledge base is what lets the build tool use the research and design decisions from the
+earlier sessions.
 
 ## Tools
 
-GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill. The app is plain HTML, CSS, and JavaScript, so there is nothing to install for the build.
+GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill. The app is plain HTML,
+CSS, and JavaScript, so there is nothing to install for the build.

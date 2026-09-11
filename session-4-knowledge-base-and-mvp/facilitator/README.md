@@ -4,9 +4,24 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 > **The worked example lives in [`reference-build/`](reference-build/).** A full run of this session: the knowledge base, the chosen direction, the spec, both plans, and the app. Demonstrate from it and compare participants' output against it. The session root holds empty stubs, which is what participants fill in — keep the two apart, and don't hand out the finished version before they've done the work.
 
+## Core, stretch, and the three checkpoints
+
+The required outcome is **one** increment built and verified. Everything past that is stretch. Say
+this out loud at the start — the pilot's overwhelm came partly from a nine-increment plan reading
+like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
+
+The participant `README.md` places three checkpoints. Run them; they are the human quality check
+participants asked for.
+
+| After | What you are checking |
+|---|---|
+| Step 1, the KB | Can you tell what problem they committed to from `kb/overview.md` alone? |
+| Step 3, the spec | Is the out-of-scope list real? An empty one means the build will sprawl. |
+| Step 6, the first verified increment | Did they look at the app themselves, rather than trusting the agent's summary? |
+
 ## Where the app's `AGENTS.md` goes
 
-`session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's own files. An agent reads the nearest `AGENTS.md` to what it is working on, and the one at the repository root describes this course repository — a participant who writes the app's notes there replaces the course instructions. Step 5.1 of the participant `README.md` now says this explicitly, and [`reference-build/app/AGENTS.md`](reference-build/app/AGENTS.md) is the worked example.
+`session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's own files. An agent reads the nearest `AGENTS.md` to what it is working on, and the one at the repository root describes this course repository — a participant who writes the app's notes there replaces the course instructions. Step 7 of the participant `README.md` says this explicitly, and [`reference-build/app/AGENTS.md`](reference-build/app/AGENTS.md) is the worked example.
 
 ## Recap (open the session with this)
 

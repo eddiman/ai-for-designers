@@ -35,7 +35,7 @@ is already past the bar it sets. Further increments are stretch work.
 ## A caution when demonstrating
 
 This was built in a dry run, and it shows in places: the reference `app/AGENTS.md` does not carry
-the conventions section that step 5.1 asks participants to produce, and `verification-plan.md`
+the conventions section that step 7 asks participants to produce, and `verification-plan.md`
 still has increment 2 marked as not started. Both are honest about what happened, which makes them
 useful to show — a participant who sees a half-verified plan understands the loop better than one
 who sees a tidy fiction.
