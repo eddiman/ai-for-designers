@@ -1,0 +1,4 @@
+# AI for Designers — course presentation.
+# Shared by link, not meant to be found in search results.
+User-agent: *
+Disallow: /

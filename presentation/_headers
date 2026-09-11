@@ -1,0 +1,5 @@
+# Netlify serves these headers for the whole site. X-Robots-Tag is the
+# authoritative "keep this out of search" signal, and unlike robots.txt it
+# covers every file, not just the HTML page.
+/*
+  X-Robots-Tag: noindex, nofollow
