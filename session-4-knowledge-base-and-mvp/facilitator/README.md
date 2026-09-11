@@ -2,11 +2,11 @@
 
 Front-facing material for participants is in the session root `README.md`. This folder holds the facilitator-only guidance.
 
-> **Knowledge base — in place.** The reference knowledge base is committed at `../kb/`, populated from the Session 1–3 artifacts. It is the worked example: participants build their own `kb/` during the session, and this one is what you demonstrate from and compare against. `../kb/AGENTS.md` documents its read order and folder semantics.
+> **The worked example lives in [`reference-build/`](reference-build/).** A full run of this session: the knowledge base, the chosen direction, the spec, both plans, and the app. Demonstrate from it and compare participants' output against it. The session root holds empty stubs, which is what participants fill in — keep the two apart, and don't hand out the finished version before they've done the work.
 
 ## Where the app's `AGENTS.md` goes
 
-`session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's own files. An agent reads the nearest `AGENTS.md` to what it is working on, and the one at the repository root describes this course repository — a participant who writes the app's notes there replaces the course instructions. Step 5.1 of the participant `README.md` now says this explicitly, and `../app/AGENTS.md` is the worked example.
+`session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's own files. An agent reads the nearest `AGENTS.md` to what it is working on, and the one at the repository root describes this course repository — a participant who writes the app's notes there replaces the course instructions. Step 5.1 of the participant `README.md` now says this explicitly, and [`reference-build/app/AGENTS.md`](reference-build/app/AGENTS.md) is the worked example.
 
 ## Recap (open the session with this)
 

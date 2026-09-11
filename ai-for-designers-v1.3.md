@@ -189,7 +189,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **Tools:** GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
 
-**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The reference knowledge base is committed at `session-4-knowledge-base-and-mvp/kb/` as the worked example; participants build their own during the session.
+**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The worked example of the whole session — knowledge base, chosen direction, spec, both plans, and the app — is committed at `session-4-knowledge-base-and-mvp/facilitator/reference-build/`. The session root holds empty stubs; participants produce their own.
 
 **The app's stack is pinned:** plain HTML, CSS, and JavaScript — no framework, no build step, nothing to install. Participants paste a ready-made scaffold prompt instead of being asked to choose, and the build prompts tell the agent to pick the simplest working option and report it rather than putting a technical question to a designer. Keeping the stack free of installs also keeps the session's attention on the spec-and-verify loop instead of on tooling.
 

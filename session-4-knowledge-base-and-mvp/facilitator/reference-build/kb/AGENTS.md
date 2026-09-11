@@ -8,14 +8,14 @@ This directory stores durable knowledge for the bus-app project used throughout 
 
 Before making substantial changes, read:
 
-1. `session-4-knowledge-base-and-mvp/kb/AGENTS.md`
-2. `session-4-knowledge-base-and-mvp/kb/README.md`
-3. `session-4-knowledge-base-and-mvp/kb/overview.md`
-4. Relevant files in `session-4-knowledge-base-and-mvp/kb/decisions/`, `session-4-knowledge-base-and-mvp/kb/design/`, `session-4-knowledge-base-and-mvp/kb/stories/`, and `session-4-knowledge-base-and-mvp/kb/learnings/`
+1. `AGENTS.md`
+2. `README.md`
+3. `overview.md`
+4. Relevant files in `decisions/`, `design/`, `stories/`, and `learnings/`
 
 ## Knowledge model
 
-Raw imports belong in `session-4-knowledge-base-and-mvp/kb/sessions/`. Curated knowledge belongs in `session-4-knowledge-base-and-mvp/kb/overview.md`, `session-4-knowledge-base-and-mvp/kb/decisions/`, `session-4-knowledge-base-and-mvp/kb/design/`, `session-4-knowledge-base-and-mvp/kb/stories/`, and `session-4-knowledge-base-and-mvp/kb/learnings/`.
+Raw imports belong in `sessions/`. Curated knowledge belongs in `overview.md`, `decisions/`, `design/`, `stories/`, and `learnings/`.
 
 Raw files preserve their source material. Curated files are concise, evidence-linked records that should be updated deliberately.
 

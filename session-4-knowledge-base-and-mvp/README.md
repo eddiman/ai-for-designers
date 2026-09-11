@@ -121,7 +121,7 @@ After each increment: verify it against `verification-plan.md`, mark it verified
 - a running MVP of the bus app, built incrementally and verified as it goes
 - an `AGENTS.md` that captures the project's tech stack, architecture, and conventions
 
-Work the build loop in the stub files in this folder — `chosen-direction.md`, `spec.md`, `build-plan.md`, and `verification-plan.md`. The knowledge base is in this folder's `kb/` directory, so there is no separate stub for it.
+Work the build loop in the stub files in this folder — `chosen-direction.md`, `spec.md`, `build-plan.md`, and `verification-plan.md`. The knowledge base and the app have no stubs: you create `kb/` in step 1 and `app/` in step 5, both in this folder.
 
 ## What you'll take away
 

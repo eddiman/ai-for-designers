@@ -27,7 +27,9 @@ This repository is the working space for planning **AI for Designers**, a course
 Each session folder separates front-facing from facilitator material:
 - root `README.md` — the participant-facing course material for that session (what you'll learn, what you do, what you produce).
 - `facilitator/` — facilitator-only notes: run of show, recap scripts, pre-setup, dry-run checks, and design notes (including the planted-tension secrets) that participants must not see verbatim.
-- `premade/` — the on-ramp artifacts handed to drop-ins, with a front-facing manifest; not yet produced.
+- `premade/` — the on-ramp artifacts handed to drop-ins, with a front-facing manifest.
+
+Session 4 adds one more: `facilitator/reference-build/` holds a full worked run of the session — the knowledge base, chosen direction, spec, both plans, and the app. The session root keeps empty stubs for participants to fill in, so the finished version and the blank version never share a path.
 
 ## Current state
 
