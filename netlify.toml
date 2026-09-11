@@ -1,0 +1,7 @@
+# Only the presentation is published. Everything else in this repository is
+# course material and facilitator notes, which stay local.
+#
+# Deploy with:  netlify deploy --prod
+[build]
+  publish = "presentation"
+  command = ""

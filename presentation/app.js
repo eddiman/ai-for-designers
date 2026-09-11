@@ -217,7 +217,7 @@
     el.next.disabled = state.index === deck.length - 1;
 
     var meta = session(state.sessionId);
-    var slideName = s.title || "slide " + (state.index + 1);
+    var slideName = shortLabel(s) || "slide " + (state.index + 1);
     var parts = [meta ? meta.short : null, slideName];
     if (slideName !== "AI for Designers") parts.push("AI for Designers");
     document.title = parts.filter(Boolean).join(" — ");
