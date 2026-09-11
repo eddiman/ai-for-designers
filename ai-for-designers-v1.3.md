@@ -181,13 +181,15 @@ Run this for each of the three interviews and for the questionnaire. The questio
 - **Knowledge base:** use a scaffolding skill to create the KB structure, then populate it from the existing insights, personas, problem definition, prototype decisions, and project settings. The KB becomes the durable context the build tool reads, so the research and design work from Sessions 1–3 is finally reusable by code.
 - **MVP build in Copilot:** from the KB, write a spec, make a build plan, and define how you will verify each piece works. Build in small increments, verify each one, and iterate. The explicit anti-pattern is one-shotting — asking the tool to produce a whole feature in a single prompt and hoping it holds together.
 
+**How it runs:** each participant builds the MVP themselves with AI, working individually on their own machine in a shared room, asking for help whenever they need it. Pairing and a watch-only guided build were both considered and set aside. The facilitator works the same steps on screen and pauses after each phase, so nobody is silently stuck.
+
 **Concrete output:** a project knowledge base, and a running MVP of the bus app built incrementally with a verification plan attached.
 
 **Takeaway:** a generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step is what separates a working MVP from a confident-looking mess. The knowledge base is the thing that lets a build tool actually use the research and design decisions from the earlier sessions.
 
 **Tools:** GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
 
-**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The KB itself is set up from a separate scaffolding prompt supplied later — leave it as a placeholder until that arrives.
+**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The reference knowledge base is committed at `session-4-knowledge-base-and-mvp/kb/` as the worked example; participants build their own during the session.
 
 ---
 
@@ -206,7 +208,6 @@ The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for
 ## Open decisions
 
 - **Session 1 output format.** Markdown files assumed, since Figma Make and Copilot consume them later. Confirm markdown vs. PDF vs. something else.
-- **Session 4 build — hands-on or guided?** Designers building an MVP themselves is ambitious. Decide whether they build hands-on, pair up, or watch a guided build while focusing on the spec/verify discipline.
 - **The KB scaffolding skill.** Session 4 assumes a reusable skill that sets up the knowledge base and ingests prior artifacts. Does this exist, or does building it become part of the prep (or its own Skill Lab)?
 - **Session length.** Sessions 3–4 likely run past 75 minutes. Decide whether to extend them or split.
 - **Double Diamond framing.** v1.1 made the Discover→Deliver arc explicit. v1.2 onward leans on a workflow/pipeline instead. Decide whether to keep an explicit process map or drop it.

@@ -13,6 +13,10 @@ Walk through the reference prototype direction: which one was chosen and why it 
 - The KB scaffolding skill must exist and be ready before Session 4 (see the open decisions in `../../ai-for-designers-v1.3.md`). **It does not exist yet.** `../../kb-prompt.md` is the current stand-in — a prompt participants copy and paste rather than a skill they invoke. The participant `README.md` says "use the KB scaffolding skill", so either the skill gets built or that step needs rewording before the session runs.
 - A working Copilot build environment in VS Code, with the BSD application approved.
 
-## Open question for this session
+## How the build runs
 
-Designers building an MVP themselves is ambitious. Decide whether they build hands-on, pair up, or watch a guided build while focusing on the spec/verify discipline.
+Each participant builds the MVP themselves, using AI, on their own machine. They work individually rather than in pairs, in the same room, and ask for help whenever they need it.
+
+Pace the room rather than letting people run ahead alone: work the same steps on your own screen and pause after each phase — KB, chosen direction, spec, plan, first increment — so nobody is silently stuck. In the pilot, Session 4 was not run alongside participants, and the facilitator judged afterwards that it should have been.
+
+Expect help requests to cluster where the pilot struggled: file navigation, technical vocabulary in the instructions, and the agent's own clarifying questions — one participant could not understand those well enough to answer them.
