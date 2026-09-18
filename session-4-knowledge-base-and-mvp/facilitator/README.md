@@ -13,7 +13,7 @@ The participant `README.md` places three checkpoints. Run them, since they are t
 | After | What you are checking |
 |---|---|
 | Step 1, the KB | Can you tell what problem they committed to from `kb/overview.md` alone? |
-| Step 3, the spec | Is the out-of-scope list real? An empty one means the build will sprawl. |
+| Step 3, the spec | Does the out-of-scope list name specific things? An empty one means the build will sprawl. |
 | Step 6, the first verified increment | Did they look at the app themselves, rather than trusting the agent's summary? |
 
 ## Where the app's `AGENTS.md` goes

@@ -14,13 +14,13 @@ Work in order. Each step feeds the next, so check the output before moving on.
 
 ### 1. Generate 3 directions in Figma Make
 
-Attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. Attaching the files is what brings the prototypes back grounded in your actual research. **Bonus:** go to https://designmd.app/ and pick a `design.md` you like and attach it too, or describe in the prompt how you want the design to look.
+Attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. Attaching the files is what brings the prototypes back grounded in your own research. **Bonus:** go to https://designmd.app/ and pick a `design.md` you like and attach it too, or describe in the prompt how you want the design to look.
 
 Attach `problem-definition.md`, `key-insights.md`, and `personas.md`, then start from this prompt and adapt it:
 
 > I've attached my problem definition, key insights, and personas from a research project on helping people catch the bus. Using these as the brief, design **3 distinct prototype directions** for a mobile bus app that each solve the committed problem in a different way.
 >
-> For each direction: give it a short name, generate the key screens as a clickable flow, and stay grounded in the attached research, meaning the insights and personas rather than generic bus-app conventions. Make the three genuinely different from each other (for example, lean into the reliability-first take in one and the personalization take in another) so I have real alternatives to compare instead of three versions of the same idea.
+> For each direction: give it a short name, generate the key screens as a clickable flow, and stay grounded in the attached research, meaning the insights and personas rather than generic bus-app conventions. Make the three genuinely different from each other (for example, lean into the reliability-first take in one and the personalization take in another) so I have alternatives worth comparing instead of three versions of the same idea.
 
 React to what comes back rather than accepting the first result as final. Ask it to push one direction further, pull two apart if they've converged, or fix a screen that doesn't match a persona's needs. The prototypes get better the more you steer.
 
@@ -74,7 +74,7 @@ Capture these in the stub files in this folder: `prototype-directions.md`, `app-
 
 ## What you'll take away
 
-When a generative tool is given your real problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both halves, the generation and the review, depend on the Session 1–2 files being clean and portable.
+When a generative tool is given your own problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both halves, the generation and the review, depend on the Session 1–2 files being clean and portable.
 
 ## Tools
 

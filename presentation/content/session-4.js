@@ -26,7 +26,7 @@ window.DECKS["session-4"] = [
 
   {
     kind: "list",
-    eyebrow: "Say this out loud",
+    eyebrow: "Scope",
     title: "What this session is not",
     items: [
       "Building production-quality software is **outside the scope**.",
@@ -67,7 +67,7 @@ window.DECKS["session-4"] = [
     rows: [
       ["repository", "The folder holding this whole course, tracked so changes are recoverable. Its top level is the “repository root”."],
       ["agent", "Copilot when it can read and write files by itself, rather than only answering in chat."],
-      ["scaffold", "Create the empty starting files for an app, before any real behaviour exists."],
+      ["scaffold", "Create the empty starting files for an app, before any of its behaviour exists."],
       ["stack", "Which technologies an app is built from. Yours is decided: HTML, CSS, and JavaScript."],
       ["increment", "One small piece of the app, small enough to build and check in a single pass."],
       ["verify", "Open the thing and confirm it does what the plan said, before moving on."]
@@ -108,7 +108,7 @@ window.DECKS["session-4"] = [
     doneItems: [
       "`kb/` exists, artifacts sorted into folders",
       "You can find the problem, personas and prototype decisions without searching",
-      "`overview.md` reads as a real entry point"
+      "`overview.md` works as an entry point"
     ],
     why: "A knowledge base is your project's durable memory, written as files for an agent to read before it acts. Everything after this step reads from it."
   },
@@ -353,6 +353,6 @@ window.DECKS["session-4"] = [
     eyebrow: "End of the course",
     title: "You took one project the whole way",
     lead: "Raw research → insights → a committed problem and personas → prototypes → a persona review → a knowledge base → a spec → a verified build. Every step traceable to the one before it.",
-    meta: ["The knowledge base is yours to keep using", "Expect it to feel natural after a few real projects"]
+    meta: ["The knowledge base is yours to keep using", "Expect it to feel natural after a few projects of your own"]
   }
 ];

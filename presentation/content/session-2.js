@@ -108,7 +108,7 @@ window.DECKS["session-2"] = [
 
   {
     kind: "list",
-    eyebrow: "Step 2, the part people skip",
+    eyebrow: "Step 2, your reply to the critique",
     title: "Write your own response to the red-team",
     lead: "*Red-teaming* borrows a term from security: a red team attacks a plan to expose its weaknesses. Here the AI is your red team.",
     items: [

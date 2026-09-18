@@ -30,7 +30,7 @@ Every one of these is ordinary once named. Ask if any of them stays fuzzy.
 |---|---|
 | **repository** (repo) | The folder holding this whole course, tracked so changes are recoverable. Its top level is the "repository root". |
 | **agent** | Copilot when it can read and write files by itself, rather than only answering in chat. |
-| **scaffold** | Create the empty starting files for an app, before any real behaviour exists. |
+| **scaffold** | Create the empty starting files for an app, before any of its behaviour exists. |
 | **stack** | Which technologies an app is built from. Yours is decided already: HTML, CSS, and JavaScript. |
 | **increment** | One small piece of the app, small enough to build and check in a single pass. |
 | **verify** | Open the thing and confirm it does what the plan said, before moving on. |
@@ -68,7 +68,7 @@ Everything from Sessions 1–3: your research synthesis, problem definition, per
 
 - `kb/` exists and holds your artifacts, sorted into folders.
 - You can find the committed problem, the personas, and the prototype decisions without searching.
-- `kb/overview.md` reads as a real entry point to the project rather than a list of file names.
+- `kb/overview.md` works as an entry point to the project rather than reading as a list of file names.
 
 **Why this matters**
 
@@ -232,7 +232,7 @@ It belongs beside the app it describes, at **`session-4-knowledge-base-and-mvp/a
 >
 > Document what is actually here: the stack (plain HTML, CSS, and JavaScript, with no build step and no dependencies), the project structure and where things live, the conventions to follow, and exactly how to open and check the app. State the stack as fixed, so that later increments must not introduce a framework, a build step, a CSS library, or a dependency. Add a short rule to read the knowledge base in `session-4-knowledge-base-and-mvp/kb/` before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.
 >
-> Only describe what is real in the code. Where something is genuinely undecided, list it as an open question for me at the end.
+> Only describe what exists in the code. Where something is genuinely undecided, list it as an open question for me at the end.
 
 2. Read it and check it against reality: does it say plain HTML, CSS, and JavaScript with no build step, and does it tell you how to open the app?
 3. Answer or delete any open questions it left at the end.

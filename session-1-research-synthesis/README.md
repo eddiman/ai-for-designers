@@ -58,7 +58,7 @@ The questionnaire is the broad signal that the interviews get measured against, 
 - Ask the harder question of each summary: is this actually usable, and what did each style miss or add?
 - **Choose your inputs.** For each source, meaning each of the three interviews and the questionnaire, pick the *one* summary, generic or directed, that you'll carry into triangulation. Let the differences analysis guide the choice. You don't have to pick the same style for every source. You're committing to a framing here, and its bias travels forward, so choose on purpose and note why.
 - **Triangulate.** This is the one place you deliberately combine sources in a single chat, and it works precisely because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript. Put your four chosen summaries into one fresh chat and ask: **"Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."**
-- Then don't take that answer at face value. Check it against what you noticed yourself: did it surface a real conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension, since the model's pass is a draft you interrogate. This is where the planted tension should surface.
+- Then don't take that answer at face value. Check it against what you noticed yourself: did it surface an actual conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension, since the model's pass is a draft you interrogate. This is where the planted tension should surface.
 
 ## What you'll produce
 

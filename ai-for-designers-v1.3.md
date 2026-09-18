@@ -55,12 +55,12 @@ A leading research question produces leading research, which is the exact bias S
 
 > "How do people plan and catch buses today, and where does it go wrong?"
 
-This keeps the solution open. The "timetable against app" question then shows up as one of the *findings* rather than the premise, and the deeper tension can surface honestly:
+This keeps the solution open. The "timetable against app" question then shows up as one of the *findings* rather than the premise, and the deeper tension can surface from the data itself:
 
 - the questionnaire (the broad, shallow signal) shows most people mainly want **reliable, real-time arrival info**;
 - a vocal minority in the interviews (the narrow, deep signal) wants a **full personal app** with saved routes and notifications.
 
-That tension, whether the value sits in reliability or in personalization, is the thread that runs through every session. It becomes the real question for the MVP: what should we actually build first.
+That tension, whether the value sits in reliability or in personalization, is the thread that runs through every session. It becomes the question the MVP has to answer: what should we build first.
 
 ## Premade catch-up materials (the facilitator builds these once)
 
@@ -108,7 +108,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 - For each source, the participant picks the *one* summary (generic or directed) to carry forward, guided by the differences analysis. They need not pick the same style for every source. This commits them to a framing whose bias travels onward.
 - Put the four chosen summaries in one chat and run a conflict-seeking prompt: "Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."
-- The participant interrogates that pass, asking whether it surfaced a real conflict or flattened everything into consensus, and whether it leaned on the most vivid interview, then names the central tension themselves. The model's pass is a draft.
+- The participant interrogates that pass, asking whether it surfaced an actual conflict or flattened everything into consensus, and whether it leaned on the most vivid interview, then names the central tension themselves. The model's pass is a draft.
 
 **Run of show (~70 min):**
 - **0:00–0:10:** Frame the session and the scenario. Show the planted-tension warning.
@@ -163,7 +163,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **Concrete output:** 3 prototype directions in Figma, a written description of the app flow, and a persona-based UX review with prioritized findings.
 
-**Takeaway:** when a generative tool is given your real problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
+**Takeaway:** when a generative tool is given your own problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
 
 **Tools:** Figma Make; Figma MCP (local server, set up by each participant in lockstep); GitHub Copilot / agent. Requires the BSD application to be approved.
 

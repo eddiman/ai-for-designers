@@ -94,7 +94,7 @@ window.DECKS["session-1"] = [
     eyebrow: "Step 3 of each chat",
     title: "The comparison prompt",
     text: "Analyze the summaries and highlight the differences between them.",
-    note: "Read this one out loud in the room. It is the step people skip, and it is the step that shows what the framing did."
+    note: "Read this one out loud. This is the step that shows what the framing did to the summary."
   },
 
   {
@@ -162,7 +162,7 @@ window.DECKS["session-1"] = [
     eyebrow: "Then push back",
     title: "Do not take that answer at face value",
     items: [
-      "Did it surface a real conflict, or flatten everything into agreement?",
+      "Did it surface an actual conflict, or flatten everything into agreement?",
       "Did it lean on the most vivid interview?",
       "**You** name the central tension. Letting the model have the last word defeats the step."
     ]

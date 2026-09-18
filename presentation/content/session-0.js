@@ -25,7 +25,7 @@ window.DECKS["session-0"] = [
   {
     kind: "list",
     eyebrow: "Sort this before Session 1",
-    title: "Four things, all of them quick",
+    title: "What's needed to get started",
     ordered: true,
     items: [
       { label: "A laptop you can install on.", text: "You work on your own machine throughout." },
@@ -35,8 +35,8 @@ window.DECKS["session-0"] = [
     ],
     callout: {
       tone: "stop",
-      title: "The one with a lead time",
-      text: "GitHub Copilot needs a **BSD application approved**. Start it the day the course is announced, because approval does not clear overnight and Sessions 3 and 4 both need it."
+      title: "Important",
+      text: "GitHub Copilot is needed for Sessions 3 and 4. Check if you can get it via your customer organization, if not contact your manager on how to get internal Bouvet access."
     }
   },
 
@@ -87,7 +87,7 @@ window.DECKS["session-0"] = [
 
   {
     kind: "statement",
-    eyebrow: "The reframing that helped most",
+    eyebrow: "How to think about VS Code",
     text: "VS Code is a file manager with an AI in it.",
     callout: {
       title: "You are not being asked to code",
@@ -98,7 +98,7 @@ window.DECKS["session-0"] = [
   {
     kind: "list",
     eyebrow: "Tooling walkthrough",
-    title: "Fifteen minutes, before any real work",
+    title: "Fifteen minutes, before the hands-on work",
     ordered: true,
     items: [
       { label: "What a Markdown file is.", text: "A plain text file with simple formatting. Every artifact you make is one." },

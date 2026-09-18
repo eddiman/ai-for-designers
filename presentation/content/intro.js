@@ -5,14 +5,14 @@ window.DECKS["intro"] = [
     kind: "cover",
     eyebrow: "Welcome",
     title: "AI for Designers",
-    lead: "Using AI across one real project, from raw research through to a built MVP.",
+    lead: "Using AI across one project, from raw research through to a built MVP.",
     meta: ["Four sessions", "UI · UX · Service, same room", "Bring a laptop"]
   },
 
   {
     kind: "statement",
     eyebrow: "The premise",
-    text: "This course runs *one project* end to end, so what you leave with is a workflow you have actually used on material that behaves like real research."
+    text: "This course runs *one project* end to end, so what you leave with is a workflow you have used yourself, on research material that disagrees with itself the way research usually does."
   },
 
   {
@@ -69,7 +69,7 @@ window.DECKS["intro"] = [
   {
     kind: "statement",
     eyebrow: "The through-line",
-    text: "Give the AI real context, work in small steps you can check, and never let it one-shot the thing you care about."
+    text: "Give the AI your worked evidence as context, work in small steps you can check, and never let it one-shot the thing you care about."
   },
 
   {
@@ -92,7 +92,7 @@ window.DECKS["intro"] = [
       "**Not a coding course.** Session 4 builds an app, and the stack is decided for you with nothing to install.",
       "**Not about shipping production software.** The MVP tests whether your research can constrain a working output.",
       "**Not a tool demo.** The tools will change. The workflow is the thing worth keeping.",
-      "**Not a replacement for real users.** The persona review in Session 3 generates hypotheses, and does not replace usability testing."
+      "**Not a substitute for talking to users.** The persona review in Session 3 generates hypotheses, and does not replace usability testing."
     ]
   },
 
@@ -110,7 +110,7 @@ window.DECKS["intro"] = [
 
   {
     kind: "statement",
-    eyebrow: "One honest warning",
+    eyebrow: "The difficulty curve",
     text: "Sessions 3 and 4 are harder than 1 and 2: new tools, new vocabulary, and more moving parts."
   },
 

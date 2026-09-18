@@ -1,6 +1,6 @@
 # AI for Designers: Course Planning
 
-This repository is the working space for planning **AI for Designers**, a course that teaches designers (UI, UX, and Service) to use AI across one real project, from research through to a built MVP.
+This repository is the working space for planning **AI for Designers**, a course that teaches designers (UI, UX, and Service) to use AI across one project, from research through to a built MVP.
 
 ## Source of truth
 
@@ -62,9 +62,11 @@ Plain, direct, explanatory language. State the point, then say how or why it fol
 Specific rules that apply to every file here:
 
 - **No em dashes.** Use a comma, parentheses, a colon, or a separate sentence.
-- **No manufactured contrasts.** Avoid "it's not X, it's Y", "not just X, but Y", "X, not Y", and balanced flourishes such as "A is cheap; B is the skill". State the positive claim directly. Keep a contrast only where two real alternatives have to be told apart, for example that the Figma MCP server needs the desktop app, or that the persona review is not user evidence.
+- **No manufactured contrasts.** Avoid "it's not X, it's Y", "not just X, but Y", "X, not Y", and balanced flourishes such as "A is cheap; B is the skill". State the positive claim directly. Keep a contrast only where two genuine alternatives have to be told apart, for example that the Figma MCP server needs the desktop app, or that the persona review is not user evidence.
 - **No rhetorical questions** that the writer answers in the next sentence. Genuine questions put to participants or left open for a decision are fine.
 - **No slogans or hype.** Explain the mechanism or the effect instead of calling something impactful or transformative, and drop closing summaries that only repeat what was said.
+- **No filler emphasis.** Do not use "real", "really", or "honest" to add weight, as in "one real project", "any real work", or "one honest warning". Name what is meant instead: whose project it is, which work, what the warning is about. "real-time" and "real-world" stay, since they are the established terms for the thing they describe.
+- **No retrospective asides in participant-facing text.** A slide or session README is read by someone seeing the course for the first time, so it cannot lean on how an earlier run went. "The reframing that helped most" and "the part people skip" mean nothing to them. Put that reasoning in `facilitator/` instead.
 - **Markdown paragraphs are single long lines**, never hard-wrapped at a column.
 
 Two deliberate exceptions. Prompt bodies, meaning the text a participant pastes into Copilot or Figma Make, are written for the tool, so their wording and line breaks serve the tool rather than the reader. Interview transcripts and questionnaire results are research data, so the quoted speech and the numbers stay exactly as they are.

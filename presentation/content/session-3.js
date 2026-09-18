@@ -12,7 +12,7 @@ window.DECKS["session-3"] = [
   {
     kind: "statement",
     eyebrow: "What this session is about",
-    text: "Attaching your real research is what makes the prototypes yours rather than generic. Then the same personas that shaped them become the reviewers that test them."
+    text: "Attaching your own research is what makes the prototypes yours rather than generic. Then the same personas that shaped them become the reviewers that test them."
   },
 
   {
@@ -69,7 +69,7 @@ window.DECKS["session-3"] = [
     eyebrow: "Step 1",
     title: "Three directions",
     text:
-      "I've attached my problem definition, key insights, and personas from a\nresearch project on helping people catch the bus. Using these as the brief,\ndesign 3 distinct prototype directions for a mobile bus app that each solve\nthe committed problem in a different way.\n\nFor each direction: give it a short name, generate the key screens as a\nclickable flow, and stay grounded in the attached research, meaning the\ninsights and personas rather than generic bus-app conventions. Make the three\ngenuinely different from each other so I have real alternatives to compare.",
+      "I've attached my problem definition, key insights, and personas from a\nresearch project on helping people catch the bus. Using these as the brief,\ndesign 3 distinct prototype directions for a mobile bus app that each solve\nthe committed problem in a different way.\n\nFor each direction: give it a short name, generate the key screens as a\nclickable flow, and stay grounded in the attached research, meaning the\ninsights and personas rather than generic bus-app conventions. Make the three\ngenuinely different from each other so I have alternatives worth comparing.",
     note: "Bonus: pick a `design.md` from designmd.app and attach it too, or describe the look you want in the prompt."
   },
 
@@ -83,7 +83,7 @@ window.DECKS["session-3"] = [
       "Extract **only the actual app screens**. Drop the rest."
     ],
     doneItems: [
-      "Every frame in the file is a real app screen",
+      "Every frame in the file is one of the app's screens",
       "No wrappers or landing pages left behind"
     ],
     why: "The reviewer in step 4 reads this file. Scaffolding in it becomes noise in the review."
@@ -157,7 +157,7 @@ window.DECKS["session-3"] = [
   {
     kind: "statement",
     eyebrow: "A word before you run the review",
-    text: "This is early design critique and hypothesis generation. Its findings are *not* user evidence and do not replace usability testing with real people.",
+    text: "This is early design critique and hypothesis generation. Its findings are *not* user evidence and do not replace usability testing with users.",
     callout: {
       tone: "go",
       title: "What it is good for",
@@ -179,7 +179,7 @@ window.DECKS["session-3"] = [
   {
     kind: "statement",
     eyebrow: "What you'll take away",
-    text: "Given your real problem and personas as structured files, a generative tool returns prototypes grounded in the research, and you can pressure-test them straight away against the same personas."
+    text: "Given your own problem and personas as structured files, a generative tool returns prototypes grounded in the research, and you can pressure-test them straight away against the same personas."
   },
 
   {
