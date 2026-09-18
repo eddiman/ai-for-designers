@@ -111,18 +111,13 @@ window.DECKS["intro"] = [
   {
     kind: "statement",
     eyebrow: "One honest warning",
-    text: "Sessions 3 and 4 are harder than 1 and 2: new tools, new vocabulary, and more moving parts.",
-    callout: {
-      title: "What we changed because of it",
-      text: "A tooling walkthrough before the practical work, every step showing what to do and how you know you are done, and one required outcome per session with the rest as optional."
-    }
+    text: "Sessions 3 and 4 are harder than 1 and 2: new tools, new vocabulary, and more moving parts."
   },
 
   {
     kind: "cover",
     eyebrow: "Let's start",
     title: "Session 0: what you need",
-    lead: "The tools, the access, and the setup for each of the four sessions.",
-    meta: ["Then straight into Session 1"]
+    lead: "The tools, the access, and the setup for each of the four sessions."
   }
 ];
