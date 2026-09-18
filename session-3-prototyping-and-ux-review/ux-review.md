@@ -8,7 +8,7 @@
 
 <!-- Every persona reviews every direction. Walk the numbered screens in flow order; refer to screens by number. -->
 
-### Direction 1 — [name]
+### Direction 1: [name]
 
 **As [persona 1]**
 -
@@ -19,7 +19,7 @@
 **As [persona 3]**
 -
 
-### Direction 2 — [name]
+### Direction 2: [name]
 
 **As [persona 1]**
 -
@@ -30,7 +30,7 @@
 **As [persona 3]**
 -
 
-### Direction 3 — [name]
+### Direction 3: [name]
 
 **As [persona 1]**
 -

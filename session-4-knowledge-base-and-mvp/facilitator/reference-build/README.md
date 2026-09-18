@@ -1,6 +1,6 @@
-# Session 4 — reference build
+# Session 4: reference build
 
-Facilitator-only. This is the worked example of Session 4, produced by running the session's own steps end to end. Use it to demonstrate from, to answer "what should mine look like?", and to compare a participant's output against. Do not hand it to participants before they have done the work — finished answers replace the thinking the session is trying to produce.
+Facilitator-only. This is the worked example of Session 4, produced by running the session's own steps end to end. Use it to demonstrate from, to answer "what should mine look like?", and to compare a participant's output against. Do not hand it to participants before they have done the work, since finished answers replace the thinking the session is trying to produce.
 
 It mirrors the participant layout exactly, so every path a participant sees in the session `README.md` has an equivalent here:
 
@@ -19,10 +19,10 @@ The **Decide** direction, with the saved-stop status, recommendation-led screens
 
 ## State of the build
 
-Plain HTML, CSS, and JavaScript in `app/`, opened directly in a browser. The pre-build decision gate and increment 1 are verified; increment 2 is built and awaiting verification. Increments 3–9 are planned and not built — see `build-plan.md`.
+Plain HTML, CSS, and JavaScript in `app/`, opened directly in a browser. The pre-build decision gate and increment 1 are verified; increment 2 is built and awaiting verification. Increments 3–9 are planned and not built, as `build-plan.md` records.
 
 The required Session 4 outcome for a participant is **one** verified increment, so this reference is already past the bar it sets. Further increments are stretch work.
 
 ## A caution when demonstrating
 
-This was built in a dry run, and it shows in places: the reference `app/AGENTS.md` does not carry the conventions section that step 7 asks participants to produce, and `verification-plan.md` still has increment 2 marked as not started. Both are honest about what happened, which makes them useful to show — a participant who sees a half-verified plan understands the loop better than one who sees a tidy fiction.
+This was built in a dry run, and it shows in places: the reference `app/AGENTS.md` does not carry the conventions section that step 7 asks participants to produce, and `verification-plan.md` still has increment 2 marked as not started. Both are honest about what happened, which makes them useful to show. A participant who sees a half-verified plan understands the loop better than one who sees a tidy fiction.

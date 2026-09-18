@@ -1,6 +1,6 @@
 ## 1. Trust in real-time information is the primary design problem
 
-**Insight:** Users are not primarily struggling with bus delays—they are struggling with not being able to trust the information they receive.
+**Insight:** Users are not primarily struggling with bus delays; they are struggling with not being able to trust the information they receive.
 
 ### Evidence
 
@@ -82,7 +82,7 @@
 
 ***
 
-## 5. The real problem includes cognitive and emotional burden, not just information access
+## 5. The real problem includes cognitive and emotional burden as well as information access
 
 **Insight:** Users expend mental effort trying to predict, verify, and monitor their journeys because they cannot rely on the system.
 
@@ -97,7 +97,7 @@
 ### Inferred
 
 * The design opportunity is not merely providing arrival data; it is reducing cognitive load and emotional stress.
-* A successful solution should make users feel reassured and confident, not just informed.
+* A successful solution should leave users feeling reassured and confident, beyond being informed.
 
 ***
 

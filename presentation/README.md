@@ -96,7 +96,7 @@ A slide is an object with a `kind` and the fields that kind uses. Text fields ac
 
 Any slide also takes an optional `callout: {tone, title, text}`, where `tone` is `go` (green), `stop` (red), or omitted (yellow), and an optional `note`, which renders small at the foot of the slide as a facilitator cue.
 
-The prose on the slides follows the writing preferences in the global `CLAUDE.md`, including no em dashes and no "not X, but Y" constructions. The `prompt` bodies are the exception: their line breaks and wording are tuned for the tool the participant pastes them into, so edit them for what the tool needs rather than for how they read.
+The prose on the slides follows the writing style set out in the root `AGENTS.md`, including no em dashes and no "not X, but Y" constructions. The `prompt` bodies are the exception: their line breaks and wording are tuned for the tool the participant pastes them into, so edit them for what the tool needs rather than for how they read.
 
 ## Layout notes
 

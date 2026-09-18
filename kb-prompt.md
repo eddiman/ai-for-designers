@@ -110,7 +110,7 @@ Install a markdown-first knowledge base inside this project repository.
 
    Curated knowledge belongs in `kb/overview.md`, `kb/decisions/`, `kb/design/`, `kb/stories/`, and `kb/learnings/`.
 
-   Raw notes are cheap to write. Curated knowledge should be updated deliberately.
+   Raw notes can be written quickly and often. Curated knowledge should be updated deliberately, since later work reads it as settled.
 
    ## Folder Semantics
 
@@ -140,7 +140,7 @@ Install a markdown-first knowledge base inside this project repository.
    ```
 
 4. Write starter content for the other KB files:
-   - `kb/README.md`: explain what the KB is for, raw notes vs curated knowledge, folder semantics, and that `views/` is derived.
+   - `kb/README.md`: explain what the KB is for, how raw notes differ from curated knowledge, the folder semantics, and that `views/` is derived.
    - `kb/overview.md`: include project name if safely inferred, current goal, problem statement, scope, non-goals, current state, entry points, and open questions.
    - folder `README.md` files: briefly describe what belongs in each folder.
    - templates: create lightweight templates with the fields listed below.

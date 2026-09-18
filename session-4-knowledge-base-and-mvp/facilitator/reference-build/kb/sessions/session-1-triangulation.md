@@ -28,7 +28,7 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
   * 17% incorrect real-time info  
     → **\~74% of frustration tied to timing reliability** *(questionnaire-summary.md)*
 
-✅ **Conclusion:** Perfect alignment — both qualitative and quantitative data identify **trust in timing information as the dominant issue**.
+✅ **Conclusion:** Perfect alignment, since both qualitative and quantitative data identify **trust in timing information as the dominant issue**.
 
 ***
 
@@ -39,7 +39,7 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
   * 79% say they just want to reliably know arrival time
   * Open responses: waiting without information is especially painful *(questionnaire-summary.md)*
 
-✅ **Conclusion:** Strong agreement that **uncertainty—not delay itself—is the root frustration**.
+✅ **Conclusion:** Strong agreement that **uncertainty, and not delay itself, is the root frustration**.
 
 ***
 
@@ -102,9 +102,9 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
 ⚠️ **Difference in emphasis:**
 
 * Questionnaire highlights a **near balance between physical and digital usage**
-* Interviews show **strong individual preferences and behaviors**, not just distribution
+* Interviews show **strong individual preferences and behaviors** beyond the distribution
 
-👉 Interpretation: Interviews add nuance about **why** people choose tools, not just **what** they use.
+👉 Interpretation: Interviews add nuance about **why** people choose tools, beyond **what** they use.
 
 ***
 
@@ -122,7 +122,7 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
 
 ***
 
-# 🧩 Gaps — insights only one source reveals
+# 🧩 Gaps: insights only one source reveals
 
 ## Only in interviews (not surfaced clearly in questionnaire)
 
@@ -171,7 +171,7 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
 * Interviews describe **stress, anxiety, frustration intensity** *(interview-summaries.md)*
 * Questionnaire mentions frustration but less depth emotionally *(questionnaire-summary.md)*
 
-➡️ Interviews provide **empathy-level insight**, not just metrics.
+➡️ Interviews provide **empathy-level insight** beyond the metrics.
 
 ***
 
@@ -225,4 +225,4 @@ Here is a structured comparison of the **interview summaries** vs. the **questio
   * Questionnaire provides **scale, prioritization, and population trends**
 
 Together, they form a consistent but richer picture:  
-👉 **Fix trust in real-time information first—then tailor solutions to different user types.**
+👉 **Fix trust in real-time information first, then tailor solutions to different user types.**

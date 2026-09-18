@@ -6,7 +6,7 @@ Below are **5 candidate problem framings**, ranked by how strongly your evidence
 
 ## 1. Rebuild trust in real-time arrival information
 
-**Rank: #1 — strongest evidence support**
+**Rank: #1, strongest evidence support**
 
 ### How Might We
 
@@ -20,7 +20,7 @@ This is the clearest cross-source pattern. Both the interviews and questionnaire
 
 **Observed**
 
-* All three interview participants — **Maja, Geir, and Sofie** — described incorrect or misleading real-time information, including wrong countdowns, ghost buses, and uncertainty about whether the bus is actually coming. *(interview-summaries.md)*
+* All three interview participants, **Maja, Geir, and Sofie**, described incorrect or misleading real-time information, including wrong countdowns, ghost buses, and uncertainty about whether the bus is actually coming. *(interview-summaries.md)*
 * Questionnaire respondents showed the same issue at scale:
   * 31% said they “don’t know if the bus is coming”
   * 26% reported schedule mismatch
@@ -36,7 +36,7 @@ This is the clearest cross-source pattern. Both the interviews and questionnaire
 
 ## 2. Reduce uncertainty at the stop
 
-**Rank: #2 — very strong evidence support**
+**Rank: #2, very strong evidence support**
 
 ### How Might We
 
@@ -50,7 +50,7 @@ The problem is not only that buses are late. The deeper issue is that users are 
 
 **Observed**
 
-* Interviewees said that **“not knowing” is worse than waiting** and described anxiety, stress, and poor decision-making under uncertainty. *(Maja, Geir, Sofie — interview-summaries.md)*
+* Interviewees said that **“not knowing” is worse than waiting** and described anxiety, stress, and poor decision-making under uncertainty. *(Maja, Geir, Sofie, interview-summaries.md)*
 * 79% of questionnaire respondents said they mainly want to reliably know when the bus will arrive. *(questionnaire-summary.md)*
 * Open questionnaire responses described waiting without information as especially frustrating. *(questionnaire-summary.md)*
 
@@ -63,7 +63,7 @@ The problem is not only that buses are late. The deeper issue is that users are 
 
 ## 3. Help users make confident travel decisions when information is imperfect
 
-**Rank: #3 — strong evidence support**
+**Rank: #3, strong evidence support**
 
 ### How Might We
 
@@ -91,7 +91,7 @@ This framing is strongly supported, but it is one step downstream from the core 
 
 ## 4. Support different user types without forcing everyone into an advanced app
 
-**Rank: #4 — moderate evidence support**
+**Rank: #4, moderate evidence support**
 
 ### How Might We
 
@@ -124,7 +124,7 @@ Your evidence shows a real tension: some users want proactive help, while others
 
 ## 5. Reduce the mental effort of planning and monitoring bus trips
 
-**Rank: #5 — weaker but still meaningful evidence support**
+**Rank: #5, weaker but still meaningful evidence support**
 
 ### How Might We
 
@@ -139,7 +139,7 @@ This is a strong qualitative insight, especially from the interviews, but it is 
 **Observed**
 
 * Maja described having to “mentally run the system” and reconstruct her journey herself. *(interview-summaries.md)*
-* Interviewees described stress, anxiety, and frustration caused by uncertainty. *(Maja, Geir, Sofie — interview-summaries.md)*
+* Interviewees described stress, anxiety, and frustration caused by uncertainty. *(Maja, Geir, Sofie, interview-summaries.md)*
 * The questionnaire confirms widespread frustration but does not deeply measure cognitive load. *(questionnaire-summary.md)*
 
 **Inferred**
@@ -183,7 +183,7 @@ That would be a weaker first problem for four reasons.
 
 ***
 
-## 1. It starts with a solution channel, not the core problem
+## 1. It starts with a solution channel rather than the core problem
 
 If the picked problem is app- or assistant-focused, it assumes the answer is a digital feature. But your strongest evidence says the real issue is **trust in timing information**, not lack of features.
 
@@ -256,4 +256,4 @@ This combines the two strongest evidence-backed needs:
 1. **Trustworthy real-time information**
 2. **Reduced uncertainty for decision-making**
 
-It avoids prematurely committing to an app, assistant, notification system, or display redesign. Those can become solution directions later — but the first problem to solve should be **confidence in what is happening now**.
+It avoids prematurely committing to an app, assistant, notification system, or display redesign. Those can become solution directions later, and the first problem to solve should be **confidence in what is happening now**.

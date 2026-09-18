@@ -4,9 +4,9 @@
 
 ---
 
-## Persona 1 — [name]
+## Persona 1: [name]
 
-**Hypothesis** <!-- One line: who this person is and what they need. Labelled as a hypothesis, not a fact. -->
+**Hypothesis** <!-- One line: who this person is and what they need. Labelled as a hypothesis rather than a fact. -->
 
 **Grounded in** <!-- Specific evidence from the research: which interview / questionnaire signal. -->
 -
@@ -16,7 +16,7 @@
 
 ---
 
-## Persona 2 — [name]
+## Persona 2: [name]
 
 **Hypothesis**
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Persona 3 — [name] (optional)
+## Persona 3: [name] (optional)
 
 **Hypothesis**
 

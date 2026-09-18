@@ -1,4 +1,4 @@
-# Session 1 — Research synthesis: how prompt framing changes what you learn
+# Session 1: Research synthesis, and how prompt framing changes what you learn
 
 ## What you'll learn
 
@@ -6,7 +6,7 @@ How the framing of a summarization prompt changes the research you get back, and
 
 ## What you start from
 
-Everyone works from the same research pack in `premade/`: three interview transcripts and a questionnaire dataset, all about how people plan and catch buses today. This is the start of the course, so there's nothing to carry forward yet — you build from this shared pack.
+Everyone works from the same research pack in `premade/`: three interview transcripts and a questionnaire dataset, all about how people plan and catch buses today. This is the start of the course, so there's nothing to carry forward yet. You build from this shared pack.
 
 A tension has been deliberately planted somewhere between the interviews and the questionnaire. You aren't told where. Finding it is part of the work.
 
@@ -22,16 +22,16 @@ What to watch for:
 - The generic prompt keeps your assumptions out of it and gives a low-bias first pass. It can also come back bland and skip the things that matter for your specific problem.
 - The directed prompt gives sharper, more relevant output. It can also quietly fold your interpretation into something that still looks like a neutral summary, so a reader can't tell what the user actually said apart from what you were hoping to hear.
 
-Neither style is the right one. The skill is knowing which mode you're in and choosing it on purpose.
+Both styles are legitimate. The skill is knowing which mode you're in and choosing it on purpose.
 
 ## What you'll do
 
 Two rules hold for the whole session:
 
-1. **One source, one chat.** Summarize each interview, and the questionnaire, in its *own* fresh chat. Don't pour several transcripts into one chat — mixing sources muddles the model's context and you get answers you can't trust.
-2. **Work the data in steps.** Each step where you shape the raw data yourself is a step where you keep control and can check the result. The shortcuts feel faster but hand the judgement to the model (see the warning below).
+1. **One source, one chat.** Summarize each interview, and the questionnaire, in its *own* fresh chat. Pouring several transcripts into one chat muddles the model's context, and you get answers you can't trust.
+2. **Work the data in steps.** Each step where you shape the raw data yourself is a step where you keep control and can check the result. The shortcuts feel faster and hand the judgement to the model (see the warning below).
 
-> **The shortcut to avoid.** It's tempting to paste all three transcripts and the questionnaire into one chat and ask it to summarize, prioritize, and lay everything out in one go. You'll get something that looks polished — but you won't know if it's the right cut, or whether the summaries hold up, because you never worked the data yourself. That's relevance with no way to trust it. The steps below are slower on purpose: they're what let you judge whether the output has any merit.
+> **The shortcut to avoid.** It's tempting to paste all three transcripts and the questionnaire into one chat and ask it to summarize, prioritize, and lay everything out in one go. You'll get something that looks polished, and you won't know whether it's the right cut or whether the summaries hold up, because you never worked the data yourself. That leaves you with relevance and no way to check it. The steps below are slower on purpose: they're what let you judge whether the output has any merit.
 
 ### The interviews
 
@@ -47,26 +47,26 @@ Keeping all three steps in one chat is what lets the model compare the two summa
 
 Run the same three-step flow on the questionnaire dataset, in its own single chat session:
 
-1. **Generic** — "Summarize this questionnaire." Save the summary.
-2. **Directed** — in the same chat: "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved." Save that summary.
+1. **Generic:** "Summarize this questionnaire." Save the summary.
+2. **Directed:** in the same chat, "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved." Save that summary.
 3. Then ask the model: **"Analyze the summaries and highlight the differences between them."** Save what it says.
 
-The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews — don't treat it as a footnote.
+The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews. Treating it as a footnote is how a planted tension stays hidden.
 
 ### Then, across everything
 
 - Ask the harder question of each summary: is this actually usable, and what did each style miss or add?
-- **Choose your inputs.** For each source — each of the three interviews and the questionnaire — pick the *one* summary, generic or directed, that you'll carry into triangulation. Let the differences analysis guide the choice. You don't have to pick the same style for every source. You're committing to a framing here, and its bias travels forward, so choose on purpose and note why.
-- **Triangulate.** This is the one place you deliberately combine sources in a single chat — and it works precisely because you're feeding in your *worked, vetted* summaries, not four piles of raw transcript. Put your four chosen summaries into one fresh chat and ask: **"Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."**
-- Then don't take that answer at face value. Check it against what you noticed yourself: did it surface a real conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension — the model's pass is a draft you interrogate. This is where the planted tension should surface.
+- **Choose your inputs.** For each source, meaning each of the three interviews and the questionnaire, pick the *one* summary, generic or directed, that you'll carry into triangulation. Let the differences analysis guide the choice. You don't have to pick the same style for every source. You're committing to a framing here, and its bias travels forward, so choose on purpose and note why.
+- **Triangulate.** This is the one place you deliberately combine sources in a single chat, and it works precisely because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript. Put your four chosen summaries into one fresh chat and ask: **"Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."**
+- Then don't take that answer at face value. Check it against what you noticed yourself: did it surface a real conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension, since the model's pass is a draft you interrogate. This is where the planted tension should surface.
 
 ## What you'll produce
 
-- `interview-summaries.md` — for each interview, the generic summary, the directed summary, and the model's analysis of the differences between them, with quotes attributed to the source.
-- `questionnaire-summary.md` — the generic summary of the questionnaire results, the directed summary, and the model's analysis of the differences between them.
-- `triangulation.md` — where the interviews and the questionnaire agree, conflict, and leave gaps, with the central tension named.
+- `interview-summaries.md` holds, for each interview, the generic summary, the directed summary, and the model's analysis of the differences between them, with quotes attributed to the source.
+- `questionnaire-summary.md` holds the generic summary of the questionnaire results, the directed summary, and the model's analysis of the differences between them.
+- `triangulation.md` holds where the interviews and the questionnaire agree, conflict, and leave gaps, with the central tension named.
 
-Empty stub files for each of these are in this folder — fill them in as you go. As you write, keep what was said or measured separate from what you infer from it.
+Empty stub files for each of these are in this folder, so fill them in as you go. As you write, keep what was said or measured separate from what you infer from it.
 
 ## What you'll take away
 
@@ -74,9 +74,9 @@ Three things to leave with:
 
 1. **One problem, one chat.** Keep separate problems in separate chat sessions. Mixing several sources or questions into one context confuses the model and produces confident answers that are quietly wrong. A fresh chat per source is how you keep the model's context clean.
 
-2. **The more you work the raw data, the more you control it — and the better and more trustworthy the result.** Every step you take yourself (generic pass, directed pass, comparing them, choosing one, cross-referencing) is a step where *you* stay in charge and can check the output. Asking the model to summarize, prioritize, and lay everything out in one shot feels efficient, but it hands all of that judgement over — and leaves you with no way to tell whether the answer has any merit. You can only trust a summary you can trace back: to the source quotes, to the framing you chose, to the other sources that agree or conflict with it. Worked-in-steps is checkable; one-shot is not. And it compounds: the more steps you work — ask, read, propose a change, ask again — the better you understand the material, and the better the AI can help you.
+2. **The more you work the raw data, the more you control it, and the more trustworthy the result.** Every step you take yourself (generic pass, directed pass, comparing them, choosing one, cross-referencing) is a step where *you* stay in charge and can check the output. Asking the model to summarize, prioritize, and lay everything out in one shot feels efficient, and it hands all of that judgement over, leaving you with no way to tell whether the answer has any merit. You can only trust a summary you can trace back: to the source quotes, to the framing you chose, and to the other sources that agree or conflict with it. It also compounds: the more steps you work, asking, reading, proposing a change, asking again, the better you understand the material, and the better the AI can help you.
 
-3. **Prompt framing is a research-design decision** you make before you read a word of the output. A generic prompt gives a low-bias first pass that can read as bland. A directed prompt gives relevance and can smuggle your assumptions into a summary that looks neutral. Decide which you want each time, keep observation and interpretation apart, and confirm any pattern across more than one source before you trust it.
+3. **Prompt framing is a research-design decision** you make before you read a word of the output. A generic prompt gives a low-bias first pass that can read as bland. A directed prompt gives relevance, and it can smuggle your assumptions into a summary that looks neutral. Decide which you want each time, keep observation and interpretation apart, and confirm any pattern across more than one source before you trust it.
 
 ## Tool
 

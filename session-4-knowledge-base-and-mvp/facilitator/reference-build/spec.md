@@ -4,7 +4,7 @@
 
 ## What we're building
 
-An MVP of the **Decide** bus-information experience. For a rider's saved stop, it presents a short current status and lets the rider ask what to do. It returns one clear recommendation — **Wait**, **Wait for now**, or **Take alternative** — alongside a compact indication of the information's status and supporting detail that can be opened when wanted. When the rider's usual bus cannot be relied on, the experience presents a confirmed alternative as the primary next step.
+An MVP of the **Decide** bus-information experience. For a rider's saved stop, it presents a short current status and lets the rider ask what to do. It returns one clear recommendation (**Wait**, **Wait for now**, or **Take alternative**) alongside a compact indication of the information's status and supporting detail that can be opened when wanted. When the rider's usual bus cannot be relied on, the experience presents a confirmed alternative as the primary next step.
 
 The MVP must help a rider decide whether to wait, leave, or choose another option. It must not imply that a time or recommendation is more certain than the available information supports.
 

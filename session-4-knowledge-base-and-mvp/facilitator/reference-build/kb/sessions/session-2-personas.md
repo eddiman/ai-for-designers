@@ -9,7 +9,7 @@ Below are **3 persona hypotheses** grounded in the triangulation evidence and al
 
 ## Persona hypothesis
 
-**A rider who wants to make the “right” travel decision, but does not trust one source enough — so they cross-check apps, maps, memory, and timing patterns before acting.**
+**A rider who wants to make the “right” travel decision, but does not trust one source enough, so they cross-check apps, maps, memory, and timing patterns before acting.**
 
 This persona is close to **Maja**.
 
@@ -21,8 +21,8 @@ They need **trustworthy, decision-ready information** that reduces the need to m
 
 ### Observed
 
-* Maja checks multiple sources because she does not fully trust the available information. *(Maja — interview-summaries.md)*
-* Maja was described as “mentally running the system” and reconstructing journeys herself. *(Maja — interview-summaries.md)*
+* Maja checks multiple sources because she does not fully trust the available information. *(Maja, interview-summaries.md)*
+* Maja was described as “mentally running the system” and reconstructing journeys herself. *(Maja, interview-summaries.md)*
 * Interviews more broadly revealed coping behaviors such as double-checking information, leaving early, and taking earlier buses. *(interview-summaries.md)*
 * The questionnaire shows that 55% of respondents do not trust real-time information. *(questionnaire-summary.md)*
 
@@ -66,10 +66,10 @@ They need **simple, visible, trustworthy real-time information** without extra c
 
 ### Observed
 
-* Geir relies heavily on physical displays. *(Geir — interview-summaries.md)*
-* Geir distrusts displays after previous bad experiences. *(Geir — interview-summaries.md)*
-* Geir explicitly prefers simple, minimal solutions and rejects unnecessary app complexity. *(Geir — interview-summaries.md)*
-* Sofie also prefers simple tools, especially for familiar trips. *(Sofie — interview-summaries.md)*
+* Geir relies heavily on physical displays. *(Geir, interview-summaries.md)*
+* Geir distrusts displays after previous bad experiences. *(Geir, interview-summaries.md)*
+* Geir explicitly prefers simple, minimal solutions and rejects unnecessary app complexity. *(Geir, interview-summaries.md)*
+* Sofie also prefers simple tools, especially for familiar trips. *(Sofie, interview-summaries.md)*
 * Questionnaire respondents were mixed or skeptical toward apps:
   * 34% positive
   * 38% negative  
@@ -113,15 +113,15 @@ This persona is close to **Sofie**.
 
 ## Core need
 
-They need **the right amount of guidance for the situation** — not always a full assistant, but support when uncertainty increases.
+They need **the right amount of guidance for the situation**, meaning support that grows as uncertainty increases rather than a full assistant at all times.
 
 ## Evidence
 
 ### Observed
 
-* Sofie distinguishes between familiar trips, where she needs minimal information, and unfamiliar trips, where she needs more guidance. *(Sofie — interview-summaries.md)*
-* Sofie adds buffer time because she cannot fully rely on the system. *(Sofie — interview-summaries.md)*
-* Sofie prefers simple tools but still needs support when travel is less familiar. *(Sofie — interview-summaries.md)*
+* Sofie distinguishes between familiar trips, where she needs minimal information, and unfamiliar trips, where she needs more guidance. *(Sofie, interview-summaries.md)*
+* Sofie adds buffer time because she cannot fully rely on the system. *(Sofie, interview-summaries.md)*
+* Sofie prefers simple tools but still needs support when travel is less familiar. *(Sofie, interview-summaries.md)*
 * 79% of questionnaire respondents said they want to reliably know when the bus will arrive. *(questionnaire-summary.md)*
 * Open questionnaire responses described waiting without information as especially frustrating. *(questionnaire-summary.md)*
 

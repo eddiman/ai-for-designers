@@ -1,4 +1,4 @@
-# Bus travel questionnaire — results
+# Bus travel questionnaire: results
 
 ## Study background
 

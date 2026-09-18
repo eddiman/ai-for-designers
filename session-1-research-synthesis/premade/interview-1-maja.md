@@ -1,8 +1,8 @@
-# Interview 1 — Maja
+# Interview 1: Maja
 
 **Participant:** Maja, 29
 **Occupation:** Marketing coordinator
-**Bus usage:** Daily — commute plus errands, no car
+**Bus usage:** Daily, commute plus errands, no car
 **Recorded:** 2026-05-20, ~35 min, semi-structured (excerpt)
 **Interviewer:** facilitator (shown as **I**)
 

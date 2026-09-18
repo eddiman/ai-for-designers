@@ -21,7 +21,7 @@
 
 - If a check fails, record the failure, the increment returned to, and the re-verification result here before moving on.
 
-### Increment 2 — verified 2026-09-11
+### Increment 2: verified 2026-09-11
 
 Opened `app/index.html` and reached all three conditions through the visible selector. Checked each against the confirmed build decisions in [spec.md](spec.md):
 

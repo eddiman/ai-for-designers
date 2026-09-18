@@ -4,17 +4,17 @@
 
 ---
 
-## Direction 1 — [name]
+## Direction 1: [name]
 - **Figma link:**
 - **What it is:**
 - **How it answers the problem:**
 
-## Direction 2 — [name]
+## Direction 2: [name]
 - **Figma link:**
 - **What it is:**
 - **How it answers the problem:**
 
-## Direction 3 — [name]
+## Direction 3: [name]
 - **Figma link:**
 - **What it is:**
 - **How it answers the problem:**

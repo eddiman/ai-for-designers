@@ -4,21 +4,21 @@
 
 ---
 
-## Interview 1 — Maja (daily commuter, no car)
+## Interview 1: Maja (daily commuter, no car)
 
 **Summary**
 
 
 ---
 
-## Interview 2 — Geir (occasional rider, drives otherwise)
+## Interview 2: Geir (occasional rider, drives otherwise)
 
 **Summary**
 -
 
 ---
 
-## Interview 3 — Sofie (student, mixed-mode traveller)
+## Interview 3: Sofie (student, mixed-mode traveller)
 
 **Summary**
 

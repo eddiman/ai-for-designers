@@ -1,4 +1,4 @@
-# Interview 2 — Geir
+# Interview 2: Geir
 
 **Participant:** Geir, 54
 **Occupation:** Warehouse supervisor

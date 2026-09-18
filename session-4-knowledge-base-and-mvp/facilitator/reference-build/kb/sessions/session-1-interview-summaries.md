@@ -1,10 +1,10 @@
 # Interview summaries
 
-> Reference artifact (premade). One carried-forward summary per interview — the **generic**-prompt version chosen for each source in `triangulation.md` — with quotes attributed to the source. What was said is kept separate from what we infer. Attach these as-is to start Session 2; there's nothing to select or redo.
+> Reference artifact (premade). One carried-forward summary per interview, the **generic**-prompt version chosen for each source in `triangulation.md`, with quotes attributed to the source. What was said is kept separate from what we infer. Attach these as-is to start Session 2; there's nothing to select or redo.
 
 ---
 
-## Interview 1 — Maja (daily commuter, no car)
+## Interview 1: Maja (daily commuter, no car)
 
 **Summary**
 
@@ -115,19 +115,19 @@
 
 ## 🎯 Key Takeaways
 
-* **Trust > punctuality** — reliable info matters more than perfect timing
-* **Personalization is critical** — daily riders need tailored tools
-* **Proactive beats reactive** — users want guidance, not lookup
-* **Consistency matters** — repetitive journeys should be frictionless
+* **Trust > punctuality**: reliable info matters more than perfect timing
+* **Personalization is critical**: daily riders need tailored tools
+* **Proactive beats reactive**: users want guidance, not lookup
+* **Consistency matters**: repetitive journeys should be frictionless
 
 ***
 
 ✅ **Bottom line:**  
-Maja wants a **smart, personalized transit assistant** that removes uncertainty, reduces mental effort, and adapts to her routine—transforming commuting from stressful to effortless.
+Maja wants a **smart, personalized transit assistant** that removes uncertainty, reduces mental effort, and adapts to her routine, transforming commuting from stressful to effortless.
 
 ---
 
-## Interview 2 — Geir (occasional rider, drives otherwise)
+## Interview 2: Geir (occasional rider, drives otherwise)
 
 **Summary**
 
@@ -172,11 +172,11 @@ Maja wants a **smart, personalized transit assistant** that removes uncertainty,
 
 ---
 
-## Interview 3 — Sofie (student, mixed-mode traveller)
+## Interview 3: Sofie (student, mixed-mode traveller)
 
 **Summary**
 
-* **Usage pattern:** Sofie treats the bus as a **situational backup** rather than a primary mode—she uses it when it’s raining, late, or dark, but otherwise prefers walking or cycling.
+* **Usage pattern:** Sofie treats the bus as a **situational backup** rather than a primary mode, since she uses it when it’s raining, late, or dark, but otherwise prefers walking or cycling.
 
 * **Planning behavior:** She **plans last-minute using an app**, checking the next departure rather than preparing ahead.
 
@@ -195,7 +195,7 @@ Maja wants a **smart, personalized transit assistant** that removes uncertainty,
     She prefers **simple, reliable tools over sophisticated ones**.
 
 * **Context-dependent needs:**
-  * **Familiar routes:** Minimal guidance needed—just accurate times
+  * **Familiar routes:** Minimal guidance needed, only accurate times
   * **Unfamiliar trips (e.g., visiting family):** Wants **more guidance and reassurance** (wayfinding support, clarity)
 
 * **Accessibility awareness:** Notes that her grandmother has very different needs (clear signage, physical accessibility, no app use), highlighting a **design challenge across user types**.

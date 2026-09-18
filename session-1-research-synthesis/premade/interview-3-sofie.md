@@ -1,4 +1,4 @@
-# Interview 3 — Sofie
+# Interview 3: Sofie
 
 **Participant:** Sofie, 22
 **Occupation:** University student (part-time café job)

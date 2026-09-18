@@ -2,9 +2,9 @@
 title: AI for Designers
 version: 1.3
 status: draft
-audience: designers — UI, UX, and Service, all in the same room
+audience: designers (UI, UX, and Service, all in the same room)
 format: 4 sessions, ~60–90 min each, bi-weekly (Sessions 3–4 likely need more time)
-last-updated: 2026-06-29
+last-updated: 2026-09-18
 supersedes: ai-for-designers-v1.2.md (kept for history)
 ---
 
@@ -16,9 +16,9 @@ supersedes: ai-for-designers-v1.2.md (kept for history)
 
 v1.2 seeded each session from the plan and left the runnable detail to be filled in. v1.3 captures **Session 1 as it now actually runs**:
 
-- The generic-vs-directed comparison is a fixed **three-step flow per source** — generic, then directed in the same chat, then "analyze the differences between them" — applied to each interview *and* to the questionnaire, with the exact prompts written out.
+- The generic-against-directed comparison is a fixed **three-step flow per source**: generic, then directed in the same chat, then "analyze the differences between them". It is applied to each interview *and* to the questionnaire, with the exact prompts written out.
 - The directed prompt uses the **same topical lens** on both sources ("what frustrates people and what they most want improved"), so the planted tension emerges from the data rather than from the prompt wording.
-- Triangulation now starts with the participant **choosing one summary per source** to carry forward — committing to a framing whose bias travels onward — then runs a **conflict-seeking** prompt, with the human naming the tension and treating the model's pass as a draft.
+- Triangulation now starts with the participant **choosing one summary per source** to carry forward, which commits them to a framing whose bias travels onward. Then it runs a **conflict-seeking** prompt, with the human naming the tension and treating the model's pass as a draft.
 - Each session folder now separates **front-facing material** (session root, plus stub files for the artifacts) from **facilitator notes** (`facilitator/`) and the **catch-up pack** (`premade/`).
 
 Sessions 2–4 are unchanged from v1.2 and still need the same fleshing-out into runnable detail.
@@ -27,23 +27,23 @@ Sessions 2–4 are unchanged from v1.2 and still need the same fleshing-out into
 
 v1.1 organized the four sessions around the design process (Discover → Define → Develop → Deliver) and listed where AI helps in each phase, with separate guidance per role. v1.2 kept that arc underneath but changed how the course is run:
 
-- **One running scenario.** Every session works the same project — helping people catch the bus — so the group builds a single thread from raw research through to a working MVP.
-- **Your own work carries forward; premade data is the on-ramp.** If you attend the whole course, each session builds on the artifacts *you* made in the previous one, so by the end the bus-app project is genuinely yours — that ownership is the point. For anyone who missed a session, each session also ships with a known-good premade version of the previous artifact, so they can drop in for a single topic without having committed to the whole course. Everyone finishes a session with the same *kind* of artifact in the same format; the content varies because it reflects each person's own choices.
+- **One running scenario.** Every session works the same project, helping people catch the bus, so the group builds a single thread from raw research through to a working MVP.
+- **Your own work carries forward; premade data is the on-ramp.** If you attend the whole course, each session builds on the artifacts *you* made in the previous one, so by the end the bus-app project is genuinely yours. That ownership is the point. For anyone who missed a session, each session also ships with a known-good premade version of the previous artifact, so they can drop in for a single topic without having committed to the whole course. Everyone finishes a session with the same *kind* of artifact in the same format, and the content varies because it reflects each person's own choices.
 - **All three roles in the same room.** UI, UX, and Service designers go through the same sessions on the same scenario. There are no separate role tracks. The aim is for each role to see the full end-to-end flow and where AI touches their part and the parts on either side of them.
-- **Files are the currency.** From Session 1 onward, output is saved as portable files (markdown or PDF). Later sessions attach these files to Figma Make and Copilot, so anything left in a chat window cannot move forward.
-- **A different back half.** Session 3 moves to Figma Make plus a round-trip into Copilot/Figma for a persona-based UX review. Session 4 builds an actual MVP in Copilot from a project knowledge base, using a deliberate spec → plan → verify → iterate loop.
+- **Files are what moves between tools.** From Session 1 onward, output is saved as portable files (markdown or PDF). Later sessions attach these files to Figma Make and Copilot, so anything left in a chat window cannot move forward.
+- **A different back half.** Session 3 moves to Figma Make plus a round-trip into Copilot and Figma for a persona-based UX review. Session 4 builds an actual MVP in Copilot from a project knowledge base, using a deliberate spec → plan → verify → iterate loop.
 
 ## How this course works (the backbone)
 
-Read this before the session plans — it explains the moving parts.
+Read this before the session plans, since it explains the moving parts.
 
-**Continuity, and ownership.** If you attend the course, you carry your own artifacts forward. Your Session 1 summaries feed your Session 2 framing, which feeds your Session 3 prototypes, and so on, so the bus-app project you end up with is built from your own decisions. That ownership is deliberate — it is what makes people feel they belong to the course rather than watching a demo. Everyone leaves each session with the same kind of artifact in the same format, so the facilitator can teach to that shape, while the content differs from person to person.
+**Continuity, and ownership.** If you attend the course, you carry your own artifacts forward. Your Session 1 summaries feed your Session 2 framing, which feeds your Session 3 prototypes, and so on, so the bus-app project you end up with is built from your own decisions. That ownership is deliberate. It is what makes people feel they belong to the course rather than watching a demo. Everyone leaves each session with the same kind of artifact in the same format, so the facilitator can teach to that shape, while the content differs from person to person.
 
-**The on-ramp for drop-ins.** Not everyone can commit to four sessions. So each session also ships with a known-good premade version of the previous artifact. Anyone who missed last time, or is dropping in for one topic, picks up the premade version and continues from there with no catch-up cost. The two paths run side by side in the same room.
+**The on-ramp for drop-ins.** Not everyone can commit to four sessions, so each session also ships with a known-good premade version of the previous artifact. Anyone who missed last time, or is dropping in for one topic, picks up the premade version and continues from there with no catch-up cost. The two paths run side by side in the same room.
 
-**The recap does double duty.** Each session opens with a short account of what the reference artifact contains and *why* — which prompt style was used, what was kept, what was thrown out, what tension is carried forward. For returning participants it is a model for justifying their own work; for drop-ins it is the context they need to use the premade version.
+**The recap does double duty.** Each session opens with a short account of what the reference artifact contains and *why*: which prompt style was used, what was kept, what was thrown out, and what tension is carried forward. For returning participants it is a model for justifying their own work, and for drop-ins it is the context they need to use the premade version.
 
-**Roles stay together on purpose.** A Service designer should see what happens when their research becomes a prototype; a UI designer should see the research that justified the screen they are polishing. Running one shared thread is how each role gets that visibility.
+**Roles stay together on purpose.** A Service designer should see what happens when their research becomes a prototype, and a UI designer should see the research that justified the screen they are polishing. Running one shared thread is how each role gets that visibility.
 
 **Each session folder separates three things.** The session root holds the front-facing course material and a stub file for every artifact the participant produces. A `facilitator/` subfolder holds the run of show, steering notes, and any design secrets (such as where the planted tension lives) that participants must not see verbatim. A `premade/` subfolder holds the catch-up pack for drop-ins.
 
@@ -55,16 +55,16 @@ A leading research question produces leading research, which is the exact bias S
 
 > "How do people plan and catch buses today, and where does it go wrong?"
 
-This keeps the solution open. The "timetable vs. app" question then shows up as one of the *findings* rather than the premise, and the deeper tension can surface honestly:
+This keeps the solution open. The "timetable against app" question then shows up as one of the *findings* rather than the premise, and the deeper tension can surface honestly:
 
 - the questionnaire (the broad, shallow signal) shows most people mainly want **reliable, real-time arrival info**;
 - a vocal minority in the interviews (the narrow, deep signal) wants a **full personal app** with saved routes and notifications.
 
-That tension — does the value sit in reliability or in personalization — is the thread that runs through every session and becomes the real question for the MVP: what should we actually build first.
+That tension, whether the value sits in reliability or in personalization, is the thread that runs through every session. It becomes the real question for the MVP: what should we actually build first.
 
 ## Premade catch-up materials (the facilitator builds these once)
 
-These are the known-good versions handed to anyone who missed the previous session, so they can continue without having done the prior work. Returning participants use their own output instead. Session 1 is the exception — its research pack is the shared starting data for everyone.
+These are the known-good versions handed to anyone who missed the previous session, so they can continue without having done the prior work. Returning participants use their own output instead. Session 1 is the exception, since its research pack is the shared starting data for everyone.
 
 | For session | Premade version | What it demonstrates |
 |---|---|---|
@@ -78,23 +78,23 @@ These are the known-good versions handed to anyone who missed the previous sessi
 1. Use AI across the whole project. The early research and framing is where designers most underuse it, so we start there.
 2. Keep what was said separate from what you concluded. AI tends to blend the two; you keep them apart.
 3. Anchor every output in evidence. Treat AI's summaries, personas, and findings as hypotheses until something confirms them.
-4. Give the tool a clear contract and structured context — files, then a knowledge base. Vague input produces vague output.
+4. Give the tool a clear contract and structured context, first files and then a knowledge base. Vague input produces vague output.
 5. Move in small, verified steps. The human owns the decisions and the accountability for whatever ships.
 
 ---
 
-## Session 1 — Research synthesis: how prompt framing changes what you learn
+## Session 1: Research synthesis, and how prompt framing changes what you learn
 
 **Learning goal:** See how the framing of a summarization prompt changes the research you get back, keep observation separate from interpretation, and learn to choose a framing on purpose and triangulate across sources before trusting a pattern.
 
-**Starting point:** everyone starts from the same research pack — 3 interview transcripts and a questionnaire dataset. Session 1 is the start, so there is no prior recap; instead the facilitator explains how the data was generated and says plainly that a tension has been planted, without saying where.
+**Starting point:** everyone starts from the same research pack, 3 interview transcripts and a questionnaire dataset. Session 1 is the start, so there is no prior recap. Instead the facilitator explains how the data was generated and says plainly that a tension has been planted, without saying where.
 
 **The two prompt styles (used on every source):**
 
 - **Generic:** "Summarize this interview." / "Summarize this questionnaire."
-- **Directed (a topical lens, not an answer):** for interviews, "…focusing on how they catch the bus today, what frustrates them, and what they wish existed"; for the questionnaire, "…focusing on what frustrates people about catching the bus today and what they most want improved."
+- **Directed (a topical lens, without an answer in it):** for interviews, "…focusing on how they catch the bus today, what frustrates them, and what they wish existed"; for the questionnaire, "…focusing on what frustrates people about catching the bus today and what they most want improved."
 
-The directed prompt deliberately uses the same lens on both sources, so the divergence between them comes from the data, not from the wording. Neither style is the right one — the skill is knowing which mode you are in and choosing it on purpose.
+The directed prompt deliberately uses the same lens on both sources, so the divergence between them comes from the data and not from the wording. Both styles are legitimate; the skill is knowing which mode you are in and choosing it on purpose.
 
 **The per-source flow (one chat session per source):**
 
@@ -102,32 +102,32 @@ The directed prompt deliberately uses the same lens on both sources, so the dive
 2. In the same chat, run the directed prompt; save that summary.
 3. Ask the model "Analyze the summaries and highlight the differences between them"; save the analysis.
 
-Run this for each of the three interviews and for the questionnaire. The questionnaire gets the same care as the interviews — it is the broad signal the interviews are measured against, not a footnote.
+Run this for each of the three interviews and for the questionnaire. The questionnaire gets the same care as the interviews, since it is the broad signal the interviews are measured against. Treating it as a footnote is how a planted tension stays hidden.
 
 **Choose, then triangulate:**
 
 - For each source, the participant picks the *one* summary (generic or directed) to carry forward, guided by the differences analysis. They need not pick the same style for every source. This commits them to a framing whose bias travels onward.
 - Put the four chosen summaries in one chat and run a conflict-seeking prompt: "Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."
-- The participant interrogates that pass — did it surface a real conflict or flatten everything into consensus, did it lean on the most vivid interview — and names the central tension themselves. The model's pass is a draft.
+- The participant interrogates that pass, asking whether it surfaced a real conflict or flattened everything into consensus, and whether it leaned on the most vivid interview, then names the central tension themselves. The model's pass is a draft.
 
 **Run of show (~70 min):**
-- **0:00–0:10** — Frame the session and the scenario. Show the planted-tension warning.
-- **0:10–0:25** — Live demo: the three-step flow on one interview, then on the questionnaire.
-- **0:25–0:55** — Hands-on: each participant runs the flow across the interviews and the questionnaire.
-- **0:55–1:10** — Choose inputs, then triangulate. This is where the planted tension should surface.
+- **0:00–0:10:** Frame the session and the scenario. Show the planted-tension warning.
+- **0:10–0:25:** Live demo, the three-step flow on one interview, then on the questionnaire.
+- **0:25–0:55:** Hands-on, each participant runs the flow across the interviews and the questionnaire.
+- **0:55–1:10:** Choose inputs, then triangulate. This is where the planted tension should surface.
 
 **Concrete output (the artifacts, each stubbed in the session folder):**
-- `interview-summaries.md` — per interview: the generic summary, the directed summary, and the model's differences analysis, with quotes attributed to the source.
-- `questionnaire-summary.md` — the same three parts for the questionnaire.
-- `triangulation.md` — the inputs chosen (which summary per source, and why), plus where the sources agree, conflict, and leave gaps, with the central tension named.
+- `interview-summaries.md` holds, per interview, the generic summary, the directed summary, and the model's differences analysis, with quotes attributed to the source.
+- `questionnaire-summary.md` holds the same three parts for the questionnaire.
+- `triangulation.md` holds the inputs chosen (which summary per source, and why), plus where the sources agree, conflict, and leave gaps, with the central tension named.
 
-**Takeaway:** Prompt framing is a research-design decision made before you read the output. A generic prompt gives a low-bias first pass that can read bland; a directed prompt gives relevance and can smuggle your assumptions into a summary that looks neutral. Choose which you want each time, commit to one framing per source on purpose, and confirm any pattern across more than one source — and against your own reading — before you trust it.
+**Takeaway:** Prompt framing is a research-design decision made before you read the output. A generic prompt gives a low-bias first pass that can read bland. A directed prompt gives relevance, and it can smuggle your assumptions into a summary that looks neutral. Choose which you want each time, commit to one framing per source on purpose, and confirm any pattern across more than one source, and against your own reading, before you trust it.
 
 **Tool:** Microsoft Copilot 365 chat (org-provided, no setup).
 
 ---
 
-## Session 2 — From summaries to a problem definition and personas
+## Session 2: From summaries to a problem definition and personas
 
 **Learning goal:** Turn the synthesized research into one committed problem definition and a small set of evidence-grounded personas, and save them as files that downstream tools can read. This is the v1.1 "Define" work, plus personas, plus file discipline.
 
@@ -138,9 +138,9 @@ Run this for each of the three interviews and for the questionnaire. The questio
 - Create **2–3 personas**, each grounded in specific evidence from the research, each labelled as a hypothesis, each noting what we still do not know about them.
 - Save everything as files: `problem-definition.md`, `personas.md`, `key-insights.md`, formatted so they can be attached in Figma Make and Copilot.
 
-**On "Create personas?" — yes, and here is the reason.** Personas earn their place because Session 3 runs a UX review *in character as these personas*. That makes them a required, working input rather than a deliverable for its own sake, which is also why they have to be tied to evidence and treated as hypotheses.
+**On "Create personas?", and the reason for it.** Personas earn their place because Session 3 runs a UX review *in character as these personas*. That makes them a required, working input, which is also why they have to be tied to evidence and treated as hypotheses.
 
-**Concrete output:** a "design brief packet" — three files (problem definition, personas, key insights) that the rest of the course consumes.
+**Concrete output:** a "design brief packet" of three files (problem definition, personas, key insights) that the rest of the course consumes.
 
 **Takeaway:** AI produces problem framings and personas quickly, and each one needs an evidence anchor and a hypothesis label before you rely on it. The human picks the single problem and the personas to commit to. Save the results as clean files, because every later session reads them as input.
 
@@ -148,22 +148,22 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 ---
 
-## Session 3 — Prototyping with Figma Make, and a persona UX review
+## Session 3: Prototyping with Figma Make, and a persona UX review
 
 **Learning goal:** Use the brief packet to generate prototype directions in Figma Make, then close the loop by running a persona-based UX review through Copilot and Figma. Participants connect the Figma MCP themselves, led step by step by the facilitator; the lesson is the workflow and what it produces.
 
-**Starting point + recap:** continue from your own brief packet from Session 2, or pick up the premade `problem-definition.md`, `personas.md`, and `key-insights.md` if you missed it. The recap explains which problem the reference packet committed to, how the reliability-vs-personalization tension was resolved, and which personas it reviews against.
+**Starting point + recap:** continue from your own brief packet from Session 2, or pick up the premade `problem-definition.md`, `personas.md`, and `key-insights.md` if you missed it. The recap explains which problem the reference packet committed to, how the reliability-against-personalization tension was resolved, and which personas it reviews against.
 
 **The work:**
-- **Figma Make:** attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. The point of attaching files is that the prototypes come back grounded in the actual research rather than generic.
-- **Round-trip to Copilot / Figma:** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings.
+- **Figma Make:** attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. Attaching the files is what brings the prototypes back grounded in the actual research.
+- **Round-trip to Copilot and Figma:** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings.
 - **Triage:** decide which findings are worth acting on.
 
-**Pre-setup (important):** the read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`, so it cannot be pre-wired for them. The facilitator builds and tests the full round-trip in advance — Figma Make generation → into Figma → persona UX review — then leads participants through their own setup in lockstep, pausing until everyone's server is reachable.
+**Pre-setup (important):** the read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`, so it cannot be pre-wired for them. The facilitator builds and tests the full round-trip in advance (Figma Make generation → into Figma → persona UX review), then leads participants through their own setup in lockstep, pausing until everyone's server is reachable.
 
 **Concrete output:** 3 prototype directions in Figma, a written description of the app flow, and a persona-based UX review with prioritized findings.
 
-**Takeaway:** when a generative tool is given your real problem and personas as structured files, the prototypes it returns are grounded in the research instead of generic, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
+**Takeaway:** when a generative tool is given your real problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
 
 **Tools:** Figma Make; Figma MCP (local server, set up by each participant in lockstep); GitHub Copilot / agent. Requires the BSD application to be approved.
 
@@ -171,7 +171,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 ---
 
-## Session 4 — A project knowledge base and an MVP build
+## Session 4: A project knowledge base and an MVP build
 
 **Learning goal:** Stand up a project knowledge base from everything produced so far, then build a working MVP in Copilot using a disciplined loop, without one-shotting whole features.
 
@@ -179,19 +179,19 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **The work:**
 - **Knowledge base:** use a scaffolding skill to create the KB structure, then populate it from the existing insights, personas, problem definition, prototype decisions, and project settings. The KB becomes the durable context the build tool reads, so the research and design work from Sessions 1–3 is finally reusable by code.
-- **MVP build in Copilot:** from the KB, write a spec, make a build plan, and define how you will verify each piece works. Build in small increments, verify each one, and iterate. The explicit anti-pattern is one-shotting — asking the tool to produce a whole feature in a single prompt and hoping it holds together.
+- **MVP build in Copilot:** from the KB, write a spec, make a build plan, and define how you will verify each piece works. Build in small increments, verify each one, and iterate. The explicit anti-pattern is one-shotting, meaning you ask the tool to produce a whole feature in a single prompt and hope it holds together.
 
 **How it runs:** each participant builds the MVP themselves with AI, working individually on their own machine in a shared room, asking for help whenever they need it. Pairing and a watch-only guided build were both considered and set aside. The facilitator works the same steps on screen and pauses after each phase, so nobody is silently stuck.
 
 **Concrete output:** a project knowledge base, and a running MVP of the bus app built incrementally with a verification plan attached.
 
-**Takeaway:** a generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step is what separates a working MVP from a confident-looking mess. The knowledge base is the thing that lets a build tool actually use the research and design decisions from the earlier sessions.
+**Takeaway:** a generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The knowledge base is the thing that lets a build tool actually use the research and design decisions from the earlier sessions.
 
 **Tools:** GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
 
-**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The worked example of the whole session — knowledge base, chosen direction, spec, both plans, and the app — is committed at `session-4-knowledge-base-and-mvp/facilitator/reference-build/`. The session root holds empty stubs; participants produce their own.
+**Pre-setup:** the KB scaffolding skill and a working Copilot build environment, ready before the session. The worked example of the whole session (knowledge base, chosen direction, spec, both plans, and the app) is committed at `session-4-knowledge-base-and-mvp/facilitator/reference-build/`. The session root holds empty stubs; participants produce their own.
 
-**The app's stack is pinned:** plain HTML, CSS, and JavaScript — no framework, no build step, nothing to install. Participants paste a ready-made scaffold prompt instead of being asked to choose, and the build prompts tell the agent to pick the simplest working option and report it rather than putting a technical question to a designer. Keeping the stack free of installs also keeps the session's attention on the spec-and-verify loop instead of on tooling.
+**The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no framework, no build step, and nothing to install. Participants paste a ready-made scaffold prompt instead of being asked to choose, and the build prompts tell the agent to pick the simplest working option and report it rather than putting a technical question to a designer. Keeping the stack free of installs also keeps the session's attention on the spec-and-verify loop.
 
 ---
 
@@ -200,17 +200,17 @@ Run this for each of the three interviews and for the questionnaire. The questio
 | Tool | Sessions | Notes |
 |---|---|---|
 | Microsoft Copilot 365 chat | 1, 2 | Org-provided, no setup |
-| GitHub Copilot / agent | 3, 4 | **Requires a BSD application — start it the day the course is announced** |
+| GitHub Copilot / agent | 3, 4 | **Requires a BSD application. Start it the day the course is announced** |
 | Figma Make | 3 | Confirm current support for attached files |
 | Figma MCP (local server) | 3, 4 | Runs on each participant's own machine; they set it up in facilitator lockstep. Facilitator tests the full round-trip in advance; may need IT/security sign-off |
-| KB scaffolding skill | 4 | Needs to exist before Session 4 — see open decisions |
+| KB scaffolding skill | 4 | Needs to exist before Session 4; see open decisions |
 
-The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for participants. Session 3 needs setup on each participant's own machine — the Figma MCP local server — so the facilitator testing the pipeline in advance is necessary but not sufficient; expect to fix a few in the room. Session 4 needs no install of its own: the app is plain HTML, CSS, and JavaScript.
+The pre-setup burden grows session to session. Sessions 1–2 are zero-setup for participants. Session 3 needs setup on each participant's own machine, the Figma MCP local server, so the facilitator has to test the pipeline in advance, and that still will not be enough on its own; expect to fix a few in the room. Session 4 needs no install of its own, since the app is plain HTML, CSS, and JavaScript.
 
 ## Open decisions
 
-- **Session 1 output format.** Markdown files assumed, since Figma Make and Copilot consume them later. Confirm markdown vs. PDF vs. something else.
+- **Session 1 output format.** Markdown files assumed, since Figma Make and Copilot consume them later. Confirm markdown against PDF or something else.
 - **The KB scaffolding skill.** Session 4 assumes a reusable skill that sets up the knowledge base and ingests prior artifacts. Does this exist, or does building it become part of the prep (or its own Skill Lab)?
 - **Session length.** Sessions 3–4 likely run past 75 minutes. Decide whether to extend them or split.
-- **Double Diamond framing.** v1.1 made the Discover→Deliver arc explicit. v1.2 onward leans on a workflow/pipeline instead. Decide whether to keep an explicit process map or drop it.
+- **Double Diamond framing.** v1.1 made the Discover→Deliver arc explicit. v1.2 onward leans on a workflow or pipeline instead. Decide whether to keep an explicit process map or drop it.
 - **FigJam board.** The board currently reflects the v1.1 phase mapping. Decide whether to update it to the current scenario and session flow.

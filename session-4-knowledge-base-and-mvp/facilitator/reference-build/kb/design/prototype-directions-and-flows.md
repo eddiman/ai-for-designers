@@ -2,7 +2,7 @@
 
 All three directions address the committed problem. Each is a four-screen mobile prototype. No direction is selected in the supplied artifacts.
 
-## Direction 1 — Signal
+## Direction 1: Signal
 
 **Concept:** Replace false precision with honest confidence states. The app shows the quality of the data as well as the time.
 
@@ -16,21 +16,21 @@ The three detail screens represent conditions at the same stop, not a linear jou
 
 **Prototype:** [Figma direction 1](https://www.figma.com/design/sbCntnu1vvMCYwhdAZu5tP/AI-Testing?node-id=2227-54726)
 
-## Direction 2 — Decide
+## Direction 2: Decide
 
 **Concept:** Reduce manual cross-checking by showing an action recommendation alongside the information used to make it.
 
 **Flow:** A home screen shows Maja's saved stop and a “What should I do?” action. It leads to three versions of the decision screen:
 
 - **Wait:** Two sources agree, GPS confirms the bus is two stops away, and no disruption is reported.
-- **Wait — for now:** The live app, schedule, and stop display disagree; the recommendation includes a time-boxed caveat and a more prominent alternative.
+- **Wait for now:** The live app, schedule, and stop display disagree; the recommendation includes a time-boxed caveat and a more prominent alternative.
 - **Take alternative:** The usual bus has been untraceable for nine minutes; a confirmed alternative and navigation action are primary.
 
 The direction adapts its recommendation as certainty falls, seeking to give confidence through a decision rather than through a raw number alone.
 
 **Prototype:** [Figma direction 2](https://www.figma.com/design/sbCntnu1vvMCYwhdAZu5tP/AI-Testing?node-id=2227-54727)
 
-## Direction 3 — Shift
+## Direction 3: Shift
 
 **Concept:** Scale the app's visual presence with the stakes of the trip.
 
