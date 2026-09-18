@@ -16,6 +16,16 @@ Session 0 has no folder of its own in the repository — it exists only as this 
 
 Run the introduction and Session 0 back to back at the start of Session 1. The introduction closes by pointing at Session 0, and Session 0 closes by pointing at Session 1, so the three run as one sequence without touching the landing page.
 
+## Published
+
+Live at **https://ai-for-designers-course.netlify.app**
+
+The Netlify site is connected to this repository, so every push to `main` rebuilds and republishes it. There is no build command; Netlify just serves the `presentation/` directory, which `netlify.toml` at the repository root sets as the publish directory. Nothing else in the repository is published.
+
+The deck is kept out of search results by three things: `robots.txt`, an `X-Robots-Tag: noindex` header in `_headers`, and a meta robots tag in `index.html`. Anyone with the address can still open it, so treat the URL as shareable but not indexed.
+
+To deploy without pushing (useful while editing slides), run `netlify deploy --prod` from the repository root.
+
 ## Run it
 
 Open `index.html` in a browser. There is no install step, no build step, and no package manager — plain HTML, CSS, and JavaScript, the same rule the Session 4 MVP follows.
