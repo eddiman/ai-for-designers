@@ -19,7 +19,7 @@ window.DECKS["session-3"] = [
     kind: "list",
     eyebrow: "First, together",
     title: "Connect the Figma MCP",
-    lead: "The read-only Figma server runs on **your own machine**, so it has to be yours to set up. We do it as a room, step by step.",
+    lead: "The read-only Figma server runs on **your own machine**, so you set it up. We do it together, step by step.",
     items: [
       { label: "In Figma desktop", text: "Dev Mode → right sidebar → MCP section → preferences → Enabled" },
       { label: "Confirm", text: "the server answers at `http://127.0.0.1:3845/mcp`" },
@@ -29,7 +29,7 @@ window.DECKS["session-3"] = [
     callout: {
       tone: "stop",
       title: "Two things that will bite",
-      text: "The server only runs while the Figma **desktop** app is open. And the tools do not appear in Copilot until you restart the `figma` entry in `mcp.json`."
+      text: "It only runs while the Figma **desktop** app is open, and the tools appear in Copilot only after you restart the `figma` entry in `mcp.json`."
     }
   },
 
@@ -38,11 +38,11 @@ window.DECKS["session-3"] = [
     eyebrow: "What you start from",
     title: "Your brief packet",
     items: [
-      "`problem-definition.md` — the one committed problem",
-      "`key-insights.md` — the evidence-anchored takeaways",
-      "`personas.md` — the 2–3 hypotheses you will review in character as"
+      { label: "`problem-definition.md`", text: "the one committed problem" },
+      { label: "`key-insights.md`", text: "the evidence-anchored takeaways" },
+      { label: "`personas.md`", text: "the 2–3 hypotheses you will review in character as" }
     ],
-    note: "Missed Session 2? The premade versions in `premade/` are ready to attach."
+    note: "If you missed Session 2, the premade versions in `premade/` are ready to attach as they are."
   },
 
   {
@@ -53,7 +53,7 @@ window.DECKS["session-3"] = [
     doItems: [
       "Attach `problem-definition.md`, `key-insights.md`, `personas.md`.",
       "Ask for **3 distinct directions**, each solving the committed problem a different way.",
-      "Steer the result — push one further, pull two apart if they converged.",
+      "Steer the result: push one further, pull two apart if they converged.",
       "Fill in `prototype-directions.md`: name, Figma link, what it is, how it answers the problem."
     ],
     doneItems: [
@@ -69,7 +69,7 @@ window.DECKS["session-3"] = [
     eyebrow: "Step 1",
     title: "Three directions",
     text:
-      "I've attached my problem definition, key insights, and personas from a\nresearch project on helping people catch the bus. Using these as the brief,\ndesign 3 distinct prototype directions for a mobile bus app that each solve\nthe committed problem in a different way.\n\nFor each direction: give it a short name, generate the key screens as a\nclickable flow, and stay grounded in the attached research — the insights and\npersonas, not generic bus-app conventions. Make the three genuinely different\nfrom each other so I have real alternatives to compare.",
+      "I've attached my problem definition, key insights, and personas from a\nresearch project on helping people catch the bus. Using these as the brief,\ndesign 3 distinct prototype directions for a mobile bus app that each solve\nthe committed problem in a different way.\n\nFor each direction: give it a short name, generate the key screens as a\nclickable flow, and stay grounded in the attached research, meaning the\ninsights and personas rather than generic bus-app conventions. Make the three\ngenuinely different from each other so I have real alternatives to compare.",
     note: "Bonus: pick a `design.md` from designmd.app and attach it too, or describe the look you want in the prompt."
   },
 
@@ -77,7 +77,7 @@ window.DECKS["session-3"] = [
     kind: "step",
     n: 2,
     title: "Bring the designs into a Figma file",
-    lead: "Figma Make often adds scaffolding — landing pages, wrappers, duplicated states.",
+    lead: "Figma Make often adds scaffolding: landing pages, wrappers, and duplicated states.",
     doItems: [
       "Copy the designs out of Figma Make into a Figma design file.",
       "Extract **only the actual app screens**. Drop the rest."
@@ -104,7 +104,7 @@ window.DECKS["session-3"] = [
       "Screens numbered in flow order",
       "`app-flow.md` uses the same names and numbers as the Figma file"
     ],
-    why: "This is what makes the file readable to the review step — the reviewer can follow one direction at a time and refer to screens by number."
+    why: "This is what makes the file readable to the review step: the reviewer can take one direction at a time and refer to screens by number."
   },
 
   {
@@ -132,7 +132,7 @@ window.DECKS["session-3"] = [
     eyebrow: "Step 4",
     title: "The persona review",
     text:
-      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in\nits own named section with screens numbered in flow order. Also attached are\nmy personas.md, problem-definition.md, app-flow.md, and\nprototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each — hold each one to what it\nis trying to do, not just what is on screen.\n\nReview all three directions in character as each of my personas — every\npersona reviews every direction. For each persona × direction, walk the\nnumbered screens in order and note what that persona notices, struggles with,\nand wants, referring to screens by number. Stay true to each persona's\nevidence-grounded goals; don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact\nfirst, with columns: finding, which persona(s), which direction, severity, and\nwhether to act on it. Write the full review and the table into ux-review.md."
+      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in\nits own named section with screens numbered in flow order. Also attached are\nmy personas.md, problem-definition.md, app-flow.md, and\nprototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to\nwhat it is trying to do, and not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that\nevery persona reviews every direction. For each persona × direction, walk the\nnumbered screens in order and note what that persona notices, struggles with,\nand wants, referring to screens by number. Stay true to each persona's\nevidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact\nfirst, with columns: finding, which persona(s), which direction, severity, and\nwhether to act on it. Write the full review and the table into ux-review.md."
   },
 
   {
@@ -170,16 +170,16 @@ window.DECKS["session-3"] = [
     eyebrow: "What you'll produce",
     title: "Three outputs",
     items: [
-      "3 prototype directions in Figma, with `prototype-directions.md` describing each",
-      "`app-flow.md` — the screen-by-screen path through each direction",
-      "`ux-review.md` — the persona review, the prioritized findings, and your triage"
+      { label: "3 prototype directions in Figma", text: "with `prototype-directions.md` describing each" },
+      { label: "`app-flow.md`", text: "the screen-by-screen path through each direction" },
+      { label: "`ux-review.md`", text: "the persona review, the prioritized findings, and your triage" }
     ]
   },
 
   {
     kind: "statement",
     eyebrow: "What you'll take away",
-    text: "Given your real problem and personas as structured files, a generative tool returns prototypes grounded in the research — and you can pressure-test them straight away against the same personas."
+    text: "Given your real problem and personas as structured files, a generative tool returns prototypes grounded in the research, and you can pressure-test them straight away against the same personas."
   },
 
   {

@@ -15,10 +15,10 @@ window.DECKS["session-0"] = [
     title: "What each session needs",
     cols: ["Session", "Tool", "Setup"],
     rows: [
-      ["1 — Research synthesis", "Microsoft Copilot 365 chat", "None. Org-provided, works in the browser."],
-      ["2 — Problem and personas", "Microsoft Copilot 365 chat", "None."],
-      ["3 — Prototyping and review", "Figma Make · Figma desktop · VS Code with Copilot", "Figma MCP local server — we set it up together in the session."],
-      ["4 — Knowledge base and MVP", "VS Code with GitHub Copilot", "Nothing to install. The app is plain HTML, CSS, and JavaScript."]
+      ["1. Research synthesis", "Microsoft Copilot 365 chat", "None. Org-provided, works in the browser."],
+      ["2. Problem and personas", "Microsoft Copilot 365 chat", "None."],
+      ["3. Prototyping and review", "Figma Make · Figma desktop · VS Code with Copilot", "The Figma MCP local server, which we set up together in the session."],
+      ["4. Knowledge base and MVP", "VS Code with GitHub Copilot", "Nothing to install. The app is plain HTML, CSS, and JavaScript."]
     ]
   },
 
@@ -30,13 +30,13 @@ window.DECKS["session-0"] = [
     items: [
       { label: "A laptop you can install on.", text: "You work on your own machine throughout." },
       { label: "Microsoft Copilot 365 access.", text: "Org-provided. Open it once and confirm you can start a chat." },
-      { label: "VS Code installed.", text: "Free download. You do not need to know how to use it — that is what the walkthrough is for." },
+      { label: "VS Code installed.", text: "Free download. You do not need to know how to use it; the walkthrough covers that." },
       { label: "The course repository on your machine.", text: "Ask if you have not done this before; it takes two minutes with help." }
     ],
     callout: {
       tone: "stop",
       title: "The one with a lead time",
-      text: "GitHub Copilot needs a **BSD application approved**. Start it the day the course is announced — it does not clear overnight, and Sessions 3 and 4 both need it."
+      text: "GitHub Copilot needs a **BSD application approved**. Start it the day the course is announced, because approval does not clear overnight and Sessions 3 and 4 both need it."
     }
   },
 
@@ -45,7 +45,7 @@ window.DECKS["session-0"] = [
     eyebrow: "Session 3 needs a little more",
     title: "Figma, and the connection to Copilot",
     items: [
-      { label: "Figma desktop app, updated.", text: "The MCP server lives in the desktop app, not the browser." },
+      { label: "Figma desktop app, updated.", text: "The MCP server lives in the desktop app, so the browser version will not do." },
       { label: "A Figma file you have edit access to.", text: "You will paste your generated designs into it." },
       { label: "Figma Make access.", text: "This is where the three prototype directions come from." },
       { label: "The local MCP server.", text: "Runs on **your** machine, so you set it up. We do it together, step by step, and nobody moves on until everyone's server answers." }
@@ -57,7 +57,7 @@ window.DECKS["session-0"] = [
     kind: "list",
     eyebrow: "Session 4 needs the least",
     title: "Nothing to install",
-    lead: "The MVP is plain HTML, CSS, and JavaScript — no framework, no build step, no package manager.",
+    lead: "The MVP is plain HTML, CSS, and JavaScript: no framework, no build step, and no package manager.",
     items: [
       "You open a file in your browser and the app runs.",
       "The stack is pinned, so the build tool never asks you to choose one.",
@@ -66,7 +66,7 @@ window.DECKS["session-0"] = [
     callout: {
       tone: "go",
       title: "Why it is deliberately plain",
-      text: "Nothing to install means nothing to fail on your machine, and no version drift between people in the room. Every hour not spent on tooling is an hour spent on the method."
+      text: "Nothing to install means nothing to fail on your machine, and no version drift between people in the room. That keeps the session time on the method rather than on setup."
     }
   },
 
@@ -74,15 +74,15 @@ window.DECKS["session-0"] = [
     kind: "list",
     eyebrow: "Readiness check",
     title: "Hands up for each of these",
-    lead: "This plans support and pairing. There is no wrong answer and nobody is excluded by it — I just need to know where to stand.",
+    lead: "This is how I plan support and pairing. There is no wrong answer, and nobody is excluded by it.",
     items: [
-      "**VS Code** — comfortable, seen it once, or never?",
-      "**Markdown files** — do you know what one is?",
-      "**Finding files in a folder tree** — including on someone else's project?",
-      "**Git or GitHub** — any exposure at all?",
-      "**Working with AI beyond single prompts** — attaching files, iterating, agents?"
+      "**VS Code**: comfortable, seen it once, or never?",
+      "**Markdown files**: do you know what one is?",
+      "**Finding files in a folder tree**: including on someone else's project?",
+      "**Git or GitHub**: any exposure at all?",
+      "**Working with AI beyond single prompts**: attaching files, iterating, agents?"
     ],
-    note: "Comfort with VS Code matters more here than experience with AI. Better to know that now than to discover it at the time."
+    note: "Comfort with VS Code matters more here than experience with AI, and it is better to know now than mid-session."
   },
 
   {
@@ -147,8 +147,8 @@ window.DECKS["session-0"] = [
     title: "You can still do the next one",
     lead: "Every session has a `premade/` folder holding a known-good version of what the previous session produced.",
     items: [
-      "Take the premade artifacts and use them as-is — there is nothing to redo or choose.",
-      "You lose the work being *yours*, and you keep the full method.",
+      "Take the premade artifacts and use them as they are. There is nothing to redo or choose.",
+      "The work is no longer *yours* in the same way, and you still do the full method.",
       "Say so at the start and we will point you at the right folder."
     ]
   },
@@ -166,14 +166,14 @@ window.DECKS["session-0"] = [
     callout: {
       tone: "go",
       title: "You are not behind if you stop at the core",
-      text: "Session 4 asks for one increment built and verified — not nine. Completing the loop once is the learning goal."
+      text: "Session 4 asks for one increment built and verified, out of the nine you will have planned. Completing the loop once is the learning goal."
     }
   },
 
   {
     kind: "cover",
     eyebrow: "Ready",
-    title: "Session 1 — Research synthesis",
+    title: "Session 1: Research synthesis",
     lead: "How the framing of a summarization prompt changes the research you get back.",
     meta: ["Microsoft Copilot 365 chat", "No setup needed"]
   }

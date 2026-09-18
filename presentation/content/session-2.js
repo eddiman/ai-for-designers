@@ -18,10 +18,10 @@ window.DECKS["session-2"] = [
   {
     kind: "list",
     eyebrow: "What you start from",
-    title: "Your worked evidence, not the raw sources",
-    lead: "If you were here for Session 1, continue from your own work. If you missed it, the premade versions in `premade/` are ready to use as-is.",
+    title: "Your worked evidence",
+    lead: "If you were here for Session 1, continue from your own work. If you missed it, the premade versions in `premade/` are ready to use as they are.",
     items: [
-      { label: "Your triangulation note", text: "the main input — it already did the cross-source combining" },
+      { label: "Your triangulation note", text: "the main input, since it already did the cross-source combining" },
       { label: "Your chosen summaries", text: "the one version you carried forward per source, so you can pull specific quotes" }
     ],
     callout: {
@@ -34,20 +34,20 @@ window.DECKS["session-2"] = [
   {
     kind: "table",
     eyebrow: "How you'll work",
-    title: "One chat for the packet, or a fresh chat per activity?",
+    title: "Two ways to structure the chats",
     lead: "Both are valid. Choose deliberately.",
     cols: ["", "One chat for all three", "Fresh chat per activity"],
     rows: [
-      ["For", "The thread carries — insights feed the problem, the problem feeds the personas", "Clean context each time, so each task reads the evidence fresh"],
+      ["For", "The thread carries: insights feed the problem, the problem feeds the personas", "Clean context each time, so each task reads the evidence fresh"],
       ["For", "Fewer restarts and less re-pasting", "Forces you to re-state what you carry forward, which sharpens it"],
-      ["Against", "Context piles up — the red-team argument can anchor your personas to it", "You have to re-attach the evidence and paste in what you are building on"]
+      ["Against", "Context piles up, and the red-team argument can anchor your personas to it", "You have to re-attach the evidence and paste in what you are building on"]
     ]
   },
 
   {
     kind: "statement",
     eyebrow: "Whichever you pick",
-    text: "The more steps you work — ask, read, propose a change, ask again — the better you understand the material, and the better the AI can help you. The chat structure is plumbing around that loop."
+    text: "The more steps you work yourself (ask, read, propose a change, ask again), the better you understand the material, and the better the AI can help you. The chat structure is plumbing around that loop."
   },
 
   {
@@ -75,7 +75,7 @@ window.DECKS["session-2"] = [
     title: "Key insights",
     text:
       "From the triangulation note and summaries, give me the 3–5 key insights that\nshould drive the design. For each, cite the specific evidence and label it as\nobserved (said or measured) or inferred.",
-    note: "Insights are not the triangulation. The triangulation maps agreement and conflict; the insights are the committed takeaways you carry forward."
+    note: "The insights are a separate step from the triangulation. The triangulation maps where sources agree and conflict, and the insights are the committed takeaways you pull out of it."
   },
 
   {
@@ -91,7 +91,7 @@ window.DECKS["session-2"] = [
       "Write your own reply to that argument."
     ],
     doneItems: [
-      "One problem, not a blend of three",
+      "One problem, picked from the ranked list",
       "The framings you rejected, and why",
       "The red-team argument and *your* response to it"
     ],
@@ -100,7 +100,7 @@ window.DECKS["session-2"] = [
 
   {
     kind: "prompt",
-    eyebrow: "Step 2 — three prompts in sequence",
+    eyebrow: "Step 2: three prompts in sequence",
     title: "Generate, rank, red-team",
     text:
       "Generate 5 candidate problem framings for what to solve first, each with a\nHow-Might-We statement and the evidence that supports it.\n\nRank these by how much of my evidence actually supports each one. Cite the\nspecific source for each.\n\nArgue why the problem I picked is the wrong one to solve first."
@@ -113,12 +113,12 @@ window.DECKS["session-2"] = [
     lead: "*Red-teaming* borrows a term from security: a red team attacks a plan to expose its weaknesses. Here the AI is your red team.",
     items: [
       "Do you concede and re-scope the problem?",
-      "Or hold your ground — and on what evidence?",
+      "Or do you hold your ground, and on what evidence?",
       "**That reply is the judgement this step trains.** Pasting the critique and moving on defeats the purpose."
     ],
     callout: {
       title: "Narrowing is the point",
-      text: "“Commit to a single problem” means pick one framing from the ranked list. Not a blend of three, not “all of the above.”"
+      text: "“Commit to a single problem” means picking one framing from the ranked list, rather than blending three of them or keeping all of the above."
     }
   },
 
@@ -147,7 +147,7 @@ window.DECKS["session-2"] = [
     title: "Personas",
     text:
       "From this evidence and the committed problem, propose 2–3 personas. Ground\neach in specific interview or questionnaire signals, label each as a\nhypothesis, and note what we still don't know about them.",
-    note: "Use the split the triangulation named — the power user who wants a proactive assistant against the simplicity-first rider who wants reliable basics."
+    note: "Use the split the triangulation named: the power user who wants a proactive assistant, and the simplicity-first rider who wants reliable basics."
   },
 
   {
@@ -161,7 +161,7 @@ window.DECKS["session-2"] = [
       ["`problem-definition.md`", "The single committed problem, the rejected candidates, the red-team argument, and your response"],
       ["`personas.md`", "2–3 evidence-grounded personas, each labelled as a hypothesis"]
     ],
-    note: "Plain markdown — clean headings, short bullets, nothing fancy — so they attach cleanly to Figma Make and Copilot in Session 3."
+    note: "Plain markdown with clean headings and short bullets, so they attach cleanly to Figma Make and Copilot in Session 3."
   },
 
   {

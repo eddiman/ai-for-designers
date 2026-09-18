@@ -19,7 +19,7 @@ window.DECKS["session-1"] = [
     kind: "list",
     eyebrow: "What you start from",
     title: "One shared research pack",
-    lead: "Everyone works from the same material in `premade/`. Nothing to carry forward yet — this is where the project begins.",
+    lead: "Everyone works from the same material in `premade/`. There is nothing to carry forward yet, since this is where the project begins.",
     items: [
       { label: "Three interviews", text: "transcripts about how people plan and catch buses today" },
       { label: "One questionnaire", text: "the broad signal the interviews get measured against" }
@@ -45,7 +45,7 @@ window.DECKS["session-1"] = [
   {
     kind: "statement",
     eyebrow: "The point",
-    text: "Neither style is the right one. The skill is knowing which mode you are in, and choosing it *on purpose*."
+    text: "Both styles are legitimate. The skill is knowing which mode you are in, and choosing it *on purpose*."
   },
 
   {
@@ -66,7 +66,7 @@ window.DECKS["session-1"] = [
     callout: {
       tone: "stop",
       title: "Why the steps below are slower on purpose",
-      text: "You never worked the data, so you cannot tell whether it is the right cut. That is relevance with no way to check it."
+      text: "You never worked the data, so you cannot tell whether it is the right cut of it, and you have no way to check."
     }
   },
 
@@ -94,7 +94,7 @@ window.DECKS["session-1"] = [
     eyebrow: "Step 3 of each chat",
     title: "The comparison prompt",
     text: "Analyze the summaries and highlight the differences between them.",
-    note: "Read this one out loud in the room — it is the step people skip, and it is where the lesson lands."
+    note: "Read this one out loud in the room. It is the step people skip, and it is the step that shows what the framing did."
   },
 
   {
@@ -103,8 +103,8 @@ window.DECKS["session-1"] = [
     title: "The questionnaire",
     lead: "The same three-step flow, in its own single chat.",
     doItems: [
-      "**Generic** — “Summarize this questionnaire.”",
-      "**Directed** — “…focusing on what frustrates people about catching the bus today and what they most want improved.”",
+      "**Generic**: “Summarize this questionnaire.”",
+      "**Directed**: “…focusing on what frustrates people about catching the bus today and what they most want improved.”",
       "Then the same differences analysis."
     ],
     doneItems: [
@@ -121,7 +121,7 @@ window.DECKS["session-1"] = [
     lead: "For each of the four sources, pick the *one* summary you carry forward.",
     doItems: [
       "Ask of each summary: is this usable, and what did each style miss or add?",
-      "Pick generic or directed for each source — they do not all have to match.",
+      "Pick generic or directed for each source; they do not all have to match.",
       "Note why you picked it."
     ],
     doneItems: [
@@ -135,7 +135,7 @@ window.DECKS["session-1"] = [
     kind: "step",
     n: 4,
     title: "Triangulate",
-    lead: "The one place you deliberately combine sources in a single chat — because what you are feeding in is worked and vetted, not raw transcript.",
+    lead: "The one place you deliberately combine sources in a single chat, because what you feed in has been worked and vetted rather than pasted in raw.",
     doItems: [
       "Put your four chosen summaries into one fresh chat.",
       "Run the triangulation prompt.",
@@ -143,7 +143,7 @@ window.DECKS["session-1"] = [
     ],
     doneItems: [
       "Agreements, conflicts and gaps written down with sources cited",
-      "The central tension named — in your words",
+      "The central tension named, in your words",
       "`triangulation.md` filled in"
     ],
     why: "This is where the planted tension should surface. The model's pass is a draft you interrogate."
@@ -188,7 +188,7 @@ window.DECKS["session-1"] = [
     ordered: true,
     items: [
       { label: "One problem, one chat.", text: "Mixing sources or questions into one context produces confident answers that are quietly wrong." },
-      { label: "The more you work the raw data, the more you control it.", text: "You can only trust a summary you can trace back — to the source quotes, to the framing you chose, to the sources that agree or conflict." },
+      { label: "The more you work the raw data, the more you control it.", text: "You can only trust a summary you can trace back: to the source quotes, to the framing you chose, and to the sources that agree or conflict." },
       { label: "Prompt framing is a research-design decision.", text: "You make it before you read a word of the output. Decide which mode you want each time." }
     ]
   },

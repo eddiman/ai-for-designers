@@ -21,7 +21,7 @@ window.DECKS["session-4"] = [
   {
     kind: "statement",
     eyebrow: "Why this session exists",
-    text: "You are testing whether your research and design decisions can constrain a working output. Handed your evidence and your decisions, does a build tool produce something that answers the problem you committed to?"
+    text: "You are testing whether your research and design decisions can constrain a working output. Handed your evidence and your decisions, a build tool should produce something that answers the problem you committed to. Today you find out whether it does."
   },
 
   {
@@ -30,7 +30,7 @@ window.DECKS["session-4"] = [
     title: "What this session is not",
     items: [
       "Building production-quality software is **outside the scope**.",
-      "The MVP is **one output** of the knowledge base — you can keep asking questions of that knowledge base long after today.",
+      "The MVP is **one output** of the knowledge base, and you can keep asking questions of that knowledge base long after today.",
       "You do not need to be a developer. The stack is decided for you and nothing gets installed."
     ]
   },
@@ -48,8 +48,8 @@ window.DECKS["session-4"] = [
     eyebrow: "What counts as done",
     title: "Core, and stretch",
     items: [
-      { label: "Core — everyone:", text: "a knowledge base, a committed direction, a spec, both plans, and **one increment you built and verified**." },
-      { label: "Stretch — if you get there:", text: "keep going through your increments, one at a time, verifying each before the next." }
+      { label: "Core, for everyone:", text: "a knowledge base, a committed direction, a spec, both plans, and **one increment you built and verified**." },
+      { label: "Stretch, if you get there:", text: "keep going through your increments, one at a time, verifying each before the next." }
     ],
     callout: {
       tone: "go",
@@ -146,7 +146,7 @@ window.DECKS["session-4"] = [
     lead: "Session 3 gave you three directions and a UX review without making you pick. That is this step.",
     doItems: [
       "Decide which one direction you are taking into the build.",
-      "Ask for the trade-offs first if you want them — but the call is yours.",
+      "Ask for the trade-offs first if you want them; the call is still yours.",
       "Write it into `chosen-direction.md`: the direction, why it won, which review findings you will fix, what you are leaving behind."
     ],
     doneItems: [
@@ -171,7 +171,7 @@ window.DECKS["session-4"] = [
     title: "Write the spec",
     doItems: [
       "Draft `spec.md` with the agent, reading the KB and your chosen direction.",
-      "Tell it: **do not write, scaffold or run any code** — this is a planning step.",
+      "Tell it: **do not write, scaffold or run any code**, since this is a planning step.",
       "Push back where it reached for a generic feature. Ask where the line comes from in the KB.",
       "If it has no answer, cut the line."
     ],
@@ -180,7 +180,7 @@ window.DECKS["session-4"] = [
       "Every scope item traces to something in your KB",
       "The out-of-scope list is not empty"
     ],
-    why: "The out-of-scope list is what keeps the build from sprawling. A spec that traces to evidence is the difference between building your project and building a generic bus app."
+    why: "The out-of-scope list is what keeps the build from sprawling, and tracing every scope item to your evidence is what keeps the app anchored to your project rather than to generic bus-app conventions."
   },
 
   {
@@ -203,14 +203,14 @@ window.DECKS["session-4"] = [
     title: "Plan the build",
     lead: "Two files, written in the same pass.",
     doItems: [
-      "`build-plan.md` — the increments, each small enough to build **and verify in one pass**.",
-      "`verification-plan.md` — a row per increment, how you will confirm it works.",
+      "`build-plan.md`: the increments, each small enough to build **and verify in one pass**.",
+      "`verification-plan.md`: a row per increment, how you will confirm it works.",
       "Split anything you could not check in one sitting.",
       "For each verification row, ask yourself what you would actually click or look at."
     ],
     doneItems: [
       "Nothing in the order depends on something later",
-      "Increment 1 is small — a starting point with no feature in it yet",
+      "Increment 1 is small: a starting point with no feature in it yet",
       "Every verification row describes something you can actually check"
     ],
     why: "This is the plan the build tool follows. An increment you cannot verify is one you have to trust blindly."
@@ -227,21 +227,21 @@ window.DECKS["session-4"] = [
   {
     kind: "list",
     eyebrow: "Step 5",
-    title: "The stack is already decided, so you do not have to be",
+    title: "The stack is already decided",
     lead: "Plain **HTML**, **CSS** and **JavaScript**. No framework, no build step, no packages, nothing to install. You open the file in your browser and it runs.",
     items: [
       "The build tool will not stop to ask which framework to use.",
       "Everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.",
-      "It is enough — a saved stop, a status and a recommendation need nothing more."
+      "It is enough for what the MVP does: a saved stop, a status and a recommendation need nothing more."
     ]
   },
 
   {
     kind: "prompt",
-    eyebrow: "Step 5 — paste as-is",
+    eyebrow: "Step 5: paste as-is",
     title: "Scaffold the app",
     text:
-      "Scaffold the app for this MVP at session-4-knowledge-base-and-mvp/app/ as\nplain HTML, CSS, and JavaScript — an index.html, a styles.css, and a\nscript.js. No framework, no build step, no package manager, no dependencies:\nI must be able to open index.html directly in a browser and have it work.\n\nLeave it as a single near-empty starting page for now — do not build any part\nof the MVP yet. When you are done, tell me how to open it and confirm it works.\n\nIf a technical choice is not covered above, pick the simplest option that\nkeeps the app opening directly in a browser and tell me what you picked. Do\nnot ask me to choose."
+      "Scaffold the app for this MVP at session-4-knowledge-base-and-mvp/app/ as\nplain HTML, CSS, and JavaScript (an index.html, a styles.css, and a\nscript.js). No framework, no build step, no package manager, no dependencies:\nI must be able to open index.html directly in a browser and have it work.\n\nLeave it as a single near-empty starting page for now, and do not build any\npart of the MVP yet. When you are done, tell me how to open it and confirm\nthat it works.\n\nIf a technical choice is not covered above, pick the simplest option that\nkeeps the app opening directly in a browser and tell me what you picked. Do\nnot ask me to choose."
   },
 
   {
@@ -269,17 +269,17 @@ window.DECKS["session-4"] = [
     title: "Build one increment, then verify it",
     lead: "This is the core of the session. The anti-pattern is one-shotting: asking for a whole feature in one prompt and hoping it holds together.",
     doItems: [
-      "Release **only the first increment** — nothing beyond it.",
+      "Release **only the first increment**, nothing beyond it.",
       "Have it write back into `build-plan.md` what it actually did, then stop.",
       "Open the app and run your verification check yourself.",
-      "Mark the row verified — or write down what failed and what you changed."
+      "Mark the row verified, or write down what failed and what you changed."
     ],
     doneItems: [
       "The increment works when **you** look at it",
       "`build-plan.md` records what the tool actually did",
       "`verification-plan.md` shows it verified, or says why not"
     ],
-    why: "Verifying each small step, and making the tool write back what it did, is what produces a working MVP instead of a confident-looking mess."
+    why: "Verifying each small step, and making the tool write back what it did, is what keeps the app working as it grows and tells you where it went wrong when it stops working."
   },
 
   {
@@ -287,13 +287,13 @@ window.DECKS["session-4"] = [
     eyebrow: "Step 6",
     title: "Look at the page, not the summary",
     items: [
-      "The agent will tell you it works. That is a claim, not a check.",
+      "The agent will tell you it works. Treat that as a claim you still have to check.",
       "Open `index.html` and do the thing your verification plan says.",
-      "A *product* question — what a screen says, what a rider sees first — is yours to answer, from your spec."
+      "A *product* question (what a screen says, what a rider sees first) is yours to answer, from your spec."
     ],
     callout: {
       tone: "go",
-      title: "Checkpoint — you have met the session's core goal",
+      title: "Checkpoint: you have met the session's core goal",
       text: "Show your verified increment and your verification-plan row before going further."
     }
   },
@@ -305,7 +305,7 @@ window.DECKS["session-4"] = [
     lead: "The scaffold settled things nobody wrote down: the folder layout, where styles live, what the files are called.",
     doItems: [
       "Now that the first increment exists, have the agent draft `app/AGENTS.md`.",
-      "Have it state the stack as **fixed** — no framework, build step or dependency later.",
+      "Have it state the stack as **fixed**: no framework, build step or dependency later.",
       "Check it against reality: does it match what is in `app/`?",
       "Answer or delete any open questions it left."
     ],
@@ -321,7 +321,7 @@ window.DECKS["session-4"] = [
     kind: "list",
     eyebrow: "Step 7",
     title: "One file to leave alone",
-    lead: "`AGENTS.md` belongs beside the app it describes — `app/AGENTS.md`. An agent reads the nearest one to whatever it is working on.",
+    lead: "`AGENTS.md` belongs beside the app it describes, at `app/AGENTS.md`. An agent reads the nearest one to whatever it is working on.",
     items: [
       "**Do not** write it at the repository root.",
       "The root `AGENTS.md` describes this course repository.",
