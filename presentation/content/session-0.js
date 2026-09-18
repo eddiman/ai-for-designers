@@ -104,7 +104,7 @@ window.DECKS["session-0"] = [
       { label: "What a Markdown file is.", text: "A plain text file with simple formatting. Every artifact you make is one." },
       { label: "Where each session's files live.", text: "One folder per session, and the files you fill in sit at the top of it." },
       { label: "Opening, editing, saving.", text: "In VS Code, and how to tell whether your change was saved." },
-      { label: "The Explorer and Copilot Chat.", text: "The two panels you actually use." },
+      { label: "The Explorer and Copilot Chat.", text: "The two panels you work in." },
       { label: "Course artifacts against application code.", text: "Two different kinds of file in the same folder. Knowing which is which saves confusion in Session 4." }
     ]
   },

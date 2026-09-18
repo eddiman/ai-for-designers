@@ -139,13 +139,13 @@ The out-of-scope list is what keeps the build from sprawling, and tracing every 
 > **Do not write, scaffold, or run any application code; this is a planning step only.** If an increment cannot be verified in a single pass, split it. If something in the spec is missing or contradictory, flag it and ask me rather than filling the gap yourself.
 
 2. Read the increments. Split anything you could not check in one sitting.
-3. Read the verification plan. For each row, ask yourself what you would actually click or look at.
+3. Read the verification plan. For each row, ask yourself what you would click or look at.
 
 **You are done when**
 
 - `build-plan.md` lists increments in an order where nothing depends on something later.
 - Increment 1 is small, a starting point with no feature in it yet.
-- `verification-plan.md` has a row per increment describing something you can actually check.
+- `verification-plan.md` has a row per increment describing something you can check.
 
 **Why this matters**
 
@@ -201,12 +201,12 @@ This is the core of the session. The anti-pattern to avoid is one-shotting: aski
 **You are done when**
 
 - The increment works when you look at it yourself.
-- `build-plan.md` records what the tool actually did.
+- `build-plan.md` records which files the tool changed.
 - `verification-plan.md` shows that increment as verified, or records why it is not.
 
 **Why this matters**
 
-Verifying each small step, and making the tool write back what it actually did, is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The written record is what keeps both of you honest about what has been built against what is still only planned.
+Verifying each small step, and making the tool write back which files it changed, is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The written record is what keeps both of you honest about what has been built against what is still only planned.
 
 **If the tool asks you a technical question**
 
@@ -239,7 +239,7 @@ It belongs beside the app it describes, at **`session-4-knowledge-base-and-mvp/a
 
 **You are done when**
 
-- `app/AGENTS.md` exists and describes what is actually in `app/`.
+- `app/AGENTS.md` exists and matches the files in `app/`.
 - It states the stack as fixed.
 - No open questions are left dangling for a later increment to guess at.
 
@@ -265,7 +265,7 @@ Work in the stub files in this folder: `chosen-direction.md`, `spec.md`, `build-
 
 ## What you'll take away
 
-A generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step, and making the tool write back what it actually did, is what keeps the MVP working as it grows. The knowledge base is what lets the build tool use the research and design decisions from the earlier sessions.
+A generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step, and making the tool write back which files it changed, is what keeps the MVP working as it grows. The knowledge base is what lets the build tool use the research and design decisions from the earlier sessions.
 
 ## Tools
 

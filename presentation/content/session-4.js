@@ -206,12 +206,12 @@ window.DECKS["session-4"] = [
       "`build-plan.md`: the increments, each small enough to build **and verify in one pass**.",
       "`verification-plan.md`: a row per increment, how you will confirm it works.",
       "Split anything you could not check in one sitting.",
-      "For each verification row, ask yourself what you would actually click or look at."
+      "For each verification row, ask yourself what you would click or look at."
     ],
     doneItems: [
       "Nothing in the order depends on something later",
       "Increment 1 is small: a starting point with no feature in it yet",
-      "Every verification row describes something you can actually check"
+      "Every verification row describes something you can check"
     ],
     why: "This is the plan the build tool follows. An increment you cannot verify is one you have to trust blindly."
   },
@@ -270,16 +270,16 @@ window.DECKS["session-4"] = [
     lead: "This is the core of the session. The anti-pattern is one-shotting: asking for a whole feature in one prompt and hoping it holds together.",
     doItems: [
       "Release **only the first increment**, nothing beyond it.",
-      "Have it write back into `build-plan.md` what it actually did, then stop.",
+      "Have it write back into `build-plan.md` which files it changed and what now works, then stop.",
       "Open the app and run your verification check yourself.",
       "Mark the row verified, or write down what failed and what you changed."
     ],
     doneItems: [
       "The increment works when **you** look at it",
-      "`build-plan.md` records what the tool actually did",
+      "`build-plan.md` records which files the tool changed",
       "`verification-plan.md` shows it verified, or says why not"
     ],
-    why: "Verifying each small step, and making the tool write back what it did, is what keeps the app working as it grows and tells you where it went wrong when it stops working."
+    why: "Verifying each small step, and making the tool write back which files it changed, is what keeps the app working as it grows and tells you where it went wrong when it stops working."
   },
 
   {
@@ -310,7 +310,7 @@ window.DECKS["session-4"] = [
       "Answer or delete any open questions it left."
     ],
     doneItems: [
-      "`app/AGENTS.md` describes what is actually in `app/`",
+      "`app/AGENTS.md` matches the files in `app/`",
       "It states the stack as fixed",
       "No open questions dangling for a later increment to guess at"
     ],

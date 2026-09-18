@@ -2,7 +2,7 @@
 
 ## What you'll learn
 
-How the framing of a summarization prompt changes the research you get back, and how to work raw research into something you can actually trust. You'll see three things first-hand: why each source belongs in its own chat, why working the data in small controlled steps beats one-shotting it, and how to triangulate across sources before you trust a pattern.
+How the framing of a summarization prompt changes the research you get back, and how to work raw research into something you can trust. You'll see three things first-hand: why each source belongs in its own chat, why working the data in small controlled steps beats one-shotting it, and how to triangulate across sources before you trust a pattern.
 
 ## What you start from
 
@@ -20,7 +20,7 @@ You'll run the same data through two styles of prompt and compare:
 What to watch for:
 
 - The generic prompt keeps your assumptions out of it and gives a low-bias first pass. It can also come back bland and skip the things that matter for your specific problem.
-- The directed prompt gives sharper, more relevant output. It can also quietly fold your interpretation into something that still looks like a neutral summary, so a reader can't tell what the user actually said apart from what you were hoping to hear.
+- The directed prompt gives sharper, more relevant output. It can also quietly fold your interpretation into something that still looks like a neutral summary, so a reader can't tell what the user said apart from what you were hoping to hear.
 
 Both styles are legitimate. The skill is knowing which mode you're in and choosing it on purpose.
 
@@ -55,7 +55,7 @@ The questionnaire is the broad signal that the interviews get measured against, 
 
 ### Then, across everything
 
-- Ask the harder question of each summary: is this actually usable, and what did each style miss or add?
+- Ask the harder question of each summary: is this usable, and what did each style miss or add?
 - **Choose your inputs.** For each source, meaning each of the three interviews and the questionnaire, pick the *one* summary, generic or directed, that you'll carry into triangulation. Let the differences analysis guide the choice. You don't have to pick the same style for every source. You're committing to a framing here, and its bias travels forward, so choose on purpose and note why.
 - **Triangulate.** This is the one place you deliberately combine sources in a single chat, and it works precisely because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript. Put your four chosen summaries into one fresh chat and ask: **"Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."**
 - Then don't take that answer at face value. Check it against what you noticed yourself: did it surface an actual conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension, since the model's pass is a draft you interrogate. This is where the planted tension should surface.

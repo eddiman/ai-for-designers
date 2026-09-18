@@ -85,7 +85,7 @@ window.DECKS["session-2"] = [
     lead: "Generate framings, rank them by evidence, commit to one, then red-team it.",
     doItems: [
       "Generate **5 candidate framings**, each with a How-Might-We and its evidence.",
-      "Rank them by how much of *your* evidence actually supports each.",
+      "Rank them by how much of *your* evidence supports each.",
       "**Commit to one.** Write it as a single clear statement plus its How-Might-We.",
       "Ask the model to argue your pick is the wrong problem to solve first.",
       "Write your own reply to that argument."

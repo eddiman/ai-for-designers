@@ -14,7 +14,7 @@ supersedes: ai-for-designers-v1.2.md (kept for history)
 
 ## What changed from v1.2
 
-v1.2 seeded each session from the plan and left the runnable detail to be filled in. v1.3 captures **Session 1 as it now actually runs**:
+v1.2 seeded each session from the plan and left the runnable detail to be filled in. v1.3 captures **Session 1 as it now runs**:
 
 - The generic-against-directed comparison is a fixed **three-step flow per source**: generic, then directed in the same chat, then "analyze the differences between them". It is applied to each interview *and* to the questionnaire, with the exact prompts written out.
 - The directed prompt uses the **same topical lens** on both sources ("what frustrates people and what they most want improved"), so the planted tension emerges from the data rather than from the prompt wording.
@@ -28,7 +28,7 @@ Sessions 2–4 are unchanged from v1.2 and still need the same fleshing-out into
 v1.1 organized the four sessions around the design process (Discover → Define → Develop → Deliver) and listed where AI helps in each phase, with separate guidance per role. v1.2 kept that arc underneath but changed how the course is run:
 
 - **One running scenario.** Every session works the same project, helping people catch the bus, so the group builds a single thread from raw research through to a working MVP.
-- **Your own work carries forward; premade data is the on-ramp.** If you attend the whole course, each session builds on the artifacts *you* made in the previous one, so by the end the bus-app project is genuinely yours. That ownership is the point. For anyone who missed a session, each session also ships with a known-good premade version of the previous artifact, so they can drop in for a single topic without having committed to the whole course. Everyone finishes a session with the same *kind* of artifact in the same format, and the content varies because it reflects each person's own choices.
+- **Your own work carries forward; premade data is the on-ramp.** If you attend the whole course, each session builds on the artifacts *you* made in the previous one, so by the end the bus-app project is built from your own decisions. That ownership is the point. For anyone who missed a session, each session also ships with a known-good premade version of the previous artifact, so they can drop in for a single topic without having committed to the whole course. Everyone finishes a session with the same *kind* of artifact in the same format, and the content varies because it reflects each person's own choices.
 - **All three roles in the same room.** UI, UX, and Service designers go through the same sessions on the same scenario. There are no separate role tracks. The aim is for each role to see the full end-to-end flow and where AI touches their part and the parts on either side of them.
 - **Files are what moves between tools.** From Session 1 onward, output is saved as portable files (markdown or PDF). Later sessions attach these files to Figma Make and Copilot, so anything left in a chat window cannot move forward.
 - **A different back half.** Session 3 moves to Figma Make plus a round-trip into Copilot and Figma for a persona-based UX review. Session 4 builds an actual MVP in Copilot from a project knowledge base, using a deliberate spec → plan → verify → iterate loop.
@@ -134,7 +134,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 **Starting point + recap:** if you were here for Session 1, you continue from your own summaries and triangulation note; if you missed it, take the premade reference versions and carry on. Either way the session opens with a recap that explains which prompt style produced the reference summaries and why (for example, a directed prompt focused on reliability, frequency, and trust, because those recurred across sources), what the central tension is, and why the summaries are solid enough to build on.
 
 **The work:**
-- Generate candidate problem framings and How-Might-We statements from the evidence. Ask AI to rank them by how much evidence actually supports each one. Commit to a single problem and have AI red-team it ("argue why this is the wrong problem to solve first").
+- Generate candidate problem framings and How-Might-We statements from the evidence. Ask AI to rank them by how much evidence supports each one. Commit to a single problem and have AI red-team it ("argue why this is the wrong problem to solve first").
 - Create **2–3 personas**, each grounded in specific evidence from the research, each labelled as a hypothesis, each noting what we still do not know about them.
 - Save everything as files: `problem-definition.md`, `personas.md`, `key-insights.md`, formatted so they can be attached in Figma Make and Copilot.
 
@@ -185,7 +185,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **Concrete output:** a project knowledge base, and a running MVP of the bus app built incrementally with a verification plan attached.
 
-**Takeaway:** a generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The knowledge base is the thing that lets a build tool actually use the research and design decisions from the earlier sessions.
+**Takeaway:** a generative build tool becomes reliable when it has a structured knowledge base to read and a loop that goes spec → plan → small build → verify → iterate. Verifying each small step is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The knowledge base is what lets a build tool use the research and design decisions from the earlier sessions.
 
 **Tools:** GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill.
 

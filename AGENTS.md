@@ -9,7 +9,7 @@ This repository is the working space for planning **AI for Designers**, a course
 ## The course in brief
 
 - **One running scenario.** Every session works the same project, helping people catch the bus, building a single thread from raw research to a working bus-app MVP.
-- **Your own work carries forward; premade data is the on-ramp.** Attendees build on their own artifacts from session to session, so the project they end up with is genuinely theirs. Anyone who missed a session uses a known-good premade version of the previous artifact to drop in for a single topic. Everyone ends a session with the same kind of artifact in the same format; the content varies per person.
+- **Your own work carries forward; premade data is the on-ramp.** Attendees build on their own artifacts from session to session, so the project they end up with is built from their own decisions. Anyone who missed a session uses a known-good premade version of the previous artifact to drop in for a single topic. Everyone ends a session with the same kind of artifact in the same format; the content varies per person.
 - **All three roles in the same room.** No separate role tracks. Each role sees the full end-to-end flow.
 - **Files are how work moves between tools.** Output is saved as portable files so later sessions can attach them to Figma Make and Copilot.
 - **Four sessions:** (1) research synthesis, (2) problem definition and personas, (3) prototyping with Figma Make plus a persona UX review, (4) knowledge base and an MVP build.
@@ -66,6 +66,7 @@ Specific rules that apply to every file here:
 - **No rhetorical questions** that the writer answers in the next sentence. Genuine questions put to participants or left open for a decision are fine.
 - **No slogans or hype.** Explain the mechanism or the effect instead of calling something impactful or transformative, and drop closing summaries that only repeat what was said.
 - **No filler emphasis.** Do not use "real", "really", or "honest" to add weight, as in "one real project", "any real work", or "one honest warning". Name what is meant instead: whose project it is, which work, what the warning is about. "real-time" and "real-world" stay, since they are the established terms for the thing they describe.
+- **A ban covers what is close to it.** Synonyms, hyphenated rewordings, and the same figure of speech with one word swapped fall under the same rule, so "genuine", "truly", "actual", and "actually" are out wherever the sentence reads the same without them. Keep such a word only where it marks a contrast the text depends on, as in what the build tool did against what it said it did.
 - **No retrospective asides in participant-facing text.** A slide or session README is read by someone seeing the course for the first time, so it cannot lean on how an earlier run went. "The reframing that helped most" and "the part people skip" mean nothing to them. Put that reasoning in `facilitator/` instead.
 - **Markdown paragraphs are single long lines**, never hard-wrapped at a column.
 

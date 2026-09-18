@@ -58,7 +58,7 @@ window.DECKS["intro"] = [
     title: "Five things to know up front",
     ordered: true,
     items: [
-      { label: "Your own work carries forward.", text: "The project you end up with is genuinely yours. Everyone produces the same kind of artifact, with their own content in it." },
+      { label: "Your own work carries forward.", text: "The project you end up with is built from your own decisions. Everyone produces the same kind of artifact, with their own content in it." },
       { label: "Missing a session does not break you.", text: "Every session has a known-good premade version of the previous artifact. Drop it in and keep going." },
       { label: "All three roles, same room.", text: "No separate tracks. Everyone sees the full end-to-end flow." },
       { label: "Everything is saved as files.", text: "Output is plain markdown, so the next tool can read what the last one produced." },
@@ -91,7 +91,7 @@ window.DECKS["intro"] = [
     items: [
       "**Not a coding course.** Session 4 builds an app, and the stack is decided for you with nothing to install.",
       "**Not about shipping production software.** The MVP tests whether your research can constrain a working output.",
-      "**Not a tool demo.** The tools will change. The workflow is the thing worth keeping.",
+      "**Not a tool demo.** The tools will change. The workflow is what you keep.",
       "**Not a substitute for talking to users.** The persona review in Session 3 generates hypotheses, and does not replace usability testing."
     ]
   },

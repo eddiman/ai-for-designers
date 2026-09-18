@@ -57,7 +57,7 @@ window.DECKS["session-3"] = [
       "Fill in `prototype-directions.md`: name, Figma link, what it is, how it answers the problem."
     ],
     doneItems: [
-      "Three directions that are genuinely different from each other",
+      "Three directions that solve the problem in different ways",
       "Each has key screens as a clickable flow",
       "`prototype-directions.md` is filled in, not a note-to-self"
     ],
