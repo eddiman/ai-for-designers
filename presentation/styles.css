@@ -417,7 +417,7 @@ ol.items li::before {
 }
 .callout--stop { border-left-color: var(--red); }
 .callout--go { border-left-color: var(--green); }
-.callout strong { display: block; margin-bottom: 0.4cqw; }
+.callout__title { display: block; margin-bottom: 0.4cqw; }
 
 .slide__note {
   margin-top: auto;

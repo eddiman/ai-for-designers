@@ -93,7 +93,7 @@
   function renderCallout(c) {
     var tone = c.tone ? " callout--" + c.tone : "";
     var node = h("div", "callout" + tone);
-    if (c.title) node.appendChild(h("strong", null, fmt(c.title)));
+    if (c.title) node.appendChild(h("strong", "callout__title", fmt(c.title)));
     node.appendChild(h("span", null, fmt(c.text)));
     return node;
   }
