@@ -117,7 +117,7 @@ window.DECKS["intro"] = [
   {
     kind: "cover",
     eyebrow: "Let's start",
-    title: "Session 0: what you need",
-    lead: "The tools, the access, and the setup for each of the four sessions."
+    title: "Session 0: get your workspace ready",
+    lead: "Download the files, open the course folder in VS Code, and check every step before Session 1."
   }
 ];

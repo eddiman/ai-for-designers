@@ -43,7 +43,7 @@ Two things need sharpening in the room: what participants should do, and what th
 
 ## Pre-setup
 
-Microsoft Copilot 365 chat is org-provided with no setup. Confirm participants can sign in before the session. No other prerequisites.
+Before the research exercise starts, run the guided Session 0 setup in lockstep. Every participant downloads and extracts the course ZIP, opens the whole `ai-for-designers-main` folder in VS Code, finds the Session 1 source and output files, completes the edit-save-preview check, and confirms that Microsoft 365 Copilot answers in the browser. Do not start Session 1 until each participant passes the five-item readiness gate or has a partner who can keep the files organized with them.
 
 ## Design notes
 

@@ -19,7 +19,7 @@ window.DECKS["session-3"] = [
     kind: "list",
     eyebrow: "First, together",
     title: "Connect the Figma MCP",
-    lead: "The read-only Figma server runs on **your own machine**, so you set it up. We do it together, step by step.",
+    lead: "Figma's read-only server runs locally. We set it up together.",
     items: [
       { label: "In Figma desktop", text: "Dev Mode → right sidebar → MCP section → preferences → Enabled" },
       { label: "Confirm", text: "the server answers at `http://127.0.0.1:3845/mcp`" },

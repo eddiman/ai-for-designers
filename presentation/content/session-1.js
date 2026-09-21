@@ -6,7 +6,7 @@ window.DECKS["session-1"] = [
     eyebrow: "Session 1",
     title: "Research synthesis",
     lead: "How the framing of a summarization prompt changes the research you get back.",
-    meta: ["Microsoft Copilot 365 chat", "No setup needed", "session-1-research-synthesis/"]
+    meta: ["Microsoft 365 Copilot chat", "VS Code workspace", "session-1-research-synthesis/"]
   },
 
   {

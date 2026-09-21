@@ -10,6 +10,10 @@ Everyone works from the same research pack in `premade/`: three interview transc
 
 A tension has been deliberately planted somewhere between the interviews and the questionnaire. You aren't told where. Finding it is part of the work.
 
+Before the session starts, download and extract the course ZIP, then open the whole `ai-for-designers-main` folder in VS Code. Keep VS Code open beside Microsoft 365 Copilot in your browser. You read and copy source material from `premade/`, then paste and save your results in the empty Markdown files at the top of this session folder.
+
+To preview a Markdown file, make the file's tab active and press **Cmd+Shift+V** on Mac or **Ctrl+Shift+V** on Windows. The preview is for reading. Return to the original `.md` tab to edit. If the shortcut does nothing, open the Command Palette with **Cmd+Shift+P** on Mac or **Ctrl+Shift+P** on Windows, type `Markdown: Open Preview`, and press Enter.
+
 ## The two prompt styles
 
 You'll run the same data through two styles of prompt and compare:
@@ -80,4 +84,4 @@ Three things to leave with:
 
 ## Tool
 
-Microsoft Copilot 365 chat (org-provided, no setup).
+Microsoft 365 Copilot chat in the browser, plus VS Code for reading the research files and saving your work. Complete the guided setup in Session 0 before this session starts.

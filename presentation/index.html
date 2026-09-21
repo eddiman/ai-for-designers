@@ -25,6 +25,23 @@
           for the setup, then a deck per session. The session <code>README.md</code> files stay the
           detailed instruction set for following along or handing to an agent.
         </p>
+        <div class="landing__actions">
+          <a
+            class="landing__download"
+            href="https://github.com/eddiman/ai-for-designers/archive/refs/heads/main.zip"
+            download
+          >
+            Download course files (.zip)
+          </a>
+          <a
+            class="landing__download landing__download--secondary"
+            href="https://code.visualstudio.com/download"
+            target="_blank"
+            rel="noopener"
+          >
+            Get VS Code
+          </a>
+        </div>
       </header>
 
       <nav id="session-list" class="session-groups" aria-label="Sessions"></nav>
@@ -51,23 +68,21 @@
 
       <div id="stage" class="stage" role="main" aria-live="polite">
         <article id="slide" class="slide"></article>
+        <div id="overview" class="overview" hidden>
+          <div class="overview__head">
+            <h2 class="h6" id="overview-title">Slides</h2>
+          </div>
+          <ol id="overview-list" class="overview__list"></ol>
+        </div>
       </div>
 
       <div class="controls" role="toolbar" aria-label="Presentation controls">
         <a class="controls__btn" href="#/" title="Back to sessions (Esc)" data-nav>Home</a>
-        <button class="controls__btn" id="btn-overview" title="Slide overview (O)">Session overview</button>
+        <button class="controls__btn" id="btn-overview" title="Slide overview (O)" aria-controls="overview" aria-expanded="false">Session overview</button>
         <button class="controls__btn" id="btn-prev" title="Previous slide (←)" aria-label="Previous slide">←</button>
         <span class="controls__count"><span id="count-now">1</span> / <span id="count-all">1</span></span>
         <button class="controls__btn" id="btn-next" title="Next slide (→)" aria-label="Next slide">→</button>
         <button class="controls__btn" id="btn-fullscreen" title="Fullscreen (F)">Fullscreen</button>
-      </div>
-
-      <div id="overview" class="overview" hidden>
-        <div class="overview__head">
-          <h2 class="h6" id="overview-title">Slides</h2>
-          <button class="controls__btn" id="btn-overview-close">Close</button>
-        </div>
-        <ol id="overview-list" class="overview__list"></ol>
       </div>
     </div>
 

@@ -14,9 +14,9 @@ window.SESSIONS = [
     id: "session-0",
     group: "Start here",
     short: "Session 0",
-    title: "Before we start",
-    lead: "What each session needs from you: tools, access, setup, and a tooling walkthrough.",
-    tool: "Requirements",
+    title: "Get your workspace ready",
+    lead: "Download the course files, open them in VS Code, edit and preview Markdown, and check your Copilot access.",
+    tool: "Guided setup",
     folder: null
   },
   {
@@ -25,7 +25,7 @@ window.SESSIONS = [
     short: "Session 1",
     title: "Research synthesis",
     lead: "How prompt framing changes what you learn, and how to triangulate before you trust a pattern.",
-    tool: "Copilot 365 chat",
+    tool: "Microsoft 365 Copilot chat",
     folder: "session-1-research-synthesis"
   },
   {
@@ -34,7 +34,7 @@ window.SESSIONS = [
     short: "Session 2",
     title: "Problem definition and personas",
     lead: "Turn synthesized research into insights, one committed problem, and evidence-grounded personas.",
-    tool: "Copilot 365 chat",
+    tool: "Microsoft 365 Copilot chat",
     folder: "session-2-problem-definition-and-personas"
   },
   {

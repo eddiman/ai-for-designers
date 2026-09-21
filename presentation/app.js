@@ -23,7 +23,6 @@
     next: document.getElementById("btn-next"),
     fullscreen: document.getElementById("btn-fullscreen"),
     overviewBtn: document.getElementById("btn-overview"),
-    overviewClose: document.getElementById("btn-overview-close"),
     overview: document.getElementById("overview"),
     overviewList: document.getElementById("overview-list"),
     overviewTitle: document.getElementById("overview-title")
@@ -80,7 +79,7 @@
     items.forEach(function (item) {
       var li = document.createElement("li");
       if (typeof item === "string") {
-        li.innerHTML = fmt(item);
+        li.innerHTML = "<span>" + fmt(item) + "</span>";
       } else {
         li.innerHTML =
           '<span class="items__label">' + fmt(item.label) + "</span><span>" + fmt(item.text) + "</span>";
@@ -148,16 +147,16 @@
 
       var grid = h("div", "step-grid");
       var left = h("div", "step-block");
-      left.appendChild(h("h4", null, "Do this now"));
+      left.appendChild(h("h3", "step-block__title", "Do this now"));
       left.appendChild(renderItems(s.doItems || [], { ordered: true }));
       grid.appendChild(left);
 
       var right = h("div", "step-block");
-      right.appendChild(h("h4", null, "You are done when"));
+      right.appendChild(h("h3", "step-block__title", "You are done when"));
       right.appendChild(renderItems(s.doneItems || [], { check: true }));
       if (s.why) {
         var why = h("div", "step-block step-block--why");
-        why.appendChild(h("h4", null, "Why this matters"));
+        why.appendChild(h("h3", "step-block__title", "Why this matters"));
         why.appendChild(h("p", null, fmt(s.why)));
         right.appendChild(why);
       }
@@ -334,11 +333,20 @@
   function openOverview() {
     if (!state.sessionId) return;
     el.overview.hidden = false;
+    el.overviewBtn.textContent = "Close overview";
+    el.overviewBtn.setAttribute("aria-expanded", "true");
     renderOverview();
   }
 
   function closeOverview() {
     el.overview.hidden = true;
+    el.overviewBtn.textContent = "Session overview";
+    el.overviewBtn.setAttribute("aria-expanded", "false");
+  }
+
+  function toggleOverview() {
+    if (el.overview.hidden) openOverview();
+    else closeOverview();
   }
 
   function toggleFullscreen() {
@@ -357,6 +365,7 @@
 
   // Click anywhere on the slide advances, except on something interactive.
   el.stage.addEventListener("click", function (e) {
+    if (!el.overview.hidden) return;
     if (e.target.closest("a, button, pre, input, textarea, select")) return;
     if (window.getSelection && String(window.getSelection()).length) return;
     next();
@@ -365,8 +374,7 @@
   el.next.addEventListener("click", next);
   el.prev.addEventListener("click", prev);
   el.fullscreen.addEventListener("click", toggleFullscreen);
-  el.overviewBtn.addEventListener("click", openOverview);
-  el.overviewClose.addEventListener("click", closeOverview);
+  el.overviewBtn.addEventListener("click", toggleOverview);
 
   document.addEventListener("keydown", function (e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
@@ -415,8 +423,7 @@
       case "o":
       case "O":
         e.preventDefault();
-        if (el.overview.hidden) openOverview();
-        else closeOverview();
+        toggleOverview();
         break;
     }
   });
