@@ -1,228 +1,78 @@
 # Triangulation
 
-> Reference artifact (premade). A finished triangulation of the Session 1 summaries: which summary was carried forward for each source, then where the sources agree, conflict, and leave gaps, with the central tension named. Attach it as-is to start Session 2; there's nothing to redo.
+> Your work. First choose which one summary, generic or directed, represents each source. Put those chosen summaries into one chat and run the prompt below, then check the result against what you noticed yourself before filling this in. The model's pass is a draft, so you decide what holds up and you name the tension.
 >
-> Produced by putting the chosen summaries in one chat and running: "Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."
+> Prompt: "Compare the four labelled summaries. Use exactly these headings:
+>
+> ## Agree
+> List patterns supported by at least two sources. Cite the sources for each point.
+>
+> ## Conflict
+> Find contradictions or different directions among interviews and between interviews and the questionnaire. Cite the sources. If none are supported, say so; do not invent one.
+>
+> ## Gaps
+> List issues raised by only one source or not measured elsewhere. Cite the source.
+>
+> ## The central tension
+> In one or two sentences, name the two competing directions in the evidence and cite the sources supporting each. Treat this as a draft I will check and revise."
 
-## Inputs carried forward
-<!-- The one summary carried in for each source (generic or directed). -->
-- Maja: Generic 
-- Geir: Generic
-- Sofie: Generic
-- Questionnaire: Directed
+## Inputs I chose
+<!-- Complete one entry per source before starting the triangulation chat. -->
 
+### Maja
 
+**Chosen summary:** Directed
 
-Here is a structured comparison of the **interview summaries** vs. the **questionnaire summary**, focusing on **agreement, conflicts/divergences, and unique gaps**.
+### Geir
 
-***
+**Chosen summary:** General
 
-# ✅ Where the sources strongly agree
+### Sofie
 
-### 1. Core problem = unreliable / untrustworthy real-time information
+**Chosen summary:** Directed
 
-* All interview participants (Maja, Geir, Sofie) highlight **incorrect or misleading real-time data** as their main frustration (e.g., “ghost buses,” wrong countdowns, uncertainty). *(interview-summaries.md)*
-* Questionnaire shows the same pattern at scale:
-  * 31% “don’t know if the bus is coming”
-  * 26% schedule mismatch
-  * 17% incorrect real-time info  
-    → **\~74% of frustration tied to timing reliability** *(questionnaire-summary.md)*
+### Questionnaire
 
-✅ **Conclusion:** Perfect alignment, since both qualitative and quantitative data identify **trust in timing information as the dominant issue**.
+**Chosen summary:** general
 
-***
+Agree
 
-### 2. Uncertainty is worse than waiting
+Unreliable real-time information is the biggest source of frustration. All three interviewees describe situations where arrival information could not be trusted, including delays, countdowns changing unexpectedly, buses disappearing, or buses that never arrived. Maja, Geir, and Sofie all emphasise that uncertainty is worse than the delay itself. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-* Interviewees explicitly say **“not knowing” is worse than delays** (Maja, Geir, Sofie stress anxiety and poor decisions under uncertainty). *(interview-summaries.md)*
-* Questionnaire confirms this behaviorally and attitudinally:
-  * 79% say they just want to reliably know arrival time
-  * Open responses: waiting without information is especially painful *(questionnaire-summary.md)*
+The key problem is uncertainty rather than waiting time. Maja wants to know whether to keep waiting or choose another option, Geir wants confidence that a bus is actually coming, and Sofie is stressed by not knowing whether a bus is delayed or cancelled. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-✅ **Conclusion:** Strong agreement that **uncertainty, and not delay itself, is the root frustration**.
+Users want better communication during disruptions. Maja wants explanations and proactive guidance when services are disrupted, Geir wants clear explanations of delays, cancellations, and diversions, and Sofie wants cancellation and disruption alerts when they affect her trip. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-***
+Trustworthy information is valued more highly than additional functionality. Although they differ on what extra features they want, all three interviews indicate that reliable information is a prerequisite for a good experience. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-### 3. Trust is fundamentally broken
+Current information problems cause behavioural workarounds. Maja leaves earlier than necessary because she does not trust the information provided, and Sofie deliberately catches earlier buses and adds buffer time after losing confidence in the system. (Sources: Maja Generic Summary; Sofie Summary)
 
-* Interviews:
-  * Maja double-checks multiple sources
-  * Sofie adds buffer time
-  * Geir distrusts displays after bad experiences *(interview-summaries.md)*
-* Questionnaire:
-  * 55% do **not trust real-time information** *(questionnaire-summary.md)*
+Conflict
 
-✅ **Conclusion:** Both datasets frame this as a **system-wide trust failure**, not isolated issues.
+Personalisation versus simplicity. Maja wants a highly personalised transit assistant that learns routines, saves favourite journeys, integrates with calendars, and proactively recommends actions. In contrast, both Geir and Sofie explicitly reject this direction, preferring simple tools that focus on providing accurate information with minimal setup. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-***
+Attitudes toward proactive notifications differ. Maja sees proactive notifications as a key solution and wants alerts about delays, alternatives, cancellations, and departure timing. Sofie only wants narrowly targeted disruption alerts and says she would disable excessive notifications. Geir actively dislikes push notifications and does not want them as part of the solution. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-### 4. Reliability matters more than features
+Different views of app complexity. Maja feels current apps are not doing enough because they fail to remember routines and adapt to her needs. Geir feels current apps already do too much and are unnecessarily complicated. Sofie largely sides with Geir, preferring simplicity over advanced features. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-* Interviewees repeatedly deprioritize features:
-  * Geir explicitly rejects apps/features
-  * Sofie prefers simple tools
-  * Even Maja prioritizes reliability before anything else *(interview-summaries.md)*
-* Questionnaire:
-  * Real-time accuracy (47%) dominates
-  * Apps/features only 14% *(questionnaire-summary.md)*
+Different definitions of improvement. Maja's desired future experience centers on reducing cognitive effort through automation and personalisation. Geir's and Sofie's desired future experience centers on improving the accuracy and honesty of information rather than adding intelligence or automation. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-✅ **Conclusion:** Strong agreement that **fixing accuracy comes before adding functionality**.
+Gaps
 
-***
+High cognitive load from managing routine journeys. Only Maja explicitly describes the burden of repeatedly checking multiple information sources and manually maintaining mental rules and workarounds for daily travel. (Source: Maja Generic Summary)
 
-# ⚖️ Where the sources diverge or point in different directions
+Calendar integration and context-aware travel planning. Only Maja proposes calendar-aware recommendations, routine learning, occupancy awareness, and day-of-week adaptation. (Source: Maja Generic Summary)
 
-### 1. Appetite for apps and advanced features
+Resistance to account creation, favourites, and setup. Only Geir explicitly identifies account registration, managing favourites, and app setup requirements as frustrations. (Source: Geir Directed Summary)
 
-* **Interviews show segmentation**:
-  * Maja wants a **personalized, proactive, “smart assistant”** *(interview-summaries.md)*
-  * Geir and Sofie explicitly prefer **simple, minimal solutions** *(interview-summaries.md)*
-* **Questionnaire trend is more negative overall**:
-  * Only 34% positive toward apps
-  * 38% negative *(questionnaire-summary.md)*
+Reliance on stop displays instead of mobile apps. Only Geir primarily uses electronic signs and timetables at stops rather than smartphone apps. (Source: Geir Directed Summary)
 
-⚠️ **Tension:**
+Guidance for unfamiliar journeys. Only Sofie raises the need for better support when travelling in unfamiliar cities and locating the correct stop or direction. (Source: Sofie Summary)
 
-* Interviews reveal **clear persona split (power user vs. simplicity-first users)**
-* Questionnaire compresses this into a **more generally skeptical population view**
+Accessibility concerns beyond smartphone users. Only Sofie discusses accessibility needs through the example of her grandmother, highlighting challenges for passengers who depend on physical signage or staff assistance rather than apps. (Source: Sofie Summary)
 
-👉 Interpretation: Interviews expose **segment-level needs**, while the questionnaire **averages them out**.
+Questionnaire coverage gap. The interview summaries repeatedly discuss trust, uncertainty, and disruption communication, but these summaries alone do not provide evidence about how widely these themes occurred in the questionnaire because no questionnaire findings are included in the material provided here. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
 
-***
+The central tension
 
-### 2. Role of physical vs. digital tools
-
-* Interviews:
-  * Geir relies almost entirely on **physical displays**
-  * Maja uses **apps + maps + memory**
-  * Sofie uses **apps primarily** *(interview-summaries.md)*
-* Questionnaire:
-  * 45% physical sources vs. 39% apps *(questionnaire-summary.md)*
-
-⚠️ **Difference in emphasis:**
-
-* Questionnaire highlights a **near balance between physical and digital usage**
-* Interviews show **strong individual preferences and behaviors** beyond the distribution
-
-👉 Interpretation: Interviews add nuance about **why** people choose tools, beyond **what** they use.
-
-***
-
-### 3. Importance of service reliability vs. information reliability
-
-* Questionnaire elevates **service reliability/frequency (21%)** as the second priority *(questionnaire-summary.md)*
-* Interviews focus much less on this; participants often say delays are acceptable **if communicated clearly** *(interview-summaries.md)*
-
-⚠️ **Difference:**
-
-* Questionnaire suggests **service quality still matters meaningfully**
-* Interviews frame **information quality as the primary lever**, sometimes overshadowing service issues
-
-👉 Interpretation: Interviews may **underrepresent structural service concerns** compared to the broader population.
-
-***
-
-# 🧩 Gaps: insights only one source reveals
-
-## Only in interviews (not surfaced clearly in questionnaire)
-
-### 1. Cognitive load and mental effort
-
-* Maja’s experience of “mentally running the system” and reconstructing journeys daily *(interview-summaries.md)*
-
-➡️ Missing in questionnaire, which focuses on outcomes (frustration) rather than **effort required**.
-
-***
-
-### 2. Proactive vs. reactive experience
-
-* Strong desire (especially from Maja, partially Sofie) for:
-  * Notifications
-  * “Leave now” guidance
-  * Alternative routing *(interview-summaries.md)*
-
-➡️ Questionnaire shows low interest in apps, but doesn’t capture this **specific unmet proactive need**.
-
-***
-
-### 3. Behavioral adaptation strategies
-
-* Interviews reveal coping behaviors:
-  * Leaving early
-  * Taking earlier buses
-  * Double-checking multiple sources *(interview-summaries.md)*
-
-➡️ Questionnaire does not explicitly capture **how users compensate for broken systems**.
-
-***
-
-### 4. Context-dependent needs
-
-* Sofie distinguishes between:
-  * Familiar trips → minimal info
-  * Unfamiliar trips → need guidance *(interview-summaries.md)*
-
-➡️ Questionnaire lacks this **situational variation**.
-
-***
-
-### 5. Emotional impact (stress, anxiety)
-
-* Interviews describe **stress, anxiety, frustration intensity** *(interview-summaries.md)*
-* Questionnaire mentions frustration but less depth emotionally *(questionnaire-summary.md)*
-
-➡️ Interviews provide **empathy-level insight** beyond the metrics.
-
-***
-
-## Only in questionnaire (not strongly surfaced in interviews)
-
-### 1. Scale and prioritization of issues
-
-* Quantifies the dominance of timing issues (74%) *(questionnaire-summary.md)*
-
-➡️ Interviews suggest importance but don’t show **relative magnitude**.
-
-***
-
-### 2. Population-level attitudes toward apps
-
-* Clear breakdown of sentiment (34% positive / 38% negative) *(questionnaire-summary.md)*
-
-➡️ Interviews show opinions, but not **how widespread those views are**.
-
-***
-
-### 3. Share of user types
-
-* Frequency of bus use (daily vs. occasional) *(questionnaire-summary.md)*
-
-➡️ Interviews show personas but not **distribution across the population**.
-
-***
-
-# 🧠 Synthesis
-
-* **Strong consensus:**  
-  The system fails primarily due to **unreliable, untrustworthy real-time information**, creating uncertainty and eroding trust.
-
-* **Key tension:**
-  * Interviews: reveal **diverse user needs (simple vs. smart tools)**
-  * Questionnaire: suggests **overall skepticism toward apps**
-
-* **Complementarity:**
-  * Questionnaire = **what matters most, at scale**
-  * Interviews = **why it matters and how it plays out in real behavior**
-
-***
-
-# 🧾 Bottom line
-
-* **Agreement:** Reliability and trust dominate everything
-* **Conflict:** Level of interest in advanced/app-based solutions varies by user type
-* **Gaps:**
-  * Interviews reveal **behavior, emotion, and cognitive load**
-  * Questionnaire provides **scale, prioritization, and population trends**
-
-Together, they form a consistent but richer picture:  
-👉 **Fix trust in real-time information first, then tailor solutions to different user types.**
+The evidence suggests a tension between personalised, proactive travel assistance that learns and acts on behalf of riders (Maja) and simple, low-effort tools that prioritise trustworthy information over additional features (Geir and Sofie). Both sides agree that reliability and trust must be solved first, but they differ sharply on whether the solution is more intelligence and personalisation or fewer features and greater accuracy. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
