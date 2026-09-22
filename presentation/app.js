@@ -55,6 +55,45 @@
     return node;
   }
 
+  function copyButton(text) {
+    var button = h("button", "copy-button", "Copy");
+    button.type = "button";
+    button.setAttribute("aria-label", "Copy prompt");
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      function copied() {
+        button.textContent = "Copied";
+        button.classList.add("copy-button--copied");
+        window.setTimeout(function () {
+          button.textContent = "Copy";
+          button.classList.remove("copy-button--copied");
+        }, 1600);
+      }
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(copied).catch(function () {
+          fallbackCopy(text, copied);
+        });
+      } else {
+        fallbackCopy(text, copied);
+      }
+    });
+    return button;
+  }
+
+  function fallbackCopy(text, onSuccess) {
+    var input = document.createElement("textarea");
+    input.value = text;
+    input.setAttribute("readonly", "");
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.appendChild(input);
+    input.select();
+    if (document.execCommand("copy")) onSuccess();
+    document.body.removeChild(input);
+  }
+
   function session(id) {
     for (var i = 0; i < SESSIONS.length; i++) if (SESSIONS[i].id === id) return SESSIONS[i];
     return null;
@@ -83,6 +122,7 @@
       } else {
         li.innerHTML =
           '<span class="items__label">' + fmt(item.label) + "</span><span>" + fmt(item.text) + "</span>";
+        if (item.copyText) li.appendChild(copyButton(item.copyText));
       }
       list.appendChild(li);
     });
@@ -165,9 +205,13 @@
     },
 
     prompt: function (s, root) {
+      root.classList.add("slide--prompt");
       if (s.eyebrow) root.appendChild(h("p", "eyebrow", fmt(s.eyebrow)));
       if (s.title) root.appendChild(h("h3", null, fmt(s.title)));
-      root.appendChild(h("pre", "prompt", escapeHtml(s.text)));
+      var prompt = h("div", "prompt-wrap");
+      prompt.appendChild(h("pre", "prompt", escapeHtml(s.text)));
+      prompt.appendChild(copyButton(s.text));
+      root.appendChild(prompt);
     },
 
     table: function (s, root) {

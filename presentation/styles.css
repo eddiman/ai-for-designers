@@ -389,6 +389,7 @@ kbd {
 .items li { font-size: 1.9cqw; color: var(--on-surface-medium); display: flex; gap: 1.2cqw; align-items: baseline; }
 .items li > .items__label { flex: 0 0 auto; font-weight: 600; color: var(--on-surface-high); }
 .items li > span:last-child { min-width: 0; }
+.items li > .copy-button { flex: 0 0 auto; }
 ol.items li::before {
   counter-increment: n;
   content: counter(n);
@@ -421,6 +422,8 @@ ol.items li::before {
   color: var(--on-surface-disabled);
 }
 .step-block .items li { font-size: 1.6cqw; }
+.step-block .items li:has(.copy-button) { gap: 0.8cqw; }
+.step-block .items li:has(.copy-button) > span:nth-child(3) { flex: 1 1 auto; }
 .step-block--why p { font-size: 1.6cqw; }
 .step-number {
   display: inline-flex;
@@ -435,6 +438,7 @@ ol.items li::before {
 }
 
 /* Prompt slide */
+.prompt-wrap { position: relative; }
 .prompt {
   margin: 0;
   padding: 2.2cqw 2.6cqw;
@@ -448,6 +452,22 @@ ol.items li::before {
   overflow: auto;
   max-height: 58cqh;
 }
+.prompt-wrap > .copy-button { position: absolute; top: 1.1cqw; right: 1.1cqw; }
+.slide--prompt .prompt { max-height: 68cqh; font-size: 1.15cqw; line-height: 1.45; }
+.copy-button {
+  min-width: 4.5cqw;
+  padding: 0.35cqw 0.75cqw;
+  color: var(--on-surface-medium);
+  background: var(--surface-white);
+  border: 1px solid var(--surface-overlay);
+  border-radius: var(--radius-pill);
+  font: 500 1cqw/1.4 var(--font-sans);
+  cursor: pointer;
+  transition: background 120ms var(--ease), border-color 120ms var(--ease), color 120ms var(--ease);
+}
+.copy-button:hover { color: var(--on-surface-high); border-color: var(--on-surface-disabled); }
+.copy-button:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.copy-button--copied { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
 
 /* Table slide */
 .slide table { width: 100%; border-collapse: collapse; font-size: 1.5cqw; }
@@ -551,7 +571,7 @@ ol.items li::before {
   text-align: left;
   background: var(--surface-white);
   border: 1px solid var(--surface-overlay);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   cursor: pointer;
 }
 .overview__item:hover { background: var(--surface-surface); }
@@ -600,6 +620,8 @@ ol.items li::before {
   .callout { padding: 16px; font-size: 14px; }
   .slide__note { padding-top: 16px; font-size: 12px; }
   .prompt { font-size: 13px; }
+  .copy-button { min-width: 52px; padding: 5px 9px; font-size: 11px; }
+  .prompt-wrap > .copy-button { top: 10px; right: 10px; }
   .controls { justify-content: center; gap: 4px; padding: 8px; }
   .controls__btn { min-width: 36px; padding: 7px 8px; font-size: 12px; }
   .controls__count { min-width: 58px; font-size: 12px; }
