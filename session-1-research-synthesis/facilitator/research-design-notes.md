@@ -1,6 +1,6 @@
 # Session 1 research pack: design notes (do not share with participants)
 
-This explains how the research pack in `premade/` was built and where the tension lives, so the facilitator can run the opening framing and the "a tension has been planted, but I won't say where" prompt. Sharing it with the room would defeat the cross-reference exercise.
+This explains how the research pack in `research/` was built and where the tension lives, so the facilitator can run the opening framing and the "a tension has been planted, but I won't say where" prompt. Sharing it with the room would defeat the cross-reference exercise.
 
 ## How the data was generated
 

@@ -7,7 +7,7 @@ Front-facing material for participants is in the session root `README.md`. This 
 Whether participants continue from their own Session 1 output or pick up the premade reference versions, open with a recap that walks through the reference summaries:
 
 - which prompt style produced each and why. The reference carried the **generic** summaries for the three interviews and the **directed** summary for the questionnaire (the choices recorded in `../premade/triangulation.md`), because those were the cuts that best held up across sources;
-- what the central tension is, meaning reliability against personalization (see `../../session-1-research-synthesis/facilitator/premade-design-notes.md`);
+- what the central tension is, meaning reliability against personalization (see `../../session-1-research-synthesis/facilitator/research-design-notes.md`);
 - why the summaries are solid enough to build on.
 
 For returning participants the recap is a model for justifying their own work, and for drop-ins it's the context they need to use the premade versions.

@@ -133,14 +133,14 @@ window.DECKS["session-0"] = [
     doItems: [
       "If the Explorer is hidden, select its two-file icon at the top left. Shortcut: **Cmd+Shift+E** on Mac or **Ctrl+Shift+E** on Windows.",
       "Select the arrow beside `session-1-research-synthesis` to expand it.",
-      "Expand `premade` and open `interview-1-maja.md`.",
+      "Expand `research` and open `interview-1-maja.md`.",
       "Then open `interview-summaries.md` from the Session 1 folder."
     ],
     doneItems: [
       "Maja's transcript opens as a tab",
       "`interview-summaries.md` opens as a second tab"
     ],
-    why: "During Session 1, you read and copy from `premade/`, then write and paste your results into the empty files beside it."
+    why: "During Session 1, you read and copy from `research/`, then write and paste your results into the empty files beside it."
   },
 
   {
@@ -149,7 +149,7 @@ window.DECKS["session-0"] = [
     title: "Read here, write here",
     cols: ["Location", "What it contains", "What you do"],
     rows: [
-      ["`premade/`", "Three interview transcripts and questionnaire results", "Open, read, copy and attach. Leave these source files unchanged."],
+      ["`research/`", "Three interview transcripts and questionnaire results", "Open, read, copy and attach. Leave these source files unchanged."],
       ["`interview-summaries.md`", "Space for all three interview summaries", "Paste summaries and comparison notes here."],
       ["`questionnaire-summary.md`", "Space for the questionnaire summaries", "Paste the questionnaire work here."],
       ["`triangulation.md`", "Agree, conflict, gaps and central tension", "Fill this after choosing one summary per source."]
@@ -251,7 +251,7 @@ window.DECKS["session-0"] = [
     check: true,
     items: [
       "VS Code shows the extracted `ai-for-designers-main` folder in the Explorer.",
-      "You can open files in `session-1-research-synthesis/premade/`.",
+      "You can open files in `session-1-research-synthesis/research/`.",
       "You can type, paste and save in `interview-summaries.md`.",
       "**Cmd+Shift+V** on Mac or **Ctrl+Shift+V** on Windows opens the Markdown preview.",
       "Microsoft 365 Copilot answers in your browser."

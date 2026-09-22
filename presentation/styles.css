@@ -42,7 +42,10 @@
     sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --radius: 4px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
   --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
 }
 
@@ -124,7 +127,7 @@ kbd,
   color: var(--on-primary-high);
   background: var(--surface-black);
   border: 1px solid var(--surface-black);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -164,10 +167,12 @@ kbd,
 .sessions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 2px;
+  gap: 1px;
   margin: 0;
   background: var(--surface-overlay);
   border: 1px solid var(--surface-overlay);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
 .session-card {
@@ -252,11 +257,11 @@ kbd {
   text-align: center;
   background: var(--surface-surface);
   border: 1px solid var(--surface-overlay);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
 }
 
 .small { margin: 0; font-size: 14px; color: var(--on-surface-disabled); }
-.small code, .landing__lead code { background: var(--surface-surface); padding: 1px 5px; border-radius: var(--radius); }
+.small code, .landing__lead code { background: var(--surface-surface); padding: 1px 5px; border-radius: var(--radius-pill); }
 
 /* --------------------------------------------------------------------------
    Deck shell
@@ -305,8 +310,12 @@ kbd {
   background: var(--surface-white);
   border: 1px solid var(--surface-overlay);
   overflow: hidden;
+  border-radius: var(--radius-lg);
 }
 
+.slide h1, .slide h2, .slide h3, .slide p, .slide .lead, .slide .eyebrow, .slide code, .slide th, .slide td, .slide .items li {
+  cursor: auto !important;
+}
 /* Slide typography, from the Figma scale */
 .slide h1 { margin: 0; font-size: 7.4cqw; font-weight: 300; line-height: 1.08; letter-spacing: -0.02em; }
 .slide h2 { margin: 0; font-size: 5.2cqw; font-weight: 300; line-height: 1.14; letter-spacing: -0.01em; }
@@ -322,7 +331,7 @@ kbd {
 }
 
 .slide strong { font-weight: 600; color: var(--on-surface-high); }
-.slide code { font-size: 0.92em; background: var(--surface-surface); padding: 0.1em 0.35em; border-radius: var(--radius); }
+.slide code { font-size: 0.92em; background: var(--surface-surface); padding: 0.1em 0.35em; border-radius: var(--radius-pill); }
 
 /* Cover */
 .slide--cover {
@@ -493,7 +502,7 @@ ol.items li::before {
   text-decoration: none;
   background: var(--surface-white);
   border: 1px solid var(--surface-overlay);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: background 140ms var(--ease), color 140ms var(--ease);
 }
@@ -542,7 +551,7 @@ ol.items li::before {
   text-align: left;
   background: var(--surface-white);
   border: 1px solid var(--surface-overlay);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   cursor: pointer;
 }
 .overview__item:hover { background: var(--surface-surface); }

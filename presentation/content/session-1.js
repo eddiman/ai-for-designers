@@ -19,16 +19,11 @@ window.DECKS["session-1"] = [
     kind: "list",
     eyebrow: "What you start from",
     title: "One shared research pack",
-    lead: "Everyone works from the same material in `premade/`. There is nothing to carry forward yet, since this is where the project begins.",
+    lead: "Everyone works from the same material in `research/`. There is nothing to carry forward yet, since this is where the project begins.",
     items: [
       { label: "Three interviews", text: "transcripts about how people plan and catch buses today" },
       { label: "One questionnaire", text: "the broad signal the interviews get measured against" }
     ],
-    callout: {
-      tone: "stop",
-      title: "A tension has been planted",
-      text: "Somewhere between the interviews and the questionnaire, the evidence disagrees with itself. You are not told where. Finding it is part of the work."
-    }
   },
 
   {

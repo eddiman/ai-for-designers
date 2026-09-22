@@ -2,6 +2,8 @@
 
 Front-facing material for participants is in the session root `README.md`. This folder holds everything the facilitator needs and participants should not see verbatim.
 
+Participant output stays local and must not be committed. Before committing course-material changes during a facilitated run, leave `interview-summaries.md`, `questionnaire-summary.md`, and `triangulation.md` unstaged if the participant has filled them in.
+
 ## Run of show (~70 min)
 
 - **0:00–0:10:** Frame the session and the scenario. Show the planted-tension warning: tell the room a tension has been planted between the interviews and the questionnaire, without saying where.
@@ -11,7 +13,7 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 ## Opening framing
 
-Session 1 is the start of the course, so there's no prior recap. Instead, explain how the research pack was generated (see `premade-design-notes.md`) and state plainly that a tension has been planted, without revealing where.
+Session 1 is the start of the course, so there's no prior recap. Instead, explain how the research pack was generated (see `research-design-notes.md`) and state plainly that a tension has been planted, without revealing where.
 
 ## What the directed prompt does on the questionnaire
 
@@ -47,4 +49,4 @@ Before the research exercise starts, run the guided Session 0 setup in lockstep.
 
 ## Design notes
 
-The deliberate tension planted in the research pack, meaning how the data was built, where the tension lives, and how it ties to the prompt-framing lesson, is documented in `premade-design-notes.md`. Do not share that file with participants; it would defeat the cross-reference exercise.
+The deliberate tension planted in the research pack, meaning how the data was built, where the tension lives, and how it ties to the prompt-framing lesson, is documented in `research-design-notes.md`. Do not share that file with participants; it would defeat the cross-reference exercise.

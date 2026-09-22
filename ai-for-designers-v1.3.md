@@ -19,7 +19,7 @@ v1.2 seeded each session from the plan and left the runnable detail to be filled
 - The generic-against-directed comparison is a fixed **three-step flow per source**: generic, then directed in the same chat, then "analyze the differences between them". It is applied to each interview *and* to the questionnaire, with the exact prompts written out.
 - The directed prompt uses the **same topical lens** on both sources ("what frustrates people and what they most want improved"), so the planted tension emerges from the data rather than from the prompt wording.
 - Triangulation now starts with the participant **choosing one summary per source** to carry forward, which commits them to a framing whose bias travels onward. Then it runs a **conflict-seeking** prompt, with the human naming the tension and treating the model's pass as a draft.
-- Each session folder now separates **front-facing material** (session root, plus stub files for the artifacts) from **facilitator notes** (`facilitator/`) and the **catch-up pack** (`premade/`).
+- Each session folder now separates **front-facing material** (session root, plus stub files for the artifacts) from **facilitator notes** (`facilitator/`). Session 1 keeps its shared source pack in `research/`, while Sessions 2–4 keep their catch-up packs in `premade/`.
 
 Sessions 2–4 are unchanged from v1.2 and still need the same fleshing-out into runnable detail.
 
@@ -45,7 +45,7 @@ Read this before the session plans, since it explains the moving parts.
 
 **Roles stay together on purpose.** A Service designer should see what happens when their research becomes a prototype, and a UI designer should see the research that justified the screen they are polishing. Running one shared thread is how each role gets that visibility.
 
-**Each session folder separates three things.** The session root holds the front-facing course material and a stub file for every artifact the participant produces. A `facilitator/` subfolder holds the run of show, steering notes, and any design secrets (such as where the planted tension lives) that participants must not see verbatim. A `premade/` subfolder holds the catch-up pack for drop-ins.
+**Each session folder separates its material by purpose.** The session root holds the front-facing course material and a stub file for every artifact the participant produces. A `facilitator/` subfolder holds the run of show, steering notes, and any design secrets (such as where the planted tension lives) that participants must not see verbatim. Session 1 uses `research/` for the shared source pack. Sessions 2–4 use `premade/` for the catch-up pack handed to drop-ins.
 
 ## The scenario and the base problem
 
@@ -62,13 +62,13 @@ This keeps the solution open. The "timetable against app" question then shows up
 
 That tension, whether the value sits in reliability or in personalization, is the thread that runs through every session. It becomes the question the MVP has to answer: what should we build first.
 
-## Premade catch-up materials (the facilitator builds these once)
+## Shared starting data and premade catch-up materials
 
 These are the known-good versions handed to anyone who missed the previous session, so they can continue without having done the prior work. Returning participants use their own output instead. Session 1 is the exception, since its research pack is the shared starting data for everyone.
 
-| For session | Premade version | What it demonstrates |
+| For session | Starting material | What it demonstrates |
 |---|---|---|
-| 1 | Research pack: 3 fake interview transcripts + a questionnaire dataset with a results table (**everyone** starts here) | A deliberate, defensible tension planted between the interviews and the questionnaire |
+| 1 | Shared source pack in `research/`: 3 fake interview transcripts + a questionnaire dataset with a results table (**everyone** starts here) | A deliberate, defensible tension planted between the interviews and the questionnaire |
 | 2 | Reference summaries + a triangulation note from the Session 1 data | A clean, source-attributed synthesis that separates what was said from what was inferred |
 | 3 | `problem-definition.md`, `personas.md`, `key-insights.md` | A committed problem and 2–3 evidence-grounded personas, formatted to attach to tools |
 | 4 | The chosen prototype direction + a persona UX review | One direction selected, with the reasoning written down |
