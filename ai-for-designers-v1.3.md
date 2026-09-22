@@ -107,7 +107,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 **Choose, then triangulate:**
 
 - For each source, the participant picks the *one* summary (generic or directed) to carry forward, guided by the differences analysis. They need not pick the same style for every source. This commits them to a framing whose bias travels onward.
-- Put the four chosen summaries in one chat and run a conflict-seeking prompt: "Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."
+- Put the four chosen summaries in one chat and run a conflict-seeking prompt that requests the same four headings as `triangulation.md`: **Agree**, **Conflict**, **Gaps**, and **The central tension**. Each point cites its source, and the central tension is a draft the participant checks and revises.
 - The participant interrogates that pass, asking whether it surfaced an actual conflict or flattened everything into consensus, and whether it leaned on the most vivid interview, then names the central tension themselves. The model's pass is a draft.
 
 **Run of show (~70 min):**

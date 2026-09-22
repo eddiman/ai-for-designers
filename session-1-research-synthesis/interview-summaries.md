@@ -6,19 +6,29 @@
 
 ## Interview 1: Maja (daily commuter, no car)
 
-**Summary**
+### Generic summary
+
+### Directed summary
+
+### Differences analysis
 
 
 ---
 
 ## Interview 2: Geir (occasional rider, drives otherwise)
 
-**Summary**
--
+### Generic summary
+
+### Directed summary
+
+### Differences analysis
 
 ---
 
 ## Interview 3: Sofie (student, mixed-mode traveller)
 
-**Summary**
+### Generic summary
 
+### Directed summary
+
+### Differences analysis

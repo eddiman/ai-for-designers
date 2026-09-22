@@ -45,7 +45,7 @@ For each of the three interviews, open a **fresh chat**, paste in (or attach) th
 2. In the *same* chat, run the **directed** prompt and save that summary.
 3. Then ask the model: **"Analyze the summaries and highlight the differences between them."** Save what it says.
 
-Keeping all three steps in one chat is what lets the model compare the two summaries directly in step 3. Start a new chat before you move to the next interview.
+Save both summaries and the differences analysis in `interview-summaries.md`. Do not choose between the summaries yet. Keeping all three steps in one chat is what lets the model compare the two summaries directly in step 3. Start a new chat before you move to the next interview.
 
 ### The questionnaire
 
@@ -55,13 +55,29 @@ Run the same three-step flow on the questionnaire dataset, in its own single cha
 2. **Directed:** in the same chat, "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved." Save that summary.
 3. Then ask the model: **"Analyze the summaries and highlight the differences between them."** Save what it says.
 
-The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews. Treating it as a footnote is how a planted tension stays hidden.
+Save both summaries and the differences analysis in `questionnaire-summary.md`. Do not choose between the summaries yet. The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews. Treating it as a footnote is how a planted tension stays hidden.
 
 ### Then, across everything
 
 - Ask the harder question of each summary: is this usable, and what did each style miss or add?
-- **Choose your inputs.** For each source, meaning each of the three interviews and the questionnaire, pick the *one* summary, generic or directed, that you'll carry into triangulation. Let the differences analysis guide the choice. You don't have to pick the same style for every source. You're committing to a framing here, and its bias travels forward, so choose on purpose and note why.
-- **Triangulate.** This is the one place you deliberately combine sources in a single chat, and it works precisely because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript. Put your four chosen summaries into one fresh chat and ask: **"Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."**
+- **Choose your inputs now.** After saving both versions for all four sources, open `triangulation.md` and find **Inputs I chose**. Pick the *one* summary, generic or directed, that you'll carry into triangulation for Maja, Geir, Sofie, and the questionnaire. Record the chosen style for each source. Let the differences analysis guide the choice. You don't have to pick the same style for every source. This record shows which framing entered the triangulation.
+- **Triangulate.** This is the one place you deliberately combine sources in a single chat, and it works precisely because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript. Label each chosen summary with its source, such as `Maja` or `Questionnaire`, so the model can cite the evidence. You do not need to include whether the summary is generic or directed in the chat; that decision is recorded in `triangulation.md`. Put the four labelled summaries into one fresh chat and use the prompt below. Its four headings match `triangulation.md`, so you can check and transfer the response section by section.
+
+```text
+Compare the four labelled summaries. Use exactly these headings:
+
+## Agree
+List patterns supported by at least two sources. Cite the sources for each point.
+
+## Conflict
+Find contradictions or different directions among interviews and between interviews and the questionnaire. Cite the sources. If none are supported, say so; do not invent one.
+
+## Gaps
+List issues raised by only one source or not measured elsewhere. Cite the source.
+
+## The central tension
+In one or two sentences, name the two competing directions in the evidence and cite the sources supporting each. Treat this as a draft I will check and revise.
+```
 - Then don't take that answer at face value. Check it against what you noticed yourself: did it surface an actual conflict, or did it flatten everything into agreement? Did it lean on the most vivid interview? **You** name the central tension, since the model's pass is a draft you interrogate. This is where the planted tension should surface.
 
 ## What you'll produce

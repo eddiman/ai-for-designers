@@ -2,7 +2,7 @@
 
 > Reference artifact (premade). A finished triangulation of the Session 1 summaries: which summary was carried forward for each source, then where the sources agree, conflict, and leave gaps, with the central tension named. Attach it as-is to start Session 2; there's nothing to redo.
 >
-> Produced by putting the chosen summaries in one chat and running: "Compare these summaries. Where do the sources agree, where do they conflict or point in different directions, and where are the gaps only one source raises? Cite the specific source for each point."
+> Produced by putting the chosen summaries in one chat and asking for four source-cited sections matching the Session 1 template: **Agree**, **Conflict**, **Gaps**, and **The central tension**. The central tension was then checked and revised by the participant.
 
 ## Inputs carried forward
 <!-- The one summary carried in for each source (generic or directed). -->

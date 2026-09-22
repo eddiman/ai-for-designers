@@ -71,9 +71,10 @@ window.DECKS["session-1"] = [
     title: "The interviews",
     lead: "For each of the three interviews, open a **fresh chat**, paste in that one transcript, and go in this order.",
     doItems: [
-      "Run the **generic** prompt. Save the summary.",
-      "In the *same* chat, run the **directed** prompt. Save that summary.",
-      "Ask: “Analyze the summaries and highlight the differences between them.” Save what it says.",
+      { label: "Generic prompt", text: "`Summarize this interview.`", copyText: "Summarize this interview." },
+      { label: "Directed prompt", text: "In the same chat: `Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed.`", copyText: "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed." },
+      { label: "Comparison prompt", text: "`Analyze the summaries and highlight the differences between them.`", copyText: "Analyze the summaries and highlight the differences between them." },
+      "Save both summaries and the comparison under this interview in `interview-summaries.md`. Choose one summary per source later, after processing all four sources.",
       "Start a new chat before the next interview."
     ],
     doneItems: [
@@ -85,22 +86,15 @@ window.DECKS["session-1"] = [
   },
 
   {
-    kind: "prompt",
-    eyebrow: "Step 3 of each chat",
-    title: "The comparison prompt",
-    text: "Analyze the summaries and highlight the differences between them.",
-    note: "Read this one out loud. This is the step that shows what the framing did to the summary."
-  },
-
-  {
     kind: "step",
     n: 2,
     title: "The questionnaire",
     lead: "The same three-step flow, in its own single chat.",
     doItems: [
-      "**Generic**: “Summarize this questionnaire.”",
-      "**Directed**: “…focusing on what frustrates people about catching the bus today and what they most want improved.”",
-      "Then the same differences analysis."
+      { label: "Generic prompt", text: "`Summarize this questionnaire.`", copyText: "Summarize this questionnaire." },
+      { label: "Directed prompt", text: "In the same chat: `Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved.`", copyText: "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved." },
+      { label: "Comparison prompt", text: "`Analyze the summaries and highlight the differences between them.`", copyText: "Analyze the summaries and highlight the differences between them." },
+      "Save both summaries and the comparison in `questionnaire-summary.md`. Choose one summary per source later, after processing all four sources."
     ],
     doneItems: [
       "`questionnaire-summary.md` holds both summaries and the analysis",
@@ -115,13 +109,14 @@ window.DECKS["session-1"] = [
     title: "Choose your inputs",
     lead: "For each of the four sources, pick the *one* summary you carry forward.",
     doItems: [
+      "Open `triangulation.md` and find **Inputs I chose**.",
       "Ask of each summary: is this usable, and what did each style miss or add?",
       "Pick generic or directed for each source; they do not all have to match.",
-      "Note why you picked it."
+      "For each source, record whether you chose the generic or directed summary."
     ],
     doneItems: [
       "Four chosen summaries, one per source",
-      "A written reason for each choice"
+      "All four entries under **Inputs I chose** name the selected style"
     ],
     why: "You are committing to a framing here, and its bias travels forward into every later session."
   },
@@ -133,6 +128,7 @@ window.DECKS["session-1"] = [
     lead: "The one place you deliberately combine sources in a single chat, because what you feed in has been worked and vetted rather than pasted in raw.",
     doItems: [
       "Put your four chosen summaries into one fresh chat.",
+      "Label each summary with its source, for example: `Maja`. The model needs the source labels so it can cite the evidence.",
       "Run the triangulation prompt.",
       "Check the answer against what *you* noticed."
     ],
@@ -149,7 +145,7 @@ window.DECKS["session-1"] = [
     eyebrow: "Step 4",
     title: "The triangulation prompt",
     text:
-      "Compare these summaries. Where do the sources agree, where do they conflict\nor point in different directions, and where are the gaps only one source\nraises? Cite the specific source for each point."
+      "Compare the four labelled summaries. Use exactly these headings:\n\n## Agree\nList patterns supported by at least two sources. Cite the sources for each point.\n\n## Conflict\nFind contradictions or different directions among interviews and between interviews and the questionnaire. Cite the sources. If none are supported, say so; do not invent one.\n\n## Gaps\nList issues raised by only one source or not measured elsewhere. Cite the source.\n\n## The central tension\nIn one or two sentences, name the two competing directions in the evidence and cite the sources supporting each. Treat this as a draft I will check and revise."
   },
 
   {
