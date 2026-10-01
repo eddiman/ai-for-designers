@@ -18,7 +18,7 @@ Run the introduction and Session 0 back to back at the start of Session 1. The i
 
 ## Published
 
-Live at **https://ai-for-designers-course.netlify.app**
+Live at **https://ai-for-designers.netlify.app**
 
 The Netlify site is connected to this repository, so every push to `main` rebuilds and republishes it. There is no build command; Netlify just serves the `presentation/` directory, which `netlify.toml` at the repository root sets as the publish directory. Nothing else in the repository is published.
 
@@ -42,12 +42,14 @@ The one thing that needs the network is the IBM Plex Sans webfont from Google Fo
 
 | Key | Does |
 |---|---|
-| `→` `↓` `Space` `PageDown` or **click the slide** | Next slide |
+| `→` `↓` `Space` `PageDown` | Next slide |
 | `←` `↑` `PageUp` `Backspace` | Previous slide |
 | `Home` / `End` | First / last slide |
 | `F` | Toggle fullscreen |
 | `O` | Slide overview, click any slide to jump |
 | `Esc` | Close the overview, or go back to the session list |
+
+Clicking the slide does nothing, so participants can select text and press the copy buttons without skipping ahead by accident. Use the keys or the arrow buttons in the control bar to move.
 
 In fullscreen the control bar fades out until you move the pointer.
 

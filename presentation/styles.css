@@ -292,7 +292,6 @@ kbd {
   place-items: center;
   padding: 24px;
   min-height: 0;
-  cursor: pointer;
 }
 
 /* A fixed 16:9 slide that scales to the viewport, so layout is predictable on
@@ -313,9 +312,6 @@ kbd {
   border-radius: var(--radius-lg);
 }
 
-.slide h1, .slide h2, .slide h3, .slide p, .slide .lead, .slide .eyebrow, .slide code, .slide th, .slide td, .slide .items li {
-  cursor: auto !important;
-}
 /* Slide typography, from the Figma scale */
 .slide h1 { margin: 0; font-size: 7.4cqw; font-weight: 300; line-height: 1.08; letter-spacing: -0.02em; }
 .slide h2 { margin: 0; font-size: 5.2cqw; font-weight: 300; line-height: 1.14; letter-spacing: -0.01em; }

@@ -1,6 +1,6 @@
 /* ==========================================================================
    AI for Designers — presentation runtime
-   Hash routing (#/session-4/6), keyboard and click navigation, fullscreen,
+   Hash routing (#/session-4/6), keyboard and button navigation, fullscreen,
    and a slide overview. Plain JavaScript, no build step: open index.html.
    ========================================================================== */
 
@@ -14,7 +14,6 @@
     landing: document.getElementById("landing"),
     sessionList: document.getElementById("session-list"),
     deck: document.getElementById("deck"),
-    stage: document.getElementById("stage"),
     slide: document.getElementById("slide"),
     progress: document.getElementById("progress"),
     countNow: document.getElementById("count-now"),
@@ -405,14 +404,6 @@
     var on = !!document.fullscreenElement;
     el.deck.classList.toggle("deck--fullscreen", on);
     el.fullscreen.textContent = on ? "Exit fullscreen" : "Fullscreen";
-  });
-
-  // Click anywhere on the slide advances, except on something interactive.
-  el.stage.addEventListener("click", function (e) {
-    if (!el.overview.hidden) return;
-    if (e.target.closest("a, button, pre, input, textarea, select")) return;
-    if (window.getSelection && String(window.getSelection()).length) return;
-    next();
   });
 
   el.next.addEventListener("click", next);
