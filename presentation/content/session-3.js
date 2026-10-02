@@ -46,6 +46,21 @@ window.DECKS["session-3"] = [
   },
 
   {
+    kind: "list",
+    eyebrow: "What counts as done",
+    title: "Core, and stretch",
+    items: [
+      { label: "Core, for everyone:", text: "three directions grouped in a Figma file, `prototype-directions.md`, `app-flow.md`, and the persona review with your triage. No need to polish all three directions." },
+      { label: "Stretch, if you get there:", text: "refine one direction to address its “act on now” findings, then review the revised version. The steps are in the session README." }
+    ],
+    callout: {
+      tone: "go",
+      title: "The core is what Session 4 builds from",
+      text: "You are not behind if you finish the core and stop."
+    }
+  },
+
+  {
     kind: "step",
     n: 1,
     title: "Generate 3 directions in Figma Make",
@@ -59,7 +74,7 @@ window.DECKS["session-3"] = [
     doneItems: [
       "Three directions that solve the problem in different ways",
       "Each has key screens as a clickable flow",
-      "`prototype-directions.md` is filled in, not a note-to-self"
+      "`prototype-directions.md` has all three entries filled in"
     ],
     why: "Step 4 attaches that file to the UX review, where it gives the reviewer the *intent* behind each direction alongside the screen-by-screen path."
   },
@@ -108,6 +123,17 @@ window.DECKS["session-3"] = [
   },
 
   {
+    kind: "statement",
+    eyebrow: "A word before you run the review",
+    text: "This is early design critique and hypothesis generation. Its findings are *not* user evidence and do not replace usability testing with users.",
+    callout: {
+      tone: "go",
+      title: "What it is good for",
+      text: "It surfaces problems you would not have spotted on your own, and pulls the prototype closer to the committed problem."
+    }
+  },
+
+  {
     kind: "step",
     n: 4,
     title: "Run the persona UX review",
@@ -132,7 +158,7 @@ window.DECKS["session-3"] = [
     eyebrow: "Step 4",
     title: "The persona review",
     text:
-      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in\nits own named section with screens numbered in flow order. Also attached are\nmy personas.md, problem-definition.md, app-flow.md, and\nprototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to\nwhat it is trying to do, and not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that\nevery persona reviews every direction. For each persona × direction, walk the\nnumbered screens in order and note what that persona notices, struggles with,\nand wants, referring to screens by number. Stay true to each persona's\nevidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact\nfirst, with columns: finding, which persona(s), which direction, severity, and\nwhether to act on it. Write the full review and the table into ux-review.md."
+      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in its own named section\nwith screens numbered in flow order. Also attached are my personas.md, problem-definition.md,\napp-flow.md, and prototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to what it is trying to do,\nand not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that every persona reviews every\ndirection. For each persona × direction, walk the numbered screens in order and note what that\npersona notices, struggles with, and wants, referring to screens by number. Stay true to each\npersona's evidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact first, with columns:\nfinding, which persona(s), which direction, severity, and whether to act on it. Write the full\nreview and the table into ux-review.md."
   },
 
   {
@@ -152,17 +178,6 @@ window.DECKS["session-3"] = [
       "Your reasoning is recorded where you overruled the model"
     ],
     why: "A finding only one persona cares about, that would hurt another if fixed, is the reliability-versus-personalization tension resurfacing."
-  },
-
-  {
-    kind: "statement",
-    eyebrow: "A word before you run the review",
-    text: "This is early design critique and hypothesis generation. Its findings are *not* user evidence and do not replace usability testing with users.",
-    callout: {
-      tone: "go",
-      title: "What it is good for",
-      text: "It surfaces problems you would not have spotted on your own, and pulls the prototype closer to the committed problem."
-    }
   },
 
   {

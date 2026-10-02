@@ -12,7 +12,7 @@ The read-only Figma MCP is a localhost server running in each participant's own 
 
 - Build and test the full round-trip in advance on your own machine: Figma Make generation → into Figma → persona UX review.
 - Know the failure modes before the room hits them: the server is only reachable while the Figma desktop app is open, and the tools do not appear in Copilot until the `figma` entry in `mcp.json` is restarted.
-- Requires the BSD application to be approved. Confirm this well ahead.
+- Requires AI access for every participant: through their customer project where they can get it, or an approved BSD application for GitHub Copilot as plan B. Confirm this well ahead.
 
 ## Run the MCP setup in lockstep
 
@@ -25,4 +25,4 @@ Keep the setup visible. Seeing how the connection is wired, with one example of 
 - Does Figma Make currently accept attached files to inform a generation?
 - Is the Copilot↔Figma review flow reproducible end to end?
 
-Both need a dry run before this session is locked in.
+Check both on your own machine before the session runs.

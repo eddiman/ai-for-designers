@@ -29,3 +29,6 @@
 - **Insight:**
 - **Evidence:**
 - **Observed / inferred:**
+
+## Stretch: the weakest insight (optional)
+<!-- Only if you did this stretch test: the model's answer, and what you would do with that insight and why. Leave the insights above as they are. -->

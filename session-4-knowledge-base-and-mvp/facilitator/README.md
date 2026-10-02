@@ -22,12 +22,12 @@ It goes at `session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's o
 
 ## Recap (open the session with this)
 
-Walk through the reference prototype direction: which one was chosen and why it won. Returning participants use this as a model, and drop-ins need it to use the premade direction and review.
+Walk through the reference build's chosen direction, Decide (`reference-build/chosen-direction.md`): why it won over the other two, and which UX-review findings it carries into the build. Returning participants use this as a model for their own choice in step 2. Drop-ins need it to work from the premade directions, flows, and review, which leave the choice to them.
 
 ## Pre-setup
 
-- The KB scaffolding skill must exist and be ready before Session 4 (see the open decisions in `../../ai-for-designers-v1.3.md`). **It does not exist yet.** `../../kb-prompt.md` is the current stand-in, a prompt participants copy and paste rather than a skill they invoke. The participant `README.md` says "use the KB scaffolding skill", so either the skill gets built or that step needs rewording before the session runs.
-- A working Copilot build environment in VS Code, with the BSD application approved.
+- **The KB setup prompt is in step 1 of the participant `README.md`.** It creates the empty `kb/` inside `session-4-knowledge-base-and-mvp/`, with its folder READMEs, `kb/AGENTS.md`, and templates, and it must leave every file outside `kb/` alone. Run it yourself before the session and check both: that `kb/` lands inside the Session 4 folder, and that the root `AGENTS.md` is unchanged. It was adapted from `../../kb-prompt.md`, which is a general-purpose version for installing a knowledge base in any repository. Do not hand that file to participants: it creates `kb/` at the repository root and adds a section to the root `AGENTS.md`, which in this repository is the course's own instructions.
+- A working Copilot build environment in VS Code for every participant, through their customer project where possible, or with the BSD application approved as plan B.
 - **The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no build step, no package manager, and nothing to install. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework, because a build tool that stops to ask an unanswerable technical question stalls the work. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
 - Nothing to install means nothing to fail on a participant's machine, and no version drift between people in the room. If a participant's agent proposes a framework, a bundler, or a package install, that is off-spec, so point them back at the scaffold prompt.
 - The app opens straight from `index.html` in a browser, so verifying an increment means looking at the page rather than reading a terminal.

@@ -50,11 +50,28 @@ Everything from Sessions 1–3: your research synthesis, problem definition, per
 
 ## 1. Build the project knowledge base
 
+This step uses two prompts. The first creates an empty knowledge base, so you can see its structure before anything goes into it. The second fills it from your nine artifacts.
+
 **Do this now**
 
-1. Use the KB scaffolding skill to create `session-4-knowledge-base-and-mvp/kb/`.
-2. Gather your nine artifacts from the table above, taking premade versions where you need them.
-3. Paste this prompt and attach them:
+1. Open Copilot Chat in VS Code and switch to **Agent** mode.
+2. Create the empty knowledge base with this prompt, pasted as-is:
+
+> Create an empty knowledge base at `session-4-knowledge-base-and-mvp/kb/`, as plain markdown files. Do not add any project content yet; the next prompt fills it.
+>
+> Inside `session-4-knowledge-base-and-mvp/kb/`, create:
+>
+> - `AGENTS.md`: instructions for agents: what the knowledge base is for, the read order (`AGENTS.md`, `README.md`, `overview.md`, then the relevant folders), that raw notes go in `sessions/` and curated knowledge in the other folders, that `views/` holds derived summaries only, and to make the smallest correct update.
+> - `README.md`: the same explanation, for a person reading the folder.
+> - `overview.md`: empty headings for Goal, Committed problem, Current design context, Current state, and Source material.
+> - `decisions/`, `design/`, `stories/`, `learnings/`, `sessions/`, and `views/`, each with a `README.md` saying in a sentence or two what belongs there.
+> - `templates/` with `decision.md`, `design-note.md`, `learning.md`, `session-note.md`, and `story.md`, each with the headings that kind of note needs.
+>
+> Do not create or edit anything outside `session-4-knowledge-base-and-mvp/kb/`, including the `AGENTS.md` at the repository root. If something is unclear, leave a placeholder and tell me. When you are done, list the files you created.
+
+3. Read the list of files Copilot says it created. Every one should be inside `session-4-knowledge-base-and-mvp/kb/`. If it changed anything else, such as the `AGENTS.md` at the repository root, tell the facilitator before you continue.
+4. Gather your nine artifacts from the table above, taking premade versions where you need them.
+5. Paste this prompt and attach them:
 
 > Attached are the artifacts from a research-and-design project on helping people catch the bus: `interview-summaries.md`, `questionnaire-summary.md`, `triangulation.md`, `problem-definition.md`, `personas.md`, `key-insights.md`, `prototype-directions.md`, `app-flow.md`, and `ux-review.md`.
 >
@@ -62,11 +79,12 @@ Everything from Sessions 1–3: your research synthesis, problem definition, per
 >
 > Keep it factual and invent nothing that is not in the artifacts.
 
-4. Open `kb/overview.md` and read it.
+6. Open `kb/overview.md` and read it.
 
 **You are done when**
 
 - `kb/` exists and holds your artifacts, sorted into folders.
+- Every file the setup prompt created is inside `kb/`, and the `AGENTS.md` at the repository root is unchanged.
 - You can find the committed problem, the personas, and the prototype decisions without searching.
 - `kb/overview.md` works as an entry point to the project rather than reading as a list of file names.
 
@@ -185,7 +203,7 @@ Reply: *pick the simplest option that keeps the app opening directly in a browse
 
 ## 6. Build one increment, then verify it
 
-This is the core of the session. The anti-pattern to avoid is one-shotting: asking for a whole feature in a single prompt and hoping it holds together.
+This is the core of the session. The anti-pattern to avoid is one-shotting: asking for a whole feature in a single prompt and hoping the result works.
 
 **Do this now**
 
@@ -269,4 +287,4 @@ A generative build tool becomes reliable when it has a structured knowledge base
 
 ## Tools
 
-GitHub Copilot / Copilot agent in VS Code (BSD); the KB scaffolding skill. The app is plain HTML, CSS, and JavaScript, so there is nothing to install for the build.
+GitHub Copilot / Copilot agent in VS Code. If you are on a customer project, first check whether you can get AI access there; otherwise use GitHub Copilot through a BSD application. The app is plain HTML, CSS, and JavaScript, so there is nothing to install for the build.

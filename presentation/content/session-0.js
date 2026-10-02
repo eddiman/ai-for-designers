@@ -163,12 +163,12 @@ window.DECKS["session-0"] = [
     lead: "Use `interview-summaries.md` for a short setup check.",
     doItems: [
       "In the Explorer, select `interview-summaries.md`.",
-      "Find **Interview 1: Maja**, then click the empty line below **Summary**.",
+      "Find **Interview 1: Maja**, then click the empty line below **Generic summary**.",
       "Type `Setup check`, then copy and paste this sentence after it: `I can paste into this file.`",
       "Save with **Cmd+S** on Mac or **Ctrl+S** on Windows."
     ],
     doneItems: [
-      "Your text appears below Maja's Summary heading",
+      "Your text appears below Maja's Generic summary heading",
       "The white dot on the file tab disappears after saving"
     ],
     why: "This is the same action you use during Session 1: copy a response from the browser, paste it under the right heading, then save the file."
@@ -270,7 +270,7 @@ window.DECKS["session-0"] = [
     cols: ["When", "You need", "Setup"],
     rows: [
       ["Session 2", "The same VS Code folder and Microsoft 365 Copilot chat", "No additional setup."],
-      ["Before Session 3", "Figma desktop, Figma Make, an editable Figma file, and GitHub Copilot in VS Code", "Update Figma. Start any BSD, customer or internal Bouvet access request early."],
+      ["Before Session 3", "Figma desktop, Figma Make, an editable Figma file, and GitHub Copilot in VS Code", "Update Figma. On a customer project, first check whether you can get AI access there. If not, start a BSD or internal Bouvet access request early."],
       ["During Session 3", "Figma's local MCP server", "We connect and verify it together, one step at a time."],
       ["Session 4", "VS Code with GitHub Copilot in Agent mode", "No app framework, packages or build tools to install."]
     ]

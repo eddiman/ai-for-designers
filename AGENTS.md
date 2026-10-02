@@ -4,7 +4,7 @@ This repository is the working space for planning **AI for Designers**, a course
 
 ## Source of truth
 
-`ai-for-designers-v1.3.md` in the root is the current course plan. It supersedes v1.2 (kept in `archive/` for history) and the earlier v1.0/v1.1 drafts, which stay in the original Fagkomite knowledge-base repo and are not carried over here. When the plan changes, bump the version and update the source-of-truth file.
+`ai-for-designers-v1.4.md` in the root is the current course plan. It supersedes v1.3 and v1.2 (both kept in `archive/` for history) and the earlier v1.0/v1.1 drafts, which stay in the original Fagkomite knowledge-base repo and are not carried over here. When the plan changes, bump the version and update the source-of-truth file.
 
 ## The course in brief
 
@@ -16,9 +16,10 @@ This repository is the working space for planning **AI for Designers**, a course
 
 ## Repository layout
 
-- `ai-for-designers-v1.3.md` is the course plan (source of truth)
-- `archive/ai-for-designers-v1.2.md` is the previous plan, kept for history
+- `ai-for-designers-v1.4.md` is the course plan (source of truth)
+- `archive/` holds the previous plans, v1.3 and v1.2, kept for history
 - `AGENTS.md` is this file
+- `kb-prompt.md` is a general-purpose prompt for installing a knowledge base in any repository. Session 4 uses its own setup prompt instead. Do not hand this file to participants: it creates `kb/` at the repository root and edits the root `AGENTS.md`.
 - `session-1-research-synthesis/` holds Session 1; `research/` holds the shared source pack, and `facilitator/` holds run-of-show and design notes
 - `session-2-problem-definition-and-personas/` holds Session 2, with the same `facilitator/` and `premade/` split
 - `session-3-prototyping-and-ux-review/` holds Session 3, likewise
@@ -39,24 +40,18 @@ When working through the course as a participant, keep the content produced duri
 
 ## Current state
 
-- **The course has been run once, end to end.** Review notes from that run are kept outside this repository. The revision work they point to is listed under *What's next* below, which supersedes the plan's open-decisions list where the two disagree.
+- **The course has been run once, end to end, and revised after it.** Review notes from that run are kept outside this repository. The revisions they pointed to have landed and are recorded in the plan's *What changed from v1.3*: the guided Session 0 setup and readiness gate, the same action structure for every activity, a shared core with optional stretch work in every session, and the per-session changes.
 - **All four sessions are fleshed out into runnable detail**, each with its participant `README.md`, the exact prompts to adapt, `facilitator/` notes, and fill-in stubs at the session root. Session 1 has the shared source pack in `research/`; Sessions 2–4 have `premade/` on-ramp artifacts.
 - **The shared research pack exists for Session 1, and the premade artifacts exist for Sessions 2–4.** The research pack contains the planted tension; each later session's on-ramp carries forward the outputs from the session before it.
 - **Session 4's build loop has been dry-run end to end.** The output is the worked example in `session-4-knowledge-base-and-mvp/facilitator/reference-build/`: a populated knowledge base, the committed Decide direction, a spec, a nine-increment build plan, a verification plan, and the app through increment 2.
-- The plan (v1.3) is current but has been edited in place since it was drafted. The Session 3 MCP correction, the pinned Session 4 stack, and the settled build mode all landed after v1.3 was written. A version bump is pending.
-- Prerequisites are partly settled. The Figma MCP question is resolved: participants set up the local server themselves in facilitator lockstep. Session 4 needs nothing installed, since the app is plain HTML, CSS, and JavaScript. Still open: BSD approval for Copilot, and whether the KB scaffolding skill gets built. Five open decisions remain at the end of the plan.
+- **The plan is v1.4 and has no open decisions.**
+- **Prerequisites are settled apart from AI access for Sessions 3–4.** Participants set up the Figma MCP local server themselves in facilitator lockstep. Session 4 needs nothing installed, since the app is plain HTML, CSS, and JavaScript, and a setup prompt in its `README.md` creates the knowledge base. For the coding agent in Sessions 3–4, participants on customer projects should first find out whether they can get AI access through the customer. GitHub Copilot through a BSD application is plan B, and anyone who needs it should apply as soon as the course is announced.
 
 ## What's next
 
-The four sessions and the end-to-end workflow stay as they are. The revision work is in the tool orientation, the instructions, and the facilitation.
+The revised course is now running with participants.
 
-1. **Add a tooling orientation** of 10–15 minutes, guided: what Markdown is, where each session's files live, the VS Code Explorer and Copilot Chat, course artifacts against application code, and the artifact journey from research to a verified build. Plus a readiness check used to plan support and pairing.
-2. **Give every activity a visible action structure:** "Do this now", "You are done when", "Why this matters", and where relevant "If the tool asks a technical question". Keep the immediate action separate from its explanation.
-3. **Add a shared core with optional stretch work** to each session, so different speeds are handled without splitting the course. Session 4's core is the KB, the decisions and plans, and one verified increment.
-4. **Work the per-session changes:** a Markdown demo and shorter one-shot warnings in Session 1; evidence and persona quality gates plus reflection time in Session 2; stating what the persona review is and is not before running it in Session 3; and the Session 4 reframe, meaning purpose before steps, a visible progress map, defined vocabulary, and quality checkpoints after the KB, the spec, and the first increment.
-5. **Decide the KB scaffolding skill.** `kb-prompt.md` is a copy-paste prompt, and Session 4's `README.md` tells participants to use a skill. Build it or reword the step.
-6. **Bump the plan to v1.4** once the changes above land, and archive v1.3.
-7. **Run a timed dry run** with at least one designer who rarely opens VS Code and one who lives in it. Check that both finish the shared core, see where facilitator help is needed, and ask each to explain the purpose and evidence behind every artifact they produced. Use the result to decide whether Session 4 needs splitting.
+Two suggestions from the review notes were left out on purpose. Session 1 shortens its one-shot warnings instead of having participants try the shortcut before the controlled workflow. Session 2 puts its quality checks in each step's "done" list as self-checks, without pair checkpoints or extra reflection time, so its timeboxes stay as they are.
 
 Deferred on purpose: removing Session 4, requiring physical or full attendance, making the course beginner-only, moving all Session 1 work into VS Code, and adding more required artifacts.
 
@@ -71,6 +66,7 @@ Specific rules that apply to every file here:
 - **No rhetorical questions** that the writer answers in the next sentence. Genuine questions put to participants or left open for a decision are fine.
 - **No slogans or hype.** Explain the mechanism or the effect instead of calling something impactful or transformative, and drop closing summaries that only repeat what was said.
 - **No filler emphasis.** Do not use "real", "really", or "honest" to add weight, as in "one real project", "any real work", or "one honest warning". Name what is meant instead: whose project it is, which work, what the warning is about. "real-time" and "real-world" stay, since they are the established terms for the thing they describe.
+- **No "holds" for whether something is true or applies.** Do not write that a claim "holds", "holds true", or "holds up", or that it "holds for" another case, and do not reword it as "applies equally to". Say the concrete thing: "if the test passes" rather than "if this holds", and "the summaries match the sources" rather than "the summaries hold up". Other senses of the word stay, as in "hold your ground" or "hold each direction to what it is trying to do".
 - **A ban covers what is close to it.** Synonyms, hyphenated rewordings, and the same figure of speech with one word swapped fall under the same rule, so "genuine", "truly", "actual", and "actually" are out wherever the sentence reads the same without them. Keep such a word only where it marks a contrast the text depends on, as in what the build tool did against what it said it did.
 - **No retrospective asides in participant-facing text.** A slide or session README is read by someone seeing the course for the first time, so it cannot lean on how an earlier run went. "The reframing that helped most" and "the part people skip" mean nothing to them. Put that reasoning in `facilitator/` instead.
 - **Markdown paragraphs are single long lines**, never hard-wrapped at a column.

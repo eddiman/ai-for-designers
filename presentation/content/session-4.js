@@ -100,13 +100,15 @@ window.DECKS["session-4"] = [
     n: 1,
     title: "Build the project knowledge base",
     doItems: [
-      "Use the KB scaffolding skill to create `kb/`.",
+      "Open Copilot Chat in **Agent** mode.",
+      "Run the setup prompt, and check that it only created files inside `kb/`.",
       "Gather your nine artifacts, premade where you need them.",
       "Paste the population prompt and attach them.",
       "Open `kb/overview.md` and read it."
     ],
     doneItems: [
       "`kb/` exists, artifacts sorted into folders",
+      "Nothing outside `kb/` changed, including the root `AGENTS.md`",
       "You can find the problem, personas and prototype decisions without searching",
       "`overview.md` works as an entry point"
     ],
@@ -115,7 +117,15 @@ window.DECKS["session-4"] = [
 
   {
     kind: "prompt",
-    eyebrow: "Step 1",
+    eyebrow: "Step 1, first prompt",
+    title: "Create the empty knowledge base",
+    text:
+      "Create an empty knowledge base at session-4-knowledge-base-and-mvp/kb/, as plain markdown files. Do not add any project\ncontent yet; the next prompt fills it.\n\nInside session-4-knowledge-base-and-mvp/kb/, create:\n\n- AGENTS.md: instructions for agents: what the knowledge base is for, the read order (AGENTS.md, README.md, overview.md,\n  then the relevant folders), that raw notes go in sessions/ and curated knowledge in the other folders, that views/\n  holds derived summaries only, and to make the smallest correct update.\n- README.md: the same explanation, for a person reading the folder.\n- overview.md: empty headings for Goal, Committed problem, Current design context, Current state, and Source material.\n- decisions/, design/, stories/, learnings/, sessions/, and views/, each with a README.md saying in a sentence or two\n  what belongs there.\n- templates/ with decision.md, design-note.md, learning.md, session-note.md, and story.md, each with the headings that\n  kind of note needs.\n\nDo not create or edit anything outside session-4-knowledge-base-and-mvp/kb/, including the AGENTS.md at the repository\nroot. If something is unclear, leave a placeholder and tell me. When you are done, list the files you created."
+  },
+
+  {
+    kind: "prompt",
+    eyebrow: "Step 1, second prompt",
     title: "Populate the knowledge base",
     text:
       "Attached are the artifacts from a research-and-design project on helping\npeople catch the bus: [the nine files].\n\nPopulate session-4-knowledge-base-and-mvp/kb/ from them. Put the raw\nartifacts in kb/sessions/, then distil them into the curated folders: the\ncommitted problem into kb/decisions/; personas and the prototype directions\nand flows into kb/design/; the research insights and UX-review findings into\nkb/learnings/; and a short project summary into kb/overview.md that names the\ncommitted problem and points to the rest.\n\nKeep it factual and invent nothing that is not in the artifacts."
@@ -267,7 +277,7 @@ window.DECKS["session-4"] = [
     kind: "step",
     n: 6,
     title: "Build one increment, then verify it",
-    lead: "This is the core of the session. The anti-pattern is one-shotting: asking for a whole feature in one prompt and hoping it holds together.",
+    lead: "This is the core of the session. The anti-pattern is one-shotting: asking for a whole feature in one prompt and hoping the result works.",
     doItems: [
       "Release **only the first increment**, nothing beyond it.",
       "Have it write back into `build-plan.md` which files it changed and what now works, then stop.",

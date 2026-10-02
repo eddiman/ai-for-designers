@@ -32,3 +32,9 @@
 ### Directed summary
 
 ### Differences analysis
+
+---
+
+## Stretch: a third framing (optional)
+
+<!-- Only if you did the stretch task: which interview, the prompt you used, the summary, the comparison, and your note on what it surfaced. -->

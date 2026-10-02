@@ -6,7 +6,7 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 Whether participants continue from their own Session 1 output or pick up the premade reference versions, open with a recap that walks through the reference summaries:
 
-- which prompt style produced each and why. The reference carried the **generic** summaries for the three interviews and the **directed** summary for the questionnaire (the choices recorded in `../premade/triangulation.md`), because those were the cuts that best held up across sources;
+- which prompt style produced each and why. The reference carried the **generic** summaries for the three interviews and the **directed** summary for the questionnaire (the choices recorded in `../premade/triangulation.md`), because those were the cuts that the other sources confirmed best;
 - what the central tension is, meaning reliability against personalization (see `../../session-1-research-synthesis/facilitator/research-design-notes.md`);
 - why the summaries are solid enough to build on.
 
@@ -31,4 +31,4 @@ Session 3 runs the UX review in character as these personas, so they're a workin
 ## Pre-setup
 
 - Microsoft Copilot 365 chat: org-provided, no setup.
-- Confirm the GitHub Copilot / BSD application is moving, since Sessions 3–4 depend on it. Start it as early as possible.
+- Confirm that everyone has AI access for Sessions 3–4, since both depend on it. Participants on customer projects first find out whether they can get it through the customer. For everyone else, GitHub Copilot through a BSD application is plan B. Start it as early as possible.

@@ -8,6 +8,14 @@ How to turn synthesized research into a design brief packet, meaning key insight
 
 If you were here for Session 1, continue from your own interview summaries and triangulation note. If you missed it, use the premade reference versions in `premade/` as your starting evidence: the summaries plus the triangulation note, which already has its inputs chosen and the central tension named. There's nothing to select or redo, so you build on it as it is. Either way the session opens with a recap of what the reference summaries contain and why.
 
+## What counts as done
+
+**Core, for everyone:** `key-insights.md` with three to five evidence-anchored insights, `problem-definition.md` with one committed problem and your reply to the red-team, and `personas.md` with two or three personas labelled as hypotheses. That is the brief packet Session 3 attaches to Figma Make.
+
+**Stretch, if you get there:** test the packet once more, either by finding the insight with the weakest evidence or by arguing for the runner-up problem. The steps are under **Stretch: test the packet** after step 3.
+
+You are not behind if you finish the core and stop. The core is what this session asks for.
+
 ## How you'll work
 
 Two things carry over from Session 1:
@@ -37,45 +45,132 @@ Work in this order. The prompts below are starting points, so adapt them, and ke
 
 Each step builds on the one before it. If you kept everything in one chat, that earlier output is already in context. If you're using a fresh chat per step, re-attach the evidence first and paste in what you're carrying forward, your insights into step 2 and your committed problem into step 3, before you run the prompts.
 
-### 1. Key insights
+---
 
-Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on.
+## 1. Key insights
 
-**Why:** these are the portable, evidence-anchored takeaways everything downstream references. They scope the problem definition here, and in Sessions 3–4 they feed the prototype generation and the knowledge base. Get them right once and you stop re-deriving the signal from raw evidence every time.
+Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on. This is a separate step from the triangulation: the triangulation maps where sources agree, conflict, and leave gaps, and the insights are the committed takeaways you pull out of it.
+
+**Do this now**
+
+1. Attach `triangulation.md` and the chosen summary for each source.
+2. Run this prompt:
 
 > From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred.
 
-The insights are a separate step from the triangulation. The triangulation maps where sources agree, conflict, and leave gaps, and the insights are the committed takeaways you pull out of it. Save them to `key-insights.md`.
+3. Save each insight in `key-insights.md`, filling in **Insight**, **Evidence**, and **Observed / inferred**.
 
-### 2. Problem definition
+**You are done when**
+
+- `key-insights.md` has three to five insights, no more.
+- Every insight cites specific evidence.
+- You have checked the evidence behind each insight, and it says what the insight claims.
+- Every insight is labelled observed or inferred.
+
+**Why this matters**
+
+These are the portable, evidence-anchored takeaways everything downstream references. They scope the problem definition here, and in Sessions 3–4 they feed the prototype generation and the knowledge base. Get them right once and you stop re-deriving the signal from raw evidence every time.
+
+---
+
+## 2. Problem definition
 
 Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then red-team it.
 
-**Why:** you can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch. *Red-teaming* borrows a term from security, where a "red team" is tasked with attacking a plan to expose its weaknesses, so here you turn the AI into your red team and ask it to make the strongest case that your chosen problem is the wrong one to solve first. That stress-tests the choice before you sink a whole prototype into it. The single committed problem is what scopes Session 3.
+**Do this now**
+
+1. Generate the candidates:
 
 > Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it.
->
+
+2. Rank them:
+
 > Rank these by how much of my evidence actually supports each one. Cite the specific source for each.
->
+
+3. **Commit to one.** Pick *one* framing from the ranked list and write it as a single clear problem statement under **The committed problem** in `problem-definition.md`, with its How-Might-We under **How-Might-We** and the evidence behind it under **Evidence that supports it**. Do not blend several framings or keep all of them. Narrowing is the point.
+4. Under **Candidates considered and rejected**, list the framings you did not pick and why, so the choice is traceable.
+5. Turn the model into your *red team*. The term comes from security, where a red team attacks a plan to expose its weaknesses. Tell the model which framing you committed to, then run:
+
 > Argue why the problem I picked is the wrong one to solve first.
 
-**Commit to a single problem** means exactly that: pick *one* framing from the ranked list and write it as a single clear problem statement plus its How-Might-We, rather than blending three of them or keeping all of the above. Narrowing is the point. Jot down the framings you *didn't* pick and why, so the choice is traceable (the stub has a spot for this).
+6. Write your own reply to that argument. Do you concede and re-scope the problem, or do you hold your ground, and on what evidence? Save the argument and your reply under **Red-team** in `problem-definition.md`.
 
-**Write your own response to the red-team.** Once the model has argued why your pick is the wrong problem to solve first, reply in your own words instead of pasting its critique and moving on. Do you concede and re-scope the problem, or do you hold your ground, and on what evidence? That reply is the judgement this step is training, and letting the model have the last word defeats the purpose.
+**You are done when**
 
-Save the committed problem, the rejected candidates, the red-team argument, and your response to `problem-definition.md`.
+- `problem-definition.md` names one problem, picked from the ranked list, with its How-Might-We and the evidence behind it.
+- The framings you rejected are listed, each with a reason.
+- The red-team argument is saved, followed by your own reply to it.
+- You can say in a sentence or two why this problem won over the others.
 
-### 3. Personas
+**Why this matters**
+
+You can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch, and the red-team stress-tests the choice before you sink a whole prototype into it. The single committed problem is what scopes Session 3.
+
+Your reply to the red-team is the judgement this step is training. Pasting the critique and moving on lets the model have the last word, which defeats the purpose.
+
+---
+
+## 3. Personas
 
 Create **2–3 personas**, each grounded in specific evidence, each labelled as a hypothesis, each noting what you still don't know.
 
-**Why:** Session 3 runs a UX review *in character as these personas*, so they're a working input the next session depends on. That is exactly why each one has to be tied to evidence and treated as a hypothesis: you'll be making design calls in their voice.
+**Do this now**
+
+1. With your evidence and committed problem in the chat, run this prompt:
 
 > From this evidence and the committed problem, propose 2–3 personas. Ground each in specific interview or questionnaire signals, label each as a hypothesis, and note what we still don't know about them.
 
-Avoid turning each interviewee into a persona. Use the split the triangulation already named, the power user who wants a smart, proactive assistant and the simplicity-first rider who wants only reliable basics, to build personas that mean something.
+2. Check that the personas follow the split the triangulation already named: the power user who wants a smart, proactive assistant, and the simplicity-first rider who wants only reliable basics. If the model turned each interviewee into a persona, ask it to rebuild them around that split.
+3. Save them in `personas.md`, filling in **Hypothesis**, **Grounded in**, and **What we still don't know** for each.
 
-Save them to `personas.md`.
+**You are done when**
+
+- `personas.md` has two or three personas.
+- Each persona draws on more than one source.
+- Each is labelled a hypothesis and lists what you still don't know.
+- None of them is one interviewee with a new name.
+- Every trait in each persona traces to the evidence under **Grounded in**, or is listed under **What we still don't know**.
+
+**Why this matters**
+
+Session 3 runs a UX review *in character as these personas*, so they're a working input the next session depends on. That is why each one has to be tied to evidence and treated as a hypothesis: you'll be making design calls in their voice.
+
+---
+
+## Stretch: test the packet
+
+**Do this now**
+
+Choose one of these two tests, and run it in a chat that has your evidence and your packet in context.
+
+*The weakest insight*
+
+1. Run this prompt:
+
+> Look at my key insights and the evidence each one cites. Which insight rests on the weakest evidence, and why? What would I need to see in the research to trust it more?
+
+2. Decide what you would do with that insight: keep it, relabel it as inferred, or cut it. Write the model's answer and your decision under **Stretch: the weakest insight** at the bottom of `key-insights.md`.
+
+*The runner-up problem*
+
+1. Run this prompt:
+
+> Compare my committed problem with the second-ranked framing from the ranking. For each, say which of my personas it serves best and what we would give up by choosing it. Then argue for the runner-up as strongly as you can.
+
+2. Decide whether the comparison changes your mind, and why. Write the model's answer and your decision under **Stretch: the runner-up problem** at the bottom of `problem-definition.md`.
+
+For either test, write what you would change in the stretch section and leave the rest of the file as it is. Your problem and personas were built on the insights and the problem as they stand, and Session 3 needs the three files to match.
+
+**You are done when**
+
+- The stretch section of `key-insights.md` or `problem-definition.md` has the model's answer and your decision, in your own words.
+- The rest of your packet is unchanged.
+
+**Why this matters**
+
+The insight with the weakest evidence is where the packet is most likely to be wrong, and naming it now tells you what to watch for in the Session 3 review. Arguing hard for the runner-up checks whether your commitment rests on the evidence or on the order the ranking happened to produce.
+
+---
 
 ## What you'll produce
 

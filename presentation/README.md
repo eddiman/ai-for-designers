@@ -36,7 +36,7 @@ Double-clicking the file works. If you would rather serve it, anything static wi
 python3 -m http.server 8000
 ```
 
-The one thing that needs the network is the IBM Plex Sans webfont from Google Fonts. Without a connection it falls back to the system sans, and every layout still holds. If you are presenting somewhere with no wifi, load the page once beforehand so the font is cached.
+The one thing that needs the network is the IBM Plex Sans webfont from Google Fonts. Without a connection it falls back to the system sans, and every layout still works. If you are presenting somewhere with no wifi, load the page once beforehand so the font is cached.
 
 ## Presenting
 

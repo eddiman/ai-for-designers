@@ -32,6 +32,21 @@ window.DECKS["session-2"] = [
   },
 
   {
+    kind: "list",
+    eyebrow: "What counts as done",
+    title: "Core, and stretch",
+    items: [
+      { label: "Core, for everyone:", text: "three to five insights, one committed problem with your reply to the red-team, and two or three personas labelled as hypotheses." },
+      { label: "Stretch, if you get there:", text: "find the insight with the weakest evidence, or argue for the runner-up problem. The steps are in the session README." }
+    ],
+    callout: {
+      tone: "go",
+      title: "The core is what Session 3 attaches",
+      text: "You are not behind if you finish the core and stop."
+    }
+  },
+
+  {
     kind: "table",
     eyebrow: "How you'll work",
     title: "Two ways to structure the chats",
@@ -64,6 +79,7 @@ window.DECKS["session-2"] = [
     doneItems: [
       "Three to five insights, no more",
       "Every one cites specific evidence",
+      "You checked that the evidence says what the insight claims",
       "Observation and inference are labelled apart"
     ],
     why: "These are the portable takeaways everything downstream references. They scope the problem definition here, and in Sessions 3–4 they feed the prototypes and the knowledge base."
@@ -93,7 +109,8 @@ window.DECKS["session-2"] = [
     doneItems: [
       "One problem, picked from the ranked list",
       "The framings you rejected, and why",
-      "The red-team argument and *your* response to it"
+      "The red-team argument and *your* response to it",
+      "You can say why this problem won over the others"
     ],
     why: "You cannot design for everything. Ranking by evidence makes the choice defensible rather than a hunch, and the single committed problem is what scopes Session 3."
   },
@@ -136,7 +153,8 @@ window.DECKS["session-2"] = [
     doneItems: [
       "Each persona draws on more than one source",
       "Each is labelled a hypothesis, with its open questions",
-      "None of them is one interviewee with a new name"
+      "None of them is one interviewee with a new name",
+      "Every trait traces to evidence, or is listed as unknown"
     ],
     why: "Session 3 runs a UX review *in character as these personas*. You will be making design calls in their voice, so each one has to be tied to evidence."
   },

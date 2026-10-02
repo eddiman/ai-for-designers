@@ -27,6 +27,21 @@ window.DECKS["session-1"] = [
   },
 
   {
+    kind: "list",
+    eyebrow: "What counts as done",
+    title: "Core, and stretch",
+    items: [
+      { label: "Core, for everyone:", text: "both summaries and the differences analysis for all four sources, your chosen inputs, and the triangulation with the central tension named." },
+      { label: "Stretch, if you get there:", text: "run a third framing on one interview and note what it surfaced that the other two missed. The steps are in the session README." }
+    ],
+    callout: {
+      tone: "go",
+      title: "The core is what Session 2 starts from",
+      text: "You are not behind if you finish the core and stop."
+    }
+  },
+
+  {
     kind: "table",
     eyebrow: "The method",
     title: "Two prompt styles, same data",
@@ -46,29 +61,19 @@ window.DECKS["session-1"] = [
   {
     kind: "list",
     eyebrow: "Two rules",
-    title: "These hold for the whole session",
+    title: "Follow these for the whole session",
     ordered: true,
     items: [
       { label: "One source, one chat.", text: "Summarize each interview, and the questionnaire, in its own fresh chat. Mixing sources muddles the context and you get answers you cannot trust." },
       { label: "Work the data in steps.", text: "Every step where you shape the raw data yourself is a step where you keep control and can check the result." }
-    ]
-  },
-
-  {
-    kind: "statement",
-    eyebrow: "The shortcut to avoid",
-    text: "Pasting everything into one chat and asking it to summarize, prioritize and lay it all out gives you something polished that you have no way to trust.",
-    callout: {
-      tone: "stop",
-      title: "Why the steps below are slower on purpose",
-      text: "You never worked the data, so you cannot tell whether it is the right cut of it, and you have no way to check."
-    }
+    ],
+    note: "The shortcut to avoid: pasting everything into one chat and asking for it all at once gives you something polished that you cannot check."
   },
 
   {
     kind: "step",
     n: 1,
-    title: "The interviews",
+    title: "Summarize the interviews",
     lead: "For each of the three interviews, open a **fresh chat**, paste in that one transcript, and go in this order.",
     doItems: [
       { label: "Generic prompt", text: "`Summarize this interview.`", copyText: "Summarize this interview." },
@@ -82,13 +87,13 @@ window.DECKS["session-1"] = [
       "Both summaries plus the differences analysis saved for each",
       "Quotes attributed to their source"
     ],
-    why: "Keeping all three steps in one chat is what lets the model compare the two summaries directly in step 3."
+    why: "The comparison prompt works because both summaries are already in the chat. A new chat for each interview keeps the sources apart."
   },
 
   {
     kind: "step",
     n: 2,
-    title: "The questionnaire",
+    title: "Summarize the questionnaire",
     lead: "The same three-step flow, in its own single chat.",
     doItems: [
       { label: "Generic prompt", text: "`Summarize this questionnaire.`", copyText: "Summarize this questionnaire." },
@@ -98,7 +103,7 @@ window.DECKS["session-1"] = [
     ],
     doneItems: [
       "`questionnaire-summary.md` holds both summaries and the analysis",
-      "You treated it as carefully as an interview"
+      "The questionnaire had its own chat, with no interview in it"
     ],
     why: "The questionnaire is the broad signal the interviews get measured against. Treating it as a footnote is how a planted tension stays hidden."
   },

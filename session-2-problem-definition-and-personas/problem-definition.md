@@ -19,3 +19,6 @@
 ## Red-team: why this might be the wrong problem to solve first
 <!-- AI's argument against your choice, and your response to it. -->
 -
+
+## Stretch: the runner-up problem (optional)
+<!-- Only if you did this stretch test: the model's answer, and whether it changes your mind and why. Leave the committed problem above as it is. -->

@@ -1,6 +1,6 @@
 # Triangulation
 
-> Your work. First choose which one summary, generic or directed, represents each source. Put those chosen summaries into one chat and run the prompt below, then check the result against what you noticed yourself before filling this in. The model's pass is a draft, so you decide what holds up and you name the tension.
+> Your work. First choose which one summary, generic or directed, represents each source. Put those chosen summaries into one chat and run the prompt below, then check the result against what you noticed yourself before filling this in. The model's pass is a draft, so you decide which points the evidence supports, and you name the tension.
 >
 > Prompt: "Compare the four labelled summaries. Use exactly these headings:
 >

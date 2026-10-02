@@ -53,3 +53,8 @@
 ## Triage
 <!-- Which findings you'll act on, and which you're parking. -->
 -
+
+---
+
+## Stretch: refinement pass (optional)
+<!-- Only if you did the stretch task: which direction, the link to its v2 section, the review of the revised version, and your note. -->
