@@ -278,6 +278,7 @@ window.DECKS["session-0"] = [
 
   {
     kind: "cover",
+    session: "session-1",
     eyebrow: "Workspace ready",
     title: "Session 1: Research synthesis",
     lead: "Open the research files in VS Code, use Microsoft 365 Copilot in the browser, and save each result as Markdown.",

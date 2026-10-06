@@ -248,6 +248,10 @@
     root.innerHTML = "";
     if (!s) return;
 
+    // A slide can take another session's accent, e.g. the "Next" cover.
+    if (s.session) root.setAttribute("data-session", s.session);
+    else root.removeAttribute("data-session");
+
     (renderers[s.kind] || renderers.list)(s, root);
     if (s.callout) root.appendChild(renderCallout(s.callout));
     if (s.note) root.appendChild(h("p", "slide__note", fmt(s.note)));

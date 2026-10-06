@@ -475,13 +475,10 @@ ol.items li::before {
 /* Callout, used for checkpoints and warnings */
 .callout {
   padding: 1.6cqw 2cqw;
-  border-left: 4px solid var(--yellow);
   background: var(--surface-surface);
   font-size: 1.7cqw;
   color: var(--on-surface-high);
 }
-.callout--stop { border-left-color: var(--red); }
-.callout--go { border-left-color: var(--green); }
 .callout__title { display: block; margin-bottom: 0.4cqw; }
 
 .slide__note {

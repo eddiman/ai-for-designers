@@ -191,6 +191,7 @@ window.DECKS["session-1"] = [
 
   {
     kind: "cover",
+    session: "session-2",
     eyebrow: "Next",
     title: "Session 2",
     lead: "From summaries to a problem definition and personas. Session 2 starts from your triangulation note and the summaries you chose.",

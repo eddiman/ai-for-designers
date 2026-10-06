@@ -162,6 +162,7 @@ window.DECKS["session-2"] = [
 
   {
     kind: "cover",
+    session: "session-3",
     eyebrow: "Next",
     title: "Session 3",
     lead: "Prototyping with Figma Make, then a UX review in character as the personas you just wrote.",

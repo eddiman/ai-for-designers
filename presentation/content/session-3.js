@@ -199,6 +199,7 @@ window.DECKS["session-3"] = [
 
   {
     kind: "cover",
+    session: "session-4",
     eyebrow: "Next",
     title: "Session 4",
     lead: "A project knowledge base, and one verified increment of a working MVP.",
