@@ -22,7 +22,7 @@ window.DECKS["session-2"] = [
     lead: "If you were here for Session 1, continue from your own work. If you missed it, the premade versions in `premade/` are ready to use as they are.",
     items: [
       { label: "Your triangulation note", text: "the main input, since it already did the cross-source combining" },
-      { label: "Your chosen summaries", text: "the one version you carried forward per source, so you can pull specific quotes" }
+      { label: "Your chosen summaries", text: "the one named under **Inputs I chose** for each source, pasted in and labelled by source, so you can pull specific quotes" }
     ],
     callout: {
       tone: "go",
@@ -55,14 +55,14 @@ window.DECKS["session-2"] = [
     rows: [
       ["For", "The thread carries: insights feed the problem, the problem feeds the personas", "Clean context each time, so each task reads the evidence fresh"],
       ["For", "Fewer restarts and less re-pasting", "Forces you to re-state what you carry forward, which sharpens it"],
-      ["Against", "Context piles up, and the red-team argument can anchor your personas to it", "You have to re-attach the evidence and paste in what you are building on"]
+      ["Against", "Context piles up, and the red-team argument can anchor your personas to it", "You have to paste the evidence in again, along with what you are building on"]
     ]
   },
 
   {
     kind: "statement",
     eyebrow: "Whichever you pick",
-    text: "The more steps you work yourself (ask, read, propose a change, ask again), the better you understand the material, and the better the AI can help you. The chat structure is plumbing around that loop."
+    text: "Ask, read, propose a change, ask again. The more of that loop you work yourself, the better you understand the material."
   },
 
   {
@@ -71,10 +71,9 @@ window.DECKS["session-2"] = [
     title: "Key insights",
     lead: "Distil the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on.",
     doItems: [
-      "Attach the triangulation note and your chosen summaries.",
-      "Ask for **3–5 key insights**, each with its evidence cited.",
-      "Label each one **observed** (said or measured) or **inferred**.",
-      "Save to `key-insights.md`."
+      "Paste in `triangulation.md`, then the summary named under **Inputs I chose** for each source, labelled by source.",
+      { label: "Insights prompt", text: "`From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred.`", copyText: "From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred." },
+      "Save each insight in `key-insights.md` under **Insight**, **Evidence**, and **Observed / inferred**."
     ],
     doneItems: [
       "Three to five insights, no more",
@@ -86,25 +85,16 @@ window.DECKS["session-2"] = [
   },
 
   {
-    kind: "prompt",
-    eyebrow: "Step 1",
-    title: "Key insights",
-    text:
-      "From the triangulation note and summaries, give me the 3–5 key insights that\nshould drive the design. For each, cite the specific evidence and label it as\nobserved (said or measured) or inferred.",
-    note: "The insights are a separate step from the triangulation. The triangulation maps where sources agree and conflict, and the insights are the committed takeaways you pull out of it."
-  },
-
-  {
     kind: "step",
     n: 2,
     title: "Problem definition",
     lead: "Generate framings, rank them by evidence, commit to one, then red-team it.",
     doItems: [
-      "Generate **5 candidate framings**, each with a How-Might-We and its evidence.",
-      "Rank them by how much of *your* evidence supports each.",
-      "**Commit to one.** Write it as a single clear statement plus its How-Might-We.",
-      "Ask the model to argue your pick is the wrong problem to solve first.",
-      "Write your own reply to that argument."
+      { label: "Generate prompt", text: "`Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it.`", copyText: "Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it." },
+      { label: "Ranking prompt", text: "`Rank these by how much of my evidence actually supports each one. Cite the specific source for each.`", copyText: "Rank these by how much of my evidence actually supports each one. Cite the specific source for each." },
+      "**Commit to one** framing from the ranked list. Write it under **The committed problem** in `problem-definition.md`, with its How-Might-We and evidence.",
+      "List the framings you did not pick, and why, under **Candidates considered and rejected**.",
+      "Red-team your pick and write your reply, on the next slide."
     ],
     doneItems: [
       "One problem, picked from the ranked list",
@@ -116,21 +106,13 @@ window.DECKS["session-2"] = [
   },
 
   {
-    kind: "prompt",
-    eyebrow: "Step 2: three prompts in sequence",
-    title: "Generate, rank, red-team",
-    text:
-      "Generate 5 candidate problem framings for what to solve first, each with a\nHow-Might-We statement and the evidence that supports it.\n\nRank these by how much of my evidence actually supports each one. Cite the\nspecific source for each.\n\nArgue why the problem I picked is the wrong one to solve first."
-  },
-
-  {
     kind: "list",
-    eyebrow: "Step 2, your reply to the critique",
-    title: "Write your own response to the red-team",
+    eyebrow: "Step 2, red-team your pick",
+    title: "Red-team it, then write your own reply",
     lead: "*Red-teaming* borrows a term from security: a red team attacks a plan to expose its weaknesses. Here the AI is your red team.",
     items: [
-      "Do you concede and re-scope the problem?",
-      "Or do you hold your ground, and on what evidence?",
+      { label: "Red-team prompt", text: "`The problem I picked is: [paste your committed problem]. Argue why it is the wrong one to solve first.`", copyText: "The problem I picked is: [paste your committed problem]. Argue why it is the wrong one to solve first." },
+      "Write your reply under **Red-team** in `problem-definition.md`. Do you concede and re-scope the problem, or hold your ground, and on what evidence?",
       "**That reply is the judgement this step trains.** Pasting the critique and moving on defeats the purpose."
     ],
     callout: {
@@ -145,10 +127,9 @@ window.DECKS["session-2"] = [
     title: "Personas",
     lead: "Create **2–3 personas**, each grounded in specific evidence, each labelled as a hypothesis.",
     doItems: [
-      "Ask for 2–3 personas from your evidence and the committed problem.",
-      "Ground each in specific interview or questionnaire signals.",
-      "Label each as a hypothesis and note what you still do not know.",
-      "Save to `personas.md`."
+      { label: "Personas prompt", text: "`From this evidence and the committed problem, propose 2–3 personas. Ground each in specific interview or questionnaire signals, label each as a hypothesis, and note what we still don't know about them.`", copyText: "From this evidence and the committed problem, propose 2–3 personas. Ground each in specific interview or questionnaire signals, label each as a hypothesis, and note what we still don't know about them." },
+      "Check that they follow the split the triangulation named: the power user who wants a proactive assistant, and the simplicity-first rider who wants reliable basics. If the model made one persona per interviewee, ask it to rebuild them around that split.",
+      "Save them in `personas.md` under **Hypothesis**, **Grounded in**, and **What we still don't know**."
     ],
     doneItems: [
       "Each persona draws on more than one source",
@@ -157,15 +138,6 @@ window.DECKS["session-2"] = [
       "Every trait traces to evidence, or is listed as unknown"
     ],
     why: "Session 3 runs a UX review *in character as these personas*. You will be making design calls in their voice, so each one has to be tied to evidence."
-  },
-
-  {
-    kind: "prompt",
-    eyebrow: "Step 3",
-    title: "Personas",
-    text:
-      "From this evidence and the committed problem, propose 2–3 personas. Ground\neach in specific interview or questionnaire signals, label each as a\nhypothesis, and note what we still don't know about them.",
-    note: "Use the split the triangulation named: the power user who wants a proactive assistant, and the simplicity-first rider who wants reliable basics."
   },
 
   {

@@ -4,6 +4,8 @@ Known-good reference artifacts for anyone who missed Session 1, so they can drop
 
 This is the synthesized research the session builds on: reference summaries that separate what was said from what was inferred, plus the triangulation note that names the central tension.
 
+`triangulation.md` records under **Inputs I chose** which summary was carried forward for each source. Those are the sections to paste into Session 2.
+
 ## Contents
 
 - `interview-summaries.md`: reference summaries of the three interviews, with quotes attributed to the source

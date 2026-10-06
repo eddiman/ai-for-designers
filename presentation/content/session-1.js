@@ -193,7 +193,7 @@ window.DECKS["session-1"] = [
     kind: "cover",
     eyebrow: "Next",
     title: "Session 2",
-    lead: "From summaries to a problem definition and personas. You will bring your triangulation note and your four chosen summaries.",
+    lead: "From summaries to a problem definition and personas. Session 2 starts from your triangulation note and the summaries you chose.",
     meta: ["Your files carry forward", "Premade versions exist if you miss a session"]
   }
 ];

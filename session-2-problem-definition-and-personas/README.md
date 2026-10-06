@@ -6,7 +6,7 @@ How to turn synthesized research into a design brief packet, meaning key insight
 
 ## What you start from
 
-If you were here for Session 1, continue from your own interview summaries and triangulation note. If you missed it, use the premade reference versions in `premade/` as your starting evidence: the summaries plus the triangulation note, which already has its inputs chosen and the central tension named. There's nothing to select or redo, so you build on it as it is. Either way the session opens with a recap of what the reference summaries contain and why.
+If you were here for Session 1, continue from your own interview summaries and triangulation note. If you missed it, use the premade reference versions in `premade/` as your starting evidence: the summaries plus the triangulation note. The triangulation note records under **Inputs I chose** which summary was carried forward for each source, and names the central tension, so there's nothing to select or redo, and you build on it as it is. Either way the session opens with a recap of what the reference summaries contain and why.
 
 ## What counts as done
 
@@ -20,7 +20,7 @@ You are not behind if you finish the core and stop. The core is what this sessio
 
 Two things carry over from Session 1:
 
-- **Attach your worked evidence up front.** Your main input is the triangulation note, since it already did the cross-source combining. Attach it at the start, along with the *chosen* summary for each source (the one version you carried forward) so you can pull specific quotes. Combining these in one chat is fine, and it's the same move you made when you triangulated in Session 1, because everything here has been worked and vetted. The "one source, one chat" rule was about keeping raw sources apart, and you're now past that stage.
+- **Paste your worked evidence in up front.** Your main input is the triangulation note, since it already did the cross-source combining, so paste in the content of `triangulation.md` first. Then paste in the summary you chose for each source, the one named under **Inputs I chose**, labelled with its source, so you can pull specific quotes. Leave out the other summary and the differences analysis, so the model draws only on the version you carried forward. Combining these in one chat is fine, and it's the same move you made when you triangulated in Session 1, because everything here has been worked and vetted. The "one source, one chat" rule was about keeping raw sources apart, and you're now past that stage.
 - **Keep observation separate from inference** throughout: what was said or measured on one side, what you conclude from it on the other.
 
 **One chat for the whole packet, or a fresh chat per activity.** Both are valid, so choose deliberately.
@@ -35,15 +35,15 @@ Two things carry over from Session 1:
 
 - **Pro:** clean context each time, so each task reads the evidence fresh, in the spirit of Session 1's "one source, one chat."
 - **Pro:** it forces you to re-state what you're carrying forward (your insights, your committed problem), which sharpens it.
-- **Con:** you have to re-attach the evidence and paste in the outputs you're building on, or the model loses the thread.
+- **Con:** you have to paste the evidence in again, along with the outputs you're building on, or the model loses the thread.
 
-Whichever you pick, the thing that matters is the lesson from Session 1: **the more steps you work, asking, reading, proposing a change, asking again, the better you understand the material, and the better the AI can help you.** The chat structure is plumbing around that loop.
+Whichever you pick, the thing that matters is the lesson from Session 1: **the more steps you work, asking, reading, proposing a change, asking again, the better you understand the material, and the better the AI can help you.** The chat structure decides what the model has in context, and the loop is what builds your understanding.
 
 ## What you'll do
 
 Work in this order. The prompts below are starting points, so adapt them, and keep each step separate so you can check the output before moving on.
 
-Each step builds on the one before it. If you kept everything in one chat, that earlier output is already in context. If you're using a fresh chat per step, re-attach the evidence first and paste in what you're carrying forward, your insights into step 2 and your committed problem into step 3, before you run the prompts.
+Each step builds on the one before it. If you kept everything in one chat, that earlier output is already in context. If you're using a fresh chat per step, paste the evidence in again first, then what you're carrying forward, your insights into step 2 and your committed problem into step 3, before you run the prompts.
 
 ---
 
@@ -53,7 +53,7 @@ Distill the triangulation note and your chosen summaries into the handful of ins
 
 **Do this now**
 
-1. Attach `triangulation.md` and the chosen summary for each source.
+1. Paste in the content of `triangulation.md`, then the chosen summary for each source, labelled with its source (`Maja`, `Geir`, `Sofie`, `Questionnaire`), as you did in Session 1 step 4. **Inputs I chose** in `triangulation.md` names which one.
 2. Run this prompt:
 
 > From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred.
@@ -89,9 +89,9 @@ Working from the evidence and the insights you just wrote, generate framings, ra
 
 3. **Commit to one.** Pick *one* framing from the ranked list and write it as a single clear problem statement under **The committed problem** in `problem-definition.md`, with its How-Might-We under **How-Might-We** and the evidence behind it under **Evidence that supports it**. Do not blend several framings or keep all of them. Narrowing is the point.
 4. Under **Candidates considered and rejected**, list the framings you did not pick and why, so the choice is traceable.
-5. Turn the model into your *red team*. The term comes from security, where a red team attacks a plan to expose its weaknesses. Tell the model which framing you committed to, then run:
+5. Turn the model into your *red team*. The term comes from security, where a red team attacks a plan to expose its weaknesses. Paste your committed problem into this prompt and run it:
 
-> Argue why the problem I picked is the wrong one to solve first.
+> The problem I picked is: [paste your committed problem]. Argue why it is the wrong one to solve first.
 
 6. Write your own reply to that argument. Do you concede and re-scope the problem, or do you hold your ground, and on what evidence? Save the argument and your reply under **Red-team** in `problem-definition.md`.
 
