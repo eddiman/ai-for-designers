@@ -10,7 +10,7 @@ If you were here for Session 1, continue from your own interview summaries and t
 
 ## What counts as done
 
-**Core, for everyone:** `key-insights.md` with three to five evidence-anchored insights, `problem-definition.md` with one committed problem and your reply to the red-team, and `personas.md` with two or three personas labelled as hypotheses. That is the brief packet Session 3 attaches to Figma Make.
+**Core, for everyone:** `key-insights.md` with three to five evidence-anchored insights, `problem-definition.md` with one committed problem and your reply to the model's case against it, and `personas.md` with two or three personas labelled as hypotheses. That is the brief packet Session 3 attaches to Figma Make.
 
 **Stretch, if you get there:** test the packet once more, either by finding the insight with the weakest evidence or by arguing for the runner-up problem. The steps are under **Stretch: test the packet** after step 3.
 
@@ -29,7 +29,7 @@ Two things carry over from Session 1:
 
 - **Pro:** the thread carries. Your insights feed the problem definition, the committed problem feeds the personas, and the model remembers all of it without you re-stating it.
 - **Pro:** fewer restarts and less re-pasting.
-- **Con:** context piles up. By the personas step the chat is full of the ranking debate and the red-team argument against your committed problem (from the problem-definition step), which can anchor the personas to that argument rather than to the raw evidence.
+- **Con:** the chat fills up. By the personas step it holds the ranking debate and the model's argument against your committed problem, and the model reads all of it when it writes the personas. The personas can end up shaped by that argument more than by the research.
 
 *A fresh chat per activity (insights, then problem, then personas):*
 
@@ -75,7 +75,7 @@ These are the portable, evidence-anchored takeaways everything downstream refere
 
 ## 2. Problem definition
 
-Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then red-team it.
+Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then have the model argue against it.
 
 **Do this now**
 

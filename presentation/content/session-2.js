@@ -36,7 +36,7 @@ window.DECKS["session-2"] = [
     eyebrow: "What counts as done",
     title: "Core, and stretch",
     items: [
-      { label: "Core, for everyone:", text: "three to five insights, one committed problem with your reply to the red-team, and two or three personas labelled as hypotheses." },
+      { label: "Core, for everyone:", text: "three to five insights, one committed problem with your reply to the model's case against it, and two or three personas labelled as hypotheses." },
       { label: "Stretch, if you get there:", text: "find the insight with the weakest evidence, or argue for the runner-up problem. The steps are in the session README." }
     ],
     callout: {
@@ -50,12 +50,12 @@ window.DECKS["session-2"] = [
     kind: "table",
     eyebrow: "How you'll work",
     title: "Two ways to structure the chats",
-    lead: "Both are valid. Choose deliberately.",
-    cols: ["", "One chat for all three", "Fresh chat per activity"],
+    lead: "The session has three activities: key insights, the problem definition, and personas. Both ways of running them are valid, so choose deliberately.",
+    cols: ["", "One chat for all three activities", "A fresh chat for each activity"],
     rows: [
       ["For", "The thread carries: insights feed the problem, the problem feeds the personas", "Clean context each time, so each task reads the evidence fresh"],
       ["For", "Fewer restarts and less re-pasting", "Forces you to re-state what you carry forward, which sharpens it"],
-      ["Against", "Context piles up, and the red-team argument can anchor your personas to it", "You have to paste the evidence in again, along with what you are building on"]
+      ["Against", "The chat fills up. By the personas step, the model also reads its own argument against your problem, which can pull the personas away from the research", "You have to paste the evidence in again, along with what you are building on"]
     ]
   },
 
@@ -88,18 +88,18 @@ window.DECKS["session-2"] = [
     kind: "step",
     n: 2,
     title: "Problem definition",
-    lead: "Generate framings, rank them by evidence, commit to one, then red-team it.",
+    lead: "Generate framings, rank them by evidence, commit to one, then have the model argue against it.",
     doItems: [
       { label: "Generate prompt", text: "`Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it.`", copyText: "Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it." },
       { label: "Ranking prompt", text: "`Rank these by how much of my evidence actually supports each one. Cite the specific source for each.`", copyText: "Rank these by how much of my evidence actually supports each one. Cite the specific source for each." },
       "**Commit to one** framing from the ranked list. Write it under **The committed problem** in `problem-definition.md`, with its How-Might-We and evidence.",
       "List the framings you did not pick, and why, under **Candidates considered and rejected**.",
-      "Red-team your pick and write your reply, on the next slide."
+      "Have the model argue against your pick, then write your reply, on the next slide."
     ],
     doneItems: [
       "One problem, picked from the ranked list",
       "The framings you rejected, and why",
-      "The red-team argument and *your* response to it",
+      "The model's argument against your pick, and *your* response to it",
       "You can say why this problem won over the others"
     ],
     why: "You cannot design for everything. Ranking by evidence makes the choice defensible rather than a hunch, and the single committed problem is what scopes Session 3."
