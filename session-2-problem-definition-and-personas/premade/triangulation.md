@@ -25,7 +25,7 @@
 
 ### Geir
 
-**Chosen summary:** General
+**Chosen summary:** Generic
 
 ### Sofie
 
@@ -33,46 +33,47 @@
 
 ### Questionnaire
 
-**Chosen summary:** general
+**Chosen summary:** Generic
 
-Agree
+## Agree
+<!-- Patterns that show up across more than one source. -->
+- **The main problem is not knowing what is happening, more than the delays themselves.** Maja says her biggest frustration is being left to guess when a bus is late, disappears from displays or never arrives. Geir says the same about inaccurate delay information ("It's not the waiting, the not knowing whether to trust the thing in front of you"). Sofie says inaccurate information is worse than delays because it stops her making informed decisions. In the Questionnaire, "not knowing if the bus is actually coming" is the top frustration (31%), and incorrect real-time information adds 17%. (Maja, Geir, Sofie, Questionnaire)
+- **Trust in current real-time information is low.** Maja does not fully trust the information and compares several sources. Geir describes stop displays whose times change unexpectedly or that show buses that never come. Sofie lost trust after a bus shown in the app never arrived before an exam. In the Questionnaire, only 23% trust the real-time information they get and 55% distrust it. (Maja, Geir, Sofie, Questionnaire)
+- **Riders build in extra time to make up for it.** Maja often leaves earlier than necessary, and Sofie often takes an earlier bus than she needs and adds extra time to every trip. The Questionnaire does not measure this. (Maja, Sofie)
+- **Disruptions and cancellations are poorly communicated.** Maja says riders get too little guidance during disruptions. Geir waited more than 20 minutes for a bus that never came because nobody gave out disruption information. Sofie cannot tell whether a bus is delayed or cancelled. The Questionnaire has 16 open-text mentions of clearer communication about disruptions and cancellations, 22 mentions of less waiting without information, and the comment "If it's cancelled, tell me." (Maja, Geir, Sofie, Questionnaire)
+- **Accurate arrival information is the improvement most people ask for.** Geir wants countdowns that reflect actual arrival times. Sofie wants departure information that reflects what is happening. In the Questionnaire, 47% chose accurate real-time arrival information as their single improvement, and 79% agree with "I just want to reliably know when my bus will arrive, without needing extra features." (Geir, Sofie, Questionnaire)
+- **Few put a feature-rich, personalised app first.** Geir does not want more features, accounts, setup or notifications. Sofie is not interested in personalisation, saved routes, profiles or lots of notifications. In the Questionnaire, only 14% chose a personalised app as their single improvement, and 34% would use a dedicated app with favourites and notifications while 38% would not. (Geir, Sofie, Questionnaire)
+- **Riders already know their routes.** Maja takes the same routes every day and relies on her own experience of which buses are usually reliable. Geir takes the same Bus 9 from the same stop and knows the route well. Sofie relies on her own knowledge for familiar journeys. The Questionnaire concludes that passengers generally know which bus they need, and that the hard part is knowing whether and when it will arrive. (Maja, Geir, Sofie, Questionnaire)
+- **Stops and printed timetables are still used alongside apps.** Geir mainly uses the timetable and display boards at the stop. Sofie points to her grandmother, who relies on signage and drivers. In the Questionnaire, 27% use printed timetables and 18% use stop displays, against 39% who use an app. (Geir, Sofie, Questionnaire)
+- **One group does want a personalised app.** Maja wants saved routes, automatic recognition of her regular journeys and proactive notifications. The Questionnaire shows a minority who want the same: 14% chose it as their single improvement, 34% would use such an app, and "a better bus app" got 18 open-text mentions. (Maja, Questionnaire)
 
-Unreliable real-time information is the biggest source of frustration. All three interviewees describe situations where arrival information could not be trusted, including delays, countdowns changing unexpectedly, buses disappearing, or buses that never arrived. Maja, Geir, and Sofie all emphasise that uncertainty is worse than the delay itself. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
+## Conflict
+<!-- Where the interviews and the questionnaire point in different directions. -->
+- **Personalisation and saved routes.** Maja wants saved favourite routes, automatic recognition of her regular trips, one-tap access and a home screen built around her own routes. Geir says saved routes are of little use to him because he already knows his route. Sofie says she is not interested in saved routes, profiles or personalisation. The Questionnaire is split: 34% would use an app with favourites and notifications, 38% would not, and 28% are neutral. (Maja against Geir and Sofie; Questionnaire split)
+- **Notifications.** Maja wants proactive notifications ("Leave now for your usual bus", delays, alternative routes, cancellations, overcrowding), with control over how often they come. Geir actively dislikes push notifications. Sofie is in between: she wants a message on her phone when a bus is cancelled or disrupted, but not a large number of notifications. The Questionnaire only asks about notifications in the same question as favourites, so it cannot tell these three positions apart. (Maja, Geir, Sofie, Questionnaire)
+- **The same routine leads to opposite conclusions.** Maja and Geir both take the same routes regularly. For Maja, the routine is the reason she wants an app that learns it, so she does not have to search again every time. For Geir, the routine is the reason saved routes and alerts are unnecessary. (Maja, Geir)
+- **Who current apps are designed for.** Maja says apps feel designed for occasional users and not for regular commuters. Geir says they feel designed for heavy transit users and not for occasional riders like him. Both are unhappy with the apps, but they describe the problem in opposite ways. The summaries do not say whether they used the same app. (Maja, Geir)
+- **Phone or stop as the channel.** Everything Maja wishes for lives in a phone app connected to her calendar, and Sofie wants alerts on her phone. Geir wants the existing stop displays and timetables to be accurate, with nothing to install or set up. The Questionnaire shows both groups: 39% use an app, and 45% use timetables or displays at the stop. (Maja, Sofie, Geir, Questionnaire)
+- **How much the delays themselves matter.** Maja, Geir and Sofie all say the information problem is worse than the delays. In the Questionnaire, the second-largest frustration is buses arriving earlier or later than scheduled (26%), and 21% chose more frequent or reliable service as their single improvement. The questionnaire summary counts schedule deviation as part of its 74% "uncertainty" total, so part of that figure is about the service itself and not about information. The sources differ in emphasis here and do not contradict each other directly. (Maja, Geir, Sofie, Questionnaire)
+- **Interviews against the questionnaire.** Geir and Sofie match the main Questionnaire findings closely. Maja's central wish, a personalised assistant, is a minority position in the Questionnaire (14% as a single choice). The Questionnaire still shows that the need exists for some riders, since about a third would use such an app. (Maja, Geir, Sofie, Questionnaire)
 
-The key problem is uncertainty rather than waiting time. Maja wants to know whether to keep waiting or choose another option, Geir wants confidence that a bus is actually coming, and Sofie is stressed by not knowing whether a bus is delayed or cancelled. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
+## Gaps
+<!-- Touched in one source but not measured or confirmed elsewhere. -->
+- Calendar integration, awareness of the day of the week, and recommendations that adjust for meetings, traffic and occupancy. (Maja)
+- Transfers between buses (the 12 to the 4). No other source discusses them, and the Questionnaire does not ask. (Maja)
+- Suggesting alternative routes during a disruption. (Maja)
+- The mental effort of managing routine trips: repeated checking, comparing sources and making judgement calls. (Maja)
+- Crowding and bus occupancy. Maja wants overcrowding alerts, and the Questionnaire lists crowding only as a secondary frustration with no figure. (Maja, Questionnaire)
+- Creating accounts and setting things up as a barrier to using an app at all. (Geir)
+- Explaining uncertainty openly instead of showing times that look certain but are wrong. (Geir, from the design implications in his summary)
+- People who normally drive and take the bus to avoid parking in town. (Geir)
+- Unfamiliar trips, such as travelling in another city. The Questionnaire mentions "confusing routes" only as a secondary concern with no figure. (Sofie)
+- Accessibility and passengers who do not use phones, such as older people who depend on clear signage, accessible stops and help from drivers. This is raised second-hand through her grandmother, and the Questionnaire gives no breakdown by age or accessibility needs. (Sofie)
+- Evening shifts, bad weather and running late as the situations that make someone take the bus. (Sofie)
+- Ticketing, listed as a secondary concern with no figure. (Questionnaire)
+- The 12% who "simply show up and wait". None of the interviewees describe this behaviour. (Questionnaire)
+- The Questionnaire gives no results by how often people ride, so it cannot show whether daily riders like Maja want a personalised app more than less frequent riders like Geir. The terms are also used loosely: the summary calls 53% "most respondents", and Geir rides about three times a week but calls himself an occasional rider. (Questionnaire, Maja, Geir)
 
-Users want better communication during disruptions. Maja wants explanations and proactive guidance when services are disrupted, Geir wants clear explanations of delays, cancellations, and diversions, and Sofie wants cancellation and disruption alerts when they affect her trip. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Trustworthy information is valued more highly than additional functionality. Although they differ on what extra features they want, all three interviews indicate that reliable information is a prerequisite for a good experience. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Current information problems cause behavioural workarounds. Maja leaves earlier than necessary because she does not trust the information provided, and Sofie deliberately catches earlier buses and adds buffer time after losing confidence in the system. (Sources: Maja Generic Summary; Sofie Summary)
-
-Conflict
-
-Personalisation versus simplicity. Maja wants a highly personalised transit assistant that learns routines, saves favourite journeys, integrates with calendars, and proactively recommends actions. In contrast, both Geir and Sofie explicitly reject this direction, preferring simple tools that focus on providing accurate information with minimal setup. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Attitudes toward proactive notifications differ. Maja sees proactive notifications as a key solution and wants alerts about delays, alternatives, cancellations, and departure timing. Sofie only wants narrowly targeted disruption alerts and says she would disable excessive notifications. Geir actively dislikes push notifications and does not want them as part of the solution. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Different views of app complexity. Maja feels current apps are not doing enough because they fail to remember routines and adapt to her needs. Geir feels current apps already do too much and are unnecessarily complicated. Sofie largely sides with Geir, preferring simplicity over advanced features. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Different definitions of improvement. Maja's desired future experience centers on reducing cognitive effort through automation and personalisation. Geir's and Sofie's desired future experience centers on improving the accuracy and honesty of information rather than adding intelligence or automation. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-Gaps
-
-High cognitive load from managing routine journeys. Only Maja explicitly describes the burden of repeatedly checking multiple information sources and manually maintaining mental rules and workarounds for daily travel. (Source: Maja Generic Summary)
-
-Calendar integration and context-aware travel planning. Only Maja proposes calendar-aware recommendations, routine learning, occupancy awareness, and day-of-week adaptation. (Source: Maja Generic Summary)
-
-Resistance to account creation, favourites, and setup. Only Geir explicitly identifies account registration, managing favourites, and app setup requirements as frustrations. (Source: Geir Directed Summary)
-
-Reliance on stop displays instead of mobile apps. Only Geir primarily uses electronic signs and timetables at stops rather than smartphone apps. (Source: Geir Directed Summary)
-
-Guidance for unfamiliar journeys. Only Sofie raises the need for better support when travelling in unfamiliar cities and locating the correct stop or direction. (Source: Sofie Summary)
-
-Accessibility concerns beyond smartphone users. Only Sofie discusses accessibility needs through the example of her grandmother, highlighting challenges for passengers who depend on physical signage or staff assistance rather than apps. (Source: Sofie Summary)
-
-Questionnaire coverage gap. The interview summaries repeatedly discuss trust, uncertainty, and disruption communication, but these summaries alone do not provide evidence about how widely these themes occurred in the questionnaire because no questionnaire findings are included in the material provided here. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
-
-The central tension
-
-The evidence suggests a tension between personalised, proactive travel assistance that learns and acts on behalf of riders (Maja) and simple, low-effort tools that prioritise trustworthy information over additional features (Geir and Sofie). Both sides agree that reliability and trust must be solved first, but they differ sharply on whether the solution is more intelligence and personalisation or fewer features and greater accuracy. (Sources: Maja Generic Summary; Geir Directed Summary; Sofie Summary)
+## The central tension
+<!-- State the tension you've surfaced in one or two sentences. -->
+One direction is a personalised, proactive app that learns routines and sends notifications (Maja, plus a minority in the Questionnaire: 14% chose it and 34% would use it). The other is simple, accurate arrival and disruption information with no setup, accounts or extra features (Geir, Sofie, and most of the Questionnaire: 47% chose accuracy, and 79% want to know when the bus will arrive without extra features). Both start from the same problem, uncertainty about whether the bus is coming (Maja, Geir, Sofie, Questionnaire), and Sofie's wish for cancellation alerts on her phone is the one point where the two directions overlap.

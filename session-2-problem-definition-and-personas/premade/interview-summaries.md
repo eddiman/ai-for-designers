@@ -7,6 +7,37 @@
 ## Interview 1: Maja (daily commuter, no car)
 
 ### Generic summary
+**Participant:** Maja, 29, marketing coordinator. She has no car and uses the bus daily for commuting and errands. The interview was recorded on 2026-05-20 (about 35 minutes, semi-structured; this is an excerpt).
+
+**Overview:** Maja relies on the bus for almost everything. Her morning commute has two legs, the 12 into the centre and then the 4 to the office. Her evening trips change from night to night depending on the gym or meeting people. Most of the interview covers how much effort it takes her to plan trips with today's tools and what she would want from a better app.
+
+**How she plans trips today:**
+- She checks the transit app first, then the live map because she does not fully trust the app, and often just leaves early and hopes.
+- She keeps a mental version of the timetable. Maja knows "the :08 is a liar," so she aims for the :23 bus but leaves as if she were catching the :08. She says it is "exhausting when you say it out loud."
+- She makes the same trips repeatedly, but the app makes her type the route in fresh every time. In Maja's words: "I've done this exact journey four hundred times."
+
+**Pain points:**
+- **Generic apps:** Every app she has tried opens with a blank search box and a map of the whole region, and none of them remember anything between sessions. Maja calls it "like having an assistant with amnesia."
+- **Unreliable live information:** Her worst experience was standing at the stop in heavy rain while the sign showed 2 minutes for about fifteen minutes, after which the bus disappeared from the sign entirely. She did not know whether to keep waiting or run for the train. Maja describes "That feeling of being *stuck guessing*" as the worst part.
+- **Not knowing matters more than delay:** Maja says, "I don't even mind the bus being late. I mind not knowing." and "Late I can plan around if you tell me. Silence is what kills me."
+- **Service capacity:** She would like more frequent buses, and the 4 is so full around 5pm that she sometimes cannot get on. She sees these as infrastructure problems that are unlikely to change and thinks the information side is where effort should go.
+
+**What she wants:**
+- A personal app with saved routes (home, work, gym, her mum's) and favourites.
+- Proactive notifications, such as "leave now" based on her location and live traffic, and warnings before she reaches the stop that her usual bus is delayed, full or cancelled, together with the next option.
+- Control over when she is notified, for example weekday mornings only and nothing on Sundays.
+- Possibly calendar integration, so an early meeting prompts her to leave earlier.
+- She says she would pay for an app like this.
+
+**Her ideal scenario:** She opens her phone and it already knows it is Tuesday and she is going to the office. It tells her to leave in 4 minutes, take the 12 then the 4, that she will arrive at 8:52, and that the 4 is a bit full today. She taps once, gets a nudge if anything changes, and never types a route again.
+
+**Key takeaways:**
+- Maja's main frustration is uncertainty: live information she cannot trust and a planning routine she has to keep in her head every morning.
+- She sees the solution as one personalised app that learns her routines and notifies her proactively. As Maja puts it, "Personalisation is the whole game for me."
+- Her worst moment, the bus vanishing from the sign in the rain, was about missing information rather than the delay itself, and she draws that distinction explicitly.
+- She wants the app to feel like her own. Maja says: "I want something that's learned my life and has my back."
+
+### Directed summary
 Interview Summary: Maja (29, Daily Bus User)
 How She Catches the Bus Today
 
@@ -83,246 +114,39 @@ Key Takeaway
 
 Maja wants a highly personalised transit app that learns her routines, proactively manages disruptions, and removes the uncertainty and mental effort involved in daily bus travel. Her primary pain point is not the bus service itself, but having to constantly monitor, interpret, and manage travel information on her own.
 
-### Directed summary
-There are only minor differences between the two summaries. They identify the same core themes, but they differ in emphasis, level of detail, and how explicitly they connect findings to design implications.
-
-1. Focus on Current Bus-Catching Behavior
-First Summary
-Provides more operational detail about Maja's daily routine.
-Explicitly mentions:
-Route 12 → city centre → Route 4 → office.
-Evening trips to the gym and social activities.
-Use of three information sources: transit app, live map, and personal experience.
-Her workaround of leaving early because she does not trust the information.
-Second Summary
-Covers the same commuting pattern but in a more concise way.
-Places greater emphasis on her decision-making process:
-Checking multiple sources.
-Using personal rules and workarounds.
-Relying on experience rather than trusting official information.
-
-Difference:
- The first summary paints a fuller picture of her travel behavior, while the second focuses more on how she plans and manages journeys.
-
-2. Frustrations
-First Summary
-
-Groups frustrations into four categories:
-
-Unreliable and unclear real-time information
-Cognitive burden of planning
-Current apps feel generic
-Lack of personalisation
-
-It also highlights:
-
-The distinction between delays and uncertainty.
-The emotional impact of needing to constantly manage travel information.
-Second Summary
-
-Uses similar categories, but:
-
-Places stronger emphasis on the idea that Maja is forced to "manage the system herself."
-More explicitly links uncertainty to a lack of guidance during disruptions.
-Frames the issue as a burden placed on the rider.
-
-Difference:
- The first summary treats uncertainty as the main problem. The second emphasizes the broader experience of self-managing travel and repeatedly having to compensate for weak tools.
-
-3. Desired Solution
-First Summary
-
-Splits desired features into:
-
-Personalised transit assistant
-Proactive notifications
-Reduced decision-making
-
-The "reduced decision-making" theme is particularly strong and framed as an end goal.
-
-Second Summary
-
-Splits desired features into:
-
-Personalised bus assistant
-Smart, proactive notifications
-Context-aware travel planning
-
-The second version adds more detail about:
-
-Calendar integration.
-Adapting to weekday routines.
-Incorporating factors such as traffic, delays, and bus occupancy.
-
-Difference:
- The first summary focuses on reducing effort and cognitive load. The second focuses on intelligence and contextual awareness.
-
-4. Design Insights
-First Summary
-
-Includes an explicit "Key Insights for Design" section:
-
-Uncertainty is worse than delays.
-Frequent riders need personalisation.
-Users want proactive guidance.
-Routine journeys should be automated.
-Trust is critical.
-Second Summary
-
-Does not include a dedicated design-insights section. Instead, those insights are embedded within the narrative.
-
-Difference:
- The first summary is more useful for UX research synthesis because it translates findings into actionable design principles.
-
-5. Overall Framing
-First Summary
-
-Main narrative:
-
-Maja wants a personal travel assistant that reduces uncertainty and removes mental effort.
-
-Second Summary
-
-Main narrative:
-
-Maja wants a personalised app that understands her routines and manages travel information on her behalf.
-
-Difference:
- The first frames the problem as cognitive burden and trust.
- The second frames it as lack of personalisation and adaptation.
-
-Bottom Line
-
-The two summaries largely agree on the findings. The biggest difference is emphasis:
-
-Summary 1 is more design-oriented and highlights uncertainty, trust, and cognitive load.
-Summary 2 is more user-centered and highlights personalisation, routine awareness, and proactive assistance.
-
-For UX or product-design work, the strongest synthesis would combine both perspectives:
-
-Maja's core need is not better timetable information, but a transit experience that learns her routines, proactively manages disruptions, and removes the uncertainty and mental effort of daily commuting.
-
 ### Differences analysis
-If by “the summaries” you mean the two summaries that were generated from Maja's interview, there are very few substantive differences in findings. They describe the same participant and same underlying needs, but emphasize different aspects of her experience.
+Both summaries describe the same interview and agree on the main points. Maja makes the same trips every day, she does not trust the live information, and she wants an app that knows her routes and tells her when to leave. They differ in how much of the transcript they keep, how close they stay to her own words, and what they put first.
 
-Areas of Agreement
+**Structure:**
+- The first summary follows the interview in this order: participant details, an overview, how she plans trips, pain points, what she wants, her ideal scenario, and takeaways.
+- The second summary is sorted under the three themes from your second prompt: how she catches the bus, what frustrates her, and what she wishes existed. Most of what falls outside those themes is left out.
 
-Both summaries conclude that:
+**Specifics and quotes:**
+The first summary keeps the specific details and quotes Maja several times. The second summary turns the same material into general statements, and none of its quoted text matches the transcript word for word. For example:
+- The :08 and :23 workaround becomes "personal workarounds and mental rules ... especially around buses that frequently deviate from their schedules."
+- The rain incident, where the sign showed 2 minutes for about fifteen minutes and then the bus disappeared from it, becomes "When a bus is late, disappears from displays, or fails to arrive."
+- Her ideal Tuesday morning (leave in 4 minutes, the 12 then the 4, in at 8:52, the 4 a bit full today) becomes a general list under "Context-Aware Travel Planning."
 
-Maja is a frequent bus user who relies on public transport for both commuting and everyday activities.
-She uses multiple sources of information before traveling because she does not fully trust any single source.
-Her biggest pain point is uncertainty around bus arrivals, delays, and disruptions.
-Existing transit apps feel generic and are not designed around regular commuters.
-She wants a more personalized experience that learns her routines.
-She values proactive notifications and guidance rather than having to constantly check schedules herself.
-She wants common journeys to be remembered and automated.
-Differences in Emphasis
-1. Understanding of the Core Problem
+Because the first summary quotes her, you can search the transcript for each claim. To check the second summary, you have to reread the transcript.
 
-Summary 1
+**What the second summary leaves out:**
+- **Crowding and frequency:** Maja would like more frequent buses, and she says the 4 is so full at 5pm that she sometimes cannot get on. That is a frustration about catching the bus, so it fits the second prompt, but it is missing; the second summary mentions overcrowding only as something she wants to be notified about. The second summary then concludes that her primary pain point "is not the bus service itself." A reader cannot see that she did raise a service problem and then set it aside herself as something that will not change.
+- **Evening trips:** Her evening route changes depending on the gym or who she is meeting. The first summary mentions this. The second describes her as taking "the same routes every day."
+- **Willingness to pay:** She says she would pay for an app like this.
+- **Interview context:** Her occupation, the recording date and length, and the fact that the transcript is an excerpt.
 
-Frames the main problem as uncertainty and cognitive burden.
-Emphasizes the mental effort required to manage commuting.
-Focuses on how trust issues force Maja to create workarounds.
+**What the second summary adds or states more strongly:**
+- **Quotes that are not hers:** The notification examples are in quotation marks, but "Take this alternative route." is not something Maja said. Her words were "here's the next one" and "here's your next option." The other two examples are rephrased from her wording. A reader would take all three as her words.
+- **Calendar:** Maja said "Maybe it knows my calendar." The first summary keeps this as "Possibly." The second lists "Integrates with her calendar" next to the things she was sure about, and nothing marks it as uncertain.
+- **Notification control:** The second summary says she wants control over "when and how often" notifications are sent. She talked about when (weekday mornings only, nothing on Sundays) and said nothing about how often.
+- **General claims:** "She feels that transport systems provide insufficient guidance during disruptions" is the summary's own wording. Maja talked about her app, her stop and the sign she relies on.
 
-Example themes:
+**What each summary puts first:**
+- The first summary opens its takeaways with uncertainty. It points out that her worst moment was about missing information, which she separates from the delay: "I don't even mind the bus being late. I mind not knowing." It presents the personal app as her proposed solution ("She sees the solution as one personalised app").
+- The second summary includes the not-knowing point too, as its first frustration. However, two of its four frustrations are about apps being generic and not personalised, and its wishes read as a feature list. Its final takeaway also opens with "Maja wants a highly personalised transit app." The result is that her proposed solution comes before the problem she described.
 
-"Uncertainty is more painful than delays."
-"Trust is critical."
-"Routine journeys should be automated."
-
-Summary 2
-
-Frames the main problem as lack of personalization.
-Focuses on how current apps fail to adapt to her habits and routines.
-Presents the issue as technology not understanding the user.
-
-Example themes:
-
-Apps don't learn her routes.
-Apps don't remember preferences.
-Apps fail to adapt to her daily life.
-
-Difference:
- Summary 1 focuses on the burden caused by unreliable information; Summary 2 focuses on the lack of user-centered personalization.
-
-2. Description of Current Behaviour
-
-Summary 1
-
-Gives more detail about:
-Morning and evening travel patterns.
-Her use of a transit app, live map, and personal knowledge.
-The specific workaround of leaving earlier than necessary.
-
-Summary 2
-
-Is more concise.
-Focuses on the fact that she relies on multiple information sources and personal judgment.
-
-Difference:
- Summary 1 provides a richer picture of her actual travel behavior, while Summary 2 summarizes it at a higher level.
-
-3. Desired Future Solution
-
-Summary 1 Organizes her desires into:
-
-Personalised transit assistant
-Proactive notifications
-Reduced decision-making
-
-The emphasis is on reducing effort.
-
-Summary 2 Organizes her desires into:
-
-Personalised bus assistant
-Smart notifications
-Context-aware travel planning
-
-The emphasis is on intelligence and adaptation.
-
-Difference:
- Summary 1 highlights automation and reducing cognitive load. Summary 2 highlights context awareness and personalization.
-
-4. Design Implications
-
-Summary 1 Contains explicit UX/product-design insights:
-
-Uncertainty is worse than delays.
-Frequent riders need different experiences than tourists.
-Users want proactive guidance.
-Trust drives behavior.
-Routine trips should be automated.
-
-Summary 2 Does not explicitly extract design principles. The implications remain embedded within the narrative summary.
-
-Difference:
- Summary 1 is more useful for product design and requirements generation. Summary 2 is more useful as a participant-focused summary.
-
-What Each Summary Misses
-Summary 1 Underemphasizes
-Calendar integration.
-Context-aware recommendations.
-The extent to which Maja wants the app to feel personally tailored.
-Summary 2 Underemphasizes
-Trust as a central issue.
-The distinction Maja makes between "being late" and "not knowing."
-The cognitive effort involved in manually managing travel every day.
-Most Important Difference
-
-The fundamental difference is how they interpret Maja's primary need:
-
-Summary 1:
-
-Maja's problem is that commuting requires too much mental effort because information is unreliable and she must constantly manage uncertainty.
-
-Summary 2:
-
-Maja's problem is that transit apps fail to understand her routines and provide a personalized experience.
-
-A stronger synthesis combines both:
-
-Maja wants a transit app that learns her routines, remembers her frequent journeys, proactively handles disruptions, and eliminates the uncertainty and mental effort involved in daily bus travel.
+**What this means for using them:**
+Use the first summary when you need to trace a claim back to the transcript. The second summary is quicker to scan by theme. Before you use it, add the crowding on the 4 back in, replace the quoted notification examples with her own words, and mark the calendar idea as a maybe. In both summaries, keep her problem (not knowing whether her bus is coming) separate from her proposed fix (a personal app). The feature list shows what one person imagines, while the problem is something you can compare with your other interviews.
 
 ---
 
