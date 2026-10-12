@@ -1,259 +1,54 @@
-Below are **5 candidate problem framings**, ranked by how strongly your evidence supports solving them first.
-
-***
-
-# Ranked candidate problem framings
-
-## 1. Rebuild trust in real-time arrival information
-
-**Rank: #1, strongest evidence support**
-
-### How Might We
-
-**How might we make real-time bus information trustworthy enough that riders feel confident acting on it?**
-
-### Why this should be solved first
-
-This is the clearest cross-source pattern. Both the interviews and questionnaire point to unreliable real-time information as the central pain point.
-
-### Evidence
-
-**Observed**
-
-* All three interview participants, **Maja, Geir, and Sofie**, described incorrect or misleading real-time information, including wrong countdowns, ghost buses, and uncertainty about whether the bus is actually coming. *(interview-summaries.md)*
-* Questionnaire respondents showed the same issue at scale:
-  * 31% said they “don’t know if the bus is coming”
-  * 26% reported schedule mismatch
-  * 17% reported incorrect real-time information  
-    Together, this means about **74% of frustration is tied to timing reliability**. *(questionnaire-summary.md)*
-* 55% of questionnaire respondents said they do **not trust real-time information**. *(questionnaire-summary.md)*
-
-**Inferred**
-
-* If users do not trust the information, then improving any other part of the experience may have limited value because people will still hesitate, double-check, or ignore the system.
-
-***
-
-## 2. Reduce uncertainty at the stop
-
-**Rank: #2, very strong evidence support**
-
-### How Might We
-
-**How might we reduce the uncertainty riders feel while waiting, especially when the bus is delayed, missing, or unclear?**
-
-### Why this should be solved first
-
-The problem is not only that buses are late. The deeper issue is that users are left unable to make decisions.
-
-### Evidence
-
-**Observed**
-
-* Interviewees said that **“not knowing” is worse than waiting** and described anxiety, stress, and poor decision-making under uncertainty. *(Maja, Geir, Sofie, interview-summaries.md)*
-* 79% of questionnaire respondents said they mainly want to reliably know when the bus will arrive. *(questionnaire-summary.md)*
-* Open questionnaire responses described waiting without information as especially frustrating. *(questionnaire-summary.md)*
-
-**Inferred**
-
-* The key design job is not simply to show a countdown, but to help users answer:  
-  **“Should I wait, walk, switch route, call someone, or leave later?”**
-
-***
-
-## 3. Help users make confident travel decisions when information is imperfect
-
-**Rank: #3, strong evidence support**
-
-### How Might We
-
-**How might we help riders decide what to do when the bus information is uncertain or changing?**
-
-### Why this is slightly lower than #1 and #2
-
-This framing is strongly supported, but it is one step downstream from the core issue. It focuses on decision support rather than the root trust problem.
-
-### Evidence
-
-**Observed**
-
-* Maja checks multiple sources to verify what is happening. *(interview-summaries.md)*
-* Sofie adds buffer time because she cannot fully rely on the system. *(interview-summaries.md)*
-* Geir distrusts displays after previous bad experiences. *(interview-summaries.md)*
-* Interviews revealed coping behaviors such as leaving early, taking earlier buses, and double-checking information. *(interview-summaries.md)*
-
-**Inferred**
-
-* Users are already building their own decision-support system through workarounds.
-* A design opportunity is to reduce the amount of manual checking and guessing users have to do.
-
-***
-
-## 4. Support different user types without forcing everyone into an advanced app
-
-**Rank: #4, moderate evidence support**
-
-### How Might We
-
-**How might we give riders the level of support they need without making the experience feel too complex or app-dependent?**
-
-### Why this matters
-
-Your evidence shows a real tension: some users want proactive help, while others want simplicity and reliability above all else.
-
-### Evidence
-
-**Observed**
-
-* Maja wanted a more personalized, proactive, smart assistant-like experience with notifications and guidance. *(interview-summaries.md)*
-* Geir preferred simple, minimal solutions and rejected unnecessary app complexity. *(interview-summaries.md)*
-* Sofie preferred simple tools but needed more guidance for unfamiliar trips. *(interview-summaries.md)*
-* Questionnaire respondents were divided on apps:
-  * 34% positive
-  * 38% negative  
-    *(questionnaire-summary.md)*
-
-**Inferred**
-
-* The design should probably be layered:
-  * basic trustworthy information for everyone
-  * optional proactive support for users who want it
-* However, this should likely come **after** the reliability/trust problem is addressed.
-
-***
-
-## 5. Reduce the mental effort of planning and monitoring bus trips
-
-**Rank: #5, weaker but still meaningful evidence support**
-
-### How Might We
-
-**How might we reduce the mental effort riders spend checking, interpreting, and compensating for unreliable bus information?**
-
-### Why this is valuable but probably not first
-
-This is a strong qualitative insight, especially from the interviews, but it is less directly quantified in the questionnaire.
-
-### Evidence
-
-**Observed**
-
-* Maja described having to “mentally run the system” and reconstruct her journey herself. *(interview-summaries.md)*
-* Interviewees described stress, anxiety, and frustration caused by uncertainty. *(Maja, Geir, Sofie, interview-summaries.md)*
-* The questionnaire confirms widespread frustration but does not deeply measure cognitive load. *(questionnaire-summary.md)*
-
-**Inferred**
-
-* The system is offloading work onto riders.
-* A good solution should reduce checking, guessing, and planning burden.
-* But because this is mostly interview-based, it is less strongly supported than the trust/reliability framings.
-
-***
-
-# Overall ranking
-
-1. **Rebuild trust in real-time arrival information**  
-   Strongest support across all interviews and questionnaire data.
-
-2. **Reduce uncertainty at the stop**  
-   Strong support across both qualitative and quantitative evidence.
-
-3. **Help users make confident travel decisions when information is imperfect**  
-   Strong behavioral evidence, especially from interviews.
-
-4. **Support different user types without forcing everyone into an advanced app**  
-   Important, but more about solution strategy than the first problem to solve.
-
-5. **Reduce the mental effort of planning and monitoring bus trips**  
-   Valuable qualitative insight, but less directly measured at scale.
-
-***
-
-# The problem you picked may be the wrong one to solve first
-
-Since the triangulation highlights a tension between **advanced/personalized tools** and **basic trust in information**, the problem would be wrong to solve first if it is framed around something like:
-
-> “How might we build a smarter, more personalized bus assistant?”
-
-or
-
-> “How might we improve the app experience for bus riders?”
-
-That would be a weaker first problem for four reasons.
-
-***
-
-## 1. It starts with a solution channel rather than the core problem
-
-If the picked problem is app- or assistant-focused, it assumes the answer is a digital feature. But your strongest evidence says the real issue is **trust in timing information**, not lack of features.
-
-**Evidence**
-
-* Real-time accuracy was the dominant improvement need in the questionnaire at 47%. *(questionnaire-summary.md)*
-* Apps/features were much lower at 14%. *(questionnaire-summary.md)*
-* Geir and Sofie both preferred simple, minimal solutions rather than more app complexity. *(interview-summaries.md)*
-
-**Why that matters**
-A smarter app built on untrusted data may simply become a more polished version of the same broken experience.
-
-***
-
-## 2. It overweights Maja’s needs and underweights the broader evidence
-
-Maja’s desire for proactive, personalized support is important, but it is not the dominant pattern across all sources.
-
-**Evidence**
-
-* Maja wanted proactive notifications, “leave now” guidance, and smart assistance. *(interview-summaries.md)*
-* Geir explicitly preferred simple tools and relied more on physical displays. *(interview-summaries.md)*
-* Sofie preferred simplicity, especially for familiar trips. *(interview-summaries.md)*
-* Questionnaire sentiment toward apps was mixed: 34% positive, 38% negative. *(questionnaire-summary.md)*
-
-**Why that matters**
-Solving first for the power-user case risks designing for the most articulate or feature-positive participant rather than the strongest cross-source need.
-
-***
-
-## 3. It may ignore the largest quantified frustration
-
-The questionnaire shows that timing reliability dominates frustration. A first design problem should match the strongest measured pain point.
-
-**Evidence**
-
-* 31% do not know if the bus is coming. *(questionnaire-summary.md)*
-* 26% experience schedule mismatch. *(questionnaire-summary.md)*
-* 17% cite incorrect real-time information. *(questionnaire-summary.md)*
-* Together, around 74% of frustration relates to timing reliability. *(questionnaire-summary.md)*
-
-**Why that matters**
-If the first problem does not directly address reliability, uncertainty, or trust, it is less evidence-led.
-
-***
-
-## 4. It risks adding complexity before repairing confidence
-
-The interviews show that users already experience stress, checking behavior, and mental load. Adding more features could increase the burden if the underlying information remains questionable.
-
-**Evidence**
-
-* Maja checks multiple sources and mentally reconstructs journeys. *(interview-summaries.md)*
-* Sofie adds buffer time. *(interview-summaries.md)*
-* Geir distrusts displays after previous failed experiences. *(interview-summaries.md)*
-
-**Why that matters**
-The first design move should reduce effort, not introduce another thing users must interpret or verify.
-
-***
-
-# Recommended first problem framing
-
-The strongest first framing is:
-
-## **How might we make real-time bus information trustworthy enough that riders feel confident deciding whether to wait, leave, or choose another option?**
-
-This combines the two strongest evidence-backed needs:
-
-1. **Trustworthy real-time information**
-2. **Reduced uncertainty for decision-making**
-
-It avoids prematurely committing to an app, assistant, notification system, or display redesign. Those can become solution directions later, and the first problem to solve should be **confidence in what is happening now**.
+# Problem definition
+
+> Your work. The single problem you commit to. Generate candidate framings and How-Might-We statements, rank them by how much evidence supports each, pick one, then red-team it.
+
+## The committed problem
+<!-- One clear statement of the problem you're solving first. -->
+Riders are not told clearly when their bus is delayed, cancelled or disrupted, so they wait without information and cannot decide whether to wait, leave or take another option.
+
+## How-Might-We
+<!-- The committed problem phrased as an HMW. -->
+How might we clearly communicate delays, cancellations and disruptions so passengers know whether to wait, leave or consider another option?
+
+## Evidence that supports it
+<!-- Point to specific findings from the Session 1 summaries and triangulation. -->
+- Maja, observed: She says passengers receive too little guidance during disruptions.
+- Geir, observed: He waited more than 20 minutes for a bus that never arrived because no disruption information was provided.
+- Sofie, observed: She cannot tell whether a bus is delayed or cancelled.
+- Questionnaire, measured: There are 16 open-text mentions of clearer disruption and cancellation communication.
+- Questionnaire, measured: There are 22 mentions of reducing waiting without information.
+- Questionnaire, observed: One respondent writes, "If it's cancelled, tell me."
+
+## Candidates considered and rejected
+<!-- The other framings you generated, and why you didn't pick them. -->
+The ranking put five framings in this order: (1) knowing whether and when the bus is coming, (2) clear delay, diversion and cancellation messages, (3) fast checking of a route riders already know, (4) accurate information at the stop as well as on the phone, and (5) proactive, personalised help for daily commuters. I committed to the second.
+
+- **Riders cannot tell whether their bus is coming or when it will arrive** (ranked 1). HMW: How might we help riders know whether their bus is coming and when it will arrive, with information they can trust? It has the most measured support of all five (31%, 17%, 23% against 55%, 47%, 79%), and the committed problem is part of it. I did not take it as the whole problem because much of it depends on how accurate the predictions are, which a design cannot fix alone. Its evidence still applies, and the red-team reply below folds the part about unreliable predictions into the committed problem.
+- **Riders already know their route but still check it by hand and add buffer time** (ranked 3). HMW: How might we let riders check the status of a route they already know in a few seconds, without searching for the journey again? The starting point is broad, but the questionnaire supports it only through the summary's conclusion, with no figure. The sources also split on how to make checking fast: Maja wants saved routes, while Geir and Sofie do not. Committing to it now would force the personalisation decision before the evidence can settle it.
+- **Many riders check at the stop, where the information is often wrong** (ranked 4). HMW: How might we make sure riders who rely on stop displays and printed timetables get the same accurate information as riders who use an app, with nothing to install or set up? Only Geir supports it directly, Sofie only second-hand through her grandmother, and no source says the app and the stop display give different information. That consistency is an inference from my own insight 5. I keep the stop as a place the committed problem has to reach.
+- **Daily commuters have to monitor and interpret travel information on their own** (ranked 5). HMW: How might we help daily commuters manage their regular trips without having to monitor, compare and interpret information themselves? Only Maja and a minority of the questionnaire support it (14% chose it, 34% would use such an app), and Geir, Sofie and 38% of respondents argue against it. It stays as a persona hypothesis to review against.
+
+## Red-team: why this might be the wrong problem to solve first
+<!-- AI's argument against your choice, and your response to it. -->
+**The model's argument**
+
+1. **The survey gives it the least support of the two strongest framings.** All four sources mention disruptions, but in the Questionnaire the support comes only from open text: 16 mentions of clearer communication about disruptions and cancellations, and 22 mentions of less waiting without information. Of the five open-text themes the Questionnaire lists, disruption communication has the fewest mentions. Confidence that the bus is coming has 39 mentions and more accurate real-time predictions has 28. The closed questions point the same way: 47% chose accurate real-time arrival information as their single improvement, and "Not knowing if the bus is actually coming" is the top frustration at 31%. No closed question asked about disruption messages, so the survey cannot show how many riders would put them first.
+2. **A disruption message only works if riders trust the system that sends it.** Only 23% trust the real-time information they get, and 55% distrust it. One respondent says "I've stopped believing" the app's estimates. Sofie lost trust after a bus shown in the app never arrived before her exam, and Geir says the stop displays show buses that never arrive. A delay or cancellation message comes from that same information system. If riders have learned not to believe it, they may keep waiting or keep adding buffer time even after the message arrives. The evidence does not test this directly, but it suggests the trust problem in framing 1 has to be solved before a message from that system will change what riders do.
+3. **Riders experience a missing bus the same way whatever the cause.** Geir's summary files the signs that show buses that never arrive under unreliable real-time information, and his wait of more than 20 minutes under disruptions. For the person at the stop, both are the same experience: a bus they were told to expect does not come. Maja describes the same thing when a bus "disappears from displays, or fails to arrive". Treating disruption as a separate problem could mean building a message layer on top of arrival times that are still wrong.
+4. **The evidence shows uncertainty on ordinary days, but not how often disruptions happen.** Maja often leaves earlier than necessary and Sofie often takes an earlier bus than she needs, both because they do not fully trust the information. In the Questionnaire, 26% name buses arriving earlier or later than scheduled as their main frustration, and the comment "Standing in the rain not knowing if I've already missed it is the worst part" is about arrival times. None of the sources says how often disruptions or cancellations happen.
+5. **"Take another option" depends on a research gap.** Geir supports the need to decide, since he would have made different travel decisions with accurate disruption information. What the other option is, and how to present it, has not been researched. Suggesting alternative routes during a disruption comes from Maja alone, and the triangulation lists it as a gap. The key insights say alternative-route suggestions "remain a research gap rather than a validated requirement."
+6. **It starts with the question the sources disagree on most.** A disruption message needs a channel. Maja wants proactive notifications with control over how often they come, Sofie wants a phone message only for cancellations and disruptions, and Geir dislikes push notifications and wants clear messages at the stop with nothing to set up. The Questionnaire asks about notifications only together with favourites, so it cannot tell these positions apart. Framing 1 can begin with the information itself and leave the question of how to deliver it until later.
+
+The model added that these points are about what to solve first and do not show the problem is unimportant: all four sources raise disruption communication, none argues against it, and Geir's wait is the most specific incident in the interviews. It suggested treating the problem as part of trustworthy arrival status, as insight 2 already does.
+
+**My reply**
+
+I keep the problem, and narrow what it covers in three places.
+
+- I keep it because it is the moment where not knowing costs the rider a decision. Geir waited more than 20 minutes for a bus that never came, Sofie cannot tell delayed from cancelled, and Maja is left guessing whether to wait or find another option. All four sources raise it and none argues against it. Framing 1 has more survey support, but a design can do the most at the point where the normal service breaks down and the rider has to choose.
+- Point 3 changes the scope. A bus that disappears from the display or never arrives is the same experience as a cancellation, so "disrupted" here includes a bus whose live position is lost, and the status has to say when a prediction can no longer be trusted. That also answers part of point 2: the message has to show how current and how certain the information is, or riders who distrust the system will ignore it. With that scope, the problem also covers ordinary days when a bus is late without an announcement, which answers point 4.
+- Point 5 changes what I promise. The design helps riders decide whether to wait or leave. Suggesting another route stays a hypothesis to test, since only Maja raises it.
+- On point 6 I hold my ground. The status comes first, where riders already look, in the app and at the stop. Notifications stay opt-in, and the channel question stays open until it can be tested with riders.
+
+## Stretch: the runner-up problem (optional)
+<!-- Only if you did this stretch test: the model's answer, and whether it changes your mind and why. Leave the committed problem above as it is. -->
