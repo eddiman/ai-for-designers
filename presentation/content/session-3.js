@@ -148,7 +148,7 @@ window.DECKS["session-3"] = [
     doneItems: [
       "Every persona reviewed every direction",
       "Findings refer to screens by number",
-      "A prioritized table: finding, persona(s), direction, severity, act on it?"
+      "A prioritized table: finding, persona(s), direction, severity"
     ],
     why: "The personas shaped the prototypes, so holding the prototypes to those same personas is what closes the loop."
   },
@@ -158,26 +158,33 @@ window.DECKS["session-3"] = [
     eyebrow: "Step 4",
     title: "The persona review",
     text:
-      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in its own named section\nwith screens numbered in flow order. Also attached are my personas.md, problem-definition.md,\napp-flow.md, and prototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to what it is trying to do,\nand not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that every persona reviews every\ndirection. For each persona × direction, walk the numbered screens in order and note what that\npersona notices, struggles with, and wants, referring to screens by number. Stay true to each\npersona's evidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact first, with columns:\nfinding, which persona(s), which direction, severity, and whether to act on it. Write the full\nreview and the table into ux-review.md."
+      "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in its own named section\nwith screens numbered in flow order. Also attached are my personas.md, problem-definition.md,\napp-flow.md, and prototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to what it is trying to do,\nand not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that every persona reviews every\ndirection. For each persona × direction, walk the numbered screens in order and note what that\npersona notices, struggles with, and wants, referring to screens by number. Stay true to each\npersona's evidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact first, with columns:\nfinding, which persona(s), which direction, and severity. Write the full review and the table\ninto ux-review.md, and leave the Triage section empty."
   },
 
   {
     kind: "step",
     n: 5,
     title: "Triage",
-    lead: "Same chat, so the review is still in context. Decide what is worth acting on.",
+    lead: "Same chat, so the review is still in context. The model proposes a grouping, and you decide.",
     doItems: [
-      "Ask for the findings grouped into **act on now**, **later**, and **won't do**.",
-      "Require a one-line reason tied to impact for each.",
-      "Ask it to flag findings that only one persona cares about but would hurt another if “fixed”.",
-      "Overrule it where you disagree, and note why."
+      "Run the triage prompt on the next slide. It writes the grouping into the **Triage** section of `ux-review.md`.",
+      "Read the grouping and move any finding you disagree with.",
+      "Under **My decisions**, write one line in your own words for each act-on-now finding: why it goes ahead. Add a line for every finding you moved."
     ],
     doneItems: [
-      "Every finding is in one of the three groups",
-      "The triage section of `ux-review.md` is written",
-      "Your reasoning is recorded where you overruled the model"
+      "Every finding is in act on now, later, or won't do",
+      "The **Triage** section of `ux-review.md` is written",
+      "**My decisions** has your line for each act-on-now finding and each move"
     ],
-    why: "A finding only one persona cares about, that would hurt another if fixed, is the reliability-versus-personalization tension resurfacing."
+    why: "Agreeing with the model is fine, as long as you can say why each finding goes ahead. In Session 4, Copilot reads these lines when it helps you choose which direction to build."
+  },
+
+  {
+    kind: "prompt",
+    eyebrow: "Step 5",
+    title: "Group the findings",
+    text:
+      "From the prioritized findings table, help me triage. Group the findings into act on now, later,\nand won't do. For each, give a one-line reason tied to impact: how many personas it hurts, how\nsevere it is, and whether it undermines the committed problem. Flag any finding that only one\npersona cares about but that would hurt another if we \"fixed\" it, since that's the\nreliability-against-personalization tension resurfacing. Write the result into the Triage section\nof ux-review.md, and leave My decisions empty."
   },
 
   {

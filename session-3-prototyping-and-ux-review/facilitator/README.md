@@ -20,6 +20,10 @@ Work through the setup in the participant `README.md` step by step with the room
 
 Keep the setup visible. Seeing how the connection is wired, with one example of it in use, is worth more than arriving at a room where it already works, and the lockstep pass is what catches anyone left unsure.
 
+## Step 5: triage
+
+Copilot can fill in the Triage section during step 4, even though the prompt tells it to leave the section empty. If it does, have the participant delete it before running the triage prompt, so the grouping comes from step 5. During step 5, watch for anyone who accepts the grouping and moves on. The lines under **My decisions** are the participant's own decisions, and in Session 4 Copilot reads them when it helps choose the direction to build.
+
 ## To verify before committing this session
 
 - Does Figma Make currently accept attached files to inform a generation?

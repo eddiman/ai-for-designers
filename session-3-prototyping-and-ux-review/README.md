@@ -181,7 +181,7 @@ Before you run the review, know what kind of result it gives you. This is early 
 >
 > Review all three directions **in character as each of my personas**, so that every persona reviews every direction. For each persona × direction, walk the numbered screens in order and note what that persona notices, struggles with, and wants, referring to screens by number. Stay true to each persona's evidence-grounded goals (for example, the reliability-first rider and the personalization-seeking power user), and don't give generic feedback.
 >
-> Then pull it together into one **prioritized findings table**, highest-impact first, with columns: finding, which persona(s), which direction, severity, and whether to act on it. Write the full review and the table into `ux-review.md`.
+> Then pull it together into one **prioritized findings table**, highest-impact first, with columns: finding, which persona(s), which direction, and severity. Write the full review and the table into `ux-review.md`, and leave the **Triage** section empty.
 
 5. Read the review. If a persona's feedback reads generically, push back and ask it to ground the critique in that persona's specific goals and the evidence behind them.
 
@@ -209,19 +209,20 @@ Decide which findings are worth acting on, and which you're parking.
 
 1. Continue in the same chat, so the review is still in context, and run this prompt:
 
-> From the prioritized findings table, help me triage. Group the findings into **act on now**, **later**, and **won't do**. For each, give a one-line reason tied to impact: how many personas it hurts, how severe it is, and whether it undermines the committed problem. Flag any finding that only one persona cares about but that would hurt another if we "fixed" it, since that's the reliability-against-personalization tension resurfacing. Write the result into the triage section of `ux-review.md`.
+> From the prioritized findings table, help me triage. Group the findings into **act on now**, **later**, and **won't do**. For each, give a one-line reason tied to impact: how many personas it hurts, how severe it is, and whether it undermines the committed problem. Flag any finding that only one persona cares about but that would hurt another if we "fixed" it, since that's the reliability-against-personalization tension resurfacing. Write the result into the **Triage** section of `ux-review.md`, and leave **My decisions** empty.
 
-2. Read the grouping. Where you disagree, move the finding and write down why in the **Triage** section of `ux-review.md`.
+2. Read the grouping. Move any finding you disagree with to the group you think it belongs in.
+3. Under **My decisions**, write one line in your own words for each act-on-now finding: why it goes ahead of the ones you parked. Add a line for every finding you moved, saying why.
 
 **You are done when**
 
 - Every finding is in one of the three groups: act on now, later, or won't do.
 - The **Triage** section of `ux-review.md` is written.
-- Wherever you overruled the model, your reason is written down.
+- **My decisions** has a line in your own words for each act-on-now finding and for every finding you moved.
 
 **What this step is for**
 
-The call is yours. The model proposes the grouping and you decide, and the reasons you give where you overrule it are the point of the step. A finding that only one persona cares about, and that would hurt another if fixed, is the reliability-against-personalization tension resurfacing.
+The model proposes a grouping, and you decide which findings go ahead. Writing a line for each act-on-now finding is how you make that decision yourself. Agreeing with the model is fine, as long as you can say why the finding goes ahead of the ones you parked. In Session 4, Copilot reads this section from the knowledge base when it helps you choose which direction to build. A finding that only one persona cares about, and that would hurt another if fixed, is the reliability-against-personalization tension resurfacing.
 
 ---
 

@@ -46,12 +46,16 @@
 ## Prioritized findings
 <!-- Highest-impact first. -->
 
-| Finding | Which persona(s) | Which direction | Severity | Act on it? |
-|---|---|---|---|---|
-|  |  |  |  |  |
+| Finding | Which persona(s) | Which direction | Severity |
+|---|---|---|---|
+|  |  |  |  |
 
 ## Triage
-<!-- Which findings you'll act on, and which you're parking. -->
+<!-- The model's grouping into act on now, later, and won't do, with its one-line reasons. -->
+-
+
+### My decisions
+<!-- In your own words: one line for each act-on-now finding on why it goes ahead of the ones you parked, and one line for every finding you moved, saying why. -->
 -
 
 ---
