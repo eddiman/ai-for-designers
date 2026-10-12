@@ -1,47 +1,143 @@
-# App flow
+Prototype Flow Instructions
+1. Next Nudge
+Concept: A proactive assistant for regular riders like Maja. It learns a familiar journey and only interrupts when something changes.
 
-> Your work. A written description of how the app flows, meaning the path a user takes through it. This is what you hand to the persona UX review.
+Flow
+Start: Today screen
 
-## Flow
-## Direction 01: Signal
-Core idea: Replace false precision with honest confidence states. The app never shows a number it can't back up.
+Show Maja’s usual Tuesday journey: Bus 9 from Home to Central.
+Display one prominent alert: “Your 08:14 bus is delayed.”
+Explain the practical impact: “Leave 9 minutes later than usual.”
+Reinforce that notifications are selective: “We’ll stay quiet unless this changes.”
+Tap the delay alert
 
-The flow starts at a stop list: nearby stops with their routes, nothing more. Tapping a stop moves to the stop detail, which is the heart of the direction: a single dominant signal (a coloured indicator + time) that names the quality of the data being shown, not just the data itself.
+Navigate to the Live bus status screen.
+Show:
+Status: Delayed by 9 minutes
+Recommended departure time: Leave at 08:12
+New estimated arrival at the stop: 08:23
+Confidence level: High confidence
+Time of the latest update
+A simple stop timeline
+Tap “See my choices”
 
-The stop detail has three states, each a distinct screen:
+Navigate to the Decision options screen.
+Present:
+Wait for Bus 9 as the lowest-effort recommendation
+Walk to Oak Avenue for Bus 3 as a possible faster option
+Clearly label alternative routes as suggestions rather than guarantees.
+Tap either choice
 
-Confirmed: the bus has live GPS, was seen 2 stops away, the time shown is trustworthy. Green signal, exact number.
-Expected: no GPS, the time comes from the schedule. Amber signal, a tilde prefix (~12 min) to signal it's an estimate, and a plain-language explanation of why.
-Unknown: no data at all, last update was 9 minutes ago. Red signal, a question mark instead of a time, and a direct suggestion to consider an alternative.
-The relationship between screens 1–3 is not a linear journey. They're the same stop detail screen under three different real-world conditions. A test participant would see one of them depending on what state the bus is in. The navigation dots in the prototype let the researcher move between conditions to show all three.
+Confirm the selection by returning to the Today screen.
+The prototype can show the selected plan as the active journey.
+What to test
+Does the alert help riders change their departure time confidently?
+Is “Leave at 08:12” more useful than simply saying the bus is delayed?
+Do alternative-route suggestions reduce uncertainty or create more work?
+Does the promise of fewer notifications make personalisation acceptable?
+2. Truth First
+Concept: A no-account, no-setup status checker for riders like Geir and Sofie who want reliable basics without extra features.
 
-## Direction 02: Decide
-Core idea: The app absorbs the cross-checking work Maja does manually. Instead of showing her data to interpret, it shows her an action.
+Flow
+Start: Nearby departures
 
-The flow starts on a home screen: a greeting, her saved stop (Stortorget, Bus 37), and a single large button, "What should I do?" This is the explicit design promise of the direction. Below it, a recent-routes list grounds the screen as a real app with history.
+Automatically show the nearest stop: Pine Street, Stop 1042.
+List nearby buses using plain operational states:
+Bus 9: Delayed 9 minutes
+Bus 12: Live signal lost
+Bus 3: On time — tracked
+Avoid presenting scheduled times as though they are live estimates.
+Tap Bus 9
 
-Tapping the button leads to one of three decision screens, each representing a different data situation:
+Navigate to the Confirmed delay screen.
+Lead with the direct answer: “Yes. It’s coming.”
+Show:
+Best estimate: 14 minutes
+Vehicle is moving
+Last live-location update
+Scheduled time versus current estimate
+Confidence based on recent vehicle data
+Give a plain decision statement: “Wait if 14 minutes works for you.”
+Tap “Done”
 
-Wait (sources agree): two sources confirm the bus position. The app recommends "Wait," explains why in plain terms (sources agree, bus seen 2 stops away, no disruption), and shows an alternative passively at the bottom.
-Wait for now (sources conflict): the live app and schedule disagree. Rather than hiding the conflict, the app shows the breakdown and still gives a recommendation, but with a caveat: be ready to walk. The alternative becomes more prominent.
-Take alternative (no data): Bus 37 is untraceable. The app stops hedging and names the action directly: take Bus 15. The alternative is elevated to the primary recommendation, with a navigation button.
-The three decision screens are the same question ("What should I do?") answered under different certainty levels. They're meant to show that the app's behaviour, and not only its content, changes with the quality of the underlying data.
+Return to the nearby departures list.
+Tap Bus 12
 
-## Direction 03: Shift
-Core idea: The app's visual presence scales with the stakes. On a familiar trip it nearly disappears; when something goes wrong it steps forward.
+Navigate to the Uncertain status screen.
+Lead with: “We can’t confirm this bus.”
+Explain:
+The live vehicle signal was lost
+When and where it was last seen
+The scheduled time is not a live estimate
+Give direct guidance: “Don’t rely on the countdown.”
+Tap “Check again”
 
-The four screens form a single continuous journey, one trip unfolding in time:
+Return to or refresh the nearby departures screen.
+In a higher-fidelity prototype, simulate either:
+Live tracking returning, or
+The status remaining uncertain.
+What to test
+Do riders understand the difference between delayed and uncertain?
+Does showing the evidence behind an estimate improve trust?
+Is “Yes, it’s coming” more reassuring than a countdown alone?
+Does openly admitting uncertainty help riders decide whether to leave?
+3. Stop Signal
+Concept: A continuation of the physical bus stop on the rider’s phone. It serves stop-first riders without requiring an account or saved route.
 
-Quiet mode: Sofie's familiar commute. A single card: route number, destination, minutes. Nothing else. The app makes no demands on her attention.
+Flow
+Start: Connect to a stop
 
-Alert emerging: something has changed. The card acquires an amber border and a discreet strip at the bottom: "Something changed with your bus / See →." The app is present and hasn't interrupted her, so she can ignore it or tap in.
+Explain: “Take this stop with you.”
+Offer two ways to connect:
+Scan stop code
+Enter the four-digit stop number
+Show the example stop number: 1042
+Reassure users: “Nothing is saved after you leave.”
+Tap “Scan stop code” or the stop number
 
-Guidance mode: she taps in. The visual ground shifts from light to dark, the full disruption view appears: what happened (Bus 37 delayed, traffic on Prinsens gate), three options (wait, walk to an alternative stop, take a later bus), and a primary action button. The app now has full visual weight because the situation warrants it.
+Navigate to the Pine Street stop board.
+Show the same routes and terminology as the physical display:
+Bus 9: Delayed — bus is moving
+Bus 12: Uncertain — signal lost
+Bus 3: On time — tracked
+Include a confirmation message: “Same update as the stop display.”
+Show when the board was last updated.
+Tap Bus 9
 
-Resolved: she acted (or the bus caught up). The screen returns to the light, minimal card, now showing "3 min" and a small check mark. The app retreats.
+Navigate to the Wait-or-leave guidance screen.
+Lead with: “Wait about 14 minutes.”
+Clarify:
+The bus is delayed but still moving
+It is not currently reported as cancelled
+Traffic added approximately 9 minutes
+Best current estimate: 08:23
+Tap “Close stop status”
 
-The through-line is the visual weight of the app itself acting as a signal. A test participant would experience screens 0→1→2→3 in sequence as a single event, unlike the other two directions where screens represent different conditions rather than a single unfolding story.
+End the session and return to the initial connection screen.
+Do not retain the stop or ask the rider to create an account.
+Optional prototype branch: Tap Bus 12
 
-## Notes
-<!-- Anything the reviewer needs to understand the flow. -->
--
+Show:
+“We cannot confirm whether this bus is coming.”
+Last known vehicle location
+Time since the signal was lost
+Guidance not to rely on the scheduled countdown
+What to test
+Do riders understand that the phone and stop display use the same information?
+Does scanning feel easier than downloading, searching, or creating an account?
+Is the status language understandable at a glance?
+Does temporary, no-account access work for simplicity-first riders?
+Would riders trust the physical display more if it showed the same certainty states?
+Suggested Prototype Navigation
+Use three entry cards on a prototype index screen:
+
+Next Nudge — Proactive routine assistant
+Truth First — No-setup status checker
+Stop Signal — Continue from the bus stop
+For each concept:
+
+Wire every primary card and button.
+Add a visible back action on detail screens.
+Let testers move through the flow without instructions from the facilitator.
+Keep prototype data consistent: Bus 9, Pine Street, 9-minute delay, estimated arrival at 08:23.
+Test each direction independently rather than asking participants to combine features across concepts.
