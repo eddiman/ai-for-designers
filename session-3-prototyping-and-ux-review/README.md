@@ -77,7 +77,7 @@ Or add it by hand, creating `.vscode/mcp.json` with:
 - The tools list in Copilot's Agent mode shows the Figma tools.
 - Copilot can describe a frame you selected in the Figma desktop app.
 
-**Why this matters**
+**What this step is for**
 
 Without this connection, Copilot cannot see your screens in step 4, and the review has nothing to walk through. The server runs on your own machine, so everyone sets up their own.
 
@@ -111,7 +111,7 @@ Attaching your problem definition, insights, and personas as files is what bring
 - Each direction has its key screens as a clickable flow.
 - `prototype-directions.md` has all three entries filled in, each with its Figma link.
 
-**Why this matters**
+**What this step is for**
 
 The prototypes get better the more you steer, so treat the first result as a starting point. `prototype-directions.md` is attached to the UX review in step 4, where it gives the persona reviewer the *intent* behind each direction (what it's trying to do) alongside `app-flow.md`'s screen-by-screen path. That is why it has to be filled in before you move on.
 
@@ -131,7 +131,7 @@ Depending on how Figma Make built the prototypes, you may get extra scaffolding:
 - Every frame in the file is one of the app's screens.
 - No wrappers or landing pages are left.
 
-**Why this matters**
+**What this step is for**
 
 The reviewer in step 4 reads this file. Any scaffolding left in it becomes noise in the review.
 
@@ -157,7 +157,7 @@ The reviewer in step 4 reads this file. Any scaffolding left in it becomes noise
 - The screens in each group are numbered in flow order.
 - `app-flow.md` has one flow per direction, with the same names and numbers as the Figma file.
 
-**Why this matters**
+**What this step is for**
 
 This is what makes the file readable to the UX review: the reviewer can follow one direction's flow at a time and refer to screens by number. The review in step 4 is run *against* the written flows in `app-flow.md`, so that file has to be filled in before you move on.
 
@@ -191,7 +191,7 @@ Before you run the review, know what kind of result it gives you. This is early 
 - The findings refer to screens by number.
 - The **Prioritized findings** table is filled in, highest impact first.
 
-**Why this matters**
+**What this step is for**
 
 The personas shaped the prototypes, so holding the prototypes to those same personas is what closes the loop.
 
@@ -219,7 +219,7 @@ Decide which findings are worth acting on, and which you're parking.
 - The **Triage** section of `ux-review.md` is written.
 - Wherever you overruled the model, your reason is written down.
 
-**Why this matters**
+**What this step is for**
 
 The call is yours. The model proposes the grouping and you decide, and the reasons you give where you overrule it are the point of the step. A finding that only one persona cares about, and that would hurt another if fixed, is the reliability-against-personalization tension resurfacing.
 
@@ -247,7 +247,7 @@ The call is yours. The model proposes the grouping and you decide, and the reaso
 - The stretch section of `ux-review.md` says, for each "act on now" finding, whether the revision fixed it.
 - `prototype-directions.md`, `app-flow.md`, and the rest of `ux-review.md` are unchanged.
 
-**Why this matters**
+**What this step is for**
 
 One refinement pass completes the loop the review started: you act on the findings and check whether the change helped the personas. It also shows whether a fix for one persona created a problem for another, which is the reliability-against-personalization tension again.
 

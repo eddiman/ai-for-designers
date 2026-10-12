@@ -47,7 +47,7 @@ window.DECKS["session-1"] = [
     title: "Two prompt styles, same data",
     cols: ["Style", "The prompt", "What it gives you"],
     rows: [
-      ["Generic", "“Summarize this interview.”", "A low-bias first pass that keeps your assumptions out. Can come back bland and skip what matters to your problem."],
+      ["Generic", "“Summarize this interview.”", "A low-bias first pass that keeps your assumptions out. Can come back bland and leave out details specific to your problem."],
       ["Directed", "“…focusing on how they catch the bus today, what frustrates them, and what they wish existed.”", "Sharper and more relevant. Can fold your interpretation into something that still looks neutral."]
     ]
   },

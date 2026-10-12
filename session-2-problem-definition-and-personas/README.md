@@ -37,7 +37,7 @@ Two things carry over from Session 1:
 - **Pro:** it forces you to re-state what you're carrying forward (your insights, your committed problem), which sharpens it.
 - **Con:** you have to paste the evidence in again, along with the outputs you're building on, or the model loses the thread.
 
-Whichever you pick, the thing that matters is the lesson from Session 1: **the more steps you work, asking, reading, proposing a change, asking again, the better you understand the material, and the better the AI can help you.** The chat structure decides what the model has in context, and the loop is what builds your understanding.
+Whichever you pick, work the way Session 1 showed: **the more steps you work, asking, reading, proposing a change, asking again, the better you understand the material, and the better the AI can help you.** The chat structure decides what the model has in context, and the loop is what builds your understanding.
 
 ## What you'll do
 
@@ -67,7 +67,7 @@ Distill the triangulation note and your chosen summaries into the handful of ins
 - You have checked the evidence behind each insight, and it says what the insight claims.
 - Every insight is labelled observed or inferred.
 
-**Why this matters**
+**What this step is for**
 
 These are the portable, evidence-anchored takeaways everything downstream references. They scope the problem definition here, and in Sessions 3–4 they feed the prototype generation and the knowledge base. Get them right once and you stop re-deriving the signal from raw evidence every time.
 
@@ -102,7 +102,7 @@ Working from the evidence and the insights you just wrote, generate framings, ra
 - The red-team argument is saved, followed by your own reply to it.
 - You can say in a sentence or two why this problem won over the others.
 
-**Why this matters**
+**What this step is for**
 
 You can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch, and the red-team stress-tests the choice before you sink a whole prototype into it. The single committed problem is what scopes Session 3.
 
@@ -131,7 +131,7 @@ Create **2–3 personas**, each grounded in specific evidence, each labelled as 
 - None of them is one interviewee with a new name.
 - Every trait in each persona traces to the evidence under **Grounded in**, or is listed under **What we still don't know**.
 
-**Why this matters**
+**What this step is for**
 
 Session 3 runs a UX review *in character as these personas*, so they're a working input the next session depends on. That is why each one has to be tied to evidence and treated as a hypothesis: you'll be making design calls in their voice.
 
@@ -166,7 +166,7 @@ For either test, write what you would change in the stretch section and leave th
 - The stretch section of `key-insights.md` or `problem-definition.md` has the model's answer and your decision, in your own words.
 - The rest of your packet is unchanged.
 
-**Why this matters**
+**What this step is for**
 
 The insight with the weakest evidence is where the packet is most likely to be wrong, and naming it now tells you what to watch for in the Session 3 review. Arguing hard for the runner-up checks whether your commitment rests on the evidence or on the order the ranking happened to produce.
 

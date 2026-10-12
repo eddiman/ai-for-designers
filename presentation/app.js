@@ -195,7 +195,7 @@
       right.appendChild(renderItems(s.doneItems || [], { check: true }));
       if (s.why) {
         var why = h("div", "step-block step-block--why");
-        why.appendChild(h("h3", "step-block__title", "Why this matters"));
+        why.appendChild(h("h3", "step-block__title", "What this step is for"));
         why.appendChild(h("p", null, fmt(s.why)));
         right.appendChild(why);
       }

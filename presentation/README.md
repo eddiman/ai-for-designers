@@ -92,7 +92,7 @@ A slide is an object with a `kind` and the fields that kind uses. Text fields ac
 | `statement` | `eyebrow`, `text` | One big idea, with nothing competing with it. |
 | `map` | `title`, `lead`, `steps[]`, `active` | The progress map. `active` highlights one step by index. |
 | `list` | `eyebrow`, `title`, `lead`, `items[]`, `ordered`, `check` | Bullets. An item is a string, or `{label, text}`. |
-| `step` | `n`, `title`, `lead`, `doItems[]`, `doneItems[]`, `why` | A numbered step, laid out as Do this now / You are done when / Why this matters. |
+| `step` | `n`, `title`, `lead`, `doItems[]`, `doneItems[]`, `why` | A numbered step, laid out as Do this now / You are done when / What this step is for. |
 | `prompt` | `eyebrow`, `title`, `text` | A prompt to show or read out. Monospace, preserves line breaks. |
 | `table` | `eyebrow`, `title`, `lead`, `cols[]`, `rows[][]` | Comparisons and file lists. |
 

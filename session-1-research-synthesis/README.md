@@ -31,7 +31,7 @@ You'll run the same data through two styles of prompt and compare:
 
 What to watch for:
 
-- The generic prompt keeps your assumptions out of it and gives a low-bias first pass. It can also come back bland and skip the things that matter for your specific problem.
+- The generic prompt keeps your assumptions out of it and gives a low-bias first pass. It can also come back bland and leave out the details that are specific to your problem.
 - The directed prompt gives sharper, more relevant output. It can also quietly fold your interpretation into something that still looks like a neutral summary, so a reader can't tell what the user said apart from what you were hoping to hear.
 
 Both styles are legitimate. The skill is knowing which mode you're in and choosing it on purpose.
@@ -78,7 +78,7 @@ Do not choose between the two summaries yet. That choice comes in step 3, once a
 - `interview-summaries.md` has a generic summary, a directed summary, and a differences analysis under all three interviews.
 - Quotes are attributed to the person who said them.
 
-**Why this matters**
+**What this step is for**
 
 The comparison prompt works because both summaries are already in the chat, so the model can set them side by side. A new chat for each interview keeps the sources apart, which is the first rule above.
 
@@ -108,7 +108,7 @@ As with the interviews, do not choose between the summaries yet.
 - The questionnaire was summarized in its own chat, with no interview in it.
 - `questionnaire-summary.md` has the generic summary, the directed summary, and the differences analysis.
 
-**Why this matters**
+**What this step is for**
 
 The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews. Treating it as a footnote is how a planted tension stays hidden.
 
@@ -127,7 +127,7 @@ The questionnaire is the broad signal that the interviews get measured against, 
 - All four entries under **Inputs I chose** name generic or directed.
 - You have the four chosen summaries ready to paste into one chat.
 
-**Why this matters**
+**What this step is for**
 
 You are committing to a framing here, and its bias travels forward into the triangulation and every later session. The record in `triangulation.md` shows which framing entered the triangulation.
 
@@ -167,7 +167,7 @@ In one or two sentences, name the two competing directions in the evidence and c
 - **Agree**, **Conflict**, and **Gaps** in `triangulation.md` each cite their sources.
 - **The central tension** is written in your words, and names the sources behind each side.
 
-**Why this matters**
+**What this step is for**
 
 This is where the planted tension should surface. The model's pass is a draft, so you check it, and you name the central tension yourself.
 
@@ -199,7 +199,7 @@ Leave your chosen inputs and your triangulation as they are, since Session 2 rea
 - `interview-summaries.md` has a stretch section with the third summary, the comparison, and your note.
 - Your note names something the third framing surfaced that the other two missed, or says that it surfaced nothing new.
 
-**Why this matters**
+**What this step is for**
 
 A third framing on the same transcript shows how much of a summary comes from the wording of the prompt. That is the session's main lesson, tested on a framing you chose yourself.
 

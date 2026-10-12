@@ -88,7 +88,7 @@ This step uses two prompts. The first creates an empty knowledge base, so you ca
 - You can find the committed problem, the personas, and the prototype decisions without searching.
 - `kb/overview.md` works as an entry point to the project rather than reading as a list of file names.
 
-**Why this matters**
+**What this step is for**
 
 A knowledge base is your project's durable memory, written as files for an agent to read before it acts, so the context no longer lives in scattered chat history. Everything after this step reads from it. A thin knowledge base here means every later step inherits the gap.
 
@@ -114,7 +114,7 @@ Session 3 gave you three directions and a UX review without making you pick. Tha
 - It lists the UX-review findings you will carry into the build.
 - It says what the other two directions had that you are deliberately not building.
 
-**Why this matters**
+**What this step is for**
 
 The spec in step 3 is written against this file. Deciding here, in writing, is what stops the build from drifting between directions later. The choice is yours: the model can lay out trade-offs, and you make the call.
 
@@ -138,7 +138,7 @@ The spec in step 3 is written against this file. Deciding here, in writing, is w
 - Every scope item traces to something in your knowledge base.
 - The out-of-scope list is not empty.
 
-**Why this matters**
+**What this step is for**
 
 The out-of-scope list is what keeps the build from sprawling, and tracing every scope item to your evidence is what keeps the app anchored to your project rather than to generic bus-app conventions.
 
@@ -165,7 +165,7 @@ The out-of-scope list is what keeps the build from sprawling, and tracing every 
 - Increment 1 is small, a starting point with no feature in it yet.
 - `verification-plan.md` has a row per increment describing something you can check.
 
-**Why this matters**
+**What this step is for**
 
 This is the plan the build tool follows. Increments that are too big cannot be verified, and an increment you cannot verify is one you have to trust blindly.
 
@@ -222,7 +222,7 @@ This is the core of the session. The anti-pattern to avoid is one-shotting: aski
 - `build-plan.md` records which files the tool changed.
 - `verification-plan.md` shows that increment as verified, or records why it is not.
 
-**Why this matters**
+**What this step is for**
 
 Verifying each small step, and making the tool write back which files it changed, is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The written record is what keeps both of you honest about what has been built against what is still only planned.
 
@@ -261,7 +261,7 @@ It belongs beside the app it describes, at **`session-4-knowledge-base-and-mvp/a
 - It states the stack as fixed.
 - No open questions are left dangling for a later increment to guess at.
 
-**Why this matters**
+**What this step is for**
 
 Everything built after this follows this file, so a wrong line here propagates into every later increment.
 

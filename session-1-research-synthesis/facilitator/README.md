@@ -36,7 +36,7 @@ Default to AI-assisted-then-verify, given the tight slot. If time allows, the st
 
 ## Landing the takeaways
 
-Two things need sharpening in the room: what participants should do, and what they walk away knowing. The session README leads with both. Reinforce them in the debrief, since they are the outcomes that matter most:
+Two things need sharpening in the room: what participants should do, and what they walk away knowing. The session README leads with both. Reinforce them in the debrief, since Session 2 builds on both:
 
 1. **Separate problems belong in separate chats.** Mixing contexts confuses the model and yields confident, wrong answers. Say it plainly and tie it to what they just did.
 2. **The more steps you take to work the raw data yourself, the more control you have and the better the result.** Frame the step-by-step flow as what makes the output *checkable*.
