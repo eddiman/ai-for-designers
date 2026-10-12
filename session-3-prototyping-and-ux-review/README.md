@@ -105,6 +105,8 @@ Attaching your problem definition, insights, and personas as files is what bring
 
 **Bonus:** go to https://designmd.app/ and pick a `design.md` you like and attach it too, or describe in the prompt how you want the design to look.
 
+**PS:** You can ask Figma Make questions here too, and it will explain what it made and why. For example: "For each direction, explain what you built and why, and which insights and personas each choice comes from." The answer shows how it read your research, helps you spot a direction that slid into generic bus-app conventions, and gives you a starting point for **What it is** and **How it answers the problem** in `prototype-directions.md`. Check what it says against the screens before you use it.
+
 **You are done when**
 
 - You have three directions that solve the committed problem in different ways.

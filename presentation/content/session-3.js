@@ -85,7 +85,7 @@ window.DECKS["session-3"] = [
     title: "Three directions",
     text:
       "I've attached my problem definition, key insights, and personas from a\nresearch project on helping people catch the bus. Using these as the brief,\ndesign 3 distinct prototype directions for a mobile bus app that each solve\nthe committed problem in a different way.\n\nFor each direction: give it a short name, generate the key screens as a\nclickable flow, and stay grounded in the attached research, meaning the\ninsights and personas rather than generic bus-app conventions. Make the three\ngenuinely different from each other so I have alternatives worth comparing.",
-    note: "Bonus: pick a `design.md` from designmd.app and attach it too, or describe the look you want in the prompt."
+    note: "Bonus: pick a `design.md` from designmd.app and attach it too, or describe the look you want in the prompt. PS: you can ask Figma Make questions here too, for example what it built in each direction and why."
   },
 
   {
