@@ -69,9 +69,9 @@ window.DECKS["session-2"] = [
     kind: "step",
     n: 1,
     title: "Key insights",
-    lead: "Distil the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on.",
+    lead: "Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on.",
     doItems: [
-      "Paste in `triangulation.md`, then the summary named under **Inputs I chose** for each source, labelled by source.",
+      "Go to `triangulation.md`, select everything under the header **Inputs I chose** for each source, labelled by source.",
       { label: "Insights prompt", text: "`From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred.`", copyText: "From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred." },
       "Save each insight in `key-insights.md` under **Insight**, **Evidence**, and **Observed / inferred**."
     ],
