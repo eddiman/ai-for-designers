@@ -19,6 +19,7 @@ This repository is the working space for planning **AI for Designers**, a course
 - `ai-for-designers-v1.4.md` is the course plan (source of truth)
 - `archive/` holds the previous plans, v1.3 and v1.2, kept for history
 - `AGENTS.md` is this file
+- `README.md` is the repository's front page: what the course is, how to take it, and what each folder contains
 - `kb-prompt.md` is a general-purpose prompt for installing a knowledge base in any repository. Session 4 uses its own setup prompt instead. Do not hand this file to participants: it creates `kb/` at the repository root and edits the root `AGENTS.md`.
 - `session-1-research-synthesis/` holds Session 1; `research/` holds the shared source pack, and `facilitator/` holds run-of-show and design notes
 - `session-2-problem-definition-and-personas/` holds Session 2, with the same `facilitator/` and `premade/` split
