@@ -269,7 +269,18 @@ Everything built after this follows this file, so a wrong line here propagates i
 
 ## Stretch: keep going
 
-If you have time after step 7, release the next increment the same way: one at a time, verify, mark it, then the next. Stop whenever you like. Each verified increment is a finished piece of work.
+If you have time after exercise 7, build the rest of your plan one increment at a time, with the same loop as exercise 6. Stop whenever you like. Each verified increment is a finished piece of work.
+
+**Do this now**
+
+1. Release the next increment with this prompt. Replace `[number]` with the number of the next increment in `build-plan.md`:
+
+> Read `build-plan.md`, `verification-plan.md`, `app/AGENTS.md`, and the knowledge base in `session-4-knowledge-base-and-mvp/kb/`. Build **only increment [number]** from the build plan, nothing beyond it. The increments before it are built and verified, so change their code only where this increment needs it, and tell me what you changed. When it is done, write back into `build-plan.md` exactly what you did: which files you added or changed, and what now works. Then stop, so I can verify it before we continue.
+>
+> If a technical choice is not covered by the build plan or `app/AGENTS.md`, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.
+
+2. Open `index.html` and run the check from your verification plan for that increment, the same way as in exercise 6.
+3. Mark the row verified in `verification-plan.md`, or write down what failed and what you changed. Then go back to step 1 with the next increment.
 
 ## What you'll produce
 
