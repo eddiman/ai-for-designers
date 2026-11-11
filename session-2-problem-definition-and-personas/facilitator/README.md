@@ -24,6 +24,8 @@ Rough timeboxes for a live run:
 - Personas: 20 min
 - Save the packet + wrap: 10 min
 
+The ranking prompt in exercise 2 is the one prompt in this session that spells out its answer line by line. Most participants run Microsoft 365 Copilot on Auto, which picks the model for each request and does not reliably infer a layout that a prompt only hints at. The short version of the prompt therefore came back in layouts that were hard to move into `problem-definition.md`. The template's fields follow the file's headings, and its source labels match the evidence lines in the premade packet. When participants adapt this prompt, ask them to keep the template and the rules and change only the wording around them.
+
 ## Why personas are required here
 
 Session 3 runs the UX review in character as these personas, so they're a working input the next session depends on. That is the reason they must be evidence-tied and hypothesis-labelled, and it is worth making explicit to the room.

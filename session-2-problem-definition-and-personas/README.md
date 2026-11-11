@@ -83,12 +83,34 @@ Working from the evidence and the insights you just wrote, generate framings, ra
 
 > Generate 5 candidate problem framings for what to solve first, each with a How-Might-We statement and the evidence that supports it.
 
-2. Rank them:
+2. Rank them. Run this prompt in the same chat, straight after the candidates. It spells out every line of the answer, because a shorter request leaves Copilot to guess the layout, and the guesses vary from one answer to the next. The lines follow the headings in `problem-definition.md`, so the framing you pick carries straight into the file.
 
-> Rank these by how much of my evidence actually supports each one. Cite the specific source for each.
+```text
+Rank the 5 problem framings from your previous answer by how much of my evidence supports each one. Put the best-supported framing first. Use only the evidence I have given you. Do not merge, reword or add framings.
+
+Write one block for each of the 5 framings, numbered 1 to 5, in exactly this layout. Fill in every line.
+
+### 1. [Short name of the framing]
+**Problem:** [the framing, as you wrote it]
+**How-Might-We:** [its How-Might-We statement]
+**Evidence that supports it:**
+- [Source], [observed or inferred]: [the finding, with the quote or figure]
+**Evidence against it, or missing:**
+- [Source]: [what argues against the framing, or what the evidence does not cover]
+**Why this rank:** [one or two sentences comparing it with the framings next to it in the ranking]
+
+Rules:
+- [Source] is one of: Maja, Geir, Sofie, Questionnaire.
+- Write one bullet per finding, and as many bullets as the evidence needs.
+- Write "observed" when the source said it or the questionnaire measured it. Write "inferred" when it is a conclusion drawn from the sources.
+- If nothing argues against a framing, write "- None found" under "Evidence against it, or missing".
+- If two framings have about the same support, say so under "Why this rank".
+
+Stop after block 5. Do not add a summary or a recommendation.
+```
 
 3. **Commit to one.** Pick *one* framing from the ranked list and write it as a single clear problem statement under **The committed problem** in `problem-definition.md`, with its How-Might-We under **How-Might-We** and the evidence behind it under **Evidence that supports it**. Do not blend several framings or keep all of them. Narrowing is the point.
-4. Under **Candidates considered and rejected**, list the framings you did not pick and why, so the choice is traceable.
+4. Under **Candidates considered and rejected**, list the framings you did not pick and why, so the choice is traceable. The ranking's **Evidence against it, or missing** and **Why this rank** lines give you a starting point for the reasons, which you write in your own words.
 5. Turn the model into your *red team*. The term comes from security, where a red team attacks a plan to expose its weaknesses. Paste your committed problem into this prompt and run it:
 
 > The problem I picked is: [paste your committed problem]. Argue why it is the wrong one to solve first.
