@@ -48,9 +48,9 @@ Everything from Sessions 1–3: your research synthesis, problem definition, per
 
 ---
 
-## 1. Build the project knowledge base
+## Exercise 1: Build the project knowledge base
 
-This step uses two prompts. The first creates an empty knowledge base, so you can see its structure before anything goes into it. The second fills it from your nine artifacts.
+This exercise uses two prompts. The first creates an empty knowledge base, so you can see its structure before anything goes into it. The second fills it from your nine artifacts.
 
 **Do this now**
 
@@ -88,17 +88,17 @@ This step uses two prompts. The first creates an empty knowledge base, so you ca
 - You can find the committed problem, the personas, and the prototype decisions without searching.
 - `kb/overview.md` works as an entry point to the project rather than reading as a list of file names.
 
-**What this step is for**
+**What this exercise is for**
 
-A knowledge base is your project's durable memory, written as files for an agent to read before it acts, so the context no longer lives in scattered chat history. Everything after this step reads from it. A thin knowledge base here means every later step inherits the gap.
+A knowledge base is your project's durable memory, written as files for an agent to read before it acts, so the context no longer lives in scattered chat history. Everything after this exercise reads from it. A thin knowledge base here means every later exercise inherits the gap.
 
-> **Checkpoint.** Before step 2, show your `kb/overview.md` to the facilitator or the person next to you. Can they tell what problem you committed to from that file alone?
+> **Checkpoint.** Before exercise 2, show your `kb/overview.md` to the facilitator or the person next to you. Can they tell what problem you committed to from that file alone?
 
 ---
 
-## 2. Choose your prototype direction
+## Exercise 2: Choose your prototype direction
 
-Session 3 gave you three directions and a UX review without making you pick. That is this step.
+Session 3 gave you three directions and a UX review without making you pick. That is this exercise.
 
 **Do this now**
 
@@ -114,13 +114,13 @@ Session 3 gave you three directions and a UX review without making you pick. Tha
 - It lists the UX-review findings you will carry into the build.
 - It says what the other two directions had that you are deliberately not building.
 
-**What this step is for**
+**What this exercise is for**
 
-The spec in step 3 is written against this file. Deciding here, in writing, is what stops the build from drifting between directions later. The choice is yours: the model can lay out trade-offs, and you make the call.
+The spec in exercise 3 is written against this file. Deciding here, in writing, is what stops the build from drifting between directions later. The choice is yours: the model can lay out trade-offs, and you make the call.
 
 ---
 
-## 3. Write the spec
+## Exercise 3: Write the spec
 
 **Do this now**
 
@@ -138,15 +138,15 @@ The spec in step 3 is written against this file. Deciding here, in writing, is w
 - Every scope item traces to something in your knowledge base.
 - The out-of-scope list is not empty.
 
-**What this step is for**
+**What this exercise is for**
 
 The out-of-scope list is what keeps the build from sprawling, and tracing every scope item to your evidence is what keeps the app anchored to your project rather than to generic bus-app conventions.
 
-> **Checkpoint.** Before step 4, have someone read your out-of-scope list. If it is empty or vague, the build will sprawl and you will run out of time.
+> **Checkpoint.** Before exercise 4, have someone read your out-of-scope list. If it is empty or vague, the build will sprawl and you will run out of time.
 
 ---
 
-## 4. Plan the build
+## Exercise 4: Plan the build
 
 **Do this now**
 
@@ -165,13 +165,13 @@ The out-of-scope list is what keeps the build from sprawling, and tracing every 
 - Increment 1 is small, a starting point with no feature in it yet.
 - `verification-plan.md` has a row per increment describing something you can check.
 
-**What this step is for**
+**What this exercise is for**
 
 This is the plan the build tool follows. Increments that are too big cannot be verified, and an increment you cannot verify is one you have to trust blindly.
 
 ---
 
-## 5. Scaffold the app
+## Exercise 5: Scaffold the app
 
 **The stack is already decided for you.** The app is plain **HTML**, **CSS**, and **JavaScript**. No framework, no build step, no packages, nothing to install: you open the file in your browser and it runs.
 
@@ -201,7 +201,7 @@ Reply: *pick the simplest option that keeps the app opening directly in a browse
 
 ---
 
-## 6. Build one increment, then verify it
+## Exercise 6: Build one increment, then verify it
 
 This is the core of the session. The anti-pattern to avoid is one-shotting: asking for a whole feature in a single prompt and hoping the result works.
 
@@ -222,19 +222,19 @@ This is the core of the session. The anti-pattern to avoid is one-shotting: aski
 - `build-plan.md` records which files the tool changed.
 - `verification-plan.md` shows that increment as verified, or records why it is not.
 
-**What this step is for**
+**What this exercise is for**
 
 Verifying each small step, and making the tool write back which files it changed, is what keeps the MVP working as it grows, and it tells you where the build went wrong when it stops working. The written record is what keeps both of you honest about what has been built against what is still only planned.
 
 **If the tool asks you a technical question**
 
-Same reply as step 5. A *product* question works differently (what a screen should say, which option a rider sees first) and that one is yours. Answer it from your spec.
+Same reply as exercise 5. A *product* question works differently (what a screen should say, which option a rider sees first) and that one is yours. Answer it from your spec.
 
 > **Checkpoint.** You have met the session's core goal. Show your verified increment and your `verification-plan.md` row to the facilitator before going further.
 
 ---
 
-## 7. Capture the setup in `AGENTS.md`
+## Exercise 7: Capture the setup in `AGENTS.md`
 
 The scaffold settled things nobody wrote down: the folder layout, where styles live, what the files are called.
 
@@ -261,7 +261,7 @@ It belongs beside the app it describes, at **`session-4-knowledge-base-and-mvp/a
 - It states the stack as fixed.
 - No open questions are left dangling for a later increment to guess at.
 
-**What this step is for**
+**What this exercise is for**
 
 Everything built after this follows this file, so a wrong line here propagates into every later increment.
 
@@ -279,7 +279,7 @@ If you have time after step 7, release the next increment the same way: one at a
 - at least one increment of a working MVP, built and verified
 - an `AGENTS.md` that captures the project's stack, structure, and conventions
 
-Work in the stub files in this folder: `chosen-direction.md`, `spec.md`, `build-plan.md`, and `verification-plan.md`. The knowledge base and the app have no stubs, since you create `kb/` in step 1 and `app/` in step 5, both in this folder.
+Work in the stub files in this folder: `chosen-direction.md`, `spec.md`, `build-plan.md`, and `verification-plan.md`. The knowledge base and the app have no stubs, since you create `kb/` in exercise 1 and `app/` in exercise 5, both in this folder.
 
 ## What you'll take away
 

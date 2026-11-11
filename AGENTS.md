@@ -12,6 +12,7 @@ This repository is the working space for planning **AI for Designers**, a course
 - **Your own work carries forward; premade data is the on-ramp.** Attendees build on their own artifacts from session to session, so the project they end up with is built from their own decisions. Anyone who missed a session uses a known-good premade version of the previous artifact to drop in for a single topic. Everyone ends a session with the same kind of artifact in the same format; the content varies per person.
 - **All three roles in the same room.** No separate role tracks. Each role sees the full end-to-end flow.
 - **Files are how work moves between tools.** Output is saved as portable files so later sessions can attach them to Figma Make and Copilot.
+- **Sessions are made of exercises, and exercises of steps.** A numbered section such as "2. Problem definition" is an exercise, and each numbered action under its **Do this now** is a step. The deck gives every step its own slide, so the room moves forward through an exercise without paging back for the next instruction or prompt.
 - **Four sessions:** (1) research synthesis, (2) problem definition and personas, (3) prototyping with Figma Make plus a persona UX review, (4) knowledge base and an MVP build.
 
 ## Repository layout
@@ -41,7 +42,7 @@ When working through the course as a participant, keep the content produced duri
 
 ## Current state
 
-- **The course has been run once, end to end, and revised after it.** Review notes from that run are kept outside this repository. The revisions they pointed to have landed and are recorded in the plan's *What changed from v1.3*: the guided Session 0 setup and readiness gate, the same action structure for every activity, a shared core with optional stretch work in every session, and the per-session changes.
+- **The course has been run once, end to end, and revised after it.** Review notes from that run are kept outside this repository. The revisions they pointed to have been made and are recorded in the plan's *What changed from v1.3*: the guided Session 0 setup and readiness gate, the same action structure for every exercise, a shared core with optional stretch work in every session, and the per-session changes.
 - **All four sessions are fleshed out into runnable detail**, each with its participant `README.md`, the exact prompts to adapt, `facilitator/` notes, and fill-in stubs at the session root. Session 1 has the shared source pack in `research/`; Sessions 2–4 have `premade/` on-ramp artifacts.
 - **The shared research pack exists for Session 1, and the premade artifacts exist for Sessions 2–4.** The research pack contains the planted tension; each later session's on-ramp carries forward the outputs from the session before it.
 - **Session 4's build loop has been dry-run end to end.** The output is the worked example in `session-4-knowledge-base-and-mvp/facilitator/reference-build/`: a populated knowledge base, the committed Decide direction, a spec, a nine-increment build plan, a verification plan, and the app through increment 2.
@@ -52,7 +53,7 @@ When working through the course as a participant, keep the content produced duri
 
 The revised course is now running with participants.
 
-Two suggestions from the review notes were left out on purpose. Session 1 shortens its one-shot warnings instead of having participants try the shortcut before the controlled workflow. Session 2 puts its quality checks in each step's "done" list as self-checks, without pair checkpoints or extra reflection time, so its timeboxes stay as they are.
+Two suggestions from the review notes were left out on purpose. Session 1 shortens its one-shot warnings instead of having participants try the shortcut before the controlled workflow. Session 2 puts its quality checks in each exercise's "done" list as self-checks, without pair checkpoints or extra reflection time, so its timeboxes stay as they are.
 
 Deferred on purpose: removing Session 4, requiring physical or full attendance, making the course beginner-only, moving all Session 1 work into VS Code, and adding more required artifacts.
 

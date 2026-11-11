@@ -12,9 +12,9 @@ Whether participants continue from their own Session 1 output or pick up the pre
 
 For returning participants the recap is a model for justifying their own work, and for drop-ins it's the context they need to use the premade versions.
 
-## Running the three activities
+## Running the three exercises
 
-The participant README gives starter prompts for all three activities (insights → problem definition → personas) and lets participants choose between one chat for the whole packet or a fresh chat per activity, with the evidence pasted in up front either way. Point out the trade-off, carry-over context against clean context, rather than prescribing one. The prompts here are meant to be adapted, unlike Session 1, so steer the room toward tuning them rather than copying them verbatim. The learning is in judging the output, meaning the evidence anchor, the hypothesis label, and the red-team response, rather than in the prompt mechanics.
+The participant README gives starter prompts for all three exercises (insights → problem definition → personas) and lets participants choose between one chat for the whole packet or a fresh chat per exercise, with the evidence pasted in up front either way. Point out the trade-off, carry-over context against clean context, rather than prescribing one. The prompts here are meant to be adapted, unlike Session 1, so steer the room toward tuning them rather than copying them verbatim. The learning is in judging the output, meaning the evidence anchor, the hypothesis label, and the red-team response, rather than in the prompt mechanics.
 
 Rough timeboxes for a live run:
 

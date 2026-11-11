@@ -17,13 +17,13 @@ Each session starts from the files the previous one produced. Session 2 works fr
 
 ## Taking the course
 
-The on-screen deck is published at **https://ai-for-designers.netlify.app**. Start with the Introduction and Session 0 on its home page. Session 0 is a guided setup run at the start of Session 1, and it takes you through these steps one check at a time:
+The on-screen deck is published at **https://ai-for-designers.netlify.app**. Start with the Introduction and Session 0 on its home page. Session 0 is a guided setup run at the start of Session 1, and it takes you through these checks one exercise at a time:
 
 1. Select **Download course files (.zip)** on the deck's home page and extract the ZIP.
 2. In VS Code, choose **File → Open Folder...** and open the whole `ai-for-designers-main` folder. Later sessions read the files you made in earlier ones, so open the course folder rather than a single session folder.
 3. Check that you can edit, save and preview a Markdown file, and that Microsoft 365 Copilot answers in your browser.
 
-For each session, open the `README.md` in that session's folder. It has the steps, the prompts to paste, and what counts as done. You save your work in the files at the top of the session folder, which start out as templates with headings and nothing else. Those files stay on your machine.
+For each session, open the `README.md` in that session's folder. It splits the session into numbered exercises, and each exercise into steps, with the prompts to paste and what counts as done. You save your work in the files at the top of the session folder, which start out as templates with headings and nothing else. Those files stay on your machine.
 
 ### If you miss a session
 
@@ -45,7 +45,7 @@ Sessions 3 and 4 depend on GitHub Copilot. If you work on a customer project, fi
 
 | Item | What it contains |
 |---|---|
-| `README.md` | The instructions for participants: the steps, the prompts and what counts as done |
+| `README.md` | The instructions for participants: the exercises and their steps, the prompts and what counts as done |
 | Files at the top of the folder | Templates where you save your work, such as `interview-summaries.md` in Session 1 |
 | `research/` | Session 1 only. The three interview transcripts and the questionnaire results that everyone works from. Read and copy from them, and leave them unchanged. |
 | `premade/` | Sessions 2 to 4. Finished versions of the previous session's files, for anyone who missed it |
@@ -72,7 +72,7 @@ The decks are plain HTML, CSS and JavaScript with no build step, so opening `pre
 
 The download button on the deck's home page fetches GitHub's ZIP of the `main` branch, so a push to `main` changes both the published deck and the files participants download.
 
-- Each session `README.md` and its deck in `presentation/content/` follow the same steps, so a change to a step in one needs the same change in the other.
+- Each session `README.md` and its deck in `presentation/content/` follow the same exercises and steps, so a change to a step in one needs the same change in the other. The deck gives every step its own slide.
 - When the course design changes, save the plan under a new version number, move the previous version to `archive/`, and update the file name where `AGENTS.md` and this README refer to it.
 - Keep participant work out of commits. The template files must stay empty in the repository, and the `kb/` and `app/` folders that Session 4 creates must not be added. If you work through a session yourself, leave those changes unstaged.
 - Follow the writing rules in `AGENTS.md`. They apply to the READMEs, the facilitator notes and the slides, with two exceptions: prompt bodies are worded for the tool they are pasted into, and the interview transcripts and questionnaire results stay exactly as they are.

@@ -25,7 +25,7 @@ So the app advocate is one of three, a vocal minority, while two of three echo t
 
 Maja's transcript is vivid and full of features, so a careless synthesis over-weights it and concludes "build the full personal app." A **directed** prompt ("…focusing on what they wish existed") amplifies this: it pulls Maja's wishlist to the front, and can file Sofie's single reliability-flavoured wish (cancellation alerts) under "app / notifications," inflating the app signal further. A **generic** prompt tends to come back blander and more balanced. The questionnaire is the corrective, since the broad signal says most people want the basics done right and want to be able to trust the information.
 
-The cross-reference step, where the interview summaries meet the questionnaire summary, is where this should surface. Expected shape:
+The triangulation exercise, where the interview summaries meet the questionnaire summary, is where this should surface. Expected shape:
 - **Agree:** real-time accuracy and trust matter to almost everyone (Geir, Sofie, and the questionnaire majority).
 - **Conflict:** the interviews can read as "people want a rich personal app" if Maja dominates, while the questionnaire says appetite for that is a minority taste.
 - **Gaps:** unfamiliar-city journeys (Sofie), accessibility for less digital riders (Sofie's grandmother), crowding at peak (Maja), and service disruptions and diversions (Geir), each touched once and not measured in the questionnaire.

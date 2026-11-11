@@ -12,19 +12,19 @@ Continue from your own brief packet from Session 2: `problem-definition.md`, `pe
 
 **Core, for everyone:** three prototype directions in a Figma file grouped by direction, `prototype-directions.md` and `app-flow.md` filled in, and `ux-review.md` with the persona review, the prioritized findings, and your triage. You do not need to polish all three directions. That is what Session 4 builds its knowledge base from.
 
-**Stretch, if you get there:** one refinement pass on a single direction to address its "act on now" findings, then a review of the revised version. The steps are under **Stretch: refine one direction** after step 5.
+**Stretch, if you get there:** one refinement pass on a single direction to address its "act on now" findings, then a review of the revised version. The steps are under **Stretch: refine one direction** after exercise 5.
 
 You are not behind if you finish the core and stop. The core is what this session asks for.
 
 ## What you'll do
 
-Work in order. Each step feeds the next, so check the output before moving on.
+Work in order. Each exercise feeds the next, so check the output before moving on.
 
 ---
 
 ## Before you start: connect the Figma MCP
 
-The persona review in step 4 runs in Copilot, and Copilot needs to read your Figma file to do it. The Figma MCP is the connection between the two: a small server that runs inside the Figma desktop app and lets Copilot see your designs. The facilitator walks the room through the setup at the start of the session.
+The persona review in exercise 4 runs in Copilot, and Copilot needs to read your Figma file to do it. The Figma MCP is the connection between the two: a small server that runs inside the Figma desktop app and lets Copilot see your designs. The facilitator walks the room through the setup at the start of the session.
 
 Figma has two different Figma MCP servers: one that allows read and write (generate designs), and one read-only, that lets the AI see and understand the design you send it. We'll use the read-only version, also known as the **local** one, because it runs on your own machine as a localhost server.
 
@@ -77,9 +77,9 @@ Or add it by hand, creating `.vscode/mcp.json` with:
 - The tools list in Copilot's Agent mode shows the Figma tools.
 - Copilot can describe a frame you selected in the Figma desktop app.
 
-**What this step is for**
+**What this exercise is for**
 
-Without this connection, Copilot cannot see your screens in step 4, and the review has nothing to walk through. The server runs on your own machine, so everyone sets up their own.
+Without this connection, Copilot cannot see your screens in exercise 4, and the review has nothing to walk through. The server runs on your own machine, so everyone sets up their own.
 
 **If the tool asks a technical question**
 
@@ -87,7 +87,7 @@ If VS Code asks whether to trust or start the `figma` server, or asks for permis
 
 ---
 
-## 1. Generate 3 directions in Figma Make
+## Exercise 1: Generate 3 directions in Figma Make
 
 Attaching your problem definition, insights, and personas as files is what brings the prototypes back grounded in your own research.
 
@@ -113,13 +113,13 @@ Attaching your problem definition, insights, and personas as files is what bring
 - Each direction has its key screens as a clickable flow.
 - `prototype-directions.md` has all three entries filled in, each with its Figma link.
 
-**What this step is for**
+**What this exercise is for**
 
-The prototypes get better the more you steer, so treat the first result as a starting point. `prototype-directions.md` is attached to the UX review in step 4, where it gives the persona reviewer the *intent* behind each direction (what it's trying to do) alongside `app-flow.md`'s screen-by-screen path. That is why it has to be filled in before you move on.
+The prototypes get better the more you steer, so treat the first result as a starting point. `prototype-directions.md` is attached to the UX review in exercise 4, where it gives the persona reviewer the *intent* behind each direction (what it's trying to do) alongside `app-flow.md`'s screen-by-screen path. That is why it has to be filled in before you move on.
 
 ---
 
-## 2. Bring the designs into a Figma file
+## Exercise 2: Bring the designs into a Figma file
 
 Depending on how Figma Make built the prototypes, you may get extra scaffolding: landing pages, wrappers, duplicated states.
 
@@ -133,13 +133,13 @@ Depending on how Figma Make built the prototypes, you may get extra scaffolding:
 - Every frame in the file is one of the app's screens.
 - No wrappers or landing pages are left.
 
-**What this step is for**
+**What this exercise is for**
 
-The reviewer in step 4 reads this file. Any scaffolding left in it becomes noise in the review.
+The reviewer in exercise 4 reads this file. Any scaffolding left in it becomes noise in the review.
 
 ---
 
-## 3. Number the screens and group by direction
+## Exercise 3: Number the screens and group by direction
 
 **Do this now**
 
@@ -159,13 +159,13 @@ The reviewer in step 4 reads this file. Any scaffolding left in it becomes noise
 - The screens in each group are numbered in flow order.
 - `app-flow.md` has one flow per direction, with the same names and numbers as the Figma file.
 
-**What this step is for**
+**What this exercise is for**
 
-This is what makes the file readable to the UX review: the reviewer can follow one direction's flow at a time and refer to screens by number. The review in step 4 is run *against* the written flows in `app-flow.md`, so that file has to be filled in before you move on.
+This is what makes the file readable to the UX review: the reviewer can follow one direction's flow at a time and refer to screens by number. The review in exercise 4 is run *against* the written flows in `app-flow.md`, so that file has to be filled in before you move on.
 
 ---
 
-## 4. Run the persona UX review
+## Exercise 4: Run the persona UX review
 
 Before you run the review, know what kind of result it gives you. This is early design critique and hypothesis generation: the model reviews your directions in character as your personas. That surfaces problems you would not have spotted on your own, and pulls the prototype closer to the committed problem. Its findings are not user evidence and do not replace usability testing with users, so treat each one as a hypothesis.
 
@@ -193,7 +193,7 @@ Before you run the review, know what kind of result it gives you. This is early 
 - The findings refer to screens by number.
 - The **Prioritized findings** table is filled in, highest impact first.
 
-**What this step is for**
+**What this exercise is for**
 
 The personas shaped the prototypes, so holding the prototypes to those same personas is what closes the loop.
 
@@ -203,7 +203,7 @@ Copilot may ask for permission before it runs a Figma tool or edits `ux-review.m
 
 ---
 
-## 5. Triage
+## Exercise 5: Triage
 
 Decide which findings are worth acting on, and which you're parking.
 
@@ -222,7 +222,7 @@ Decide which findings are worth acting on, and which you're parking.
 - The **Triage** section of `ux-review.md` is written.
 - **My decisions** has a line in your own words for each act-on-now finding and for every finding you moved.
 
-**What this step is for**
+**What this exercise is for**
 
 The model proposes a grouping, and you decide which findings go ahead. Writing a line for each act-on-now finding is how you make that decision yourself. Agreeing with the model is fine, as long as you can say why the finding goes ahead of the ones you parked. In Session 4, Copilot reads this section from the knowledge base when it helps you choose which direction to build. A finding that only one persona cares about, and that would hurt another if fixed, is the reliability-against-personalization tension resurfacing.
 
@@ -238,7 +238,7 @@ The model proposes a grouping, and you decide which findings go ahead. Writing a
 > Here are the "act on now" findings from my UX review for the [direction name] direction: [paste the findings]. Revise that direction to address them, and keep everything else the same. Do not change the other two directions. List which screens you changed and which finding each change addresses.
 
 3. Copy the revised screens into your Figma file as a new section named after the direction with **v2** added, numbered in flow order. Leave the original section where it is.
-4. In Copilot Agent mode, continue in the review chat if you still have it, or attach the same files as in step 4. Then review the revised direction:
+4. In Copilot Agent mode, continue in the review chat if you still have it, or attach the same files as in exercise 4. Then review the revised direction:
 
 > [Link to the v2 section] Review this revised version of the [direction name] direction in character as each of my personas, the same way as the earlier review. For each "act on now" finding, say whether the revision fixed it, made it worse, or left it unchanged, and note any new problem it introduced. Write the result into the stretch section of `ux-review.md`.
 
@@ -250,13 +250,13 @@ The model proposes a grouping, and you decide which findings go ahead. Writing a
 - The stretch section of `ux-review.md` says, for each "act on now" finding, whether the revision fixed it.
 - `prototype-directions.md`, `app-flow.md`, and the rest of `ux-review.md` are unchanged.
 
-**What this step is for**
+**What this exercise is for**
 
 One refinement pass completes the loop the review started: you act on the findings and check whether the change helped the personas. It also shows whether a fix for one persona created a problem for another, which is the reliability-against-personalization tension again.
 
 **If the tool asks a technical question**
 
-Same as step 4.
+Same as exercise 4.
 
 ---
 

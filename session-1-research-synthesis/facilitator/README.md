@@ -21,9 +21,9 @@ The directed prompt uses the same lens for both sources, "what frustrates people
 
 - With a fixed-question dataset, the directed lens mainly controls **which questions get foregrounded and how the coded open-text themes get framed**, and it does not change what the numbers say.
 - "What people most want improved" leans the summary on **Q3** (accurate real-time arrival info ranks first) and can quietly underplay **Q5** (appetite for a feature-rich personal app). So the questionnaire's directed summary tilts toward reliability while the interviews' directed summary tilts toward the app.
-- That opposite tilt is exactly what should surface at the cross-reference step. The point to make: neither prompt named reliability or an app, and the framing still shaped which signal each summary carried.
+- That opposite tilt is exactly what should surface in the triangulation, exercise 4. The point to make: neither prompt named reliability or an app, and the framing still shaped which signal each summary carried.
 
-## The triangulation step (where the session lands)
+## The triangulation exercise
 
 This is the payoff. Things to watch for and steer:
 
@@ -45,7 +45,7 @@ Two things need sharpening in the room: what participants should do, and what th
 
 ## Pre-setup
 
-Before the research exercise starts, run the guided Session 0 setup in lockstep. Every participant downloads and extracts the course ZIP, opens the whole `ai-for-designers-main` folder in VS Code, finds the Session 1 source and output files, completes the edit-save-preview check, and confirms that Microsoft 365 Copilot answers in the browser. Do not start Session 1 until each participant passes the five-item readiness gate or has a partner who can keep the files organized with them.
+Before exercise 1 starts, run the guided Session 0 setup in lockstep. Every participant downloads and extracts the course ZIP, opens the whole `ai-for-designers-main` folder in VS Code, finds the Session 1 source and output files, completes the edit-save-preview check, and confirms that Microsoft 365 Copilot answers in the browser. Do not start Session 1 until each participant passes the five-item readiness gate or has a partner who can keep the files organized with them.
 
 ## Design notes
 

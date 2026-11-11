@@ -12,7 +12,7 @@ If you were here for Session 1, continue from your own interview summaries and t
 
 **Core, for everyone:** `key-insights.md` with three to five evidence-anchored insights, `problem-definition.md` with one committed problem and your reply to the model's case against it, and `personas.md` with two or three personas labelled as hypotheses. That is the brief packet Session 3 attaches to Figma Make.
 
-**Stretch, if you get there:** test the packet once more, either by finding the insight with the weakest evidence or by arguing for the runner-up problem. The steps are under **Stretch: test the packet** after step 3.
+**Stretch, if you get there:** test the packet once more, either by finding the insight with the weakest evidence or by arguing for the runner-up problem. The steps are under **Stretch: test the packet** after exercise 3.
 
 You are not behind if you finish the core and stop. The core is what this session asks for.
 
@@ -23,15 +23,15 @@ Two things carry over from Session 1:
 - **Paste your worked evidence in up front.** Your main input is the triangulation note, since it already did the cross-source combining, so paste in the content of `triangulation.md` first. Then paste in the summary you chose for each source, the one named under **Inputs I chose**, labelled with its source, so you can pull specific quotes. Leave out the other summary and the differences analysis, so the model draws only on the version you carried forward. Combining these in one chat is fine, and it's the same move you made when you triangulated in Session 1, because everything here has been worked and vetted. The "one source, one chat" rule was about keeping raw sources apart, and you're now past that stage.
 - **Keep observation separate from inference** throughout: what was said or measured on one side, what you conclude from it on the other.
 
-**One chat for the whole packet, or a fresh chat per activity.** Both are valid, so choose deliberately.
+**One chat for the whole packet, or a fresh chat per exercise.** Both are valid, so choose deliberately.
 
-*One chat for all three activities:*
+*One chat for all three exercises:*
 
 - **Pro:** the thread carries. Your insights feed the problem definition, the committed problem feeds the personas, and the model remembers all of it without you re-stating it.
 - **Pro:** fewer restarts and less re-pasting.
-- **Con:** the chat fills up. By the personas step it holds the ranking debate and the model's argument against your committed problem, and the model reads all of it when it writes the personas. The personas can end up shaped by that argument more than by the research.
+- **Con:** the chat fills up. By the personas exercise it holds the ranking debate and the model's argument against your committed problem, and the model reads all of it when it writes the personas. The personas can end up shaped by that argument more than by the research.
 
-*A fresh chat per activity (insights, then problem, then personas):*
+*A fresh chat per exercise (insights, then problem, then personas):*
 
 - **Pro:** clean context each time, so each task reads the evidence fresh, in the spirit of Session 1's "one source, one chat."
 - **Pro:** it forces you to re-state what you're carrying forward (your insights, your committed problem), which sharpens it.
@@ -43,17 +43,17 @@ Whichever you pick, work the way Session 1 showed: **the more steps you work, as
 
 Work in this order. The prompts below are starting points, so adapt them, and keep each step separate so you can check the output before moving on.
 
-Each step builds on the one before it. If you kept everything in one chat, that earlier output is already in context. If you're using a fresh chat per step, paste the evidence in again first, then what you're carrying forward, your insights into step 2 and your committed problem into step 3, before you run the prompts.
+Each exercise builds on the one before it. If you kept everything in one chat, that earlier output is already in context. If you're using a fresh chat per exercise, paste the evidence in again first, then what you're carrying forward, your insights into exercise 2 and your committed problem into exercise 3, before you run the prompts.
 
 ---
 
-## 1. Key insights
+## Exercise 1: Key insights
 
-Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on. This is a separate step from the triangulation: the triangulation maps where sources agree, conflict, and leave gaps, and the insights are the committed takeaways you pull out of it.
+Distill the triangulation note and your chosen summaries into the handful of insights the rest of the course builds on. This is a separate exercise from the triangulation: the triangulation maps where sources agree, conflict, and leave gaps, and the insights are the committed takeaways you pull out of it.
 
 **Do this now**
 
-1. Paste in the content of `triangulation.md`, then the chosen summary for each source, labelled with its source (`Maja`, `Geir`, `Sofie`, `Questionnaire`), as you did in Session 1 step 4. **Inputs I chose** in `triangulation.md` names which one.
+1. Paste in the content of `triangulation.md`, then the chosen summary for each source, labelled with its source (`Maja`, `Geir`, `Sofie`, `Questionnaire`), as you did in Session 1, exercise 4. **Inputs I chose** in `triangulation.md` names which one.
 2. Run this prompt:
 
 > From the triangulation note and summaries, give me the 3–5 key insights that should drive the design. For each, cite the specific evidence and label it as observed (said or measured) or inferred.
@@ -67,13 +67,13 @@ Distill the triangulation note and your chosen summaries into the handful of ins
 - You have checked the evidence behind each insight, and it says what the insight claims.
 - Every insight is labelled observed or inferred.
 
-**What this step is for**
+**What this exercise is for**
 
 These are the portable, evidence-anchored takeaways everything downstream references. They scope the problem definition here, and in Sessions 3–4 they feed the prototype generation and the knowledge base. Get them right once and you stop re-deriving the signal from raw evidence every time.
 
 ---
 
-## 2. Problem definition
+## Exercise 2: Problem definition
 
 Working from the evidence and the insights you just wrote, generate framings, rank them by evidence, commit to one, then have the model argue against it.
 
@@ -102,15 +102,15 @@ Working from the evidence and the insights you just wrote, generate framings, ra
 - The red-team argument is saved, followed by your own reply to it.
 - You can say in a sentence or two why this problem won over the others.
 
-**What this step is for**
+**What this exercise is for**
 
 You can't design for everything, so this forces one focus. Ranking by evidence makes that choice defensible rather than a hunch, and the red-team stress-tests the choice before you sink a whole prototype into it. The single committed problem is what scopes Session 3.
 
-Your reply to the red-team is the judgement this step is training. Pasting the critique and moving on lets the model have the last word, which defeats the purpose.
+Your reply to the red-team is the judgement this exercise is training. Pasting the critique and moving on lets the model have the last word, which defeats the purpose.
 
 ---
 
-## 3. Personas
+## Exercise 3: Personas
 
 Create **2–3 personas**, each grounded in specific evidence, each labelled as a hypothesis, each noting what you still don't know.
 
@@ -131,7 +131,7 @@ Create **2–3 personas**, each grounded in specific evidence, each labelled as 
 - None of them is one interviewee with a new name.
 - Every trait in each persona traces to the evidence under **Grounded in**, or is listed under **What we still don't know**.
 
-**What this step is for**
+**What this exercise is for**
 
 Session 3 runs a UX review *in character as these personas*, so they're a working input the next session depends on. That is why each one has to be tied to evidence and treated as a hypothesis: you'll be making design calls in their voice.
 
@@ -166,7 +166,7 @@ For either test, write what you would change in the stretch section and leave th
 - The stretch section of `key-insights.md` or `problem-definition.md` has the model's answer and your decision, in your own words.
 - The rest of your packet is unchanged.
 
-**What this step is for**
+**What this exercise is for**
 
 The insight with the weakest evidence is where the packet is most likely to be wrong, and naming it now tells you what to watch for in the Session 3 review. Arguing hard for the runner-up checks whether your commitment rests on the evidence or on the order the ranking happened to produce.
 

@@ -18,7 +18,7 @@ To preview a Markdown file, make the file's tab active and press **Cmd+Shift+V**
 
 **Core, for everyone:** both summaries and the differences analysis for all four sources, your chosen inputs recorded in `triangulation.md`, and the triangulation with the central tension named in your words. That is what Session 2 starts from.
 
-**Stretch, if you get there:** run a third framing on one interview and note what it surfaced that the other two missed. The steps are under **Stretch: try a third framing** after step 4.
+**Stretch, if you get there:** run a third framing on one interview and note what it surfaced that the other two missed. The steps are under **Stretch: try a third framing** after exercise 4.
 
 You are not behind if you finish the core and stop. The core is what this session asks for.
 
@@ -45,13 +45,13 @@ Follow two rules for the whole session:
 
 > **The shortcut to avoid.** Pasting all three transcripts and the questionnaire into one chat and asking for everything in one go gives you something polished that you cannot check, because you never worked the data yourself. The steps below are slower on purpose, so you can judge each result before you build on it.
 
-The work comes in four steps, and each one feeds the next. Finish a step before you start the next one.
+The work comes in four exercises, and each one feeds the next. Finish an exercise before you start the next one.
 
 ---
 
-## 1. Summarize the interviews
+## Exercise 1: Summarize the interviews
 
-Do this step once for each of the three interviews in `research/`: Maja, Geir, and Sofie.
+Do this exercise once for each of the three interviews in `research/`: Maja, Geir, and Sofie.
 
 **Do this now**
 
@@ -70,7 +70,7 @@ Do this step once for each of the three interviews in `research/`: Maja, Geir, a
 
 5. Start a new chat before the next interview.
 
-Do not choose between the two summaries yet. That choice comes in step 3, once all four sources are summarized.
+Do not choose between the two summaries yet. That choice comes in exercise 3, once all four sources are summarized.
 
 **You are done when**
 
@@ -78,13 +78,13 @@ Do not choose between the two summaries yet. That choice comes in step 3, once a
 - `interview-summaries.md` has a generic summary, a directed summary, and a differences analysis under all three interviews.
 - Quotes are attributed to the person who said them.
 
-**What this step is for**
+**What this exercise is for**
 
 The comparison prompt works because both summaries are already in the chat, so the model can set them side by side. A new chat for each interview keeps the sources apart, which is the first rule above.
 
 ---
 
-## 2. Summarize the questionnaire
+## Exercise 2: Summarize the questionnaire
 
 **Do this now**
 
@@ -108,13 +108,13 @@ As with the interviews, do not choose between the summaries yet.
 - The questionnaire was summarized in its own chat, with no interview in it.
 - `questionnaire-summary.md` has the generic summary, the directed summary, and the differences analysis.
 
-**What this step is for**
+**What this exercise is for**
 
 The questionnaire is the broad signal that the interviews get measured against, so summarize it as carefully as the interviews. Treating it as a footnote is how a planted tension stays hidden.
 
 ---
 
-## 3. Choose your inputs
+## Exercise 3: Choose your inputs
 
 **Do this now**
 
@@ -127,13 +127,13 @@ The questionnaire is the broad signal that the interviews get measured against, 
 - All four entries under **Inputs I chose** name generic or directed.
 - You have the four chosen summaries ready to paste into one chat.
 
-**What this step is for**
+**What this exercise is for**
 
 You are committing to a framing here, and its bias travels forward into the triangulation and every later session. The record in `triangulation.md` shows which framing entered the triangulation.
 
 ---
 
-## 4. Triangulate
+## Exercise 4: Triangulate
 
 This is the one place you deliberately combine sources in a single chat. It works because you're feeding in your *worked, vetted* summaries rather than four piles of raw transcript.
 
@@ -167,7 +167,7 @@ In one or two sentences, name the two competing directions in the evidence and c
 - **Agree**, **Conflict**, and **Gaps** in `triangulation.md` each cite their sources.
 - **The central tension** is written in your words, and names the sources behind each side.
 
-**What this step is for**
+**What this exercise is for**
 
 This is where the planted tension should surface. The model's pass is a draft, so you check it, and you name the central tension yourself.
 
@@ -199,7 +199,7 @@ Leave your chosen inputs and your triangulation as they are, since Session 2 rea
 - `interview-summaries.md` has a stretch section with the third summary, the comparison, and your note.
 - Your note names something the third framing surfaced that the other two missed, or says that it surfaced nothing new.
 
-**What this step is for**
+**What this exercise is for**
 
 A third framing on the same transcript shows how much of a summary comes from the wording of the prompt. That is the session's main lesson, tested on a framing you chose yourself.
 

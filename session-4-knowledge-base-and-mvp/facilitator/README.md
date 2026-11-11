@@ -6,15 +6,15 @@ Front-facing material for participants is in the session root `README.md`. This 
 
 ## Core, stretch, and the three checkpoints
 
-The required outcome is **one** increment built and verified. Everything past that is stretch. Say this out loud at the start, because a nine-increment plan otherwise reads like nine required deliverables. A participant who finishes step 7 and stops has met the goal.
+The required outcome is **one** increment built and verified. Everything past that is stretch. Say this out loud at the start, because a nine-increment plan otherwise reads like nine required deliverables. A participant who finishes exercise 7 and stops has met the goal.
 
 The participant `README.md` places three checkpoints. Run them, since they are the human quality check that stops someone carrying a thin artifact forward.
 
 | After | What you are checking |
 |---|---|
-| Step 1, the KB | Can you tell what problem they committed to from `kb/overview.md` alone? |
-| Step 3, the spec | Does the out-of-scope list name specific things? An empty one means the build will sprawl. |
-| Step 6, the first verified increment | Did they look at the app themselves, rather than trusting the agent's summary? |
+| Exercise 1, the KB | Can you tell what problem they committed to from `kb/overview.md` alone? |
+| Exercise 3, the spec | Does the out-of-scope list name specific things? An empty one means the build will sprawl. |
+| Exercise 6, the first verified increment | Did they look at the app themselves, rather than trusting the agent's summary? |
 
 ## Where the app's `AGENTS.md` goes
 
@@ -22,11 +22,11 @@ It goes at `session-4-knowledge-base-and-mvp/app/AGENTS.md`, next to the app's o
 
 ## Recap (open the session with this)
 
-Walk through the reference build's chosen direction, Decide (`reference-build/chosen-direction.md`): why it won over the other two, and which UX-review findings it carries into the build. Returning participants use this as a model for their own choice in step 2. Drop-ins need it to work from the premade directions, flows, and review, which leave the choice to them.
+Walk through the reference build's chosen direction, Decide (`reference-build/chosen-direction.md`): why it won over the other two, and which UX-review findings it carries into the build. Returning participants use this as a model for their own choice in exercise 2. Drop-ins need it to work from the premade directions, flows, and review, which leave the choice to them.
 
 ## Pre-setup
 
-- **The KB setup prompt is in step 1 of the participant `README.md`.** It creates the empty `kb/` inside `session-4-knowledge-base-and-mvp/`, with its folder READMEs, `kb/AGENTS.md`, and templates, and it must leave every file outside `kb/` alone. Run it yourself before the session and check both: that `kb/` lands inside the Session 4 folder, and that the root `AGENTS.md` is unchanged. It was adapted from `../../kb-prompt.md`, which is a general-purpose version for installing a knowledge base in any repository. Do not hand that file to participants: it creates `kb/` at the repository root and adds a section to the root `AGENTS.md`, which in this repository is the course's own instructions.
+- **The KB setup prompt is in exercise 1 of the participant `README.md`.** It creates the empty `kb/` inside `session-4-knowledge-base-and-mvp/`, with its folder READMEs, `kb/AGENTS.md`, and templates, and it must leave every file outside `kb/` alone. Run it yourself before the session and check both: that `kb/` is created inside the Session 4 folder, and that the root `AGENTS.md` is unchanged. It was adapted from `../../kb-prompt.md`, which is a general-purpose version for installing a knowledge base in any repository. Do not hand that file to participants: it creates `kb/` at the repository root and adds a section to the root `AGENTS.md`, which in this repository is the course's own instructions.
 - A working Copilot build environment in VS Code for every participant, through their customer project where possible, or with the BSD application approved as plan B.
 - **The app's stack is pinned:** plain HTML, CSS, and JavaScript, with no build step, no package manager, and nothing to install. Participants paste a ready-made scaffold prompt rather than being asked to choose a framework, because a build tool that stops to ask an unanswerable technical question stalls the work. The prompts also tell the agent to pick the simplest working option and report it instead of asking.
 - Nothing to install means nothing to fail on a participant's machine, and no version drift between people in the room. If a participant's agent proposes a framework, a bundler, or a package install, that is off-spec, so point them back at the scaffold prompt.

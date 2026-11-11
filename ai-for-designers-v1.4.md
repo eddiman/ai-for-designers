@@ -17,13 +17,13 @@ supersedes: ai-for-designers-v1.3.md (kept in archive/ for history)
 v1.3 captured Session 1 as it ran and left Sessions 2–4 to be fleshed out. All four sessions are now runnable, and the course has been run once end to end. v1.4 records what changed after that run, mostly in the tool orientation, the instructions, and the facilitation. The four sessions and the end-to-end workflow are the same.
 
 - **A guided setup before Session 1.** Session 0 runs at the start of Session 1. Participants download and extract the course files, open the whole folder in VS Code, find the Session 1 files, edit, save, and preview a Markdown file, and check that Microsoft 365 Copilot answers in the browser. A five-item readiness gate decides when Session 1 starts, and anyone who fails a check gets help or a partner.
-- **An on-screen deck.** `presentation/` holds what the room looks at: an introduction, Session 0, and one deck per session, published to Netlify. The session READMEs stay the detailed instructions, and each deck follows its README step for step.
-- **The same action structure for every activity.** Each step says **Do this now**, **You are done when**, and **What this step is for**, so the immediate action stays separate from its explanation. Where a tool can ask a technical question (the Figma MCP setup and the review in Session 3, and the build in Session 4), the step also says **If the tool asks a technical question**.
+- **An on-screen deck.** `presentation/` holds what the room looks at: an introduction, Session 0, and one deck per session, published to Netlify. The session READMEs stay the detailed instructions, and each deck follows its README exercise by exercise, with one slide for each step.
+- **The same action structure for every exercise.** Each exercise says **Do this now**, **You are done when**, and **What this exercise is for**, so the immediate action stays separate from its explanation. Where a tool can ask a technical question (the Figma MCP setup and the review in Session 3, and the build in Session 4), the exercise also says **If the tool asks a technical question**.
 - **A shared core and optional stretch work in every session.** The core is what the next session needs. Stretch results go in an optional section at the bottom of an existing file, so everyone carries forward files with the same shape.
 - **Session 1:** the research pack moved from `premade/` to `research/`, since it is the shared starting data rather than an on-ramp. The triangulation prompt asks for the same four headings as `triangulation.md` (Agree, Conflict, Gaps, The central tension) and tells the model not to invent a conflict. The one-shot warning is made once, in the session rules, instead of four times.
 - **Session 2:** the "done" checks cover quality as well as completion. Participants check that the evidence says what each insight claims, that they can say why their problem won, and that every persona trait traces to evidence or is listed as unknown.
-- **Session 3:** participants set up the Figma MCP on their own machines in facilitator lockstep, since the local server cannot be pre-wired. The setup is a structured step at the start of the session, and the session states what the persona review is before running it: early design critique and hypothesis generation, whose findings are not user evidence.
-- **Session 4:** the session states its purpose before the steps, shows a progress map, defines its vocabulary, and has checkpoints after the knowledge base, the spec, and the first verified increment. The app is pinned to plain HTML, CSS, and JavaScript with nothing to install, and each participant builds individually while the facilitator pauses the room after each phase. A setup prompt in the README creates the empty knowledge base, replacing the planned scaffolding skill. A full worked run is in `facilitator/reference-build/`.
+- **Session 3:** participants set up the Figma MCP on their own machines in facilitator lockstep, since the local server cannot be pre-wired. The setup is a structured exercise at the start of the session, and the session states what the persona review is before running it: early design critique and hypothesis generation, whose findings are not user evidence.
+- **Session 4:** the session states its purpose before the exercises, shows a progress map, defines its vocabulary, and has checkpoints after the knowledge base, the spec, and the first verified increment. The app is pinned to plain HTML, CSS, and JavaScript with nothing to install, and each participant builds individually while the facilitator pauses the room after each phase. A setup prompt in the README creates the empty knowledge base, replacing the planned scaffolding skill. A full worked run is in `facilitator/reference-build/`.
 - **No open decisions.** The scaffolding skill became a setup prompt, Markdown is the file format throughout, and the other items on v1.3's list no longer need deciding.
 
 ## What changed from v1.2
@@ -61,11 +61,11 @@ Read this before the session plans, since it explains the moving parts.
 
 **Each session folder separates its material by purpose.** The session root holds the front-facing course material and a stub file for every artifact the participant produces. A `facilitator/` subfolder holds the run of show, steering notes, and any design secrets (such as where the planted tension lives) that participants must not see verbatim. Session 1 uses `research/` for the shared source pack. Sessions 2–4 use `premade/` for the catch-up pack handed to drop-ins.
 
-**Every activity has the same shape.** Each step says what to do now, how you know you are done, and what the step is for, so the immediate action stays separate from its explanation. Where a tool can ask a technical question, the step also says how to answer it.
+**Every exercise has the same shape.** A session is made of numbered exercises, and each exercise is made of steps: the numbered actions under **Do this now**. Each exercise says what to do now, how you know you are done, and what the exercise is for, so the immediate action stays separate from its explanation. Where a tool can ask a technical question, the exercise also says how to answer it.
 
 **A shared core, with stretch work.** Every session has a core that everyone finishes and that the next session depends on, plus an optional stretch task for anyone who gets there. Finishing the core is enough. Stretch work goes into an optional section of an existing file, so the files everyone carries forward have the same shape.
 
-**The deck and the READMEs.** The on-screen deck in `presentation/` is what the room looks at. The session `README.md` files are the detailed instructions, and the two follow the same steps.
+**The deck and the READMEs.** The on-screen deck in `presentation/` is what the room looks at. The session `README.md` files are the detailed instructions. The two follow the same exercises and steps, and the deck gives every step its own slide, so nobody has to page back to find the next instruction or prompt.
 
 ## The scenario and the base problem
 
@@ -172,7 +172,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 - Generate candidate problem framings and How-Might-We statements from the evidence. Ask AI to rank them by how much evidence supports each one. Commit to a single problem and have AI red-team it ("argue why this is the wrong problem to solve first").
 - Create **2–3 personas**, each grounded in specific evidence from the research, each labelled as a hypothesis, each noting what we still do not know about them.
 - Save everything as files: `problem-definition.md`, `personas.md`, `key-insights.md`, formatted so they can be attached in Figma Make and Copilot.
-- Each step's "done" checks include a quality check: the cited evidence says what each insight claims, the participant can say why their problem won over the others, and every persona trait traces to evidence or is listed under what we still do not know.
+- Each exercise's "done" checks include a quality check: the cited evidence says what each insight claims, the participant can say why their problem won over the others, and every persona trait traces to evidence or is listed under what we still do not know.
 
 **Core and stretch:** the core is the three files. The stretch is one more test of the packet: find the insight resting on the weakest evidence, or have the model argue for the runner-up problem. Either way the participant records the decision in a stretch section and leaves the rest of the packet as it is.
 
@@ -193,7 +193,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 **Starting point + recap:** continue from your own brief packet from Session 2, or pick up the premade `problem-definition.md`, `personas.md`, and `key-insights.md` if you missed it. The recap explains which problem the reference packet committed to, how the reliability-against-personalization tension was resolved, and which personas it reviews against.
 
 **The work:**
-- **Connect the Figma MCP first,** as a structured step at the start of the session, so the review later can read the Figma file.
+- **Connect the Figma MCP first,** as a structured exercise at the start of the session, so the review later can read the Figma file.
 - **Figma Make:** attach the problem definition, insights, and personas as files, and generate **3 prototype directions** for the bus experience. Attaching the files is what brings the prototypes back grounded in the research.
 - **Round-trip to Copilot and Figma:** bring the designs into a Figma file, describe the flow of the app, and run a UX review in character as the Session 2 personas. Collect prioritized findings. Before the review runs, the session says what it is: early design critique and hypothesis generation, whose findings are not user evidence and do not replace usability testing.
 - **Triage:** decide which findings are worth acting on.
@@ -204,7 +204,7 @@ Run this for each of the three interviews and for the questionnaire. The questio
 
 **Concrete output:** 3 prototype directions in Figma, a written description of the app flow, and a persona-based UX review with prioritized findings.
 
-**Takeaway:** when a generative tool is given your own problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both steps depend on the Session 1–2 files being clean and portable.
+**Takeaway:** when a generative tool is given your own problem and personas as structured files, the prototypes it returns are grounded in the research, and you can pressure-test them straight away by reviewing against the same personas. Both halves, the generation and the review, depend on the Session 1–2 files being clean and portable.
 
 **Tools:** Figma Make; Figma MCP (local server, set up by each participant in lockstep); GitHub Copilot / agent. Requires AI access, through the customer project where possible, or an approved BSD application for GitHub Copilot as plan B.
 
