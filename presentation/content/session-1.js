@@ -71,16 +71,35 @@ window.DECKS["session-1"] = [
   },
 
   {
-    kind: "step",
+    kind: "exercise",
     n: 1,
     title: "Summarize the interviews",
-    lead: "For each of the three interviews, open a **fresh chat**, paste in that one transcript, and go in this order.",
-    doItems: [
-      { label: "Generic prompt", text: "`Summarize this interview.`", copyText: "Summarize this interview." },
-      { label: "Directed prompt", text: "In the same chat: `Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed.`", copyText: "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed." },
-      { label: "Comparison prompt", text: "`Analyze the summaries and highlight the differences between them.`", copyText: "Analyze the summaries and highlight the differences between them." },
-      "Save both summaries and the comparison under this interview in `interview-summaries.md`. Choose one summary per source later, after processing all four sources.",
-      "Start a new chat before the next interview."
+    lead: "Do this exercise once for each of the three interviews in `research/`: Maja, Geir, and Sofie.",
+    steps: [
+      {
+        title: "Open a fresh chat",
+        text: "Open a **fresh chat** and paste in one transcript."
+      },
+      {
+        title: "Run the generic prompt",
+        text: "Save the answer under that interview's **Generic summary** heading in `interview-summaries.md`.",
+        prompt: "Summarize this interview."
+      },
+      {
+        title: "Run the directed prompt",
+        text: "Run it in the *same* chat, and save the answer under **Directed summary**.",
+        prompt: "Summarize this interview, focusing on how they catch the bus today, what frustrates them, and what they wish existed."
+      },
+      {
+        title: "Compare the two summaries",
+        text: "Run it in the same chat as the two summaries, and save the answer under **Differences analysis**.",
+        prompt: "Analyze the summaries and highlight the differences between them."
+      },
+      {
+        title: "Start a new chat for the next interview",
+        text: "Start a new chat before the next interview, and go back to step 1.",
+        note: "Do not choose between the two summaries yet. That choice comes in exercise 3, once all four sources are summarized."
+      }
     ],
     doneItems: [
       "Three interviews, three separate chats",
@@ -91,15 +110,31 @@ window.DECKS["session-1"] = [
   },
 
   {
-    kind: "step",
+    kind: "exercise",
     n: 2,
     title: "Summarize the questionnaire",
-    lead: "The same three-step flow, in its own single chat.",
-    doItems: [
-      { label: "Generic prompt", text: "`Summarize this questionnaire.`", copyText: "Summarize this questionnaire." },
-      { label: "Directed prompt", text: "In the same chat: `Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved.`", copyText: "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved." },
-      { label: "Comparison prompt", text: "`Analyze the summaries and highlight the differences between them.`", copyText: "Analyze the summaries and highlight the differences between them." },
-      "Save both summaries and the comparison in `questionnaire-summary.md`. Choose one summary per source later, after processing all four sources."
+    lead: "The same three prompts, in a chat of its own.",
+    steps: [
+      {
+        title: "Open a fresh chat",
+        text: "Open a **fresh chat** and paste in `research/questionnaire-results.md`."
+      },
+      {
+        title: "Run the generic prompt",
+        text: "Save the answer under **Generic summary** in `questionnaire-summary.md`.",
+        prompt: "Summarize this questionnaire."
+      },
+      {
+        title: "Run the directed prompt",
+        text: "Run it in the *same* chat, and save the answer under **Directed summary**.",
+        prompt: "Summarize this questionnaire, focusing on what frustrates people about catching the bus today and what they most want improved."
+      },
+      {
+        title: "Compare the two summaries",
+        text: "Run it in the same chat as the two summaries, and save the answer under **Differences analysis**.",
+        prompt: "Analyze the summaries and highlight the differences between them.",
+        note: "As with the interviews, do not choose between the summaries yet."
+      }
     ],
     doneItems: [
       "`questionnaire-summary.md` holds both summaries and the analysis",
@@ -109,33 +144,66 @@ window.DECKS["session-1"] = [
   },
 
   {
-    kind: "step",
+    kind: "exercise",
     n: 3,
     title: "Choose your inputs",
     lead: "For each of the four sources, pick the *one* summary you carry forward.",
-    doItems: [
-      "Open `triangulation.md` and find **Inputs I chose**.",
-      "Ask of each summary: is this usable, and what did each style miss or add?",
-      "Pick generic or directed for each source; they do not all have to match.",
-      "For each source, record whether you chose the generic or directed summary."
+    steps: [
+      {
+        title: "Read both summaries for each source",
+        text: "For each of the four sources, read the two summaries and the differences analysis. Ask whether each summary is usable, and what each style missed or added."
+      },
+      {
+        title: "Open Inputs I chose",
+        text: "Open `triangulation.md` and find **Inputs I chose**."
+      },
+      {
+        title: "Pick one summary per source",
+        text: "For Maja, Geir, Sofie, and the questionnaire, pick the *one* summary, generic or directed, that you will carry into triangulation. Write the style next to **Chosen summary**. The four do not have to match."
+      }
     ],
     doneItems: [
-      "Four chosen summaries, one per source",
-      "All four entries under **Inputs I chose** name the selected style"
+      "All four entries under **Inputs I chose** name generic or directed",
+      "You have the four chosen summaries ready to paste into one chat"
     ],
     why: "You are committing to a framing here, and its bias travels forward into every later session."
   },
 
   {
-    kind: "step",
+    kind: "exercise",
     n: 4,
     title: "Triangulate",
     lead: "The one place you deliberately combine sources in a single chat, because what you feed in has been worked and vetted rather than pasted in raw.",
-    doItems: [
-      "Put your four chosen summaries into one fresh chat.",
-      "Label each summary with its source, for example: `Maja`. The model needs the source labels so it can cite the evidence.",
-      "Run the triangulation prompt.",
-      "Check the answer against what *you* noticed."
+    steps: [
+      {
+        title: "Paste in your four chosen summaries",
+        text: "Open a **fresh chat** and paste in your four chosen summaries."
+      },
+      {
+        title: "Label each summary",
+        text: "Label each summary with its source, such as `Maja` or `Questionnaire`, so the model can cite the evidence. You don't need to say whether a summary is generic or directed."
+      },
+      {
+        title: "Run the triangulation prompt",
+        text: "Its four headings match `triangulation.md`, so you can check the answer and move it across section by section.",
+        prompt: "Compare the four labelled summaries. Use exactly these headings:\n\n## Agree\nList patterns supported by at least two sources. Cite the sources for each point.\n\n## Conflict\nFind contradictions or different directions among interviews and between interviews and the questionnaire. Cite the sources. If none are supported, say so; do not invent one.\n\n## Gaps\nList issues raised by only one source or not measured elsewhere. Cite the source.\n\n## The central tension\nIn one or two sentences, name the two competing directions in the evidence and cite the sources supporting each. Treat this as a draft I will check and revise."
+      },
+      {
+        title: "Check the answer",
+        text: "Check the answer against what *you* noticed.",
+        items: [
+          "Did it surface a conflict, or flatten everything into agreement?",
+          "Did it lean on the most vivid interview?"
+        ]
+      },
+      {
+        title: "Fill in triangulation.md",
+        text: "Fill in **Agree**, **Conflict**, and **Gaps** in `triangulation.md`, keeping the source citations. Then write **The central tension** in your own words.",
+        callout: {
+          title: "You name the central tension",
+          text: "Letting the model have the last word defeats the exercise."
+        }
+      }
     ],
     doneItems: [
       "Agreements, conflicts and gaps written down with sources cited",
@@ -143,25 +211,6 @@ window.DECKS["session-1"] = [
       "`triangulation.md` filled in"
     ],
     why: "This is where the planted tension should surface. The model's pass is a draft you interrogate."
-  },
-
-  {
-    kind: "prompt",
-    eyebrow: "Step 4",
-    title: "The triangulation prompt",
-    text:
-      "Compare the four labelled summaries. Use exactly these headings:\n\n## Agree\nList patterns supported by at least two sources. Cite the sources for each point.\n\n## Conflict\nFind contradictions or different directions among interviews and between interviews and the questionnaire. Cite the sources. If none are supported, say so; do not invent one.\n\n## Gaps\nList issues raised by only one source or not measured elsewhere. Cite the source.\n\n## The central tension\nIn one or two sentences, name the two competing directions in the evidence and cite the sources supporting each. Treat this as a draft I will check and revise."
-  },
-
-  {
-    kind: "list",
-    eyebrow: "Then push back",
-    title: "Do not take that answer at face value",
-    items: [
-      "Did it surface an actual conflict, or flatten everything into agreement?",
-      "Did it lean on the most vivid interview?",
-      "**You** name the central tension. Letting the model have the last word defeats the step."
-    ]
   },
 
   {

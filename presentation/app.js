@@ -98,13 +98,50 @@
     return null;
   }
 
+  // A deck lists each exercise once, with its steps. Expanding it gives the
+  // slides the room sees: an opener, one slide per step, and a done check.
+  var EXPANDED = {};
+
   function slides(id) {
-    return DECKS[id] || [];
+    if (!EXPANDED[id]) EXPANDED[id] = expand(DECKS[id] || []);
+    return EXPANDED[id];
+  }
+
+  function expand(deck) {
+    var total = deck.filter(function (s) {
+      return s.kind === "exercise" && s.n != null;
+    }).length;
+    var out = [];
+    deck.forEach(function (s) {
+      if (s.kind !== "exercise") {
+        out.push(s);
+        return;
+      }
+      out.push({ kind: "exercise-intro", exercise: s, total: total, callout: s.callout, note: s.note });
+      (s.steps || []).forEach(function (step, i) {
+        out.push({ kind: "exercise-step", exercise: s, step: step, index: i, callout: step.callout, note: step.note });
+      });
+      out.push({ kind: "exercise-done", exercise: s, callout: s.checkpoint });
+    });
+    return out;
+  }
+
+  function exerciseName(ex) {
+    return ex.n != null ? "Exercise " + ex.n : ex.label || "Exercise";
   }
 
   // Short label for the overview: strip inline markers, then truncate.
   function shortLabel(s) {
-    var t = s.title || s.text || s.kind;
+    var t;
+    if (s.kind === "exercise-intro") {
+      t = exerciseName(s.exercise) + ": " + s.exercise.title;
+    } else if (s.kind === "exercise-step") {
+      t = (s.exercise.n != null ? s.exercise.n + "." + (s.index + 1) + " " : "Step " + (s.index + 1) + ": ") + s.step.title;
+    } else if (s.kind === "exercise-done") {
+      t = exerciseName(s.exercise) + ": you are done when";
+    } else {
+      t = s.title || s.text || s.kind;
+    }
     t = String(t).replace(/[`*]/g, "");
     return t.length > 58 ? t.slice(0, 57).replace(/\s+\S*$/, "") + "…" : t;
   }
@@ -136,6 +173,44 @@
     return node;
   }
 
+  function renderMap(steps, active) {
+    var list = h("ol", "map");
+    steps.forEach(function (step, i) {
+      var on = active != null && active === i;
+      list.appendChild(h("li", "map__step" + (on ? " map__step--active" : ""), fmt(step)));
+      if (i < steps.length - 1) list.appendChild(h("li", "map__arrow", "→"));
+    });
+    return list;
+  }
+
+  // Long prompts get smaller type so more of them is visible without scrolling.
+  function renderPrompt(text) {
+    var long = text.length > 520 || text.split("\n").length > 9;
+    var wrap = h("div", "prompt-wrap");
+    wrap.appendChild(h("pre", "prompt" + (long ? " prompt--long" : ""), escapeHtml(text)));
+    wrap.appendChild(copyButton(text));
+    return wrap;
+  }
+
+  function renderParagraphs(text, cls, root) {
+    [].concat(text).forEach(function (p) {
+      root.appendChild(h("p", cls, fmt(p)));
+    });
+  }
+
+  // "Step 2 of 6" with one mark per step, so the room can see how far in it is.
+  function renderStepProgress(count, index) {
+    var node = h("div", "step-progress");
+    node.appendChild(h("span", "step-progress__label", "Step " + (index + 1) + " of " + count));
+    var marks = h("ol", "step-progress__marks");
+    marks.setAttribute("aria-hidden", "true");
+    for (var i = 0; i < count; i++) {
+      marks.appendChild(h("li", i < index ? "is-done" : i === index ? "is-current" : null));
+    }
+    node.appendChild(marks);
+    return node;
+  }
+
   var renderers = {
     cover: function (s, root) {
       root.classList.add("slide--cover");
@@ -161,13 +236,7 @@
       if (s.eyebrow) root.appendChild(h("p", "eyebrow", fmt(s.eyebrow)));
       if (s.title) root.appendChild(h("h2", null, fmt(s.title)));
       if (s.lead) root.appendChild(h("p", "lead", fmt(s.lead)));
-      var list = h("ol", "map");
-      s.steps.forEach(function (step, i) {
-        var active = s.active != null && s.active === i;
-        list.appendChild(h("li", "map__step" + (active ? " map__step--active" : ""), fmt(step)));
-        if (i < s.steps.length - 1) list.appendChild(h("li", "map__arrow", "→"));
-      });
-      root.appendChild(list);
+      root.appendChild(renderMap(s.steps, s.active));
     },
 
     list: function (s, root) {
@@ -177,40 +246,65 @@
       if (s.items) root.appendChild(renderItems(s.items, { ordered: s.ordered, check: s.check }));
     },
 
-    step: function (s, root) {
-      var head = h("div", "step-head");
-      if (s.n != null) head.appendChild(h("span", "step-number", String(s.n)));
-      head.appendChild(h("h2", null, fmt(s.title)));
-      root.appendChild(head);
-      if (s.lead) root.appendChild(h("p", "lead", fmt(s.lead)));
+    // Opener: what the exercise is, its steps in order, and what it is for.
+    "exercise-intro": function (s, root) {
+      var ex = s.exercise;
+      root.classList.add("slide--exercise");
+      var eyebrow = ex.n != null && s.total > 1 ? exerciseName(ex) + " of " + s.total : exerciseName(ex);
+      root.appendChild(h("p", "eyebrow", fmt(eyebrow)));
+      root.appendChild(h("h2", null, fmt(ex.title)));
+      if (ex.lead) root.appendChild(h("p", "lead", fmt(ex.lead)));
+      if (ex.map) root.appendChild(renderMap(ex.map.steps, ex.map.active));
 
       var grid = h("div", "step-grid");
       var left = h("div", "step-block");
-      left.appendChild(h("h3", "step-block__title", "Do this now"));
-      left.appendChild(renderItems(s.doItems || [], { ordered: true }));
+      left.appendChild(h("h3", "step-block__title", "Steps"));
+      left.appendChild(
+        renderItems(
+          (ex.steps || []).map(function (st) {
+            return st.title;
+          }),
+          { ordered: true }
+        )
+      );
       grid.appendChild(left);
-
-      var right = h("div", "step-block");
-      right.appendChild(h("h3", "step-block__title", "You are done when"));
-      right.appendChild(renderItems(s.doneItems || [], { check: true }));
-      if (s.why) {
-        var why = h("div", "step-block step-block--why");
-        why.appendChild(h("h3", "step-block__title", "What this step is for"));
-        why.appendChild(h("p", null, fmt(s.why)));
-        right.appendChild(why);
+      if (ex.why) {
+        var right = h("div", "step-block");
+        right.appendChild(h("h3", "step-block__title", "What this exercise is for"));
+        right.appendChild(h("p", null, fmt(ex.why)));
+        grid.appendChild(right);
       }
-      grid.appendChild(right);
       root.appendChild(grid);
     },
 
-    prompt: function (s, root) {
-      root.classList.add("slide--prompt");
-      if (s.eyebrow) root.appendChild(h("p", "eyebrow", fmt(s.eyebrow)));
-      if (s.title) root.appendChild(h("h3", null, fmt(s.title)));
-      var prompt = h("div", "prompt-wrap");
-      prompt.appendChild(h("pre", "prompt", escapeHtml(s.text)));
-      prompt.appendChild(copyButton(s.text));
-      root.appendChild(prompt);
+    // One step: the instruction, and the prompt to run if the step has one.
+    "exercise-step": function (s, root) {
+      var ex = s.exercise;
+      var st = s.step;
+      root.classList.add("slide--exercise-step");
+      var top = h("div", "step-top");
+      top.appendChild(h("p", "eyebrow", fmt(exerciseName(ex) + ": " + ex.title)));
+      top.appendChild(renderStepProgress((ex.steps || []).length, s.index));
+      root.appendChild(top);
+
+      var head = h("div", "step-head");
+      head.appendChild(h("span", "step-number", String(s.index + 1)));
+      head.appendChild(h("h2", null, fmt(st.title)));
+      root.appendChild(head);
+
+      if (st.text) renderParagraphs(st.text, "step-text", root);
+      if (st.items) root.appendChild(renderItems(st.items, { ordered: st.ordered }));
+      if (st.prompt) root.appendChild(renderPrompt(st.prompt));
+      if (st.after) renderParagraphs(st.after, "step-text", root);
+    },
+
+    // The check at the end of an exercise, before the room moves on.
+    "exercise-done": function (s, root) {
+      var ex = s.exercise;
+      root.classList.add("slide--exercise-done");
+      root.appendChild(h("p", "eyebrow", fmt(exerciseName(ex) + ": " + ex.title)));
+      root.appendChild(h("h2", null, "You are done when"));
+      root.appendChild(renderItems(ex.doneItems || [], { check: true }));
     },
 
     table: function (s, root) {

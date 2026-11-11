@@ -88,23 +88,43 @@ window.DECKS["session-4"] = [
   },
 
   {
-    kind: "map",
-    eyebrow: "Step 1",
-    title: "Build the knowledge base",
-    steps: S4_MAP,
-    active: 0
-  },
-
-  {
-    kind: "step",
+    kind: "exercise",
     n: 1,
     title: "Build the project knowledge base",
-    doItems: [
-      "Open Copilot Chat in **Agent** mode.",
-      "Run the setup prompt, and check that it only created files inside `kb/`.",
-      "Gather your nine artifacts, premade where you need them.",
-      "Paste the population prompt and attach them.",
-      "Open `kb/overview.md` and read it."
+    lead: "Two prompts: the first creates an empty knowledge base, so you can see its structure, and the second fills it from your nine artifacts.",
+    map: { steps: S4_MAP, active: 0 },
+    steps: [
+      {
+        title: "Open Copilot in Agent mode",
+        text: "Open Copilot Chat in VS Code and switch to **Agent** mode."
+      },
+      {
+        title: "Create the empty knowledge base",
+        text: "Paste this prompt as-is.",
+        prompt: "Create an empty knowledge base at session-4-knowledge-base-and-mvp/kb/, as plain markdown files. Do not add any project\ncontent yet; the next prompt fills it.\n\nInside session-4-knowledge-base-and-mvp/kb/, create:\n\n- AGENTS.md: instructions for agents: what the knowledge base is for, the read order (AGENTS.md, README.md, overview.md,\n  then the relevant folders), that raw notes go in sessions/ and curated knowledge in the other folders, that views/\n  holds derived summaries only, and to make the smallest correct update.\n- README.md: the same explanation, for a person reading the folder.\n- overview.md: empty headings for Goal, Committed problem, Current design context, Current state, and Source material.\n- decisions/, design/, stories/, learnings/, sessions/, and views/, each with a README.md saying in a sentence or two\n  what belongs there.\n- templates/ with decision.md, design-note.md, learning.md, session-note.md, and story.md, each with the headings that\n  kind of note needs.\n\nDo not create or edit anything outside session-4-knowledge-base-and-mvp/kb/, including the AGENTS.md at the repository\nroot. If something is unclear, leave a placeholder and tell me. When you are done, list the files you created."
+      },
+      {
+        title: "Check what it created",
+        text: "Read the list of files Copilot says it created. Every one should be inside `session-4-knowledge-base-and-mvp/kb/`. If it changed anything else, such as the `AGENTS.md` at the repository root, tell the facilitator before you continue."
+      },
+      {
+        title: "Gather your nine artifacts",
+        text: "Take the premade version for any session you did not finish.",
+        items: [
+          { label: "Session 1", text: "`interview-summaries.md`, `questionnaire-summary.md`, `triangulation.md`" },
+          { label: "Session 2", text: "`problem-definition.md`, `personas.md`, `key-insights.md`" },
+          { label: "Session 3", text: "`prototype-directions.md`, `app-flow.md`, `ux-review.md`" }
+        ]
+      },
+      {
+        title: "Populate the knowledge base",
+        text: "Paste this prompt and attach the nine files.",
+        prompt: "Attached are the artifacts from a research-and-design project on helping people catch the bus: interview-summaries.md, questionnaire-summary.md, triangulation.md, problem-definition.md, personas.md, key-insights.md, prototype-directions.md, app-flow.md, and ux-review.md.\n\nPopulate session-4-knowledge-base-and-mvp/kb/ from them. Put the raw artifacts in kb/sessions/, then distil them into the curated folders: the committed problem into kb/decisions/; personas and the prototype directions and flows into kb/design/ (personas can also go in kb/stories/ if they fit better there); the research insights and UX-review findings into kb/learnings/; and a short project summary into kb/overview.md that names the committed problem and points to the rest.\n\nKeep it factual and invent nothing that is not in the artifacts."
+      },
+      {
+        title: "Read kb/overview.md",
+        text: "Open `kb/overview.md` and read it. It should work as an entry point to the project, rather than reading as a list of file names."
+      }
     ],
     doneItems: [
       "`kb/` exists, artifacts sorted into folders",
@@ -112,111 +132,87 @@ window.DECKS["session-4"] = [
       "You can find the problem, personas and prototype decisions without searching",
       "`overview.md` works as an entry point"
     ],
-    why: "A knowledge base is your project's durable memory, written as files for an agent to read before it acts. Everything after this step reads from it."
-  },
-
-  {
-    kind: "prompt",
-    eyebrow: "Step 1, first prompt",
-    title: "Create the empty knowledge base",
-    text:
-      "Create an empty knowledge base at session-4-knowledge-base-and-mvp/kb/, as plain markdown files. Do not add any project\ncontent yet; the next prompt fills it.\n\nInside session-4-knowledge-base-and-mvp/kb/, create:\n\n- AGENTS.md: instructions for agents: what the knowledge base is for, the read order (AGENTS.md, README.md, overview.md,\n  then the relevant folders), that raw notes go in sessions/ and curated knowledge in the other folders, that views/\n  holds derived summaries only, and to make the smallest correct update.\n- README.md: the same explanation, for a person reading the folder.\n- overview.md: empty headings for Goal, Committed problem, Current design context, Current state, and Source material.\n- decisions/, design/, stories/, learnings/, sessions/, and views/, each with a README.md saying in a sentence or two\n  what belongs there.\n- templates/ with decision.md, design-note.md, learning.md, session-note.md, and story.md, each with the headings that\n  kind of note needs.\n\nDo not create or edit anything outside session-4-knowledge-base-and-mvp/kb/, including the AGENTS.md at the repository\nroot. If something is unclear, leave a placeholder and tell me. When you are done, list the files you created."
-  },
-
-  {
-    kind: "prompt",
-    eyebrow: "Step 1, second prompt",
-    title: "Populate the knowledge base",
-    text:
-      "Attached are the artifacts from a research-and-design project on helping\npeople catch the bus: [the nine files].\n\nPopulate session-4-knowledge-base-and-mvp/kb/ from them. Put the raw\nartifacts in kb/sessions/, then distil them into the curated folders: the\ncommitted problem into kb/decisions/; personas and the prototype directions\nand flows into kb/design/; the research insights and UX-review findings into\nkb/learnings/; and a short project summary into kb/overview.md that names the\ncommitted problem and points to the rest.\n\nKeep it factual and invent nothing that is not in the artifacts."
-  },
-
-  {
-    kind: "statement",
-    eyebrow: "Checkpoint",
-    text: "Show your `kb/overview.md` to me or the person next to you. Can they tell what problem you committed to from that file alone?",
-    callout: {
-      title: "Why we stop here",
-      text: "A thin knowledge base means every later step inherits the gap. This is the cheapest place to catch it."
+    why: "A knowledge base is your project's durable memory, written as files for an agent to read before it acts. Everything after this exercise reads from it.",
+    checkpoint: {
+      title: "Checkpoint: show your `kb/overview.md`",
+      text: "Show it to me or the person next to you. Can they tell what problem you committed to from that file alone? A thin knowledge base means every later exercise inherits the gap, and this is the cheapest place to catch it."
     }
   },
 
   {
-    kind: "map",
-    eyebrow: "Step 2",
-    title: "Choose a direction",
-    steps: S4_MAP,
-    active: 1
-  },
-
-  {
-    kind: "step",
+    kind: "exercise",
     n: 2,
     title: "Choose your prototype direction",
-    lead: "Session 3 gave you three directions and a UX review without making you pick. That is this step.",
-    doItems: [
-      "Decide which one direction you are taking into the build.",
-      "Ask for the trade-offs first if you want them; the call is still yours.",
-      "Write it into `chosen-direction.md`: the direction, why it won, which review findings you will fix, what you are leaving behind."
+    lead: "Session 3 gave you three directions and a UX review without making you pick. That is this exercise.",
+    map: { steps: S4_MAP, active: 1 },
+    steps: [
+      {
+        title: "Decide which direction to build",
+        text: "Use your own judgement, or ask for the trade-offs first with this prompt. The call is still yours.",
+        prompt: "Read the knowledge base in session-4-knowledge-base-and-mvp/kb/, especially the three prototype directions, the app flows, and the UX review with its triage. Help me choose one direction to build as an MVP. Weigh each against the committed problem and how each persona reviewed it, and be explicit about the trade-offs. Recommend one, but give me the reasoning for all three so the call is mine."
+      },
+      {
+        title: "Write it into chosen-direction.md",
+        text: "Write down the direction, why it won, which UX-review findings you are committing to fix in the build, and what you are leaving behind."
+      }
     ],
     doneItems: [
       "One direction named, with your reasons",
       "The UX-review findings you will carry in are listed",
       "What the other two had that you are not building is written down"
     ],
-    why: "The spec in step 3 is written against this file. Deciding here, in writing, is what stops the build drifting between directions later."
+    why: "The spec in exercise 3 is written against this file. Deciding here, in writing, is what stops the build drifting between directions later."
   },
 
   {
-    kind: "map",
-    eyebrow: "Step 3",
-    title: "Write the spec",
-    steps: S4_MAP,
-    active: 2
-  },
-
-  {
-    kind: "step",
+    kind: "exercise",
     n: 3,
     title: "Write the spec",
-    doItems: [
-      "Draft `spec.md` with the agent, reading the KB and your chosen direction.",
-      "Tell it: **do not write, scaffold or run any code**, since this is a planning step.",
-      "Push back where it reached for a generic feature. Ask where the line comes from in the KB.",
-      "If it has no answer, cut the line."
+    lead: "The agent drafts `spec.md` from your knowledge base and your chosen direction, and writes no code.",
+    map: { steps: S4_MAP, active: 2 },
+    steps: [
+      {
+        title: "Draft the spec",
+        text: "Run this prompt. It tells the agent not to write, scaffold or run any code, since this is a planning exercise.",
+        prompt: "Read the knowledge base in session-4-knowledge-base-and-mvp/kb/, especially the committed problem, the personas, and my chosen direction in chosen-direction.md, and help me write the MVP spec into spec.md: what it does, for whom, what is in scope, what is explicitly out of scope for now, and which knowledge-base content each part rests on. Every part of the spec must trace back to something in the knowledge base rather than to a generic bus-app feature.\n\nDo not write, scaffold, or run any application code; only produce the spec. If something in the knowledge base is missing or contradictory, flag it and ask me rather than filling the gap yourself."
+      },
+      {
+        title: "Push back on generic features",
+        text: "Read the draft and push back where it reached for a generic feature. Ask where a line comes from in the knowledge base. If it has no answer, cut the line."
+      }
     ],
     doneItems: [
       "What you are building, for whom, in scope, out of scope",
       "Every scope item traces to something in your KB",
       "The out-of-scope list is not empty"
     ],
-    why: "The out-of-scope list is what keeps the build from sprawling, and tracing every scope item to your evidence is what keeps the app anchored to your project rather than to generic bus-app conventions."
+    why: "The out-of-scope list is what keeps the build from sprawling, and tracing every scope item to your evidence is what keeps the app anchored to your project rather than to generic bus-app conventions.",
+    checkpoint: {
+      title: "Checkpoint: your out-of-scope list",
+      text: "Have someone read it. If it is empty or vague, the build will sprawl and you will run out of time."
+    }
   },
 
   {
-    kind: "statement",
-    eyebrow: "Checkpoint",
-    text: "Have someone read your out-of-scope list. If it is empty or vague, the build will sprawl and you will run out of time."
-  },
-
-  {
-    kind: "map",
-    eyebrow: "Step 4",
-    title: "Plan the build",
-    steps: S4_MAP,
-    active: 3
-  },
-
-  {
-    kind: "step",
+    kind: "exercise",
     n: 4,
     title: "Plan the build",
-    lead: "Two files, written in the same pass.",
-    doItems: [
-      "`build-plan.md`: the increments, each small enough to build **and verify in one pass**.",
-      "`verification-plan.md`: a row per increment, how you will confirm it works.",
-      "Split anything you could not check in one sitting.",
-      "For each verification row, ask yourself what you would click or look at."
+    lead: "Two files, written in the same pass: `build-plan.md` and `verification-plan.md`.",
+    map: { steps: S4_MAP, active: 3 },
+    steps: [
+      {
+        title: "Draft both plans",
+        text: "Run this prompt. Each increment has to be small enough to build **and verify in one pass**.",
+        prompt: "Read spec.md and the knowledge base in session-4-knowledge-base-and-mvp/kb/. Break the MVP into small increments and write build-plan.md, with each increment small enough to build and verify in one pass, ordered so that what has to exist first comes first. No increment is a whole feature at once. Then, in the same pass, write verification-plan.md, going increment by increment through the build plan you just wrote, with exactly how I will confirm each one works before moving on.\n\nDo not write, scaffold, or run any application code; this is a planning step only. If an increment cannot be verified in a single pass, split it. If something in the spec is missing or contradictory, flag it and ask me rather than filling the gap yourself."
+      },
+      {
+        title: "Check the increments",
+        text: "Read the increments in `build-plan.md`. Split anything you could not check in one sitting."
+      },
+      {
+        title: "Check the verification plan",
+        text: "Read `verification-plan.md`. For each row, ask yourself what you would click or look at."
+      }
     ],
     doneItems: [
       "Nothing in the order depends on something later",
@@ -227,81 +223,71 @@ window.DECKS["session-4"] = [
   },
 
   {
-    kind: "map",
-    eyebrow: "Step 5",
+    kind: "exercise",
+    n: 5,
     title: "Scaffold the app",
-    steps: S4_MAP,
-    active: 4
+    lead: "The stack is already decided: plain **HTML**, **CSS** and **JavaScript**. No framework, no build step, no packages, nothing to install. You open the file in your browser and it runs.",
+    map: { steps: S4_MAP, active: 4 },
+    steps: [
+      {
+        title: "Scaffold the app",
+        text: "Paste this prompt as-is.",
+        prompt: "Scaffold the app for this MVP at session-4-knowledge-base-and-mvp/app/ as\nplain HTML, CSS, and JavaScript (an index.html, a styles.css, and a\nscript.js). No framework, no build step, no package manager, no dependencies:\nI must be able to open index.html directly in a browser and have it work.\n\nLeave it as a single near-empty starting page for now, and do not build any\npart of the MVP yet. When you are done, tell me how to open it and confirm\nthat it works.\n\nIf a technical choice is not covered above, pick the simplest option that\nkeeps the app opening directly in a browser and tell me what you picked. Do\nnot ask me to choose.",
+        callout: {
+          tone: "stop",
+          title: "If the tool asks you a technical question",
+          text: "Reply: “Pick the simplest option that keeps the app opening directly in a browser, and tell me what you picked.” You do not need an opinion about it, and this reply works any time it asks again."
+        }
+      },
+      {
+        title: "Open the starting page",
+        text: "Open `index.html` in your browser and confirm you see the starting page."
+      }
+    ],
+    doneItems: [
+      "`app/` holds `index.html`, `styles.css`, and `script.js`",
+      "Opening `index.html` shows a page",
+      "Nothing was installed and no package manager ran"
+    ],
+    why: "The stack is pinned so the build tool does not stop to ask which framework to use, and everyone in the room runs the same thing. It is enough for the MVP: a saved stop, a status and a recommendation need nothing more."
   },
 
   {
-    kind: "list",
-    eyebrow: "Step 5",
-    title: "The stack is already decided",
-    lead: "Plain **HTML**, **CSS** and **JavaScript**. No framework, no build step, no packages, nothing to install. You open the file in your browser and it runs.",
-    items: [
-      "The build tool will not stop to ask which framework to use.",
-      "Everyone in the room is running the same thing, so a question from the person next to you is a question you recognize.",
-      "It is enough for what the MVP does: a saved stop, a status and a recommendation need nothing more."
-    ]
-  },
-
-  {
-    kind: "prompt",
-    eyebrow: "Step 5: paste as-is",
-    title: "Scaffold the app",
-    text:
-      "Scaffold the app for this MVP at session-4-knowledge-base-and-mvp/app/ as\nplain HTML, CSS, and JavaScript (an index.html, a styles.css, and a\nscript.js). No framework, no build step, no package manager, no dependencies:\nI must be able to open index.html directly in a browser and have it work.\n\nLeave it as a single near-empty starting page for now, and do not build any\npart of the MVP yet. When you are done, tell me how to open it and confirm\nthat it works.\n\nIf a technical choice is not covered above, pick the simplest option that\nkeeps the app opening directly in a browser and tell me what you picked. Do\nnot ask me to choose."
-  },
-
-  {
-    kind: "statement",
-    eyebrow: "If the tool asks you a technical question",
-    text: "“Pick the simplest option that keeps the app opening directly in a browser, and tell me what you picked.”",
-    callout: {
-      tone: "stop",
-      title: "You do not need an opinion about it",
-      text: "A build tool that stops to ask a technical question you cannot answer stalls the work entirely. This reply gets you moving again, every time."
-    }
-  },
-
-  {
-    kind: "map",
-    eyebrow: "Step 6",
-    title: "Build one increment, then verify",
-    steps: S4_MAP,
-    active: 5
-  },
-
-  {
-    kind: "step",
+    kind: "exercise",
     n: 6,
     title: "Build one increment, then verify it",
     lead: "This is the core of the session. The anti-pattern is one-shotting: asking for a whole feature in one prompt and hoping the result works.",
-    doItems: [
-      "Release **only the first increment**, nothing beyond it.",
-      "Have it write back into `build-plan.md` which files it changed and what now works, then stop.",
-      "Open the app and run your verification check yourself.",
-      "Mark the row verified, or write down what failed and what you changed."
+    map: { steps: S4_MAP, active: 5 },
+    steps: [
+      {
+        title: "Release one increment",
+        text: "Run this prompt. It builds **only the first increment**, writes back into `build-plan.md` what it changed, and stops.",
+        prompt: "Read build-plan.md, verification-plan.md, and the knowledge base in session-4-knowledge-base-and-mvp/kb/. Build only the first increment from the build plan, nothing beyond it. When it is done, write back into build-plan.md exactly what you did: which files you added or changed, and what now works. Then stop, so I can verify it before we continue.\n\nIf a technical choice is not covered by the build plan or the app's AGENTS.md, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose.",
+        callout: {
+          title: "If the tool asks you a question",
+          text: "A technical question gets the same reply as in exercise 5. A *product* question, such as what a screen says or what a rider sees first, is yours to answer, from your spec."
+        }
+      },
+      {
+        title: "Look at the page, not the summary",
+        text: "Open the app and run the check from your verification plan for that increment.",
+        items: [
+          "The agent will tell you it works. Treat that as a claim you still have to check.",
+          "Open `index.html` and do the thing your verification plan says."
+        ]
+      },
+      {
+        title: "Mark the result",
+        text: "Mark the row verified in `verification-plan.md`. If it failed, write down what failed and what you went back and changed."
+      }
     ],
     doneItems: [
       "The increment works when **you** look at it",
       "`build-plan.md` records which files the tool changed",
       "`verification-plan.md` shows it verified, or says why not"
     ],
-    why: "Verifying each small step, and making the tool write back which files it changed, is what keeps the app working as it grows and tells you where it went wrong when it stops working."
-  },
-
-  {
-    kind: "list",
-    eyebrow: "Step 6",
-    title: "Look at the page, not the summary",
-    items: [
-      "The agent will tell you it works. Treat that as a claim you still have to check.",
-      "Open `index.html` and do the thing your verification plan says.",
-      "A *product* question (what a screen says, what a rider sees first) is yours to answer, from your spec."
-    ],
-    callout: {
+    why: "Verifying each small step, and making the tool write back which files it changed, is what keeps the app working as it grows and tells you where it went wrong when it stops working.",
+    checkpoint: {
       tone: "go",
       title: "Checkpoint: you have met the session's core goal",
       text: "Show your verified increment and your verification-plan row before going further."
@@ -309,15 +295,29 @@ window.DECKS["session-4"] = [
   },
 
   {
-    kind: "step",
+    kind: "exercise",
     n: 7,
     title: "Capture the setup in `AGENTS.md`",
-    lead: "The scaffold settled things nobody wrote down: the folder layout, where styles live, what the files are called.",
-    doItems: [
-      "Now that the first increment exists, have the agent draft `app/AGENTS.md`.",
-      "Have it state the stack as **fixed**: no framework, build step or dependency later.",
-      "Check it against reality: does it match what is in `app/`?",
-      "Answer or delete any open questions it left."
+    lead: "The scaffold settled things nobody wrote down: the folder layout, where styles live, what the files are called. `AGENTS.md` is the instructions file Copilot reads before it acts.",
+    steps: [
+      {
+        title: "Draft app/AGENTS.md",
+        text: "Now that the first increment exists, run this prompt.",
+        prompt: "Inspect the project you scaffolded and the first increment you built, then draft an AGENTS.md at session-4-knowledge-base-and-mvp/app/AGENTS.md. Do not modify the AGENTS.md at the repository root; that one describes the course repository.\n\nDocument what is actually here: the stack (plain HTML, CSS, and JavaScript, with no build step and no dependencies), the project structure and where things live, the conventions to follow, and exactly how to open and check the app. State the stack as fixed, so that later increments must not introduce a framework, a build step, a CSS library, or a dependency. Add a short rule to read the knowledge base in session-4-knowledge-base-and-mvp/kb/ before making substantial changes, and a rule to pick the simplest working option and report it rather than asking me technical questions.\n\nOnly describe what exists in the code. Where something is genuinely undecided, list it as an open question for me at the end.",
+        callout: {
+          tone: "stop",
+          title: "Leave the root `AGENTS.md` alone",
+          text: "It describes this course repository. Overwriting it replaces the course instructions with notes about a bus app, so the new file goes at `app/AGENTS.md`."
+        }
+      },
+      {
+        title: "Check it against the files",
+        text: "Read it and check it against what is in `app/`: does it say plain HTML, CSS, and JavaScript with no build step, and does it tell you how to open the app?"
+      },
+      {
+        title: "Close the open questions",
+        text: "Answer or delete any open questions it left at the end."
+      }
     ],
     doneItems: [
       "`app/AGENTS.md` matches the files in `app/`",
@@ -328,14 +328,28 @@ window.DECKS["session-4"] = [
   },
 
   {
-    kind: "list",
-    eyebrow: "Step 7",
-    title: "One file to leave alone",
-    lead: "`AGENTS.md` belongs beside the app it describes, at `app/AGENTS.md`. An agent reads the nearest one to whatever it is working on.",
-    items: [
-      "**Do not** write it at the repository root.",
-      "The root `AGENTS.md` describes this course repository.",
-      "Overwriting it replaces the course instructions with notes about a bus app."
+    kind: "exercise",
+    label: "Stretch",
+    title: "Build the next increment",
+    lead: "If you have time after exercise 7, build the rest of your plan one increment at a time, with the same loop as exercise 6. Stop whenever you like. Each verified increment is a finished piece of work.",
+    steps: [
+      {
+        title: "Release the next increment",
+        text: "Replace `[number]` with the number of the next increment in `build-plan.md`, then run this prompt.",
+        prompt: "Read build-plan.md, verification-plan.md, app/AGENTS.md, and the knowledge base in session-4-knowledge-base-and-mvp/kb/. Build only increment [number] from the build plan, nothing beyond it. The increments before it are built and verified, so change their code only where this increment needs it, and tell me what you changed. When it is done, write back into build-plan.md exactly what you did: which files you added or changed, and what now works. Then stop, so I can verify it before we continue.\n\nIf a technical choice is not covered by the build plan or app/AGENTS.md, pick the simplest option that keeps the app opening directly in a browser and tell me what you picked. Do not ask me to choose."
+      },
+      {
+        title: "Check it in the browser",
+        text: "Open `index.html` and run the check from your verification plan for that increment, the same way as in exercise 6."
+      },
+      {
+        title: "Mark the result, then repeat",
+        text: "Mark the row verified in `verification-plan.md`, or write down what failed and what you changed. Then go back to step 1 with the next increment."
+      }
+    ],
+    doneItems: [
+      "Every increment you built is marked verified in `verification-plan.md`, or says why not",
+      "`build-plan.md` records which files each increment changed"
     ]
   },
 

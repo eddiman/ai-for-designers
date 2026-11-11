@@ -405,9 +405,8 @@ ol.items li::before {
   border-radius: 50%;
 }
 
-/* Step slide: do / done / why */
+/* Exercise slides: the opener, one slide per step, and the done check */
 .step-head { display: flex; align-items: center; gap: 2cqw; }
-.step-block--why { margin-top: 2.2cqw; }
 .step-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 3cqw; align-items: start; }
 .step-block > .step-block__title {
   margin: 0 0 1.1cqw;
@@ -418,11 +417,10 @@ ol.items li::before {
   color: var(--on-surface-disabled);
 }
 .step-block .items li { font-size: 1.6cqw; }
-.step-block .items li:has(.copy-button) { gap: 0.8cqw; }
-.step-block .items li:has(.copy-button) > span:nth-child(3) { flex: 1 1 auto; }
-.step-block--why p { font-size: 1.6cqw; }
+.step-block p { font-size: 1.6cqw; }
 .step-number {
   display: inline-flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   width: 4.4cqw;
@@ -433,7 +431,35 @@ ol.items li::before {
   color: var(--on-accent);
 }
 
-/* Prompt slide */
+/* A step slide starts at the top, so the heading stays put from one step to
+   the next. Only the prompt may shrink, and it scrolls inside its box. */
+.slide--exercise-step { justify-content: flex-start; gap: 2cqw; padding-top: 4.5cqw; padding-bottom: 4.5cqw; }
+.slide--exercise-step > * { flex-shrink: 0; }
+.slide--exercise-step > .prompt-wrap { flex: 0 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.slide--exercise-step .prompt { flex: 0 1 auto; min-height: 0; max-height: none; }
+.slide--exercise-step .step-head h2 { font-size: 3.6cqw; }
+.slide .step-text { font-size: 2cqw; color: var(--on-surface-high); max-width: 62ch; }
+.slide--exercise-step .items li { font-size: 1.8cqw; }
+.step-top { display: flex; align-items: center; justify-content: space-between; gap: 2cqw; }
+.step-progress { display: flex; align-items: center; gap: 1.2cqw; flex: 0 0 auto; }
+.step-progress__label { font-size: 1.2cqw; font-weight: 500; letter-spacing: 0.08em; color: var(--on-surface-disabled); }
+.step-progress__marks { display: flex; gap: 0.5cqw; margin: 0; padding: 0; list-style: none; }
+.step-progress__marks li { width: 2cqw; height: 0.5cqw; background: var(--surface-overlay); }
+.step-progress__marks li.is-done { background: var(--on-surface-disabled); }
+.step-progress__marks li.is-current { background: var(--accent); }
+/* Bullets on a step slide get a small mark, so each line reads as its own action. */
+.slide--exercise-step ul.items li::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.6cqw;
+  height: 0.6cqw;
+  margin-top: 0.75cqw;
+  background: var(--accent);
+}
+/* A note is a footnote to the step, so it stays small and leaves room for the prompt. */
+.slide--exercise-step .slide__note { font-size: 1.4cqw; padding-top: 1.2cqw; }
+
+/* Prompt block, with its Copy button */
 .prompt-wrap { position: relative; }
 .prompt {
   margin: 0;
@@ -449,7 +475,9 @@ ol.items li::before {
   max-height: 58cqh;
 }
 .prompt-wrap > .copy-button { position: absolute; top: 1.1cqw; right: 1.1cqw; }
-.slide--prompt .prompt { max-height: 68cqh; font-size: 1.15cqw; line-height: 1.45; }
+/* Keep the prompt's text clear of the Copy button in the top-right corner. */
+.prompt-wrap > .prompt { padding-right: 7.5cqw; }
+.prompt--long { font-size: 1.15cqw; line-height: 1.45; }
 .copy-button {
   min-width: 4.5cqw;
   padding: 0.35cqw 0.75cqw;
@@ -600,9 +628,14 @@ ol.items li::before {
   .step-number { width: 34px; height: 34px; font-size: 17px; }
   .step-grid { grid-template-columns: 1fr; gap: 24px; }
   .step-block > .step-block__title { margin-bottom: 10px; font-size: 11px; }
-  .step-block .items li, .step-block--why p { font-size: 15px; }
+  .step-block .items li, .step-block p { font-size: 15px; }
   .items li code { overflow-wrap: anywhere; }
-  .step-block--why { margin-top: 22px; }
+  .step-top { flex-wrap: wrap; gap: 8px; }
+  .slide--exercise-step .step-head h2 { font-size: 26px; }
+  .slide .step-text, .slide--exercise-step .items li { font-size: 16px; }
+  .step-progress__label { font-size: 11px; }
+  .step-progress__marks li { width: 16px; height: 4px; }
+  .prompt--long { font-size: 12px; }
   ol.items li::before { width: 20px; }
   .items--check li::before { width: 12px; height: 12px; margin-top: 6px; }
   .map { gap: 8px; }
@@ -613,6 +646,7 @@ ol.items li::before {
   .callout { padding: 16px; font-size: 14px; }
   .slide__note { padding-top: 16px; font-size: 12px; }
   .prompt { font-size: 13px; }
+  .prompt-wrap > .prompt { padding: 44px 14px 14px; }
   .copy-button { min-width: 52px; padding: 5px 9px; font-size: 11px; }
   .prompt-wrap > .copy-button { top: 10px; right: 10px; }
   .controls { justify-content: center; gap: 4px; padding: 8px; }

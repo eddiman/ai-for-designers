@@ -19,11 +19,11 @@ window.DECKS["intro"] = [
     kind: "list",
     eyebrow: "The project",
     title: "Helping people catch the bus",
-    lead: "Every session works the same problem, so each step continues the one before it.",
+    lead: "Every session works the same problem, so each session continues the one before it.",
     items: [
       { label: "Session 1", text: "you get three interviews and a questionnaire about how people catch buses today" },
       { label: "By Session 4", text: "you have a working app built from what that research told you" },
-      { label: "In between", text: "every artifact you make becomes the input to the next step" }
+      { label: "In between", text: "every artifact you make becomes the input to the next session" }
     ],
     callout: {
       tone: "go",

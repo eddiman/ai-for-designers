@@ -92,18 +92,27 @@ A slide is an object with a `kind` and the fields that kind uses. Text fields ac
 | `statement` | `eyebrow`, `text` | One big idea, with nothing competing with it. |
 | `map` | `title`, `lead`, `steps[]`, `active` | The progress map. `active` highlights one step by index. |
 | `list` | `eyebrow`, `title`, `lead`, `items[]`, `ordered`, `check` | Bullets. An item is a string, or `{label, text}`. |
-| `step` | `n`, `title`, `lead`, `doItems[]`, `doneItems[]`, `why` | A numbered step, laid out as Do this now / You are done when / What this step is for. |
-| `prompt` | `eyebrow`, `title`, `text` | A prompt to show or read out. Monospace, preserves line breaks. |
+| `exercise` | `n` or `label`, `title`, `lead`, `map`, `steps[]`, `doneItems[]`, `why`, `checkpoint` | One exercise and its steps. It expands into several slides, described below. |
 | `table` | `eyebrow`, `title`, `lead`, `cols[]`, `rows[][]` | Comparisons and file lists. |
 
 Any slide also takes an optional `callout: {tone, title, text}`, where `tone` is `go` (green), `stop` (red), or omitted (yellow), and an optional `note`, which renders small at the foot of the slide as a facilitator cue.
 
-The prose on the slides follows the writing style set out in the root `AGENTS.md`, including no em dashes and no "not X, but Y" constructions. The `prompt` bodies are the exception: their line breaks and wording are tuned for the tool the participant pastes them into, so edit them for what the tool needs rather than for how they read.
+### Exercises and steps
+
+A session is made of exercises, and an exercise is made of steps, the numbered actions under **Do this now** in the session README. A deck lists each exercise once, as an `exercise` object, and `app.js` expands it into the slides the room sees:
+
+1. An opener with the exercise number (`n`, or `label` for an unnumbered one such as "Before you start"), the `title` and `lead`, the step titles in order, and `why` under **What this exercise is for**. An optional `map: {steps, active}` shows the session's progress map on the opener.
+2. One slide per step. A step is `{title, text, items, prompt, after, callout, note}`, and every field except `title` is optional. `text` and `after` can be a string or an array of paragraphs. A `prompt` renders in a monospace box with its own Copy button, and long prompts get smaller type.
+3. A **You are done when** slide with `doneItems`, and the optional `checkpoint: {tone, title, text}` as a callout under them.
+
+Keep step N on the slide the same as step N in the README, with the same prompt text, so that someone following either one sees the same instruction.
+
+The prose on the slides follows the writing style set out in the root `AGENTS.md`, including no em dashes and no "not X, but Y" constructions. Prompt bodies are the exception: their line breaks and wording are tuned for the tool the participant pastes them into, so edit them for what the tool needs rather than for how they read.
 
 ## Layout notes
 
 A slide is a fixed 16:9 box that scales to fit the window, with type sized in container-query units. What you see on your laptop is what lands on the projector, at any resolution. Below 720px wide the box gives up the aspect ratio and stacks instead, so the decks stay readable on a phone.
 
-Content that overflows a slide is clipped rather than scrolled. That is deliberate: an overlong slide is visibly wrong while you are editing it, instead of being quietly cut off while you present. If a slide overflows, split it.
+Content that overflows a slide is clipped rather than scrolled. That is deliberate: an overlong slide is visibly wrong while you are editing it, instead of being quietly cut off while you present. If a slide overflows, split it. The one exception is a step's prompt box, which shrinks to the space left on the slide and scrolls inside, so a long prompt never pushes the instruction off the slide. The Copy button always copies the whole prompt.
 
 If you want to check fit across a whole deck at once, measure the bottom of the last rendered element against the slide's `clientHeight`. Comparing `scrollHeight` with `clientHeight` reports a false overflow of up to about 27px, because `scrollHeight` includes the slide's bottom padding.
