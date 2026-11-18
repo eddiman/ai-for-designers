@@ -107,21 +107,32 @@
     return EXPANDED[id];
   }
 
+  // A section is a run of slides taken from another deck, as the workshop deck
+  // does. It expands on its own, so exercise numbering restarts per section,
+  // and its slides take the section's accent unless they set their own.
   function expand(deck) {
     var total = deck.filter(function (s) {
       return s.kind === "exercise" && s.n != null;
     }).length;
     var out = [];
     deck.forEach(function (s) {
+      if (s.kind === "section") {
+        expand(s.slides || []).forEach(function (x) {
+          if (s.session && !x.session) x = Object.assign({}, x, { session: s.session });
+          out.push(x);
+        });
+        return;
+      }
       if (s.kind !== "exercise") {
         out.push(s);
         return;
       }
-      out.push({ kind: "exercise-intro", exercise: s, total: total, callout: s.callout, note: s.note });
+      var session = s.session;
+      out.push({ kind: "exercise-intro", exercise: s, total: total, session: session, callout: s.callout, note: s.note });
       (s.steps || []).forEach(function (step, i) {
-        out.push({ kind: "exercise-step", exercise: s, step: step, index: i, callout: step.callout, note: step.note });
+        out.push({ kind: "exercise-step", exercise: s, step: step, index: i, session: session, callout: step.callout, note: step.note });
       });
-      out.push({ kind: "exercise-done", exercise: s, callout: s.checkpoint });
+      out.push({ kind: "exercise-done", exercise: s, session: session, callout: s.checkpoint });
     });
     return out;
   }

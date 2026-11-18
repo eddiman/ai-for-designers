@@ -54,6 +54,15 @@ window.SESSIONS = [
     lead: "Stand up a project knowledge base, then build and verify one increment of a working MVP.",
     tool: "GitHub Copilot in VS Code",
     folder: "session-4-knowledge-base-and-mvp"
+  },
+  {
+    id: "workshop",
+    group: "Full-day workshop",
+    short: "Workshop",
+    title: "The whole course in one day",
+    lead: "The introduction, the setup with the Figma MCP, and all four sessions with the breaks between them, in one deck.",
+    tool: "Introduction, setup, Sessions 1–4",
+    folder: null
   }
 ];
 

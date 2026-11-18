@@ -2,6 +2,7 @@ window.DECKS = window.DECKS || {};
 
 window.DECKS["session-0"] = [
   {
+    id: "cover",
     kind: "cover",
     eyebrow: "Session 0",
     title: "Get your workspace ready",
@@ -10,6 +11,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "bring",
     kind: "list",
     eyebrow: "Before you arrive for Session 1",
     title: "Bring these four things",
@@ -39,6 +41,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "setup-order",
     kind: "map",
     eyebrow: "Set up in this order",
     title: "Eight exercises before Session 1",
@@ -274,6 +277,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "copilot-check",
     kind: "exercise",
     n: 8,
     title: "Check Microsoft 365 Copilot",
@@ -318,6 +322,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "readiness-gate",
     kind: "list",
     eyebrow: "Readiness gate",
     title: "Do not start Session 1 until all five are true",
@@ -337,6 +342,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "later-sessions",
     kind: "table",
     eyebrow: "Requirements for later sessions",
     title: "What to arrange after Session 1",
@@ -350,6 +356,7 @@ window.DECKS["session-0"] = [
   },
 
   {
+    id: "next",
     kind: "cover",
     session: "session-1",
     eyebrow: "Workspace ready",

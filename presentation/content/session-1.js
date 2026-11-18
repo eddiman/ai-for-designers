@@ -239,6 +239,7 @@ window.DECKS["session-1"] = [
   },
 
   {
+    id: "next",
     kind: "cover",
     session: "session-2",
     eyebrow: "Next",

@@ -16,6 +16,7 @@ window.DECKS["session-3"] = [
   },
 
   {
+    id: "start-from",
     kind: "list",
     eyebrow: "What you start from",
     title: "Your brief packet",
@@ -43,6 +44,7 @@ window.DECKS["session-3"] = [
   },
 
   {
+    id: "figma-mcp",
     kind: "exercise",
     label: "Before you start",
     title: "Connect the Figma MCP",
@@ -277,6 +279,7 @@ window.DECKS["session-3"] = [
   },
 
   {
+    id: "next",
     kind: "cover",
     session: "session-4",
     eyebrow: "Next",

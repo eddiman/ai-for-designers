@@ -4,17 +4,26 @@ The on-screen deck for the course. One landing page plus a deck per session, mea
 
 ## The decks
 
-Six in all, split into two groups on the landing page.
+Seven in all, split into three groups on the landing page.
 
 | Deck | Route | Use it for |
 |---|---|---|
 | **Introduction** | `#/intro` | Opening the course. What it is, the running project, how the four sessions hang together, the three moves that carry through all of them, and what the course is not. |
 | **Session 0** | `#/session-0` | Requirements and setup. What each session needs, what to sort before Session 1, the readiness check, the tooling walkthrough, and the artifact journey. |
 | Sessions 1–4 | `#/session-1` … `#/session-4` | The sessions themselves, one deck each. |
+| **Workshop** | `#/workshop`, or `/workshop` | The whole course in one day, in one deck: the introduction, the agenda, the setup, and Sessions 1–4, with a break or lunch cover between sessions. |
 
 Session 0 has no folder of its own in the repository. It exists only as this deck, since it produces no artifacts. The same is true of the introduction.
 
 Run the introduction and Session 0 back to back at the start of Session 1. The introduction closes by pointing at Session 0, and Session 0 closes by pointing at Session 1, so the three run as one sequence without touching the landing page.
+
+### The workshop deck
+
+`content/workshop.js` builds the workshop deck from the other six when the page loads, so a slide edited in a session deck changes in the workshop too. It adds an agenda after the cover, which lists the blocks of the day in order and leaves the times out. It moves the Figma MCP setup from the start of Session 3 into the setup, as exercise 9 after the Microsoft 365 Copilot check, so a connection problem shows up while there is time to fix it. It also skips or rewords the slides that assume the sessions run on separate days: the Session 0 cover with its duration, the list of things to bring before Session 1, the table of what to arrange for later sessions, and the "if you miss a session" wording. The "Next" covers that end Sessions 1–3 become the break, lunch and break covers.
+
+The workshop picks those slides out by an `id` they carry in their own deck. If an `id` it asks for is missing, it logs a warning in the browser console. Keep the `id` when you edit one of those slides, so the workshop still finds it.
+
+`/workshop` is a small page in `workshop/index.html` that forwards to `index.html#/workshop`. A slide number carries over, so `/workshop#/61` opens slide 61.
 
 ## Published
 
@@ -61,6 +70,7 @@ Every slide has its own address, so you can link a colleague straight to one:
 index.html#/session-4          → session 4, first slide
 index.html#/session-4/6        → session 4, slide 6
 index.html#/                   → the session list
+index.html#/workshop/61        → the workshop deck, slide 61
 ```
 
 Slide numbers are the ones shown in the control bar and the overview, counting from 1. They shift if you add or remove a slide, so treat a deep link as a bookmark rather than a permanent reference.
@@ -74,6 +84,7 @@ Each session carries one of the semantic colours so a glance tells you which dec
 | Deck | Accent |
 |---|---|
 | Introduction | Black `#000000` |
+| Workshop | Black `#000000`, and each section keeps the accent of the deck it comes from |
 | Session 0: Before we start | Red `#FF1744` |
 | Session 1: Research synthesis | Green `#00E676` |
 | Session 2: Problem definition and personas | Yellow `#FFC400` |
@@ -95,7 +106,9 @@ A slide is an object with a `kind` and the fields that kind uses. Text fields ac
 | `exercise` | `n` or `label`, `title`, `lead`, `map`, `steps[]`, `doneItems[]`, `why`, `checkpoint` | One exercise and its steps. It expands into several slides, described below. |
 | `table` | `eyebrow`, `title`, `lead`, `cols[]`, `rows[][]` | Comparisons and file lists. |
 
-Any slide also takes an optional `callout: {tone, title, text}`, where `tone` is `go` (green), `stop` (red), or omitted (yellow), and an optional `note`, which renders small at the foot of the slide as a facilitator cue.
+Any slide also takes an optional `callout: {tone, title, text}`, where `tone` is `go` (green), `stop` (red), or omitted (yellow), an optional `note`, which renders small at the foot of the slide as a facilitator cue, and an optional `id`, which the workshop deck uses to find the slide.
+
+One more kind exists for the workshop deck: `{kind: "section", session, slides[]}` holds slides taken from another deck. A section expands on its own, so its exercises are numbered within the section, and its slides take the accent of `session` unless they set their own.
 
 ### Exercises and steps
 

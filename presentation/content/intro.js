@@ -2,6 +2,7 @@ window.DECKS = window.DECKS || {};
 
 window.DECKS["intro"] = [
   {
+    id: "cover",
     kind: "cover",
     eyebrow: "Welcome",
     title: "AI for Designers",
@@ -53,6 +54,7 @@ window.DECKS["intro"] = [
   },
 
   {
+    id: "how-it-works",
     kind: "list",
     eyebrow: "How it works",
     title: "Five things to know up front",
@@ -97,6 +99,7 @@ window.DECKS["intro"] = [
   },
 
   {
+    id: "what-we-ask",
     kind: "list",
     eyebrow: "What we ask of you",
     title: "To get the most out of it",
@@ -115,6 +118,7 @@ window.DECKS["intro"] = [
   },
 
   {
+    id: "next",
     kind: "cover",
     session: "session-0",
     eyebrow: "Let's start",

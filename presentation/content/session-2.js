@@ -16,6 +16,7 @@ window.DECKS["session-2"] = [
   },
 
   {
+    id: "start-from",
     kind: "list",
     eyebrow: "What you start from",
     title: "Your worked evidence",
@@ -196,6 +197,7 @@ window.DECKS["session-2"] = [
   },
 
   {
+    id: "next",
     kind: "cover",
     session: "session-3",
     eyebrow: "Next",
