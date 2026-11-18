@@ -6,6 +6,6 @@ This carries the Session 3 prototype work forward: three prototype directions, t
 
 ## Contents
 
-- `prototype-directions.md`: the three prototype directions (Signal, Decide, Shift), each with its Figma link, what it is, and how it answers the committed problem
+- `prototype-directions.md`: the three prototype directions (Signal, Decide, Shift), each with what it is and how it answers the committed problem
 - `app-flow.md`: the written screen-by-screen flow for each direction
 - `ux-review.md`: the persona-based UX review with prioritized findings and triage

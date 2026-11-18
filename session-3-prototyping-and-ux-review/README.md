@@ -110,7 +110,7 @@ Attaching your problem definition, insights, and personas as files is what bring
 > For each direction: give it a short name, generate the key screens as a clickable flow, and stay grounded in the attached research, meaning the insights and personas rather than generic bus-app conventions. Make the three genuinely different from each other (for example, lean into the reliability-first take in one and the personalization take in another) so I have alternatives worth comparing instead of three versions of the same idea.
 
 3. React to what comes back rather than accepting the first result as final. Ask it to push one direction further, pull two apart if they've converged, or fix a screen that doesn't match a persona's needs.
-4. Once you're happy with the three, fill in `prototype-directions.md`, one entry per direction with its name, **Figma link**, **What it is**, and **How it answers the problem**.
+4. Once you're happy with the three, fill in `prototype-directions.md`, one entry per direction with its name, **What it is**, and **How it answers the problem**.
 
 **Bonus:** go to https://designmd.app/ and pick a `design.md` you like and attach it too, or describe in the prompt how you want the design to look.
 
@@ -120,7 +120,7 @@ Attaching your problem definition, insights, and personas as files is what bring
 
 - You have three directions that solve the committed problem in different ways.
 - Each direction has its key screens as a clickable flow.
-- `prototype-directions.md` has all three entries filled in, each with its Figma link.
+- `prototype-directions.md` has all three entries filled in.
 
 **What this exercise is for**
 

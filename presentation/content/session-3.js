@@ -122,7 +122,7 @@ window.DECKS["session-3"] = [
       },
       {
         title: "Describe each direction",
-        text: "Once you are happy with the three, fill in `prototype-directions.md`: one entry per direction, with its name, **Figma link**, **What it is**, and **How it answers the problem**."
+        text: "Once you are happy with the three, fill in `prototype-directions.md`: one entry per direction, with its name, **What it is**, and **How it answers the problem**."
       }
     ],
     doneItems: [
