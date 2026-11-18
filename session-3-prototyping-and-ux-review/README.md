@@ -200,10 +200,8 @@ Before you run the review, know what kind of result it gives you. This is early 
 
 **Do this now**
 
-1. Check that the Figma desktop app is open and that **MCP: List Servers** in VS Code shows `figma` as running (see **Before you start**).
-2. In VS Code, open Copilot Chat in **Agent** mode.
-3. Attach `personas.md`, `problem-definition.md`, `app-flow.md`, and `prototype-directions.md`.
-4. Start from this prompt, put the link to your Figma section (or to each direction's frame) at the top, and adapt it:
+1. In Copilot Chat, attach `personas.md`, `problem-definition.md`, `app-flow.md`, and `prototype-directions.md`.
+2. Start from this prompt, put the link to your Figma section (or to each direction's frame) at the top, and adapt it:
 
 > _[Link to the Figma section/frame containing the directions, or a link to each direction's frame]_
 > Attached / connected is a Figma file with **3 prototype directions** for a bus app, each in its own named section with its screens numbered in flow order. Also attached are my `personas.md`, `problem-definition.md`, `app-flow.md` (my written flow for each direction), and `prototype-directions.md` (what each direction is and how it's meant to answer the problem).
@@ -214,7 +212,7 @@ Before you run the review, know what kind of result it gives you. This is early 
 >
 > Then pull it together into one **prioritized findings table**, highest-impact first, with columns: finding, which persona(s), which direction, and severity. Write the full review and the table into `ux-review.md`, and leave the **Triage** section empty.
 
-5. Read the review. If a persona's feedback reads generically, push back and ask it to ground the critique in that persona's specific goals and the evidence behind them.
+3. Read the review. If a persona's feedback reads generically, push back and ask it to ground the critique in that persona's specific goals and the evidence behind them.
 
 **You are done when**
 

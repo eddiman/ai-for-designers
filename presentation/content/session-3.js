@@ -205,16 +205,8 @@ window.DECKS["session-3"] = [
     lead: "Copilot Agent mode, with the Figma MCP connected and your files attached.",
     steps: [
       {
-        title: "Check the Figma connection",
-        text: "Check that the Figma desktop app is open and that **MCP: List Servers** in VS Code shows `figma` as running."
-      },
-      {
-        title: "Open Copilot in Agent mode",
-        text: "In VS Code, open Copilot Chat in **Agent** mode."
-      },
-      {
         title: "Attach your files",
-        text: "Attach `personas.md`, `problem-definition.md`, `app-flow.md`, and `prototype-directions.md`."
+        text: "In Copilot Chat, attach `personas.md`, `problem-definition.md`, `app-flow.md`, and `prototype-directions.md`."
       },
       {
         title: "Run the review",
