@@ -130,7 +130,7 @@ window.DECKS = window.DECKS || {};
         "readiness-gate": function (s) {
           return extend(s, {
             title: "Do not start Session 1 until all six are true",
-            items: s.items.concat(["Copilot's Agent mode in VS Code lists the Figma tools."])
+            items: s.items.concat(["Copilot in VS Code can read your open file in Figma."])
           });
         }
       },

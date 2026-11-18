@@ -54,10 +54,9 @@ window.DECKS["session-3"] = [
         title: "Turn on the local server in Figma",
         text: "Open a file you can edit in the Figma **desktop** app, updated to the latest version.",
         items: [
-          "Go to Dev Mode: the `</>` icon in the bottom bar.",
-          "In the right sidebar, find the MCP section and click the preferences icon.",
-          "Set the **Enabled** toggle to on.",
-          "Check the confirmation: the server is running at `http://127.0.0.1:3845/mcp`."
+          "Click **Actions** in the bottom toolbar: the button with four small shapes, to the right of the comment tool.",
+          "Type `enable mcp` in the search field.",
+          "Select **Enable desktop MCP server**, so its box is ticked."
         ],
         callout: {
           tone: "stop",
@@ -67,33 +66,36 @@ window.DECKS["session-3"] = [
       },
       {
         title: "Add it to VS Code",
-        items: [
-          "Open the Command Palette (**Cmd+Shift+P** on Mac, **Ctrl+Shift+P** on Windows) and choose **MCP: Add Server…**",
-          "Choose **HTTP**, paste `http://127.0.0.1:3845/mcp`, and name it `figma`.",
-          "Pick **Workspace** (writes `.vscode/mcp.json` in this folder) or **Global** (available everywhere).",
-          "The result is the entry below in `mcp.json`. To add it by hand instead, create `.vscode/mcp.json` and paste this in."
-        ],
-        prompt: "{\n  \"servers\": {\n    \"figma\": {\n      \"type\": \"http\",\n      \"url\": \"http://127.0.0.1:3845/mcp\"\n    }\n  }\n}",
-        note: "If VS Code asks whether to trust or start the `figma` server, allow it. For any other technical question, ask the facilitator before you answer."
+        text: "Open Copilot Chat in **Agent** mode and run this prompt. Copilot adds the Figma server to your global `mcp.json`, so the server is available in every folder you open in VS Code.",
+        prompt: "Add this to the global mcp.json for VS Code. Keep any servers that are already in the file.\n\n{\n  \"servers\": {\n    \"figma\": {\n      \"type\": \"http\",\n      \"url\": \"http://127.0.0.1:3845/mcp\"\n    }\n  }\n}",
+        note: "If Copilot asks for permission to edit `mcp.json`, or VS Code asks whether to trust or start the `figma` server, allow it. For any other technical question, ask the facilitator before you answer."
       },
       {
-        title: "Check the connection",
+        title: "Check that the server is running",
         items: [
-          "Open Copilot Chat and switch to **Agent** mode.",
-          "Click the tools icon and look for the Figma tools, such as `get_design_context`.",
-          "Select a frame in the Figma desktop app, then ask Copilot to describe it."
+          "Open the Command Palette with **Cmd+Shift+P** on Mac or **Ctrl+Shift+P** on Windows. You can also click the project name in the bar at the top of VS Code and type `>`.",
+          "Start typing `MCP: List Servers` and select it.",
+          "Find `figma` in the list. If it says **Running**, go on to the next step.",
+          "If it says **Stopped**, select it and choose **Start Server**."
         ],
         callout: {
           tone: "stop",
-          title: "If the tools do not appear",
-          text: "Check that the Figma desktop app is still open with the server enabled, then restart the `figma` entry in `mcp.json`. The tools show up in Copilot only after that restart."
+          title: "If the server will not start",
+          text: "Check that the Figma desktop app is still open and that **Enable desktop MCP server** is still ticked under **Actions**, then start the server again."
         }
+      },
+      {
+        title: "Check the connection",
+        text: "Keep your file open in the Figma desktop app, and run this prompt in Copilot Chat in **Agent** mode.",
+        prompt: "See if you can read my open file in figma now",
+        note: "If Copilot asks for permission to run a Figma tool, allow it. If it says nothing is selected, select a frame in Figma and run the prompt again."
       }
     ],
     doneItems: [
-      "The Figma desktop app shows the server running at `http://127.0.0.1:3845/mcp`",
-      "Copilot's Agent mode lists the Figma tools",
-      "Copilot can describe a frame you selected in the Figma desktop app"
+      "**Enable desktop MCP server** is ticked under **Actions** in the Figma desktop app",
+      "Your global `mcp.json` has the `figma` entry",
+      "**MCP: List Servers** shows `figma` as running",
+      "Copilot can read your open file in Figma"
     ],
     why: "Without this connection, Copilot cannot see your screens in exercise 4, and the review has nothing to walk through. The server runs on your own machine, so everyone sets up their own."
   },
@@ -204,7 +206,7 @@ window.DECKS["session-3"] = [
     steps: [
       {
         title: "Check the Figma connection",
-        text: "Check that the Figma desktop app is open and the Figma tools still show in Copilot."
+        text: "Check that the Figma desktop app is open and that **MCP: List Servers** in VS Code shows `figma` as running."
       },
       {
         title: "Open Copilot in Agent mode",
@@ -218,7 +220,7 @@ window.DECKS["session-3"] = [
         title: "Run the review",
         text: "Put the link to your Figma section at the top of this prompt, and adapt it.",
         prompt: "[Link to the Figma section containing the directions]\n\nAttached is a Figma file with 3 prototype directions for a bus app, each in its own named section\nwith screens numbered in flow order. Also attached are my personas.md, problem-definition.md,\napp-flow.md, and prototype-directions.md.\n\nUse app-flow.md for the mechanical path through each direction's screens, and\nprototype-directions.md for the intent behind each. Hold each direction to what it is trying to do,\nand not only to what is on screen.\n\nReview all three directions in character as each of my personas, so that every persona reviews every\ndirection. For each persona × direction, walk the numbered screens in order and note what that\npersona notices, struggles with, and wants, referring to screens by number. Stay true to each\npersona's evidence-grounded goals, and don't give generic feedback.\n\nThen pull it together into one prioritized findings table, highest-impact first, with columns:\nfinding, which persona(s), which direction, and severity. Write the full review and the table\ninto ux-review.md, and leave the Triage section empty.",
-        note: "If Copilot asks for permission to run a Figma tool or edit `ux-review.md`, allow it. If it cannot reach Figma, check that the desktop app is open, then restart the `figma` entry in `mcp.json`."
+        note: "If Copilot asks for permission to run a Figma tool or edit `ux-review.md`, allow it. If it cannot reach Figma, check that the desktop app is open, then start the `figma` server again from **MCP: List Servers**."
       },
       {
         title: "Push back on generic feedback",

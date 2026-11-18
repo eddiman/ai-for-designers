@@ -36,23 +36,18 @@ The local server lives in the Figma **desktop** app, so open the file you want t
 
 - Update to the latest Figma desktop app.
 - Open a file you have edit access to.
-- Go to Dev Mode (bottom bar, look for the [</>] icon).
-- In the right sidebar, find the MCP section and click the preferences icon.
-- Set the **Enabled** toggle to on.
-- You'll see a confirmation that the server is running at `http://127.0.0.1:3845/mcp`. Leave the desktop app open, since the server only runs while it's running.
-- You don't have to be in Dev Mode to use Figma MCP, you can either send the url from figma, or ask AI to see your selection.
+- Click **Actions** in the bottom toolbar. It is the button with four small shapes (a diamond, a circle, a square, and a plus), to the right of the comment tool.
+- Type `enable mcp` in the search field, and select **Enable desktop MCP server** so its box is ticked.
+- Leave the desktop app open, since the server only runs while the app is running. It runs at `http://127.0.0.1:3845/mcp`, which is the address VS Code gets in the next step.
+- With the server on, you can either send Copilot the URL of a frame from Figma, or ask it to look at your selection.
 
 **2. Add it to VS Code / GitHub Copilot**
 
-Copilot's agent mode reads MCP servers from an `mcp.json` file. Add the Figma server there:
+Copilot's agent mode reads MCP servers from an `mcp.json` file. GitHub Copilot is already running in your VS Code, so let it add the Figma server for you: open Copilot Chat in **Agent** mode and run this prompt.
 
-- In VS Code, open the Command Palette (**Cmd+Shift+P** on Mac, **Ctrl+Shift+P** on Windows) → **MCP: Add Server…**
-- Choose **HTTP**, and paste the URL `http://127.0.0.1:3845/mcp`. Name it `figma`.
-- Pick **Workspace** (writes `.vscode/mcp.json` in this folder) or **Global** (available everywhere).
+```text
+Add this to the global mcp.json for VS Code. Keep any servers that are already in the file.
 
-Or add it by hand, creating `.vscode/mcp.json` with:
-
-```json
 {
   "servers": {
     "figma": {
@@ -63,19 +58,33 @@ Or add it by hand, creating `.vscode/mcp.json` with:
 }
 ```
 
-**3. Check the connection**
+The global `mcp.json` belongs to your VS Code user profile and not to this folder, so the Figma server is available in every folder you open in VS Code.
 
-- Open the Copilot Chat panel and switch to **Agent** mode.
-- Click the tools icon and look for the Figma tools (for example `get_design_context`, `get_screenshot`), listed and enabled.
-- Select a frame in the Figma desktop app, then ask Copilot to describe it.
+**3. Check that the server is running**
 
-> Troubleshooting: if the tools don't appear, confirm the Figma desktop app is still open with the server enabled, then restart the MCP server from the `mcp.json` file (there's a **Restart** action inline above the `figma` entry). The server is only reachable while the desktop app is running.
+- Open the Command Palette with **Cmd+Shift+P** on Mac or **Ctrl+Shift+P** on Windows. You can also click the project name in the bar at the top of VS Code and type `>`.
+- Start typing `MCP: List Servers` and select it.
+- Find `figma` in the list. If it says **Running**, go on to the next step.
+- If it says **Stopped**, select it and choose **Start Server**.
+
+> Troubleshooting: if the server will not start, check that the Figma desktop app is still open and that **Enable desktop MCP server** is still ticked under **Actions**, then start the server again from **MCP: List Servers**. The server is only reachable while the desktop app is running.
+
+**4. Check the connection**
+
+Keep your file open in the Figma desktop app, and run this prompt in Copilot Chat in **Agent** mode:
+
+```text
+See if you can read my open file in figma now
+```
+
+If Copilot says nothing is selected, select a frame in Figma and run the prompt again.
 
 **You are done when**
 
-- The Figma desktop app shows the server running at `http://127.0.0.1:3845/mcp`.
-- The tools list in Copilot's Agent mode shows the Figma tools.
-- Copilot can describe a frame you selected in the Figma desktop app.
+- **Enable desktop MCP server** is ticked under **Actions** in the Figma desktop app.
+- Your global `mcp.json` has the `figma` entry.
+- **MCP: List Servers** shows `figma` as running.
+- Copilot can read your open file in Figma.
 
 **What this exercise is for**
 
@@ -83,7 +92,7 @@ Without this connection, Copilot cannot see your screens in exercise 4, and the 
 
 **If the tool asks a technical question**
 
-If VS Code asks whether to trust or start the `figma` server, or asks for permission to run a Figma tool, allow it. Those prompts check that you want Copilot to read from Figma. For anything else, ask the facilitator before you answer.
+If Copilot asks for permission to edit `mcp.json`, allow it, since that is the file the prompt asks it to change. If VS Code asks whether to trust or start the `figma` server, or asks for permission to run a Figma tool, allow that too. Those prompts check that you want Copilot to read from Figma. For anything else, ask the facilitator before you answer.
 
 ---
 
@@ -171,7 +180,7 @@ Before you run the review, know what kind of result it gives you. This is early 
 
 **Do this now**
 
-1. Check that the Figma desktop app is open and the Figma tools still show in Copilot (see **Before you start**).
+1. Check that the Figma desktop app is open and that **MCP: List Servers** in VS Code shows `figma` as running (see **Before you start**).
 2. In VS Code, open Copilot Chat in **Agent** mode.
 3. Attach `personas.md`, `problem-definition.md`, `app-flow.md`, and `prototype-directions.md`.
 4. Start from this prompt, put the link to your Figma section (or to each direction's frame) at the top, and adapt it:
@@ -199,7 +208,7 @@ The personas shaped the prototypes, so holding the prototypes to those same pers
 
 **If the tool asks a technical question**
 
-Copilot may ask for permission before it runs a Figma tool or edits `ux-review.md`. Allow it. If it says it cannot reach Figma, check that the desktop app is open, then restart the `figma` entry in `mcp.json` as described in **Before you start**.
+Copilot may ask for permission before it runs a Figma tool or edits `ux-review.md`. Allow it. If it says it cannot reach Figma, check that the desktop app is open, then start the `figma` server again from **MCP: List Servers**, as described in **Before you start**.
 
 ---
 

@@ -11,12 +11,12 @@ Walk through the reference brief packet: which problem it committed to, how the 
 The read-only Figma MCP is a localhost server running in each participant's own Figma desktop app, wired into their own VS Code `mcp.json`. You cannot pre-wire it for them. They set it up on their own machines, and the participant `README.md` carries the steps. Your job is to have the whole path tested first and to lead them through it.
 
 - Build and test the full round-trip in advance on your own machine: Figma Make generation → into Figma → persona UX review.
-- Know the failure modes before the room hits them: the server is only reachable while the Figma desktop app is open, and the tools do not appear in Copilot until the `figma` entry in `mcp.json` is restarted.
+- Know the failure modes before the room hits them: the server is only reachable while the Figma desktop app is open, and after Copilot adds the `figma` entry, **MCP: List Servers** can show it as stopped until the participant selects it and chooses **Start Server**.
 - Requires AI access for every participant: through their customer project where they can get it, or an approved BSD application for GitHub Copilot as plan B. Confirm this well ahead.
 
 ## Run the MCP setup in lockstep
 
-Work through the setup in the participant `README.md` step by step with the room, on your own screen, and pause until everyone's server is reachable at `http://127.0.0.1:3845/mcp` before starting the review. A single missed step blocks the whole review, so run it alongside them rather than leaving them to it.
+Work through the setup in the participant `README.md` step by step with the room, on your own screen, and pause until Copilot can read everyone's open Figma file before starting the review. A single missed step blocks the whole review, so run it alongside them rather than leaving them to it.
 
 Keep the setup visible. Seeing how the connection is wired, with one example of it in use, is worth more than arriving at a room where it already works, and the lockstep pass is what catches anyone left unsure.
 
