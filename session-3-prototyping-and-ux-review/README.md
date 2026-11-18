@@ -154,13 +154,33 @@ The reviewer in exercise 4 reads this file. Any scaffolding left in it becomes n
 
 1. Number each screen in the order a user moves through it.
 2. Put each direction's screens together in their own frame or section, named to match the direction name in `prototype-directions.md`.
-3. Ask Figma Make to write out each direction's flow, for example:
+3. In Figma Make, run this prompt. It asks for the flows in the same layout as `app-flow.md`, and for nothing else:
 
-> Describe each direction's flow to be used for a UX review, write it out in the chat here.
+```text
+Write out the flow of each of the three directions in the chat here. Describe only what is on each
+screen and how the user moves between screens. Do not review the design, give opinions, or suggest
+improvements, since the UX review is a separate step.
+
+Use the direction names from the prototype, and number the screens in the order a user moves
+through them, one line per screen. Use exactly this layout, and write nothing outside it:
+
+## Direction 1: [direction name]
+1. [Screen name]: [what the screen shows, what the user does there, and which screen it leads to]
+2. [Screen name]: [...]
+
+## Direction 2: [direction name]
+1. [Screen name]: [...]
+
+## Direction 3: [direction name]
+1. [Screen name]: [...]
+
+## Notes
+- [Only what a reader needs to follow the flows, such as a branch or one screen shown in several states]
+```
 
 <img width="594" height="735" alt="image" src="https://github.com/user-attachments/assets/97e4095d-505e-4b1e-9937-27e50291656b" />
 
-4. Paste each flow into `app-flow.md` under its direction, using the same direction names and screen numbers as in the Figma file.
+4. Paste the result into `app-flow.md` in place of the empty template. Check that the direction names and screen numbers match the Figma file, and delete anything that comments on the design rather than describing the flow. The review in exercise 4 does the critique, so a flow with opinions in it would steer the reviewer before it starts.
 
 **You are done when**
 

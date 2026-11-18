@@ -171,12 +171,12 @@ window.DECKS["session-3"] = [
       },
       {
         title: "Ask Figma Make for the flows",
-        text: "Ask Figma Make to write out each direction's flow, for example with this prompt.",
-        prompt: "Describe each direction's flow to be used for a UX review, write it out in the chat here."
+        text: "In Figma Make, run this prompt. It asks for the flows in the same layout as `app-flow.md`, and for nothing else.",
+        prompt: "Write out the flow of each of the three directions in the chat here. Describe only what is on each\nscreen and how the user moves between screens. Do not review the design, give opinions, or suggest\nimprovements, since the UX review is a separate step.\n\nUse the direction names from the prototype, and number the screens in the order a user moves\nthrough them, one line per screen. Use exactly this layout, and write nothing outside it:\n\n## Direction 1: [direction name]\n1. [Screen name]: [what the screen shows, what the user does there, and which screen it leads to]\n2. [Screen name]: [...]\n\n## Direction 2: [direction name]\n1. [Screen name]: [...]\n\n## Direction 3: [direction name]\n1. [Screen name]: [...]\n\n## Notes\n- [Only what a reader needs to follow the flows, such as a branch or one screen shown in several states]"
       },
       {
         title: "Paste the flows into app-flow.md",
-        text: "Paste each flow into `app-flow.md` under its direction, using the same direction names and screen numbers as in the Figma file."
+        text: "Paste the result into `app-flow.md` in place of the empty template. Check that the direction names and screen numbers match the Figma file, and delete anything that comments on the design rather than describing the flow."
       }
     ],
     doneItems: [
