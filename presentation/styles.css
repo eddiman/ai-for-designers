@@ -88,7 +88,16 @@ kbd,
 .landing {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 7vh 32px 96px;
+  /* The top padding never drops below the logo's bottom edge plus a gap */
+  padding: max(7vh, 96px) 32px 96px;
+}
+
+.landing__logo {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: auto;
+  height: 24px;
 }
 
 .overline {
